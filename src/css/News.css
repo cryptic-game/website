@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
 }
 
-.dunkel {
+.dark {
     width: 700px;
     background-color: #2d2b2b;
     border-radius: 10px;
@@ -29,7 +29,7 @@ a:hover {
 
 
 @media (max-width: 700px) {
-	.dunkel {  
+	.dark {  
     width: 100%;
     background-color: #2d2b2b;
     border-radius: 10px;
@@ -38,13 +38,13 @@ a:hover {
 }
 }
 
-#erste_Box {
+#first_box {
     font-size: 35px;
     font-family: 'Microsoft YaHei';
     color: #008d00;
 }
 
-.Überschrift {
+.heading {
     font-size: 30px;
     font-family: 'Microsoft YaHei';
     color: #4cff00;
