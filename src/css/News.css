@@ -1,0 +1,56 @@
+﻿body {
+    background-image:url(../assets/code_wall.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dunkel {
+    width: 700px;
+    background-color: #2d2b2b;
+    border-radius: 10px;
+    margin: 2em auto;
+    padding: 5pt;
+   
+    color: #fff;
+    
+}
+
+
+a {
+    color: #fff; 
+}
+
+
+a:hover {
+	color: green;
+}
+
+
+@media (max-width: 700px) {
+	.dunkel {  
+    width: 100%;
+    background-color: #2d2b2b;
+    border-radius: 10px;
+    margin: 2em 0;
+    padding: 5pt;
+}
+}
+
+#erste_Box {
+    font-size: 35px;
+    font-family: 'Microsoft YaHei';
+    color: #008d00;
+}
+
+.Überschrift {
+    font-size: 30px;
+    font-family: 'Microsoft YaHei';
+    color: #4cff00;
+}
+
+.text {
+   font-size: 25px;
+   font-family: 'Microsoft YaHei';
+}
