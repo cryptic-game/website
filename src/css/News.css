@@ -74,11 +74,9 @@ a:hover {
 .inside p {
     font-size: 27px;
     max-width: 85%;
-    margin: auto;
 }
 
 .inside h2 {
-    margin: auto;
     font-size: 28px;
     color: #109110;
 }
