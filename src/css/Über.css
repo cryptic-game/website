@@ -1,0 +1,28 @@
+body {
+    background-image: url(../assets/neon_cry_fullhd.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Helvetica;
+}
+
+
+.content {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    background-color:   #00000080;
+    border-radius: 5px;
+    
+  
+      font-size: 21px; 
+}
+
+.links {
+    color: green; 
+    background-color: transparent; 
+    text-decoration: none;
+  }
+
+  
