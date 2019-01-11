@@ -1,0 +1,81 @@
+$lightGrey: #919191;
+$darkGrey: #212121;
+$darkGreen: #109910;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $darkGrey; 
+    background-image: url(../assets/cry_mindark.png);
+    background-position: center;
+    background-size: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: ". ." ". ." ". .";
+}
+
+@media all and (-ms-high-contrast:none) {
+    .grid-container {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr 1fr;
+    }
+}
+
+.uList {
+    color: $lightGrey;
+    list-style: none;
+    font-size: 21px;
+    
+}
+
+.uList2 {
+    list-style: none;
+    color: $darkGrey;
+}
+
+a {
+    color: $lightGrey;
+    text-decoration: none;
+}
+
+a:visited {
+    color: $lightGrey;
+}
+
+li {
+    margin-top: 25px;
+}
+
+#item1 {
+    align-self: center;
+    justify-self: center;
+    color: $lightGrey;
+}
+
+#item2 {
+    color: $lightGrey;
+    align-self: center;
+    justify-self: center;
+}
+
+#item3 {
+    align-self: center;
+    justify-self: center;
+    margin-left: 40px;
+    color: $lightGrey;
+
+}
+
+#item4 {
+    align-self: center;
+    justify-self: center;
+    margin-left: -130px;
+}
