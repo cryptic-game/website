@@ -125,4 +125,46 @@ li a p {
   padding: 3px 62.5px;
   width: 150px;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #109910;
+  border: 0px none #ffffff;
+  border-radius: 17px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #16fe0a;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #477140;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  border: 0px solid #ffffff;
+  border-radius: 27px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #000000;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #38ff22;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 /*# sourceMappingURL=Spiel.css.map */
