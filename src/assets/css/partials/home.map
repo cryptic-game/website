@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../../css/partials/home.css",
+	"sources": [
+		"../../../css/partials/home.scss"
+	],
+	"sourcesContent": [
+		"$lightGrey: #717171;\r\n$darkGrey: #212121;\r\n$darkGreen: #109910;\r\nbody {\r\n    background-image: url(../../world_map_binary_green.png);\r\n}\r\n\r\n\r\nimg {\r\n    float: left;\r\n    display: block;\r\n    max-height: 55px;\r\n    padding: 3px 62.5px;\r\n    width: 150px;\r\n}\r\n\r\n.wallpaper {\r\n    width: 100%;\r\n    height: 889px;\r\n    position: fixed;\r\n    margin-top: 500px;\r\n}"
+	],
+	"mappings": ";AAGA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAsC,qCAAC;CAC1D;;;AAGD,AAAA,GAAG,CAAC;EACA,KAAK,EAAE,IAAK;EACZ,OAAO,EAAE,KAAM;EACf,UAAU,EAAE,IAAK;EACjB,OAAO,EAAE,UAAW;EACpB,KAAK,EAAE,KAAM;CAChB;;;AAED,AAAA,UAAU,CAAC;EACP,KAAK,EAAE,IAAK;EACZ,MAAM,EAAE,KAAM;EACd,QAAQ,EAAE,KAAM;EAChB,UAAU,EAAE,KAAM;CACrB",
+	"names": []
+}
