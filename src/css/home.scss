@@ -1,52 +1,72 @@
 $lightGrey: #717171;
 $darkGrey: #212121;
 $darkGreen: #109910;
-
 body {
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background-color: $lightGrey;
-  background-image: url(../assets/world_map_binary_green.png);
-  background-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $lightGrey;
+    background-image: url(../assets/world_map_binary_green.png);
+    background-size: 100%;
 }
 
 .navbar {
-  background-color: $darkGrey;
-  position: fixed;
-  height: 60px;
-  width: 100%;
+    background-color: $darkGrey;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+}
 
-  a {
+.navbar ul {
+    margin-left: -45px;
+}
+
+ul {
+    list-style: none;
+}
+
+// li {
+//     float: left;
+//     color: $darkGreen;
+//     text-align: center;
+//     text-decoration: none;
+//     font-size: 19px;
+//     width: 16%;
+//}
+li a {
     float: left;
     color: $darkGreen;
     text-align: center;
-    padding: 20px 16px;
     text-decoration: none;
-    width: 12.61%;
+    width: 16.66%;
     font-size: 17px;
-  }
+    height: 60px;
+    margin-top: -16.5px;
+}
 
-  a:hover {
+li a p {
+    margin-top: 20px;
+}
+
+li a:hover {
     background-color: $darkGreen;
     color: #fff;
     text-decoration: underline;
-  }
 }
 
 img {
-  float: left;
-  display: block;
-  max-height: 55px;
-  padding: 3px 62.5px;
-  width: 150px;
+    float: left;
+    display: block;
+    max-height: 55px;
+    padding: 3px 62.5px;
+    width: 150px;
 }
 
 .wallpaper {
-  width: 100%;
-  height: 889px;
-  position: fixed;
-  margin-top: 500px;
+    width: 100%;
+    height: 889px;
+    position: fixed;
+    margin-top: 500px;
 }

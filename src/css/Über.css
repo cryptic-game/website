@@ -1,55 +1,14 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background-image: url(../assets/code_wall.png);
+  background-image: url(../assets/neon_cry_fullhd.png);
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
-}
-
-a {
-  color: #fff;
-}
-
-a:hover {
-  color: #109910;
-}
-
-.dark {
-  margin: auto;
-  background-color: #2d2b2b;
-  border-radius: 10px;
-  max-width: 700px;
-  padding: 5pt;
-  text-color: #fff;
-}
-
-.inside {
-  background-color: #2d2b2ba4;
-  border-radius: 10px;
-  max-width: 700px;
-  margin: auto;
-  margin-top: 25px;
-  color: #fff;
-}
-
-.inside p {
-  font-size: 27px;
-  max-width: 85%;
-}
-
-.inside h2 {
-  font-size: 28px;
-  color: #109110;
-}
-
-#first_box {
-  font-size: 35px;
-  color: #109910;
 }
 
 .navbar {
@@ -76,24 +35,6 @@ li a {
   font-size: 17px;
   height: 60px;
   margin-top: -16.5px;
-}
-
-li a p {
-  margin-top: 20px;
-}
-
-li a:hover {
-  background-color: #109910;
-  color: #fff;
-  text-decoration: underline;
-}
-
-img {
-  float: left;
-  display: block;
-  max-height: 55px;
-  padding: 3px 62.5px;
-  width: 150px;
 }
 
 ::-webkit-scrollbar {
@@ -137,4 +78,37 @@ img {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
-/*# sourceMappingURL=News.css.map */
+
+li a p {
+  margin-top: 20px;
+}
+
+li a:hover {
+  background-color: #109910;
+  color: #fff;
+  text-decoration: underline;
+}
+
+img {
+  float: left;
+  display: block;
+  max-height: 55px;
+  padding: 3px 62.5px;
+  width: 150px;
+}
+
+.content {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+  background-color: #00000080;
+  border-radius: 5px;
+  font-size: 21px;
+}
+
+.links {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+/*# sourceMappingURL=Über.css.map */

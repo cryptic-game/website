@@ -1,0 +1,156 @@
+$lightGrey: #717171;
+$darkGrey: #212121;
+$darkGreen: #109910;
+body {
+    background-image: url(../assets/neon_cry_fullhd.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: white;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 22px;
+}
+
+#title_srceenshots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    font-size: 24px;
+}
+
+img.screenshots {
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title_FAQ {
+    font-size: 35px;
+    margin-left: 10%;
+}
+
+#text_FAQ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 22px;
+}
+
+.navbar {
+    background-color: $darkGrey;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+}
+
+.navbar ul {
+    margin-left: -45px;
+}
+
+ul {
+    list-style: none;
+}
+
+// li {
+//     float: left;
+//     color: $darkGreen;
+//     text-align: center;
+//     text-decoration: none;
+//     font-size: 19px;
+//     width: 16%;
+//}
+li a {
+    float: left;
+    color: $darkGreen;
+    text-align: center;
+    text-decoration: none;
+    width: 16.66%;
+    font-size: 17px;
+    height: 60px;
+    margin-top: -16.5px;
+}
+
+li a:hover {
+    background-color: $darkGreen;
+    color: #fff;
+    text-decoration: underline;
+}
+
+li a p {
+    margin-top: 20px;
+}
+
+#logo {
+    float: left;
+    display: block;
+    max-height: 55px;
+    padding: 3px 62.5px;
+    width: 150px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #109910;
+    border: 0px none #ffffff;
+    border-radius: 17px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #16fe0a;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #477140;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border: 0px solid #ffffff;
+    border-radius: 27px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #000000;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #38ff22;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
