@@ -1,13 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background-color: #212121;
-  background-image: url(../../assets/cry_mindark.png);
-  background-position: center;
-  background-size: 100%;
+  background-image: url(../../cry_mindark.png);
 }
 
 .grid-container {
@@ -46,10 +38,6 @@ a {
 
 a:visited {
   color: #919191;
-}
-
-li {
-  margin-top: 25px;
 }
 
 #item1 {

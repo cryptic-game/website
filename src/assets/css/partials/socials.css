@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'socialfont';
-  src: url("../fonts/socialfont.eot?mh1paq");
-  src: url("../fonts/socialfont.eot?#iefixmh1paq") format("embedded-opentype"), url("../fonts/socialfont.woff?mh1paq") format("woff"), url("../fonts/socialfont.ttf?mh1paq") format("truetype"), url("../fonts/socialfont.svg?mh1paq#icomoon") format("svg");
+  src: url("../../../fonts/socialfont.eot?mh1paq");
+  src: url("../../../fonts/socialfont.eot?#iefixmh1paq") format("embedded-opentype"), url("../../../font/socialfont.woff?mh1paq") format("woff"), url("../../../fonts/socialfont.ttf?mh1paq") format("truetype"), url("../../../fonts/socialfont.svg?mh1paq#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }

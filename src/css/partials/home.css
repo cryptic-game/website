@@ -1,48 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background-color: #717171;
-  background-image: url(../../assets/world_map_binary_green.png);
-  background-size: 100%;
-}
-
-.navbar {
-  background-color: #212121;
-  position: fixed;
-  height: 60px;
-  width: 100%;
-}
-
-.navbar ul {
-  margin-left: -45px;
-}
-
-ul {
-  list-style: none;
-}
-
-li a {
-  float: left;
-  color: #109910;
-  text-align: center;
-  text-decoration: none;
-  width: 16.66%;
-  font-size: 17px;
-  height: 60px;
-  margin-top: -16.5px;
-}
-
-li a p {
-  margin-top: 20px;
-}
-
-li a:hover {
-  background-color: #109910;
-  color: #fff;
-  text-decoration: underline;
+  background-image: url(../../world_map_binary_green.png);
 }
 
 img {
