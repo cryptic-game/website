@@ -1,17 +1,8 @@
 $lightGrey: #919191;
 $darkGrey: #212121;
 $darkGreen: #109910;
-
 body {
-    font-family: 'Roboto', sans-serif;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: $darkGrey; 
-    background-image: url(../assets/cry_mindark.png);
-    background-position: center;
-    background-size: 100%;
+    background-image: url(../../cry_mindark.png);
 }
 
 .grid-container {
@@ -44,14 +35,9 @@ body {
 a {
     color: $lightGrey;
     text-decoration: none;
-}
-
-a:visited {
-    color: $lightGrey;
-}
-
-li {
-    margin-top: 25px;
+    &:visited {
+        color: $lightGrey;
+    }
 }
 
 #item1 {

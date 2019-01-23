@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../../css/partials/spiel.css",
+	"sources": [
+		"../../../css/partials/spiel.scss"
+	],
+	"sourcesContent": [
+		"$lightGrey: #717171;\r\n$darkGrey: #212121;\r\n$darkGreen: #109910;\r\nbody {\r\n    background-image: url(../../neon_cry_fullhd.png);\r\n}\r\n\r\n#title {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    font-size: 24px;\r\n}\r\n\r\n.text {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    margin-left: 10%;\r\n    margin-right: 10%;\r\n    font-size: 22px;\r\n}\r\n\r\n#title_srceenshots {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    margin-left: 10%;\r\n    margin-right: 10%;\r\n    color: white;\r\n    font-size: 24px;\r\n}\r\n\r\nimg.screenshots {\r\n    width: 75%;\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n#title_FAQ {\r\n    font-size: 35px;\r\n    margin-left: 10%;\r\n}\r\n\r\n#text_FAQ {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    margin-left: 10%;\r\n    margin-right: 10%;\r\n    font-size: 22px;\r\n}\r\n\r\n#logo {\r\n    float: left;\r\n    display: block;\r\n    max-height: 55px;\r\n    padding: 3px 62.5px;\r\n    width: 150px;\r\n}"
+	],
+	"mappings": ";AAGA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAA+B,8BAAC;CACnD;;;AAED,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,IAAK;EACd,WAAW,EAAE,MAAO;EACpB,eAAe,EAAE,MAAO;EACxB,SAAS,EAAE,IAAK;CACnB;;;AAED,AAAA,KAAK,CAAC;EACF,OAAO,EAAE,IAAK;EACd,WAAW,EAAE,MAAO;EACpB,eAAe,EAAE,MAAO;EACxB,WAAW,EAAE,GAAI;EACjB,YAAY,EAAE,GAAI;EAClB,SAAS,EAAE,IAAK;CACnB;;;AAED,AAAA,kBAAkB,CAAC;EACf,OAAO,EAAE,IAAK;EACd,WAAW,EAAE,MAAO;EACpB,eAAe,EAAE,MAAO;EACxB,WAAW,EAAE,GAAI;EACjB,YAAY,EAAE,GAAI;EAClB,KAAK,EAAE,KAAM;EACb,SAAS,EAAE,IAAK;CACnB;;;AAED,AAAG,GAAA,AAAA,YAAY,CAAC;EACZ,KAAK,EAAE,GAAI;EACX,OAAO,EAAE,KAAM;EACf,WAAW,EAAE,IAAK;EAClB,YAAY,EAAE,IAAK;CACtB;;;AAED,AAAA,UAAU,CAAC;EACP,SAAS,EAAE,IAAK;EAChB,WAAW,EAAE,GAAI;CACpB;;;AAED,AAAA,SAAS,CAAC;EACN,OAAO,EAAE,IAAK;EACd,WAAW,EAAE,MAAO;EACpB,eAAe,EAAE,MAAO;EACxB,WAAW,EAAE,GAAI;EACjB,YAAY,EAAE,GAAI;EAClB,SAAS,EAAE,IAAK;CACnB;;;AAED,AAAA,KAAK,CAAC;EACF,KAAK,EAAE,IAAK;EACZ,OAAO,EAAE,KAAM;EACf,UAAU,EAAE,IAAK;EACjB,OAAO,EAAE,UAAW;EACpB,KAAK,EAAE,KAAM;CAChB",
+	"names": []
+}

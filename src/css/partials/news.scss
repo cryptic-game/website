@@ -1,0 +1,55 @@
+﻿$lightGrey: #717171;
+$darkGrey: #212121;
+$darkGreen: #109910;
+body {
+    background-image: url(../../code_wall.png);
+}
+
+a {
+    color: #fff;
+    &:hover {
+        color: $darkGreen;
+    }
+}
+
+
+@media screen and (min-width: 768px) {}
+
+.dark {
+    margin: auto;
+    background-color: $darkGrey;
+    border-radius: 10px;
+    max-width: 700px;
+    padding: 5pt;
+    text-color: #fff;
+}
+
+.inside {
+    background-color: $darkGrey;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 25px;
+    color: #fff;
+    p {
+        font-size: 27px;
+        max-width: 85%;
+    }
+    h2 {
+        font-size: 28px;
+        color: $darkGreen;
+    }
+}
+
+#first_box {
+    font-size: 35px;
+    color: $darkGreen;
+}
+
+img {
+    float: left;
+    display: block;
+    max-height: 55px;
+    padding: 3px 62.5px;
+    width: 150px;
+}

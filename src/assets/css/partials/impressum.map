@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../../css/partials/impressum.css",
+	"sources": [
+		"../../../css/partials/impressum.scss"
+	],
+	"sourcesContent": [
+		"$lightGrey: #919191;\r\n$darkGrey: #212121;\r\n$darkGreen: #109910;\r\nbody {\r\n    background-image: url(../../cry_mindark.png);\r\n}\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-template-rows: 1fr 1fr 1fr;\r\n    grid-template-areas: \". .\" \". .\" \". .\";\r\n}\r\n\r\n@media all and (-ms-high-contrast:none) {\r\n    .grid-container {\r\n        display: -ms-grid;\r\n        -ms-grid-columns: 1fr 1fr;\r\n        -ms-grid-rows: 1fr 1fr 1fr;\r\n    }\r\n}\r\n\r\n.uList {\r\n    color: $lightGrey;\r\n    list-style: none;\r\n    font-size: 21px;\r\n    \r\n}\r\n\r\n.uList2 {\r\n    list-style: none;\r\n    color: $darkGrey;\r\n}\r\n\r\na {\r\n    color: $lightGrey;\r\n    text-decoration: none;\r\n    &:visited {\r\n        color: $lightGrey;\r\n    }\r\n}\r\n\r\n#item1 {\r\n    align-self: center;\r\n    justify-self: center;\r\n    color: $lightGrey;\r\n}\r\n\r\n#item2 {\r\n    color: $lightGrey;\r\n    align-self: center;\r\n    justify-self: center;\r\n}\r\n\r\n#item3 {\r\n    align-self: center;\r\n    justify-self: center;\r\n    margin-left: 40px;\r\n    color: $lightGrey;\r\n\r\n}\r\n\r\n#item4 {\r\n    align-self: center;\r\n    justify-self: center;\r\n    margin-left: -130px;\r\n}"
+	],
+	"mappings": ";AAGA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAA2B,0BAAC;CAC/C;;;AAED,AAAA,eAAe,CAAC;EACZ,OAAO,EAAE,IAAK;EACd,qBAAqB,EAAE,OAAQ;EAC/B,kBAAkB,EAAE,WAAY;EAChC,mBAAmB,EAAE,iBAAkB;CAC1C;;AAED,MAAM,CAAN,GAAG,MAAO,iBAAgB,EAAE,IAAI;;EAC5B,AAAA,eAAe,CAAC;IACZ,OAAO,EAAE,QAAS;IAClB,gBAAgB,EAAE,OAAQ;IAC1B,aAAa,EAAE,WAAY;GAC9B;;;;AAGL,AAAA,MAAM,CAAC;EACH,KAAK,EAvBG,OAAO;EAwBf,UAAU,EAAE,IAAK;EACjB,SAAS,EAAE,IAAK;CAEnB;;;AAED,AAAA,OAAO,CAAC;EACJ,UAAU,EAAE,IAAK;EACjB,KAAK,EA9BE,OAAO;CA+BjB;;;AAED,AAAA,CAAC,CAAC;EACE,KAAK,EAnCG,OAAO;EAoCf,eAAe,EAAE,IAAK;CAIzB;;;AAND,AAAA,CAAC,AAGI,QAAQ,CAAC;EACN,KAAK,EAtCD,OAAO;CAuCd;;;AAGL,AAAA,MAAM,CAAC;EACH,UAAU,EAAE,MAAO;EACnB,YAAY,EAAE,MAAO;EACrB,KAAK,EA7CG,OAAO;CA8ClB;;;AAED,AAAA,MAAM,CAAC;EACH,KAAK,EAjDG,OAAO;EAkDf,UAAU,EAAE,MAAO;EACnB,YAAY,EAAE,MAAO;CACxB;;;AAED,AAAA,MAAM,CAAC;EACH,UAAU,EAAE,MAAO;EACnB,YAAY,EAAE,MAAO;EACrB,WAAW,EAAE,IAAK;EAClB,KAAK,EA1DG,OAAO;CA4DlB;;;AAED,AAAA,MAAM,CAAC;EACH,UAAU,EAAE,MAAO;EACnB,YAAY,EAAE,MAAO;EACrB,WAAW,EAAE,MAAO;CACvB",
+	"names": []
+}

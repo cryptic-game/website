@@ -1,6 +1,6 @@
+/* line 5, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url(../assets/code_wall.png);
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -9,49 +9,10 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  color: white;
 }
 
-a {
-  color: #fff;
-}
-
-a:hover {
-  color: #109910;
-}
-
-.dark {
-  margin: auto;
-  background-color: #2d2b2b;
-  border-radius: 10px;
-  max-width: 700px;
-  padding: 5pt;
-  text-color: #fff;
-}
-
-.inside {
-  background-color: #2d2b2ba4;
-  border-radius: 10px;
-  max-width: 700px;
-  margin: auto;
-  margin-top: 25px;
-  color: #fff;
-}
-
-.inside p {
-  font-size: 27px;
-  max-width: 85%;
-}
-
-.inside h2 {
-  font-size: 28px;
-  color: #109110;
-}
-
-#first_box {
-  font-size: 35px;
-  color: #109910;
-}
-
+/* line 18, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 .navbar {
   background-color: #212121;
   position: fixed;
@@ -59,14 +20,13 @@ a:hover {
   width: 100%;
 }
 
+/* line 24, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 .navbar ul {
   margin-left: -45px;
-}
-
-ul {
   list-style: none;
 }
 
+/* line 37, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 li a {
   float: left;
   color: #109910;
@@ -78,63 +38,67 @@ li a {
   margin-top: -16.5px;
 }
 
+/* line 46, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 li a p {
   margin-top: 20px;
 }
 
+/* line 49, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 li a:hover {
   background-color: #109910;
   color: #fff;
   text-decoration: underline;
 }
 
-img {
-  float: left;
-  display: block;
-  max-height: 55px;
-  padding: 3px 62.5px;
-  width: 150px;
-}
-
+/* line 57, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
 }
 
+/* line 62, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 ::-webkit-scrollbar-button {
   width: 0px;
   height: 0px;
 }
 
+/* line 67, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 ::-webkit-scrollbar-thumb {
   background: #109910;
   border: 0px none #ffffff;
   border-radius: 17px;
 }
 
+/* line 71, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 ::-webkit-scrollbar-thumb:hover {
   background: #16fe0a;
 }
 
+/* line 74, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 ::-webkit-scrollbar-thumb:active {
-  background: #477140;
+  background: #109910;
 }
 
+/* line 79, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 ::-webkit-scrollbar-track {
   background: #000000;
   border: 0px solid #ffffff;
   border-radius: 27px;
 }
 
+/* line 83, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 ::-webkit-scrollbar-track:hover {
   background: #000000;
 }
 
+/* line 86, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 ::-webkit-scrollbar-track:active {
-  background: #38ff22;
+  background: #16fe0a;
 }
 
+/* line 91, C:/xampp/htdocs/cryptic-website/src/css/global.scss */
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
-/*# sourceMappingURL=News.css.map */
+
+/*# sourceMappingURL=../assets/css/global.map */
