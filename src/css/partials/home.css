@@ -2,6 +2,10 @@ body {
   background-image: url(../../world_map_binary_green.png);
 }
 
+a {
+  color: #109910;
+}
+
 img {
   float: left;
   display: block;
