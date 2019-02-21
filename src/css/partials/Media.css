@@ -25,12 +25,12 @@ h1 {
     z-index: -1;
 }
 
-.InArbeit {
+.inProgress {
     color: red;
     text-decoration: underline;
 }
 
-.Hintergründe {
+.Backgrounds {
     clear: both;
     z-index: -1;
     position: relative;
@@ -41,7 +41,7 @@ h1 {
     text-align: center;
 }
 
-.Hintergrundbild {
+.Wallpaper {
     clear: both;
     z-index: 0;
     width: 75%;
