@@ -4,19 +4,21 @@ body {
 }
 
 p {
-    font: 100%
+    
 }
 
 h2 {
     
     text-decoration: underline;
     color: #109910;
+    font-size: 2em;
 }
 
 h1 {
     color: #109910;
     text-decoration: underline;
     text-align: center;
+    font-size: 3em;
 }
 
 #Video {
