@@ -1,0 +1,323 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'socialfont';
+  src: url("../../../fonts/socialfont.eot?mh1paq");
+  src: url("../../../fonts/socialfont.eot?#iefixmh1paq") format("embedded-opentype"), url("../../../font/socialfont.woff?mh1paq") format("woff"), url("../../../fonts/socialfont.ttf?mh1paq") format("truetype"), url("../../../fonts/socialfont.svg?mh1paq#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 13, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+[class*=" icon-"],
+[class^=icon-] {
+  font-family: socialfont;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-facebook:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-facebook.color:hover {
+  background-color: #3b5998;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-facebook.borderless:hover {
+  color: #3b5998;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-twitter:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-twitter.color:hover {
+  background-color: #4dc8f1;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-twitter.borderless:hover {
+  color: #4dc8f1;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-instagram:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-instagram.color:hover {
+  background-color: #3e739d;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-instagram.borderless:hover {
+  color: #3e739d;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-behance:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-behance.color:hover {
+  background-color: #0683f1;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-behance.borderless:hover {
+  color: #0683f1;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-vimeo:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-vimeo.color:hover {
+  background-color: #86c9ef;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-vimeo.borderless:hover {
+  color: #86c9ef;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-youtube:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-youtube.color:hover {
+  background-color: #ce332d;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-youtube.borderless:hover {
+  color: #ce332d;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-googleplus:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-googleplus.color:hover {
+  background-color: #d13f2d;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-googleplus.borderless:hover {
+  color: #d13f2d;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-rss:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-rss.color:hover {
+  background-color: #f88b02;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-rss.borderless:hover {
+  color: #f88b02;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-pinterest:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-pinterest.color:hover {
+  background-color: #cb2028;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-pinterest.borderless:hover {
+  color: #cb2028;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-tumblr:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-tumblr.color:hover {
+  background-color: #274152;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-tumblr.borderless:hover {
+  color: #274152;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-linkedin:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-linkedin.color:hover {
+  background-color: #0275b5;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-linkedin.borderless:hover {
+  color: #0275b5;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-skype:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-skype.color:hover {
+  background-color: #03aceb;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-skype.borderless:hover {
+  color: #03aceb;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-github:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-github.color:hover {
+  background-color: #4183C4;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-github.borderless:hover {
+  color: #4183C4;
+}
+
+/* line 26, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-dribbble:before {
+  content: "";
+}
+
+/* line 29, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-dribbble.color:hover {
+  background-color: #ea4c89;
+}
+
+/* line 32, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+.icon-dribbble.borderless:hover {
+  color: #ea4c89;
+}
+
+/* line 107, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button {
+  font-size: 32px;
+  text-decoration: none;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: content-box;
+  transition-property: background-color, color, transform;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* line 117, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.no-animation {
+  transition-property: none !important;
+}
+
+/* line 122, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.color {
+  display: inline-block;
+  border: 1px solid #4b4b4b;
+  border-radius: 50%;
+  padding: .5em;
+}
+
+/* line 127, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.color:hover {
+  border-color: transparent;
+}
+
+/* line 130, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.color:before {
+  color: #4b4b4b;
+}
+
+/* line 133, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.color:hover:before {
+  color: #FFF;
+}
+
+/* line 136, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.color.static:hover {
+  border: 1px solid #4b4b4b !important;
+  background-color: transparent;
+}
+
+/* line 139, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.color.static:hover:before {
+  color: #4b4b4b;
+}
+
+/* line 143, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.color.white {
+  border-width: 2px;
+}
+
+/* line 145, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.color.white:hover {
+  border-color: #FFF;
+}
+
+/* line 151, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.grey {
+  font-size: 32px;
+  display: inline-block;
+  background-color: #3D444D;
+  border-radius: 50%;
+  padding: .5em;
+}
+
+/* line 157, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.grey:hover {
+  transform: translate(0px, -5px);
+}
+
+/* line 160, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.grey:before {
+  color: #FFF;
+}
+
+/* line 163, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.grey.static:hover {
+  transform: none;
+}
+
+/* line 168, C:/xampp/htdocs/cryptic-website/src/css/partials/socials.scss */
+a.social-button.borderless {
+  color: #4b4b4b;
+}
+
+/*# sourceMappingURL=../../assets/css/partials/socials.map */

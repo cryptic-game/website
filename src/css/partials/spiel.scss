@@ -1,0 +1,61 @@
+$lightGrey: #717171;
+$darkGrey: #212121;
+$darkGreen: #109910;
+body {
+    background-image: url(../../neon_cry_fullhd.png);
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 22px;
+}
+
+#title_srceenshots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    font-size: 24px;
+}
+
+img.screenshots {
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title_FAQ {
+    font-size: 35px;
+    margin-left: 10%;
+}
+
+#text_FAQ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 22px;
+}
+
+#logo {
+    float: left;
+    display: block;
+    max-height: 55px;
+    padding: 3px 62.5px;
+    width: 150px;
+}

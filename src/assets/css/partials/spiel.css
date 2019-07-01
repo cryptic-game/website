@@ -1,0 +1,68 @@
+/* line 4, C:/xampp/htdocs/cryptic-website/src/css/partials/spiel.scss */
+body {
+  background-image: url(../../neon_cry_fullhd.png);
+}
+
+/* line 8, C:/xampp/htdocs/cryptic-website/src/css/partials/spiel.scss */
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+/* line 15, C:/xampp/htdocs/cryptic-website/src/css/partials/spiel.scss */
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 22px;
+}
+
+/* line 24, C:/xampp/htdocs/cryptic-website/src/css/partials/spiel.scss */
+#title_srceenshots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+  font-size: 24px;
+}
+
+/* line 34, C:/xampp/htdocs/cryptic-website/src/css/partials/spiel.scss */
+img.screenshots {
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 41, C:/xampp/htdocs/cryptic-website/src/css/partials/spiel.scss */
+#title_FAQ {
+  font-size: 35px;
+  margin-left: 10%;
+}
+
+/* line 46, C:/xampp/htdocs/cryptic-website/src/css/partials/spiel.scss */
+#text_FAQ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 22px;
+}
+
+/* line 55, C:/xampp/htdocs/cryptic-website/src/css/partials/spiel.scss */
+#logo {
+  float: left;
+  display: block;
+  max-height: 55px;
+  padding: 3px 62.5px;
+  width: 150px;
+}
+
+/*# sourceMappingURL=../../assets/css/partials/spiel.map */
