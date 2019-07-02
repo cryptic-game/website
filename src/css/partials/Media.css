@@ -24,7 +24,6 @@ h1 {
 #Video {
     position: relative;
     left: 17%;
-    z-index: -1;
 }
 
 .inProgress {
