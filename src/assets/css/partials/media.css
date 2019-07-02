@@ -3,13 +3,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-<<<<<<< HEAD
-=======
-p {
-    
-}
-
->>>>>>> 20c8713d95d85ee4eed52272ff366d22cf974ed4
 h2 {
     
     text-decoration: underline;
@@ -24,11 +17,7 @@ h1 {
     font-size: 3em;
 }
 
-<<<<<<< HEAD
 iframe {
-=======
-#Video {
->>>>>>> 20c8713d95d85ee4eed52272ff366d22cf974ed4
     position: relative;
     left: 17%;
 }
@@ -40,10 +29,6 @@ iframe {
 
 .Backgrounds {
     clear: both;
-<<<<<<< HEAD
-=======
-    z-index: -1;
->>>>>>> 20c8713d95d85ee4eed52272ff366d22cf974ed4
     position: relative;
     left: 12%;
 }
