@@ -30,7 +30,7 @@ ___
 
 
 
-##LICENSE :scroll:
+## LICENSE :scroll:
 
 [GNU AGPL v3.0](LICENSE)
 
