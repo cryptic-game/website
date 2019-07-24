@@ -1,0 +1,32 @@
+/* line 4, C:/xampp/htdocs/cryptic-website/src/css/partials/about.scss */
+body {
+  background-image: url(../../img/neon_cry_fullhd.jpg);
+}
+
+/* line 8, C:/xampp/htdocs/cryptic-website/src/css/partials/about.scss */
+img {
+  float: left;
+  display: block;
+  max-height: 55px;
+  padding: 3px 62.5px;
+  width: 150px;
+}
+
+/* line 16, C:/xampp/htdocs/cryptic-website/src/css/partials/about.scss */
+.content {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+  background-color: #000000;
+  border-radius: 5px;
+  font-size: 21px;
+}
+
+/* line 25, C:/xampp/htdocs/cryptic-website/src/css/partials/about.scss */
+.links {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=../../assets/css/partials/about.map */

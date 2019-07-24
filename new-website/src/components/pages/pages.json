@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Game",
+        "description": "Was ist Cryptic?",
+        "icon": "faGamepad",
+        "component": "Game.js"
+    },
+    {
+        "name": "News",
+        "description": "Was ist bisher geschehen?",
+        "icon": "faNewspaper",
+        "component": "News.js"
+    },
+    {
+        "name": "About",
+        "description": "-- Folgt --",
+        "icon": "faInfo",
+        "component": "Info.js"
+    }
+]

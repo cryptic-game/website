@@ -1,0 +1,53 @@
+body {
+  background-image: url(../../assets/img/code_wall.jpg);
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #109910;
+}
+
+.dark {
+  margin: auto;
+  background-color: #212121;
+  border-radius: 10px;
+  max-width: 700px;
+  padding: 5pt;
+  text-color: #fff;
+}
+
+.inside {
+  background-color: #212121;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 25px;
+  color: #fff;
+}
+
+.inside p {
+  font-size: 27px;
+  max-width: 85%;
+}
+
+.inside h2 {
+  font-size: 28px;
+  color: #109910;
+}
+
+#first_box {
+  font-size: 35px;
+  color: #109910;
+}
+
+img {
+  float: left;
+  display: block;
+  max-height: 55px;
+  padding: 3px 62.5px;
+  width: 150px;
+}
+/*# sourceMappingURL=news.css.map */
