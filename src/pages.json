@@ -9,7 +9,7 @@
     {
         "name": "Info",
         "description": "Was ist Cryptic?",
-        "icon": "faInfo",
+        "icon": "faQuestion",
         "href": "old/spiel.html"
     },
     {
@@ -21,7 +21,7 @@
     {
         "name": "About",
         "description": "Hintergrund",
-        "icon": "faQuestion",
+        "icon": "faInfo",
         "href": "old/about.html"
     }
 ]
