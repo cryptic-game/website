@@ -3,18 +3,18 @@
         "name": "Game",
         "description": "Was ist Cryptic?",
         "icon": "faGamepad",
-        "component": "Game.js"
+        "href": "https://cryptic-game.net/spiel.html"
     },
     {
         "name": "News",
         "description": "Was ist bisher geschehen?",
         "icon": "faNewspaper",
-        "component": "News.js"
+        "href": "https://cryptic-game.net/news.html"
     },
     {
         "name": "About",
         "description": "-- Folgt --",
         "icon": "faInfo",
-        "component": "Info.js"
+        "href": "https://cryptic-game.net/about.html"
     }
 ]

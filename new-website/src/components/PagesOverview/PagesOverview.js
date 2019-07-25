@@ -2,7 +2,7 @@ import React from "react"
 import anime from "animejs"
 import pages from "../pages/pages.json"
 import Entry from "./Entry.js"
-// getComputedStyle(this.entry).transform
+
 export default class PagesOverview extends React.Component{
     componentDidMount(){
         const size = 95
@@ -28,7 +28,7 @@ export default class PagesOverview extends React.Component{
     render(){
         return(
             <div className="pages-overview">
-                {pages.map(page => <Entry {...page} key={page.name}/>)}
+                {pages.map(page => <Entry {...page} key={page.name} onOpenWindow={this.props.onOpenWindow}/>)}
             </div>
         )
     }

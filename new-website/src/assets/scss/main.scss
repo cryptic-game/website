@@ -66,6 +66,49 @@ body{
                     }
                 }
             }
+            .idle-animatiom{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                border: 10px solid #2ecc71;
+                z-index: -1;
+                cursor: default;
+            }
+        }
+        .window{
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            z-index: 2;
+            .custom-header{
+                height: 20px;
+                width: 100%;
+                background-color: #95a5a6;
+                display: flex;
+                justify-content: flex-end;
+                .control{
+                    display: flex;
+                    align-items: center;
+                    padding: 0 5px;
+                    cursor: pointer;
+                }
+            }
+            iframe{
+                width: 100%;
+                height: calc(100% - 20px);
+            }
+            .resize{
+                height: 15px;
+                width: 15px;
+                background-color: grey;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
+                cursor: se-resize;
+            }
         }
     }
 }
