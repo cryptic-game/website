@@ -6,7 +6,7 @@ const winStartHeight = 300
 
 export default class Window extends React.Component{
     state = {expanded: false}
-    mousedown = {header: false}
+    mousedown = {header: false, resize: false}
 
     componentDidMount(){
         // Setting initial position of window
@@ -58,9 +58,16 @@ export default class Window extends React.Component{
             this.deactivateFullscreen()
     }
 
+    isHoveringOverButton = (mouseX, mouseY) => {
+        return Array.from(this.window.getElementsByClassName("control")).some(btn => {
+            const {x, y, width, height} = btn.getBoundingClientRect()
+            return mouseX >= x && mouseX <= x + width && mouseY >= y && mouseY <= y + height
+        })
+    }
+
     handleHeaderMouseDown = e => {
         // When user wants to move screen while fullscreen is open -> close fullscreen
-        if(this.state.expanded){
+        if(this.state.expanded && !this.isHoveringOverButton(e.clientX, e.clientY)){
             this.setState({expanded: false})
             // Set window to same position on the x axis as the user has clicked it while it was in fullscreen mode
             this.window.style.left = e.clientX - (e.clientX/window.innerWidth*this.window.clientWidth) + "px"
@@ -79,6 +86,11 @@ export default class Window extends React.Component{
 
             this.window.style.left = this.window.offsetLeft - x + "px"
             this.window.style.top = this.window.offsetTop - y + "px"
+
+            if(this.window.offsetTop < 5){
+                this.setState({expanded: true})
+                this.mousedown.header = false
+            }
 
             this.oldMousePos = {x: e.clientX, y: e.clientY}
             this.pos = {x: this.window.offsetLeft, y: this.window.offsetTop}
