@@ -13,7 +13,7 @@ const pagesOverviewEventTarget = new EventTarget()
 
 export default class MainAction extends React.Component{
     state = {isPagesOverviewVisible: false, isIdle: false}
-    idleDelay = 3000
+    idleDelay = 5000
 
     handleRemove = () => {
         this.setState({isPagesOverviewVisible: false})
