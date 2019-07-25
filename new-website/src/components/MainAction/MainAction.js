@@ -9,12 +9,24 @@ const Logo = ({onClick}) => (
     </div>
 )
 
+const pagesOverviewEventTarget = new EventTarget()
+
 export default class MainAction extends React.Component{
     state = {isPagesOverviewVisible: false, isIdle: false}
     idleDelay = 3000
 
+    handleRemove = () => {
+        this.setState({isPagesOverviewVisible: false})
+        pagesOverviewEventTarget.removeEventListener("remove", this.handleRemove)
+    }
+
     handleClick = () => {
-        this.setState(state => ({isPagesOverviewVisible: !state.isPagesOverviewVisible}))
+        if(!this.state.isPagesOverviewVisible) this.setState({isPagesOverviewVisible: true})
+        else {
+            pagesOverviewEventTarget.dispatchEvent(new CustomEvent("request-remove"))
+            pagesOverviewEventTarget.addEventListener("remove", this.handleRemove)
+        }
+
     }
 
     setIdleTimeout = () => this.timeout = setTimeout(() => this.setState({isIdle: true}), this.idleDelay)
@@ -33,7 +45,7 @@ export default class MainAction extends React.Component{
             <div className="main-action">
                 <Logo onClick={this.handleClick}/>
                 {
-                    this.state.isPagesOverviewVisible ? <PagesOverview onOpenWindow={this.props.onOpenWindow}/> :
+                    this.state.isPagesOverviewVisible ? <PagesOverview onOpenWindow={this.props.onOpenWindow} eventTarget={pagesOverviewEventTarget}/> :
                     this.state.isIdle ? <><IdleAnimation/><IdleAnimation offset={100}/></> : null
                 }
             </div>
