@@ -16,12 +16,19 @@ export default class Window extends React.Component{
         this.dimensions = {width: this.window.clientWidth, height: this.window.clientHeight}
         // Controls for moving window
         this.header.addEventListener("mousedown", e => {
+            // When user wants to move screen while fullscreen is open -> close fullscreen
+            if(this.state.expanded){
+                this.setState({expanded: false})
+                // Set window to same position on the x axis as the user has clicked it while it was in fullscreen mode
+                this.window.style.left = e.clientX - (e.clientX/window.innerWidth*this.window.clientWidth) + "px"
+                this.window.style.top = e.clientY + "px"
+            }
             this.oldMousePos = {x: e.clientX, y: e.clientY}
             this.mousedown.header = true
         })
         this.header.addEventListener("mouseup", () => this.mousedown.header = false)
         document.addEventListener("mousemove", e => {
-            if(this.mousedown.header && !this.state.expanded){
+            if(this.mousedown.header){
                 const x = this.oldMousePos.x - e.clientX
                 const y = this.oldMousePos.y - e.clientY
 
@@ -65,15 +72,22 @@ export default class Window extends React.Component{
         this.window.style.height = this.dimensions.height + "px"
     }
 
+    activateFullscreen = () => {
+        this.resetStyles()
+        this.window.classList.add("fullscreen")
+    }
+
+    deactivateFullscreen = () => {
+        this.applyStyles()
+        this.window.classList.remove("fullscreen")
+    }
+
     componentDidUpdate(prevProps, prevState){
         // Expanded changed to true -> expand window to fullscreen
-        if(!prevState.expanded && this.state.expanded){
-            this.resetStyles()
-            this.window.classList.add("fullscreen")
-        }else if(!this.state.expanded && prevState.expanded){
-            this.applyStyles()
-            this.window.classList.remove("fullscreen")
-        }
+        if(!prevState.expanded && this.state.expanded)
+            this.activateFullscreen()
+        else if(!this.state.expanded && prevState.expanded)
+            this.deactivateFullscreen()
     }
 
     handleExpand = () => this.setState({expanded: true})
