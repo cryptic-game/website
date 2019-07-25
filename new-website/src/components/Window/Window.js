@@ -13,6 +13,7 @@ export default class Window extends React.Component{
         this.window.style.left = Math.random() * (window.innerWidth - winStartWidth) + "px"
         this.window.style.top = Math.random() * (window.innerHeight - winStartHeight) + "px"
         this.pos = {x: this.window.offsetLeft, y: this.window.offsetTop}
+        this.dimensions = {width: this.window.clientWidth, height: this.window.clientHeight}
         // Controls for moving window
         this.header.addEventListener("mousedown", e => {
             this.oldMousePos = {x: e.clientX, y: e.clientY}
@@ -20,7 +21,7 @@ export default class Window extends React.Component{
         })
         this.header.addEventListener("mouseup", () => this.mousedown.header = false)
         document.addEventListener("mousemove", e => {
-            if(this.mousedown.header){
+            if(this.mousedown.header && !this.state.expanded){
                 const x = this.oldMousePos.x - e.clientX
                 const y = this.oldMousePos.y - e.clientY
 
@@ -40,22 +41,37 @@ export default class Window extends React.Component{
         })
         this.resize.addEventListener("mouseup", () => this.mousedown.resize = false)
         document.addEventListener("mousemove", e => {
-            if(this.mousedown.resize){
-                this.window.style.width = this.startDimensions.width + e.clientX - this.startPos.x + "px"
-                this.window.style.height = this.startDimensions.height + e.clientY - this.startPos.y + "px"
+            if(this.mousedown.resize && !this.state.expanded){
+                const newWidth = this.startDimensions.width + e.clientX - this.startPos.x
+                const newHeight = this.startDimensions.height + e.clientY - this.startPos.y
+                this.window.style.width = newWidth + "px"
+                this.window.style.height = newHeight + "px"
+                this.dimensions = {width: newWidth, height: newHeight}
             }
         })
+    }
+
+    resetStyles = () => {
+        this.window.style.left = ""
+        this.window.style.top = ""
+        this.window.style.width = ""
+        this.window.style.height = ""
+    }
+
+    applyStyles = () => {
+        this.window.style.left = this.pos.x + "px"
+        this.window.style.top = this.pos.y + "px"
+        this.window.style.width = this.dimensions.width + "px"
+        this.window.style.height = this.dimensions.height + "px"
     }
 
     componentDidUpdate(prevProps, prevState){
         // Expanded changed to true -> expand window to fullscreen
         if(!prevState.expanded && this.state.expanded){
-            this.window.style.left = ""
-            this.window.style.top = ""
+            this.resetStyles()
             this.window.classList.add("fullscreen")
         }else if(!this.state.expanded && prevState.expanded){
-            this.window.style.left = this.pos.x + "px"
-            this.window.style.top = this.pos.y + "px"
+            this.applyStyles()
             this.window.classList.remove("fullscreen")
         }
     }
