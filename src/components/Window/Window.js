@@ -1,6 +1,5 @@
 import React from "react"
 import Header from "./Header/Header.js"
-import ExpandIndicator from "./ExpandIndicator.js"
 
 const winStartWidth = 700
 const winStartHeight = 500
@@ -81,6 +80,7 @@ export default class Window extends React.Component{
             this.window.style.left = e.clientX - (e.clientX/window.innerWidth*this.window.clientWidth) + "px"
             this.window.style.top = e.clientY + "px"
         }
+        this.props.onFocus()
         this.oldMousePos = {x: e.clientX, y: e.clientY}
         this.mousedown.header = true
     }
@@ -145,7 +145,7 @@ export default class Window extends React.Component{
         // This will be done later
         // {this.state.showExpandIndicator && <ExpandIndicator mouse={this.oldMousePos} onAnimationFinished={this.handleAnimationFinished}/>}
         return(
-            <div className="window" ref={ref => this.window = ref}>
+            <div className="window" ref={ref => this.window = ref} style={{zIndex: this.props.zIndex}}>
                 <Header
                     expanded={this.state.expanded}
                     onExpand={this.handleExpand}
