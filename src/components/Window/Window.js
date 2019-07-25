@@ -1,8 +1,8 @@
 import React from "react"
 import Header from "./Header/Header.js"
 
-const winStartWidth = 500
-const winStartHeight = 300
+const winStartWidth = 700
+const winStartHeight = 500
 
 export default class Window extends React.Component{
     state = {expanded: false}
@@ -12,6 +12,9 @@ export default class Window extends React.Component{
         // Setting initial position of window
         this.window.style.left = Math.random() * (window.innerWidth - winStartWidth) + "px"
         this.window.style.top = Math.random() * (window.innerHeight - winStartHeight) + "px"
+        this.window.style.width = winStartWidth + "px"
+        this.window.style.height = winStartHeight + "px"
+
         this.pos = {x: this.window.offsetLeft, y: this.window.offsetTop}
         this.dimensions = {width: this.window.clientWidth, height: this.window.clientHeight}
 
@@ -34,6 +37,7 @@ export default class Window extends React.Component{
     }
 
     applyStyles = () => {
+        console.log(this.pos)
         this.window.style.left = this.pos.x + "px"
         this.window.style.top = this.pos.y + "px"
         this.window.style.width = this.dimensions.width + "px"

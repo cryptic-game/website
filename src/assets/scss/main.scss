@@ -79,8 +79,6 @@ body{
         }
         .window{
             position: absolute;
-            width: 500px;
-            height: 300px;
             z-index: 2;
             &.fullscreen{
                 width: unset;
