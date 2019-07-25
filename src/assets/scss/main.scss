@@ -29,8 +29,7 @@ body{
             }
         }
         .main-action{
-            width: 50vw;
-            max-width: 700px;
+            width: 700px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -38,6 +37,7 @@ body{
             cursor: pointer;
             .logo{
                 filter: brightness(1);
+                user-select: none;
                 width: 100%;
             }
             .pages-overview{
@@ -111,6 +111,12 @@ body{
                 right: 0;
                 clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
                 cursor: se-resize;
+            }
+            .expand-indicator{
+                top: 0; left: 0;
+                box-shadow: 0 0 10px 5px inset #3498db;
+                border-radius: 50%;
+                position: absolute;
             }
         }
     }

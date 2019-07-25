@@ -1,11 +1,12 @@
 import React from "react"
 import Header from "./Header/Header.js"
+import ExpandIndicator from "./ExpandIndicator.js"
 
 const winStartWidth = 700
 const winStartHeight = 500
 
 export default class Window extends React.Component{
-    state = {expanded: false}
+    state = {expanded: false, showExpandIndicator: false}
     mousedown = {header: false, resize: false}
 
     componentDidMount(){
@@ -26,7 +27,11 @@ export default class Window extends React.Component{
         // Controls for resizing window
         this.resize.addEventListener("mousedown", this.handleResizeMouseDown)
         this.resize.addEventListener("mouseup", this.handleResizeMouseUp)
-        document.addEventListener("mousemove", this.handleResizeMouseMove)
+
+        // Reset mousedown values in case of glitches
+        document.addEventListener("mouseup", this.handleMouseUp)
+
+        document.addEventListener("keydown", () => this.setState({showExpandIndicator: !this.state.showExpandIndicator}))
     }
 
     resetStyles = () => {
@@ -37,7 +42,6 @@ export default class Window extends React.Component{
     }
 
     applyStyles = () => {
-        console.log(this.pos)
         this.window.style.left = this.pos.x + "px"
         this.window.style.top = this.pos.y + "px"
         this.window.style.width = this.dimensions.width + "px"
@@ -81,23 +85,31 @@ export default class Window extends React.Component{
         this.mousedown.header = true
     }
 
-    handleHeaderMouseUp = () => this.mousedown.header = false
+    handleHeaderMouseUp = () => {
+        if(this.shouldExpand){
+            this.setState({expanded: true})
+            this.shouldExpand = false
+        }
+    }
 
     handleHeaderMouseMove = e => {
         if(this.mousedown.header){
             const x = this.oldMousePos.x - e.clientX
             const y = this.oldMousePos.y - e.clientY
 
-            this.window.style.left = this.window.offsetLeft - x + "px"
-            this.window.style.top = this.window.offsetTop - y + "px"
-
-            if(this.window.offsetTop < 5){
-                this.setState({expanded: true})
-                this.mousedown.header = false
+            if(e.clientX >= 0 && e.clientX <= window.innerWidth && e.clientY >= 0 && e.clientY <= window.innerHeight){
+                this.window.style.left = this.window.offsetLeft - x + "px"
+                this.window.style.top = Math.max(this.window.offsetTop, 0) - y + "px"
             }
 
             this.oldMousePos = {x: e.clientX, y: e.clientY}
             this.pos = {x: this.window.offsetLeft, y: this.window.offsetTop}
+
+            // Mouse is on top of screen -> expand window to fullscreen
+            if(e.clientY <= 0){
+                this.shouldExpand = true
+                this.setState({showExpandIndicator: true})
+            }
         }
     }
 
@@ -106,8 +118,6 @@ export default class Window extends React.Component{
         this.startDimensions = {width: this.window.offsetWidth, height: this.window.offsetHeight}
         this.mousedown.resize = true
     }
-
-    handleResizeMouseUp = () => this.mousedown.resize = false
 
     handleResizeMouseMove = e => {
         if(this.mousedown.resize && !this.state.expanded){
@@ -119,13 +129,21 @@ export default class Window extends React.Component{
         }
     }
 
+    handleMouseUp = () => {
+        for(let key in this.mousedown) this.mousedown[key] = false
+    }
+
     handleExpand = () => this.setState({expanded: true})
 
     handleCompress = () => this.setState({expanded: false})
 
     handleClose = () => this.props.onClose()
 
+    handleAnimationFinished = () => this.setState({showExpandIndicator: false})
+
     render(){
+        // This will be done later
+        // {this.state.showExpandIndicator && <ExpandIndicator mouse={this.oldMousePos} onAnimationFinished={this.handleAnimationFinished}/>}
         return(
             <div className="window" ref={ref => this.window = ref}>
                 <Header

@@ -5,7 +5,7 @@ import IdleAnimation from "./IdleAnimation.js"
 
 const Logo = ({onClick}) => (
     <div className="logo-wrapper" onClick={onClick}>
-        <img src={logo} alt="Logo" className="logo"/>
+        <img src={logo} alt="Logo" className="logo" draggable="false"/>
     </div>
 )
 
