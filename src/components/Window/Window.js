@@ -25,7 +25,7 @@ export default class Window extends React.Component{
 
         // Controls for resizing window
         this.resize.addEventListener("mousedown", this.handleResizeMouseDown)
-        this.resize.addEventListener("mouseup", this.handleResizeMouseUp)
+        this.resize.addEventListener("mousemove", this.handleResizeMouseMove)
 
         // Reset mousedown values in case of glitches
         document.addEventListener("mouseup", this.handleMouseUp)
@@ -106,10 +106,10 @@ export default class Window extends React.Component{
             this.pos = {x: this.window.offsetLeft, y: this.window.offsetTop}
 
             // Mouse is on top of screen -> expand window to fullscreen
-            if(e.clientY <= 0){
-                this.shouldExpand = true
-                this.setState({showExpandIndicator: true})
-            }
+            // if(e.clientY <= 0){
+            //     this.shouldExpand = true
+            //     this.setState({showExpandIndicator: true})
+            // }
         }
     }
 
@@ -153,7 +153,7 @@ export default class Window extends React.Component{
                     onClose={this.handleClose}
                     getRef={ref => this.header = ref}
                 />
-                <iframe src={this.props.href} title={this.props.href} frameBorder="0" ref={ref => this.iframe = ref}/>
+                <iframe src={this.props.href} title={this.props.href} frameBorder="0"/>
                 <div className="resize" ref={ref => this.resize = ref}/>
             </div>
         )

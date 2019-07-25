@@ -1,8 +1,15 @@
 [
     {
         "name": "Game",
-        "description": "Was ist Cryptic?",
+        "description": "Das Spiel",
         "icon": "faGamepad",
+        "href": "https://play.cryptic-game.net/login",
+        "color": "#e74c3c"
+    },
+    {
+        "name": "Info",
+        "description": "Was ist Cryptic?",
+        "icon": "faInfo",
         "href": "old/spiel.html"
     },
     {
@@ -13,8 +20,8 @@
     },
     {
         "name": "About",
-        "description": "-- Folgt --",
-        "icon": "faInfo",
+        "description": "Hintergrund",
+        "icon": "faQuestion",
         "href": "old/about.html"
     }
 ]
