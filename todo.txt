@@ -1,0 +1,2 @@
+Implement library JSFrames.js for the windows
+Change activity indicator of main activity to have an inset shadow
