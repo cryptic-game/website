@@ -5,7 +5,8 @@
         "icon": "faGamepad",
         "href": "https://play.cryptic-game.net/login",
         "type": "redirect",
-        "color": "#e74c3c"
+        "background": "#e74c3c",
+        "color": "#ecf0f1"
     },
     {
         "name": "Info",
