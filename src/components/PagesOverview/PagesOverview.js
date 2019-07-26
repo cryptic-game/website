@@ -46,7 +46,7 @@ export default class PagesOverview extends React.Component{
     render(){
         return(
             <div className="pages-overview">
-                {pages.map(page => <Entry {...page} key={page.name} color={page.color} onOpenWindow={this.props.onOpenWindow}/>)}
+                {pages.map(page => <Entry {...page} key={page.name} onClick={() => this.props.onOpenPage(page.href)}/>)}
             </div>
         )
     }
