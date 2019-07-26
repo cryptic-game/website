@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Cryptic",
+  "name": "Cryptic Homepage",
   "icons": [
     {
       "src": "favicon.ico",
@@ -9,7 +9,7 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "display": "fullscreen",
+  "theme_color": "#2ecc71",
+  "background_color": "#2c3e50"
 }
