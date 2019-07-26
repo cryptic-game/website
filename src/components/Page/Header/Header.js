@@ -1,5 +1,5 @@
 import React from "react"
-import { faTimes, faExpand, faCompress } from "@fortawesome/free-solid-svg-icons"
+import { faTimes } from "@fortawesome/free-solid-svg-icons"
 import Action from "./Action.js"
 
 export default props => {

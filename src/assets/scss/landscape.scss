@@ -1,0 +1,37 @@
+.landscape{
+    .background-video-wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: fixed;
+        video{
+            &:first-child{
+                width: 100%;
+                z-index: -1;
+            }
+            &:last-child{
+                position: fixed;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -2;
+                filter: blur(20px);
+            }
+        }
+    }
+    .main-action{
+        width: 700px;
+        .pages-overview{
+            top: 50%;
+            transform: translateY(-50%);
+            right: 15%;
+            height: 85px;
+            .pages-overview-entry{
+                width: 65px;
+                height: 65px;
+                padding: 10px;
+            }
+        }
+    }
+}

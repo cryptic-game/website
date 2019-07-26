@@ -1,11 +1,12 @@
 import React from "react"
 import logo from "../../assets/img/logo.svg"
+import logoWithText from "../../assets/img/logoWithText.svg"
 import PagesOverview from "../PagesOverview/PagesOverview.js"
 import IdleAnimation from "./IdleAnimation.js"
 
-const Logo = ({onClick}) => (
+const Logo = ({onClick, mode}) => (
     <div className="logo-wrapper" onClick={onClick}>
-        <img src={logo} alt="Logo" className="logo" draggable="false"/>
+        <img src={mode === "normal" ? logoWithText : mode === "small" ? logo : null} alt="Logo" className="logo" draggable="false"/>
     </div>
 )
 
@@ -43,9 +44,9 @@ export default class MainAction extends React.Component{
     render(){
         return(
             <div className="main-action">
-                <Logo onClick={this.handleClick}/>
+                <Logo onClick={this.handleClick} mode={this.props.mode}/>
                 {
-                    this.state.isPagesOverviewVisible ? <PagesOverview onOpenPage={this.props.onOpenPage} eventTarget={pagesOverviewEventTarget}/> :
+                    this.state.isPagesOverviewVisible ? <PagesOverview onOpenPage={this.props.onOpenPage} eventTarget={pagesOverviewEventTarget} mode={this.props.mode}/> :
                     this.state.isIdle ? <><IdleAnimation/><IdleAnimation offset={100}/></> : null
                 }
             </div>

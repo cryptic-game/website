@@ -1,6 +1,6 @@
 import React from "react"
 import anime from "animejs"
-import pages from "../../pages.json"
+import pages from "../../config/pages.json"
 import Entry from "./Entry.js"
 
 const map = (num, in_min, in_max, out_min, out_max) => (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
@@ -14,10 +14,17 @@ export default class PagesOverview extends React.Component{
     }
 
     componentDidMount(){
-        const radius = 150
-        const maxAngle = 280
+        const {mode} = this.props
+        let size, radius, maxAngle, fn
         const radians = deg => deg * Math.PI / 180
-        const fn = (i, method, f=1) => radius * method(map(i > 0 ? i - Math.floor(i/2) : i, 0, pages.length, 0, floor(radians(maxAngle)))) * f
+        if(mode === "normal"){
+            size = 95; radius = 150; maxAngle = 280
+            fn = (i, method, f=1) => radius * method(map(i > 0 ? i - Math.floor(i/2) : i, 0, pages.length, 0, floor(radians(maxAngle)))) * f
+        }else if(mode === "small"){
+            size = 65; radius = 100; maxAngle = 360
+            fn = (i, method) => radius * method(map(i, 0, Math.PI*radius/(size/2), 0, floor(radians(maxAngle)))-floor(radians(90)))
+        }
+
         this.animation = anime({
             targets: ".pages-overview .pages-overview-entry",
             translateX: (e,i) => {
@@ -46,7 +53,7 @@ export default class PagesOverview extends React.Component{
     render(){
         return(
             <div className="pages-overview">
-                {pages.map(page => <Entry {...page} key={page.name} onClick={() => this.props.onOpenPage(page)}/>)}
+                {pages.map(page => <Entry {...page} key={page.name} onClick={() => this.props.onOpenPage(page)} mode={this.props.mode}/>)}
             </div>
         )
     }

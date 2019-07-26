@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import "./landscape.scss";
+@import "./portrait.scss";
 
 :root{
     --active-page-header-height: 25px;
@@ -11,29 +13,7 @@ body{
     .app{
         height: 100vh;
         width: 100vw;
-        .background-video-wrapper{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            position: fixed;
-            video{
-                &:first-child{
-                    width: 100%;
-                    z-index: -1;
-                }
-                &:last-child{
-                    position: fixed;
-                    min-width: 100%;
-                    min-height: 100%;
-                    z-index: -2;
-                    filter: blur(20px);
-                }
-            }
-        }
         .main-action{
-            width: 700px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -45,20 +25,12 @@ body{
                 width: 100%;
             }
             .pages-overview{
-                display: flex;
                 position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 15%;
-                height: 85px;
                 .pages-overview-entry{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    width: 65px;
-                    height: 65px;
-                    padding: 10px;
                     border-radius: 50%;
                     background-color: #2c3e50;
                     color: #ecf0f1;

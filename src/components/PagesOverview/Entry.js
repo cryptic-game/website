@@ -28,7 +28,7 @@ export default class Entry extends React.Component{
             var style = {transform: `translate(${this.entry.dataset.translateX*this.offsetMultiplicator}px, ${this.entry.dataset.translateY*this.offsetMultiplicator}px)`}
         return(
             <div className="pages-overview-entry" ref={ref => this.entry = ref} onClick={this.props.onClick} style={{backgroundColor: this.props.color || null}}>
-                <FontAwesomeIcon icon={icons[this.props.icon]} className="icon" size="3x"/>
+                <FontAwesomeIcon icon={icons[this.props.icon]} className="icon" size={this.props.mode === "normal" ? "3x" : this.props.mode === "small" ? "2x" : null}/>
                 {this.state.showDescription && <Description content={this.props.description} style={style}/>}
             </div>
         )
