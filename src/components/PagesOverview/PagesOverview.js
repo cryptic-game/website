@@ -21,7 +21,7 @@ export default class PagesOverview extends React.Component{
             size = 95; radius = 150; maxAngle = 280
             fn = (i, method, f=1) => radius * method(map(i > 0 ? i - Math.floor(i/2) : i, 0, pages.length, 0, floor(radians(maxAngle)))) * f
         }else if(mode === "small"){
-            size = 65; radius = 100; maxAngle = 360
+            size = 80; radius = 125; maxAngle = 360
             fn = (i, method) => radius * method(map(i, 0, Math.PI*radius/(size/2), 0, floor(radians(maxAngle)))-floor(radians(90)))
         }
 

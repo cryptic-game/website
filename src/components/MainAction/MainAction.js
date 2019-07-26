@@ -47,7 +47,7 @@ export default class MainAction extends React.Component{
                 <Logo onClick={this.handleClick} mode={this.props.mode}/>
                 {
                     this.state.isPagesOverviewVisible ? <PagesOverview onOpenPage={this.props.onOpenPage} eventTarget={pagesOverviewEventTarget} mode={this.props.mode}/> :
-                    this.state.isIdle ? <IdleAnimation/> : null
+                    this.state.isIdle && !this.props.mode === "small" ? <IdleAnimation/> : null
                 }
             </div>
         )

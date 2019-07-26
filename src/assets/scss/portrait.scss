@@ -1,16 +1,17 @@
 .portrait{
-    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-    background-blend-mode: multiply;
+    // background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    // background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     .main-action{
         width: 90px;
         .pages-overview{
             top: 50%;
             left: 50%;
             .pages-overview-entry{
-                width: 50px;
-                height: 50px;
-                padding: 5px;
-                margin: -37px 0 0 -30px;
+                width: 60px;
+                height: 60px;
+                padding: 7.5px;
+                margin: -41px 0 0 -38px;
                 background-color: #ecf0f1;
                 color: #2c3e50;
             }
