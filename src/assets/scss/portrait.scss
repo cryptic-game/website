@@ -15,6 +15,9 @@
         }
     }
     .main-footer{
+        p{
+            margin: 0;
+        }
     }
     .main-container{
         .main-action{
@@ -36,5 +39,6 @@
     .active-page{
         width: 100vw;
         height: 100vh;
+        z-index: 1;
     }
 }

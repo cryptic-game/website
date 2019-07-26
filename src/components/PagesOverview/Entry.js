@@ -29,7 +29,7 @@ export default class Entry extends React.Component{
         return(
             <div className="pages-overview-entry" ref={ref => this.entry = ref} onClick={this.props.onClick} style={{backgroundColor: this.props.background || null, color: this.props.color || null}}>
                 <FontAwesomeIcon icon={icons[this.props.icon]} className="icon" size={this.props.mode === "normal" ? "3x" : this.props.mode === "small" ? "2x" : null}/>
-                {this.state.showDescription && <Description content={this.props.description} style={style}/>}
+                {this.state.showDescription && this.props.mode !== "small" && <Description content={this.props.description} style={style}/>}
             </div>
         )
     }
