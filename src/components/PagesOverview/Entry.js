@@ -24,7 +24,7 @@ export default class Entry extends React.Component{
         if(this.state.active) return (
             <div className="pages-overview-entry active"></div>
         )
-        if(this.state.showDescription)
+        if(this.state.showDescription && this.props.mode === "normal")
             var style = {transform: `translate(${this.entry.dataset.translateX*this.offsetMultiplicator}px, ${this.entry.dataset.translateY*this.offsetMultiplicator}px)`}
         return(
             <div className="pages-overview-entry" ref={ref => this.entry = ref} onClick={this.props.onClick} style={{backgroundColor: this.props.color || null}}>

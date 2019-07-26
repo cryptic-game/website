@@ -48,14 +48,13 @@ body{
                 left: 50%;
                 transform: translate(-50%, -50%);
                 border-radius: 50%;
-                border: 10px solid #2ecc71;
+                box-shadow: 0px 0px 50px 25px #2ecc71 inset;
                 z-index: -1;
                 cursor: default;
             }
         }
         .active-page{
             position: fixed;
-            top: 0; left: 0; bottom: 0; right: 0;
             background-color: #95a5a6;
             display: flex;
             flex-direction: column;

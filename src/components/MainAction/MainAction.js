@@ -14,7 +14,7 @@ const pagesOverviewEventTarget = new EventTarget()
 
 export default class MainAction extends React.Component{
     state = {isPagesOverviewVisible: false, isIdle: false}
-    idleDelay = 5000
+    idleDelay = this.props.mode === "small" ? 0 : 5000
 
     handleRemove = () => {
         this.setState({isPagesOverviewVisible: false})
@@ -47,7 +47,7 @@ export default class MainAction extends React.Component{
                 <Logo onClick={this.handleClick} mode={this.props.mode}/>
                 {
                     this.state.isPagesOverviewVisible ? <PagesOverview onOpenPage={this.props.onOpenPage} eventTarget={pagesOverviewEventTarget} mode={this.props.mode}/> :
-                    this.state.isIdle ? <><IdleAnimation/><IdleAnimation offset={100}/></> : null
+                    this.state.isIdle ? <IdleAnimation/> : null
                 }
             </div>
         )
