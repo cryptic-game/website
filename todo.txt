@@ -1,2 +1,6 @@
 Implement library JSFrames.js for the windows
 Change activity indicator of main activity to have an inset shadow
+Portrait-Version(Mobile-Version)(defined as height > width):
+    - Logo without text in the middle of screen
+    - No Background-Video
+    - Menu items around the logo, beginning from the top and going clockwise
