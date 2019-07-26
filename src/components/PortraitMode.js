@@ -2,6 +2,8 @@ import React from "react"
 import MainAction from "./MainAction/MainAction.js"
 import Page from "./Page/Page.js"
 import { PAGE_TYPES } from "../config/constants.js"
+import Header from "./Header.js"
+import Footer from "./Footer.js"
 
 export default class PortraitMode extends React.Component{
     state = {activePage: false}
@@ -32,8 +34,12 @@ export default class PortraitMode extends React.Component{
     render(){
         return(
             <div className="app portrait">
-                <MainAction onOpenPage={this.handleOpenPage} mode="small"/>
                 {this.state.activePage || null}
+                <Header/>
+                <main className="main-container">
+                    <MainAction onOpenPage={this.handleOpenPage} mode="small"/>
+                </main>
+                <Footer/>
             </div>
         )
     }
