@@ -4,24 +4,28 @@
         "description": "Das Spiel",
         "icon": "faGamepad",
         "href": "https://play.cryptic-game.net/login",
+        "type": "redirect",
         "color": "#e74c3c"
     },
     {
         "name": "Info",
         "description": "Was ist Cryptic?",
         "icon": "faQuestion",
+        "type": "content",
         "href": "old/spiel.html"
     },
     {
         "name": "News",
         "description": "Was ist bisher geschehen?",
         "icon": "faNewspaper",
+        "type": "content",
         "href": "old/news.html"
     },
     {
         "name": "About",
         "description": "Hintergrund",
         "icon": "faInfo",
+        "type": "content",
         "href": "old/about.html"
     }
 ]
