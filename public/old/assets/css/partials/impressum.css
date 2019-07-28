@@ -1,0 +1,76 @@
+/* line 4, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+body {
+  background-image: url(../../img/cry_mindark.png);
+}
+
+/* line 8, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: ". ." ". ." ". .";
+}
+
+@media all and (-ms-high-contrast: none) {
+  /* line 16, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+  .grid-container {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+  }
+}
+
+/* line 23, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+.uList {
+  color: #919191;
+  list-style: none;
+  font-size: 21px;
+}
+
+/* line 30, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+.uList2 {
+  list-style: none;
+  color: #212121;
+}
+
+/* line 35, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+a {
+  color: #919191;
+  text-decoration: none;
+}
+
+/* line 38, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+a:visited {
+  color: #919191;
+}
+
+/* line 43, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+#item1 {
+  align-self: center;
+  justify-self: center;
+  color: #919191;
+}
+
+/* line 49, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+#item2 {
+  color: #919191;
+  align-self: center;
+  justify-self: center;
+}
+
+/* line 55, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+#item3 {
+  align-self: center;
+  justify-self: center;
+  margin-left: 40px;
+  color: #919191;
+}
+
+/* line 63, C:/xampp/htdocs/cryptic-website/src/css/partials/impressum.scss */
+#item4 {
+  align-self: center;
+  justify-self: center;
+  margin-left: -130px;
+}
+
+/*# sourceMappingURL=../../assets/css/partials/impressum.map */

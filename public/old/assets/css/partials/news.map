@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../../css/partials/news.css",
+	"sources": [
+		"../../../css/partials/news.scss"
+	],
+	"sourcesContent": [
+		"﻿$lightGrey: #717171;\r\n$darkGrey: #212121;\r\n$darkGreen: #109910;\r\nbody {\r\n    background-image: url(../../code_wall.png);\r\n}\r\n\r\na {\r\n    color: #fff;\r\n    &:hover {\r\n        color: $darkGreen;\r\n    }\r\n}\r\n\r\n\r\n@media screen and (min-width: 768px) {}\r\n\r\n.dark {\r\n    margin: auto;\r\n    background-color: $darkGrey;\r\n    border-radius: 10px;\r\n    max-width: 700px;\r\n    padding: 5pt;\r\n    text-color: #fff;\r\n}\r\n\r\n.inside {\r\n    background-color: $darkGrey;\r\n    border-radius: 10px;\r\n    max-width: 700px;\r\n    margin: auto;\r\n    margin-top: 25px;\r\n    color: #fff;\r\n    p {\r\n        font-size: 27px;\r\n        max-width: 85%;\r\n    }\r\n    h2 {\r\n        font-size: 28px;\r\n        color: $darkGreen;\r\n    }\r\n}\r\n\r\n#first_box {\r\n    font-size: 35px;\r\n    color: $darkGreen;\r\n}\r\n\r\nimg {\r\n    float: left;\r\n    display: block;\r\n    max-height: 55px;\r\n    padding: 3px 62.5px;\r\n    width: 150px;\r\n}"
+	],
+	"mappings": ";AAGA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAyB,wBAAC;CAC7C;;;AAED,AAAA,CAAC,CAAC;EACE,KAAK,EAAE,IAAK;CAIf;;;AALD,AAAA,CAAC,AAEI,MAAM,CAAC;EACJ,KAAK,EARD,OAAO;CASd;;;AAML,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,IAAK;EACb,gBAAgB,EAlBT,OAAO;EAmBd,aAAa,EAAE,IAAK;EACpB,SAAS,EAAE,KAAM;EACjB,OAAO,EAAE,GAAI;EACb,UAAU,EAAE,IAAK;CACpB;;;AAED,AAAA,OAAO,CAAC;EACJ,gBAAgB,EA1BT,OAAO;EA2Bd,aAAa,EAAE,IAAK;EACpB,SAAS,EAAE,KAAM;EACjB,MAAM,EAAE,IAAK;EACb,UAAU,EAAE,IAAK;EACjB,KAAK,EAAE,IAAK;CASf;;;AAfD,AAOI,OAPG,CAOH,CAAC,CAAC;EACE,SAAS,EAAE,IAAK;EAChB,SAAS,EAAE,GAAI;CAClB;;;AAVL,AAWI,OAXG,CAWH,EAAE,CAAC;EACC,SAAS,EAAE,IAAK;EAChB,KAAK,EArCD,OAAO;CAsCd;;;AAGL,AAAA,UAAU,CAAC;EACP,SAAS,EAAE,IAAK;EAChB,KAAK,EA3CG,OAAO;CA4ClB;;;AAED,AAAA,GAAG,CAAC;EACA,KAAK,EAAE,IAAK;EACZ,OAAO,EAAE,KAAM;EACf,UAAU,EAAE,IAAK;EACjB,OAAO,EAAE,UAAW;EACpB,KAAK,EAAE,KAAM;CAChB",
+	"names": []
+}

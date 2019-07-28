@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import "./landscape.scss";
+@import "./portrait.scss";
+
+:root{
+    --active-page-header-height: 25px;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    .app{
+        height: 100vh;
+        width: 100vw;
+        .main-action{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            .logo{
+                filter: brightness(1);
+                user-select: none;
+                width: 100%;
+            }
+            .pages-overview{
+                position: absolute;
+                .pages-overview-entry{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    .description{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+            .idle-animatiom{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                box-shadow: 0px 0px 50px 25px #2ecc71 inset;
+                z-index: -1;
+                cursor: default;
+            }
+        }
+        .active-page{
+            position: fixed;
+            background-color: #95a5a6;
+            display: flex;
+            flex-direction: column;
+            .custom-header{
+                height: var(--active-page-header-height);
+                background-color: #95a5a6;
+                display: flex;
+                justify-content: flex-end;
+                .control{
+                    display: flex;
+                    align-items: center;
+                    padding: 0 5px;
+                    cursor: pointer;
+                }
+            }
+            iframe{
+                width: 100%;
+                height: calc(100% - var(--active-page-header-height));
+            }
+        }
+    }
+}

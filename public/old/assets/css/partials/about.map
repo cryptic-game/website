@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../../css/partials/about.css",
+	"sources": [
+		"../../../css/partials/about.scss"
+	],
+	"sourcesContent": [
+		"$lightGrey: #717171;\r\n$darkGrey: #212121;\r\n$darkGreen: #109910;\r\nbody {\r\n    background-image: url(../../neon_cry_fullhd.png);\r\n}\r\n\r\nimg {\r\n    float: left;\r\n    display: block;\r\n    max-height: 55px;\r\n    padding: 3px 62.5px;\r\n    width: 150px;\r\n}\r\n\r\n.content {\r\n    margin-left: 10%;\r\n    margin-right: 10%;\r\n    color: white;\r\n    background-color: #000000;\r\n    border-radius: 5px;\r\n    font-size: 21px;\r\n}\r\n\r\n.links {\r\n    color: green;\r\n    background-color: transparent;\r\n    text-decoration: none;\r\n}"
+	],
+	"mappings": ";AAGA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAA+B,8BAAC;CACnD;;;AAED,AAAA,GAAG,CAAC;EACA,KAAK,EAAE,IAAK;EACZ,OAAO,EAAE,KAAM;EACf,UAAU,EAAE,IAAK;EACjB,OAAO,EAAE,UAAW;EACpB,KAAK,EAAE,KAAM;CAChB;;;AAED,AAAA,QAAQ,CAAC;EACL,WAAW,EAAE,GAAI;EACjB,YAAY,EAAE,GAAI;EAClB,KAAK,EAAE,KAAM;EACb,gBAAgB,EAAE,OAAQ;EAC1B,aAAa,EAAE,GAAI;EACnB,SAAS,EAAE,IAAK;CACnB;;;AAED,AAAA,MAAM,CAAC;EACH,KAAK,EAAE,KAAM;EACb,gBAAgB,EAAE,WAAY;EAC9B,eAAe,EAAE,IAAK;CACzB",
+	"names": []
+}

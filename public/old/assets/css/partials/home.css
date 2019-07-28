@@ -1,0 +1,23 @@
+/* line 4, C:/xampp/htdocs/cryptic-website/src/css/partials/home.scss */
+body {
+  background-image: url(../../img/world_map_binary_green.jpg);
+}
+
+/* line 9, C:/xampp/htdocs/cryptic-website/src/css/partials/home.scss */
+img {
+  float: left;
+  display: block;
+  max-height: 55px;
+  padding: 3px 62.5px;
+  width: 150px;
+}
+
+/* line 17, C:/xampp/htdocs/cryptic-website/src/css/partials/home.scss */
+.wallpaper {
+  width: 100%;
+  height: 889px;
+  position: fixed;
+  margin-top: 500px;
+}
+
+/*# sourceMappingURL=../../assets/css/partials/home.map */

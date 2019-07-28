@@ -1,0 +1,79 @@
+body {
+  background-image: url(../../assets/img/neon_cry_fullhd.jpg);
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: ". ." ". ." ". .";
+}
+
+@media all and (-ms-high-contrast: none) {
+  .grid-container {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+  }
+}
+
+.uList {
+  color: #919191;
+  list-style: none;
+  font-size: 21px;
+}
+
+.uList2 {
+  list-style: none;
+  color: #212121;
+}
+
+a {
+  color: #919191;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #919191;
+}
+
+#item1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  color: #919191;
+}
+
+#item2 {
+  color: #919191;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#item3 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-left: 40px;
+  color: #919191;
+}
+
+#item4 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-left: -130px;
+}
+/*# sourceMappingURL=impressum.css.map */
