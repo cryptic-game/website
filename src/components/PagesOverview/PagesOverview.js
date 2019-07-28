@@ -5,6 +5,7 @@ import Entry from "./Entry.js"
 
 const map = (num, in_min, in_max, out_min, out_max) => (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 const floor = num => Math.floor(num*100)/100
+const radians = deg => deg * Math.PI / 180
 
 export default class PagesOverview extends React.Component{
     handleRequestRemove = () => {
@@ -16,7 +17,6 @@ export default class PagesOverview extends React.Component{
     componentDidMount(){
         const {mode} = this.props
         let size, radius, maxAngle, fn
-        const radians = deg => deg * Math.PI / 180
         if(mode === "normal"){
             size = 95; radius = 150; maxAngle = 280
             fn = (i, method, f=1) => radius * method(map(i > 0 ? i - Math.floor(i/2) : i, 0, pages.length, 0, floor(radians(maxAngle)))) * f
