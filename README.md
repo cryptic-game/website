@@ -23,7 +23,9 @@ with the created nginx based docker image
 you can now run a docker container
 you should map port 80 for nginx:
 
-`$ docker run -d -p 80:80 website:latest`
+```
+$ docker run -v ${PWD}:/app -v /app/node_modules -d -p 8080:3000 cryptic-website:latest
+```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
