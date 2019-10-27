@@ -2,14 +2,17 @@
 
 Teilnehmer:  Mimas, Chaozz, Paul1, Riseofrice, Nibiru
 
-## Ziel der Website
+## Ziel der Website 
 - Leute  zum Mithelfen gewinnen
 - Spieler zum mitspielen gewinnen 
  
-## Themen
+## Themen :pencil:
  - VueJS
  - Ghost
- - One Pager
+ - One 
+
+## Content Management System(CMS)
+ - Ghost wird verwendet.
 
 ##  Was wird in der Website gebraucht
 
@@ -27,6 +30,7 @@ erste Sicht:
 - Beschreibung
 - Neuigkeiten Blog
 - Statistiken auf der Website
+- u.v.m
 
 ### GIT
 - neuer Branch vueWebsite wird erstellt und wenn er stable ist wird er auf Master gepusht
