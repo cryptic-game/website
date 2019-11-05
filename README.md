@@ -16,7 +16,7 @@ To help us create this project, you can clone the repository with:
 
 ### Project setup
 ```
-npm install
+yarn install
 ```
 
 ### Compiles and hot-reloads for development
