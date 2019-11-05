@@ -1,5 +1,4 @@
 # Cryptic - Website
-
 ## Welcome
 
 This is the open-source source code to the official website of cryptic-game.
@@ -8,9 +7,11 @@ We develop an open source hacking browser game. This started as a community proj
 
 ___
 
+## [Overview](overview.md)
+
 ## For Developers
 
-To help us create this project, you can clone the repository with:
+You can clone the repository with:
 
 `git clone https://github.com/cryptic-game/website.git`
 
@@ -37,14 +38,8 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-
 ___
-
-
-
 
 ## LICENSE :scroll:
 
 [GNU AGPL v3.0](LICENSE) 
-
-___
