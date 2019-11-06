@@ -19,3 +19,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Yarn is used, so we do not want the NPM lockfile
+package-lock.json
