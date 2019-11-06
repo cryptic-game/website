@@ -7,13 +7,13 @@ We develop an open source hacking browser game. This started as a community proj
 
 ___
 
-## [Overview](overview.md)
-
 ## For Developers
 
 You can clone the repository with:
 
 `git clone https://github.com/cryptic-game/website.git`
+
+Then [read the documentation](docs/README.md) :notebook:.
 
 ### Project setup
 ```
