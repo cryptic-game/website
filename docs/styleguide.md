@@ -10,32 +10,33 @@ Width: 1200px
 Other sections height: _Not yet determined_  
 
 ## Icons
-Window: https://iconmonstr.com/window-11-svg/
-Code: https://iconmonstr.com/code-2-svg/
-Gamepad: https://iconmonstr.com/gamepad-3-svg/
-Paintbrush: https://iconmonstr.com/paintbrush-1-svg/
-Globe: https://iconmonstr.com/globe-3-svg/
-Shield: https://iconmonstr.com/shield-9-svg/
-Correction: https://iconmonstr.com/school-9-svg/
-Translation: https://iconmonstr.com/language-1-svg/
-Video Play Button: https://iconmonstr.com/video-15-svg/
+- Window: https://iconmonstr.com/window-11-svg/
+- Code: https://iconmonstr.com/code-2-svg/
+- Gamepad: https://iconmonstr.com/gamepad-3-svg/
+- Paintbrush: https://iconmonstr.com/paintbrush-1-svg/
+- Globe: https://iconmonstr.com/globe-3-svg/
+- Shield: https://iconmonstr.com/shield-9-svg/
+- Correction: https://iconmonstr.com/school-9-svg/
+- Translation: https://iconmonstr.com/language-1-svg/
+- Video Play Button: https://iconmonstr.com/video-15-svg/
 
-Discord: https://iconmonstr.com/discord-1-svg/
-Github: https://iconmonstr.com/github-1-svg/
-Youtube: https://iconmonstr.com/youtube-1-svg/
+### Brands
+- Discord: https://iconmonstr.com/discord-1-svg/
+- GitHub: https://iconmonstr.com/github-1-svg/
+- YouTube: https://iconmonstr.com/youtube-1-svg/
 
 ### Size
-In the "Teams" section: max. with = 40px  
-Play button: max. width = 50px  
-In the footer: max. height = 30px  
-Discord & Github section: max height = 100px
+- In the "Teams" section: max. width = 40px  
+- Play button: max. width = 50px  
+- In the footer: max. height = 30px  
+- Discord & Github section: max height = 100px
 
 ## Typeface
 Font: Open Sans  
 Weight: Regular, Semibold, Bold  
 Color: #FFFFFF  
 
-**The font size may be changed if it does not fit, but please keep it consistent.**
+**You may change the font size if it does not fit, but please keep it consistent.**
 
 - Title 1
 > Weight: Bold  
@@ -66,17 +67,17 @@ Color: #FFFFFF
 - Text 2
 > Weight: Regular  
 > Size: 25px  
-> Tracking: 30pt  
+> Line spacing: 30pt  
 
 - Button
 > Weight: Semibold  
 > Size: 20pt  
 
 ## Buttons
-Height: 55px  
-Border width: 3pt  
-Border radius: 10px  
-Border color: #FFFFFF  
+- Height: 55px  
+- Border width: 3pt  
+- Border radius: 10px  
+- Border color: #FFFFFF  
 
 ## Colors
 - White: #FFFFFF
