@@ -1,12 +1,14 @@
-{
+module.exports = {
   "root": true,
   "env": {
-    "node": true
+    "browser": true,
   },
   "parserOptions": {
     "parser": "babel-eslint"
   },
   "extends": [
+    "@nuxtjs",
+    "plugin:nuxt/recommended",
     "plugin:vue/essential"
   ],
   "rules": {
@@ -146,4 +148,4 @@
     "vue/no-v-html": "off",
     "vue/html-self-closing": "off"
   }
-}
+};

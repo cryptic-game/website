@@ -17,26 +17,28 @@ Then [read the documentation](docs/README.md) :notebook:.
 
 ### Project setup
 ```
-yarn install
+yarn
 ```
 
-### Compiles and hot-reloads for development
+### Compile and hot-reload for development
 ```
-yarn serve
+yarn dev
 ```
 
-### Compiles and minifies for production
+### Compile and minify for production
 ```
 yarn build
 ```
 
-### Lints and fixes files
+### Start the built files
+```
+yarn start
+```
+
+### Lint and fix files
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ___
 

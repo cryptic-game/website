@@ -11,7 +11,8 @@ Contributors: Mimas, Chaozz, Paul1, Riseofrice, Nibiru, ctexxx
 🎯🎯🎯
 ## :zap: Utilized technologies
 - [Vue.js](https://vuejs.org/) (with Vue CLI)
-- [Ghost CMS](https://ghost.org/)
+- [Nuxt.js](https://nuxtjs.org)
+- [Ghost](https://ghost.org/)
 
 ## :page_facing_up: Content
 - How can I help?
