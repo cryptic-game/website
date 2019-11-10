@@ -11,7 +11,8 @@ export default {
       { hid: "description", name: "description", content: process.env.npm_package_description || "" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" }
     ]
   },
   /*
@@ -22,7 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
-    "tachyons/css/tachyons.css"
+    "@/assets/css/global.scss"
   ],
   /*
   ** Plugins to load before mounting the App
