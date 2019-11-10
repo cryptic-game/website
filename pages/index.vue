@@ -11,6 +11,9 @@
       </video>
       <section class="section hero">
         <div class="hero__content centered-container">
+          <div class="hero__slogan">
+            Don’t <b>play</b> the game, <span><br/><b>create</b> the game</span>
+          </div>
           <h1 class="hero__title">
             An Open Source Game <br/>
             by <b>The Morpheus Tutorials</b>
@@ -60,7 +63,6 @@
 
   .hero {
     background: transparent;
-    padding: 20px 20px 16vh;
     height: 100vh;
 
     display: flex;
@@ -68,10 +70,27 @@
     align-items: flex-end;
     align-content: flex-end;
     flex-direction: row-reverse;
+
+    position: relative;
   }
 
   .hero__content {
     position: relative;
+    padding: 20px 20px 10vh;
+  }
+
+  .hero__slogan {
+    position: relative;
+    top: -30vh;
+    right: 10vw;
+    font-size: 1.6rem;
+    text-align: right;
+
+    & > span:nth-child(2) {
+      position: relative;
+
+      right: -40px;
+    }
   }
 
   .hero__title {
