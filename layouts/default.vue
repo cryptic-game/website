@@ -1,5 +1,6 @@
 <template>
   <div class="default-layout fill-screen">
+    <CNavbar/>
     <nuxt/>
   </div>
 </template>
@@ -11,3 +12,9 @@
 
   }
 </style>
+<script>
+  import CNavbar from "@/components/CNavbar";
+  export default {
+    components: { CNavbar }
+  };
+</script>

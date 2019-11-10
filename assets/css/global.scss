@@ -1,4 +1,13 @@
 @import "variables";
+@import "mobile";
+
+:root {
+  --navbar-height: 100px;
+
+  @include mobile {
+    --navbar-height: 80px;
+  }
+}
 
 *, *::before, *::after {
   box-sizing: border-box;

@@ -1,6 +1,5 @@
 <template>
   <div class="index-page">
-    <CNavbar/>
     <main>
       <video
         class="background-video"
@@ -61,7 +60,7 @@
 
   .hero {
     background: transparent;
-    padding: 20px 20px 16%;
+    padding: 20px 20px 16vh;
     height: 100vh;
 
     display: flex;
@@ -111,11 +110,10 @@
 
 <script>
   import CButton from "@/components/CButton";
-  import CNavbar from "@/components/CNavbar";
   import DiscordIcon from "@/components/icons/DiscordIcon";
 
   export default {
-    components: { DiscordIcon, CButton, CNavbar },
+    components: { DiscordIcon, CButton },
     methods: {
       joinDiscord() {
         window.open("https://discord.gg/VSQryKx", "_blank");

@@ -1,15 +1,20 @@
 <template>
-  <nav class="c-navbar" :class="{ scrolled: scrollPosition !== 0 }">
-    <div class="c-navbar__centered">
+  <nav class="c-navbar" :class="{ scrolled: scrollPosition !== 0, open }">
+    <div class="c-navbar__toggle" @click="open = !open">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="c-navbar__container">
       <div class="c-navbar__links">
-        <a href="https://play.cryptic-game.net">Play</a>
-        <nuxt-link to="/blog">
+        <a href="https://play.cryptic-game.net" @click.native.passive="open = false">Play</a>
+        <nuxt-link to="/blog" @click.native.passive="open = false">
           Blog
         </nuxt-link>
-        <nuxt-link to="/roadmap">
+        <nuxt-link to="/roadmap" @click.native.passive="open = false">
           Roadmap
         </nuxt-link>
-        <nuxt-link to="/contribute">
+        <nuxt-link to="/contribute" @click.native.passive="open = false">
           Contribute
         </nuxt-link>
       </div>
@@ -19,9 +24,10 @@
 
 <style scoped lang="scss">
   @import "~@/assets/css/variables";
+  @import "~@/assets/css/mobile";
 
   .c-navbar {
-    height: $navbar-height;
+    height: var(--navbar-height);
 
     position: fixed;
     top: 0;
@@ -33,8 +39,8 @@
     font-size: 1.1rem;
     text-transform: uppercase;
 
-    display: inline-block;
-    padding-top: 38px;
+    display: flex;
+    align-items: center;
 
     background-color: transparent;
     transition: 300ms linear background-color;
@@ -44,11 +50,14 @@
     }
   }
 
-  .c-navbar__centered {
+  .c-navbar__toggle {
+    display: none;
+  }
+
+  .c-navbar__container {
     margin: 0 auto;
     max-width: 100%;
     width: 1000px;
-    height: 100%;
   }
 
   .c-navbar__links {
@@ -82,13 +91,109 @@
       }
     }
   }
+
+  @include mobile {
+    .c-navbar__toggle {
+      display: block;
+
+      position: relative;
+      left: 30px;
+      z-index: 2;
+
+      & > span {
+        display: block;
+
+        background-color: white;
+
+        width: 30px;
+        height: 2px;
+
+        transition: 200ms linear;
+        transition-property: opacity, transform;
+
+        &:nth-child(2) {
+          margin-top: 8px;
+        }
+
+        &:nth-child(3) {
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .c-navbar__container {
+      background-color: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0;
+      padding-top: var(--navbar-height);
+
+      opacity: 0;
+      transition: 200ms ease-out opacity;
+    }
+
+    .c-navbar__links {
+      float: none;
+
+      & > a {
+        display: block;
+        width: fit-content;
+        margin: 0 auto 20px;
+        font-size: 1.5rem;
+
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: 400ms ease-out;
+        transition-property: opacity, transform;
+      }
+    }
+
+    .c-navbar.open {
+      .c-navbar__toggle > span {
+        &:nth-child(1) {
+          transform: translateY(10px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-10px) rotate(-45deg);
+        }
+      }
+
+      .c-navbar__container {
+        opacity: 1;
+      }
+
+      .c-navbar__links > a {
+        transform: translateX(0);
+        opacity: 1;
+
+        &:after {
+          top: 40px;
+        }
+      }
+    }
+  }
 </style>
 
 <script>
   export default {
     name: "CNavbar",
     data: () => ({
-      scrollPosition: 0
+      scrollPosition: 0,
+      open: false
     }),
     mounted() {
       const scrollListener = () => {
