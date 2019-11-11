@@ -35,26 +35,24 @@
         </div>
       </section>
       <section class="section second-section">
-        <div>
-          You can already play an early version:
-        </div>
-        <div class="second-section__version">
-          Cryptic Pre Alpha 3
-        </div>
-        <div>
-          <CButton green outline text-color="white" href="https://play.cryptic-game.net">
-            <template v-slot:icon>
-              <GamepadIcon class="icon"/>
-            </template>
-            Play Now
-          </CButton>
-        </div>
-        <div>
+        <div class="second-section__content centered-container">
+          <span>
+            You can already play an early version:
+          </span>
+          <span class="second-section__version">
+            Cryptic Pre Alpha 3
+          </span>
           <CButton blue outline text-color="white" to="/blog">
             <template v-slot:icon>
               <NoteIcon class="icon"/>
             </template>
             Read the Blog Post
+          </CButton>
+          <CButton green outline text-color="white" href="https://play.cryptic-game.net">
+            <template v-slot:icon>
+              <GamepadIcon class="icon"/>
+            </template>
+            Play Now
           </CButton>
         </div>
       </section>
@@ -130,20 +128,44 @@
   }
 
   .second-section {
-    height: 150px;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.2rem;
-
     background-image: url("~@/assets/image/green_background.png");
     background-attachment: fixed;
+    height: 150px;
 
-    .second-section__version {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1.5rem;
+    .second-section__content {
+      height: 100%;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      text-align: center;
+
+      .second-section__version {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      & > :not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    @include mobile {
+      height: fit-content;
+      padding: 20px 0;
+
+      .second-section__content {
+        flex-direction: column;
+        justify-content: center;
+
+        & > :not(:last-child) {
+          margin-bottom: 20px;
+          margin-right: 0;
+        }
+      }
     }
   }
 

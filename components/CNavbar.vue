@@ -122,6 +122,8 @@
     }
 
     .c-navbar__container {
+      pointer-events: none;
+
       background-color: black;
       position: fixed;
       top: 0;
@@ -173,6 +175,8 @@
       }
 
       .c-navbar__container {
+        pointer-events: auto;
+
         opacity: 1;
       }
 

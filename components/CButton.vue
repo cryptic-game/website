@@ -99,7 +99,6 @@
     justify-items: center;
     align-content: flex-start;
     justify-content: flex-start;
-    align-self: center;
 
     border-radius: 3px;
     border: none;
@@ -159,6 +158,7 @@
 
     .c-button__content {
       font-size: calc(var(--size) * 0.5rem + 0.6rem);
+      width: max-content;
 
       @include mobile {
         font-size: calc(var(--size) * 0.5rem + 0.5rem);
