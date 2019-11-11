@@ -58,8 +58,18 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    // eslint-disable-next-line no-empty-function
     extend(config, ctx) {
+      const svgRule = config.module.rules.find(rule => rule.test.test(".svg"));
+
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/;
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: [
+          "babel-loader",
+          "vue-svg-loader"
+        ]
+      });
     }
   }
 };

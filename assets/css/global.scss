@@ -42,3 +42,7 @@ html, body, #__nuxt, #__layout, .fill-screen {
     padding: 0 #{$content-padding};
   }
 }
+
+.icon {
+  fill: currentColor;
+}

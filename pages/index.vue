@@ -22,24 +22,41 @@
           <CButton
             class="hero__join-button"
             discord
+            outline
+            href="https://discord.gg/VSQryKx"
+            new-tab
             :size="2"
-            @click="joinDiscord()"
           >
             <template v-slot:icon>
-              <DiscordIcon/>
+              <DiscordIcon class="icon"/>
             </template>
             Join our Discord
           </CButton>
         </div>
       </section>
-      <section class="section">
-        <br/>
-        <br/>
-        <br/>
-        Second section
-        <br/>
-        <br/>
-        <br/>
+      <section class="section second-section">
+        <div>
+          You can already play an early version:
+        </div>
+        <div class="second-section__version">
+          Cryptic Pre Alpha 3
+        </div>
+        <div>
+          <CButton green outline text-color="white" href="https://play.cryptic-game.net">
+            <template v-slot:icon>
+              <GamepadIcon class="icon"/>
+            </template>
+            Play Now
+          </CButton>
+        </div>
+        <div>
+          <CButton blue outline text-color="white" to="/blog">
+            <template v-slot:icon>
+              <NoteIcon class="icon"/>
+            </template>
+            Read the Blog Post
+          </CButton>
+        </div>
       </section>
     </main>
   </div>
@@ -72,44 +89,62 @@
     flex-direction: row-reverse;
 
     position: relative;
-  }
 
-  .hero__content {
-    position: relative;
-    padding: 20px 20px 10vh;
-  }
-
-  .hero__slogan {
-    position: relative;
-    top: -30vh;
-    right: 10vw;
-    font-size: 1.6rem;
-    text-align: right;
-
-    & > span:nth-child(2) {
+    .hero__content {
       position: relative;
+      padding: 20px 20px 10vh;
+    }
 
-      right: -40px;
+    .hero__slogan {
+      position: relative;
+      top: -30vh;
+      right: 10vw;
+      font-size: 1.6rem;
+      text-align: right;
+
+      & > span:nth-child(2) {
+        position: relative;
+
+        right: -40px;
+      }
+    }
+
+    .hero__title {
+      margin: 0 0 5px;
+      font-size: 1.1rem;
+      font-weight: normal;
+    }
+
+    .hero__c2a {
+      font-size: 4rem;
+      font-weight: bold;
+
+      @media (max-width: 580px) {
+        font-size: 11vw;
+      }
+    }
+
+    .hero__join-button {
+      margin-top: 20px;
     }
   }
 
-  .hero__title {
-    margin: 0 0 5px;
-    font-size: 1.1rem;
-    font-weight: normal;
-  }
+  .second-section {
+    height: 150px;
 
-  .hero__c2a {
-    font-size: 4rem;
-    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
 
-    @media (max-width: 580px) {
-      font-size: 11vw;
+    background-image: url("~@/assets/image/green_background.png");
+    background-attachment: fixed;
+
+    .second-section__version {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.5rem;
     }
-  }
-
-  .hero__join-button {
-    margin-top: 20px;
   }
 
   .background-video {
@@ -129,14 +164,11 @@
 
 <script>
   import CButton from "@/components/CButton";
-  import DiscordIcon from "@/components/icons/DiscordIcon";
+  import DiscordIcon from "@/assets/icons/discord.svg";
+  import GamepadIcon from "@/assets/icons/gamepad.svg";
+  import NoteIcon from "@/assets/icons/note.svg";
 
   export default {
-    components: { DiscordIcon, CButton },
-    methods: {
-      joinDiscord() {
-        window.open("https://discord.gg/VSQryKx", "_blank");
-      }
-    }
+    components: { GamepadIcon, NoteIcon, DiscordIcon, CButton }
   };
 </script>

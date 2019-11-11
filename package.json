@@ -24,6 +24,7 @@
     "eslint-plugin-nuxt": ">=0.4.2",
     "fibers": "^4.0.2",
     "sass": "^1.23.3",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.0",
+    "vue-svg-loader": "^0.14.0"
   }
 }
