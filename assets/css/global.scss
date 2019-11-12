@@ -33,6 +33,18 @@ html, body, #__nuxt, #__layout, .fill-screen {
   overflow-x: hidden;
 }
 
+.link {
+  color: $blue;
+  text-decoration: none;
+
+  transition: 100ms linear opacity;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 .centered-container {
   width: $content-width;
   margin: 0 auto;
