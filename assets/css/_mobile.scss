@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin notMobile() {
+  @media (min-width: 801px) {
+    @content;
+  }
+}

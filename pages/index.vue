@@ -87,6 +87,43 @@
           </div>
         </div>
       </section>
+      <section class="section desc-section">
+        <div class="desc-section__content centered-container">
+          <div class="desc-section__part">
+            <h2 class="desc-section__title">
+              The Project
+            </h2>
+            <p>
+              The project "Cryptic" was initiated by the german YouTuber
+              <a class="link" href="https://the-morpheus.de/">The Morpheus</a>. It was first announced on October 15, 2017 with an
+              <a class="link" href="https://www.youtube.com/watch?v=iOJhuw7eABk">announcement video (german)</a>. The goal of the
+              project is to create a unique experience for the players, but primarily make it possible for people
+              interested in coding and computer science to develop and improve their existing skills and create something
+              great. This includes the determining of the game content, the design, sounds, the programming, the testing
+              and the server maintenance.
+            </p>
+            <p>
+              Together, we daily strive to make Cryptic better and want to give you an interesting, adventurous and
+              playful introduction into the world of hacking.
+            </p>
+          </div>
+          <div class="desc-section__part">
+            <h2 class="desc-section__title">
+              What is Cryptic?
+            </h2>
+            <p>
+              Cryptic is a MMO Hacking-Simulation with realtime strategy elements. Using specific programs and command,
+              you can infiltrate the systems of other players and the global infrastructure. Level up your hardware and
+              software, produce your own malware in your development center or communicate with other players to plan
+              a joint attack. But this is just the beginning.
+            </p>
+            <p>
+              Help the cyber police as a white hat to put a stop to the activities of malicious hackers or become a
+              black hat, cripple whole networks and spy the other players.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </template>
@@ -171,13 +208,15 @@
   .second-section {
     background-image: url("~@/assets/image/green_background.png");
     background-attachment: fixed;
-    height: 150px;
+
+    @include notMobile {
+      height: 150px;
+    }
 
     .second-section__content {
       height: 100%;
 
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       font-size: 1.2rem;
@@ -191,22 +230,21 @@
 
       & > :not(:last-child) {
         margin-right: 10px;
-      }
-    }
 
-    @include mobile {
-      height: fit-content;
-      padding: 20px 0;
-
-      .second-section__content {
-        flex-direction: column;
-        justify-content: center;
-
-        & > :not(:last-child) {
+        @include mobile {
           margin-bottom: 20px;
           margin-right: 0;
         }
       }
+
+      @include mobile {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    @include mobile {
+      padding: 20px 0;
     }
   }
 
@@ -251,11 +289,11 @@
       border-radius: 3px;
 
       &:not(:last-child) {
-        margin-right: 40px;
+        margin-right: $gutter-size;
 
         @include mobile {
           margin-right: 0;
-          margin-bottom: 40px;
+          margin-bottom: $gutter-size;
         }
       }
 
@@ -331,6 +369,37 @@
       @include mobile {
         transform: rotate(90deg);
       }
+    }
+  }
+
+  .desc-section {
+    background: rgba(0, 0, 0, 0.8);
+
+    .desc-section__content {
+      display: flex;
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
+    }
+
+    .desc-section__part {
+      width: 100%;
+      text-align: justify;
+
+      &:not(:last-child) {
+        margin-right: $gutter-size;
+
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: $gutter-size / 2;
+        }
+      }
+    }
+
+    .desc-section__title {
+      font-size: 2rem;
+      margin-top: 0;
     }
   }
 
