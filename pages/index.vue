@@ -182,6 +182,27 @@
           </div>
         </div>
       </section>
+      <section class="section faq-section">
+        <div class="centered-container">
+          <h2 class="section__title">
+            FAQ
+          </h2>
+          <div>
+            <h3 class="faq-section__question">
+              How can I contribute?
+            </h3>
+            Read our
+            <nuxt-link class="link" to="/contributing">Contributing Guide</nuxt-link>.
+          </div>
+          <div>
+            <h3 class="faq-section__question">
+              How is the project financed?
+            </h3>
+            Nobody gets paid for working on the project, but we have to pay for our servers. So if you want to sponsor
+            us, <a class="link" href="https://www.patreon.com/user?u=5322110">support The Morpheus on Patreon</a>.
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </template>
@@ -491,6 +512,13 @@
           display: block;
         }
       }
+    }
+  }
+
+  .faq-section {
+    .faq-section__question {
+      margin-top: 25px;
+      font-size: 1.3rem;
     }
   }
 
