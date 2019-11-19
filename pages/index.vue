@@ -95,12 +95,13 @@
             </h2>
             <p>
               The project "Cryptic" was initiated by the german YouTuber
-              <a class="link" href="https://the-morpheus.de/">The Morpheus</a>. It was first announced on October 15, 2017 with an
-              <a class="link" href="https://www.youtube.com/watch?v=iOJhuw7eABk">announcement video (german)</a>. The goal of the
-              project is to create a unique experience for the players, but primarily make it possible for people
-              interested in coding and computer science to develop and improve their existing skills and create something
-              great. This includes the determining of the game content, the design, sounds, the programming, the testing
-              and the server maintenance.
+              <a class="link" href="https://the-morpheus.de/">The Morpheus</a>. It was first announced on October 15,
+              2017 with an
+              <a class="link" href="https://www.youtube.com/watch?v=iOJhuw7eABk">announcement video (german)</a>.
+              The goal of the project is to create a unique experience for the players, but primarily make
+              it possible for people interested in coding and computer science to develop and improve their existing
+              skills and create something great. This includes the determining of the game content, the design, sounds,
+              the programming, the testing and the server maintenance.
             </p>
             <p>
               Together, we daily strive to make Cryptic better and want to give you an interesting, adventurous and
@@ -121,6 +122,63 @@
               Help the cyber police as a white hat to put a stop to the activities of malicious hackers or become a
               black hat, cripple whole networks and spy the other players.
             </p>
+          </div>
+        </div>
+      </section>
+      <section class="section groups-section">
+        <div class="centered-container">
+          <h2 class="section__title">
+            Groups
+          </h2>
+          <div class="groups-section__groups">
+            <div class="groups-section__group">
+              <WindowIcon class="icon"/>
+              <h3 class="groups-section__group-title">
+                Frontend
+              </h3>
+            </div>
+            <div class="groups-section__group">
+              <CodeIcon class="icon"/>
+              <h3 class="groups-section__group-title">
+                Backend
+              </h3>
+            </div>
+            <div class="groups-section__group">
+              <GamepadIcon class="icon"/>
+              <h3 class="groups-section__group-title">
+                Gamedesign
+              </h3>
+            </div>
+            <div class="groups-section__group">
+              <PaintbrushIcon class="icon"/>
+              <h3 class="groups-section__group-title">
+                Design
+              </h3>
+            </div>
+            <div class="groups-section__group">
+              <GlobeIcon class="icon"/>
+              <h3 class="groups-section__group-title">
+                Website
+              </h3>
+            </div>
+            <div class="groups-section__group">
+              <ShieldIcon class="icon"/>
+              <h3 class="groups-section__group-title">
+                Security
+              </h3>
+            </div>
+            <div class="groups-section__group">
+              <LanguageIcon class="icon"/>
+              <h3 class="groups-section__group-title">
+                Translation
+              </h3>
+            </div>
+            <div class="groups-section__group">
+              <ABCIcon class="icon"/>
+              <h3 class="groups-section__group-title">
+                Correction
+              </h3>
+            </div>
           </div>
         </div>
       </section>
@@ -403,6 +461,39 @@
     }
   }
 
+  .groups-section {
+    .groups-section__groups {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      width: 100%;
+
+      .groups-section__group {
+        padding: 20px;
+
+        width: 25%;
+        min-width: 150px;
+
+        .groups-section__group-title {
+          margin: 20px auto 0;
+          width: fit-content;
+
+          text-transform: uppercase;
+          font-size: 1.1rem;
+          letter-spacing: 2px;
+        }
+
+        .icon {
+          width: 50px;
+
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+  }
+
   .background-video {
     pointer-events: none;
     position: fixed;
@@ -424,9 +515,29 @@
   import GamepadIcon from "@/assets/icons/gamepad.svg";
   import NoteIcon from "@/assets/icons/note.svg";
   import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
+  import WindowIcon from "@/assets/icons/window.svg";
+  import ABCIcon from "@/assets/icons/abc.svg";
+  import CodeIcon from "@/assets/icons/code.svg";
+  import GlobeIcon from "@/assets/icons/globe.svg";
+  import LanguageIcon from "@/assets/icons/language.svg";
+  import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
+  import ShieldIcon from "@/assets/icons/shield.svg";
 
   export default {
-    components: { GamepadIcon, NoteIcon, DiscordIcon, CButton, ArrowRightIcon },
+    components: {
+      GamepadIcon,
+      NoteIcon,
+      DiscordIcon,
+      CButton,
+      ArrowRightIcon,
+      WindowIcon,
+      ABCIcon,
+      CodeIcon,
+      GlobeIcon,
+      LanguageIcon,
+      PaintbrushIcon,
+      ShieldIcon
+    },
     data: () => ({
       blogPosts: [
         {
