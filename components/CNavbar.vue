@@ -7,6 +7,9 @@
     </div>
     <div class="c-navbar__container">
       <div class="c-navbar__links">
+        <nuxt-link to="/" @click.native.passive="open = false">
+          Home
+        </nuxt-link>
         <a href="https://play.cryptic-game.net" @click.native.passive="open = false">Play</a>
         <nuxt-link to="/blog" @click.native.passive="open = false">
           Blog

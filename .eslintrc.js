@@ -1,3 +1,5 @@
+const INLINE_ELEMENTS = require("eslint-plugin-vue/lib/utils/inline-non-void-elements");
+
 module.exports = {
   "root": true,
   "env": {
@@ -146,6 +148,9 @@ module.exports = {
       "switchCase": 1
     }],
     "vue/no-v-html": "off",
-    "vue/html-self-closing": "off"
+    "vue/html-self-closing": "off",
+    "vue/singleline-html-element-content-newline": ["warn", {
+      ignores: ["pre", "textarea", "nuxt-link", ...INLINE_ELEMENTS]
+    }]
   }
 };
