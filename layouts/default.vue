@@ -12,8 +12,10 @@
 
   }
 </style>
+
 <script>
   import CNavbar from "@/components/CNavbar";
+
   export default {
     components: { CNavbar }
   };

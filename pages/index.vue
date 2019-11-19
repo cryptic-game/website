@@ -206,7 +206,7 @@
   }
 
   .second-section {
-    background-image: url("~@/assets/image/green_background.png");
+    background-image: url("~@/assets/image/green_background.jpg");
     background-attachment: fixed;
 
     @include notMobile {

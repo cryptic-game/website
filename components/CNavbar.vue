@@ -17,6 +17,9 @@
         <nuxt-link to="/contribute" @click.native.passive="open = false">
           Contribute
         </nuxt-link>
+        <nuxt-link to="/team" @click.native.passive="open = false">
+          Team
+        </nuxt-link>
       </div>
     </div>
   </nav>
