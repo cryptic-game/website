@@ -214,6 +214,7 @@
   .index-page {
     background-color: black;
     width: 100%;
+    margin-top: calc(-1 * var(--navbar-height));
   }
 
   .section {

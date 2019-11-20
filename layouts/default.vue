@@ -28,7 +28,7 @@
         <a
           class="default-layout__footer-icon-link"
           href="https://www.youtube.com/channel/UCD1cNWfpafkrCxQqWezpZjQ"
-          style="--color: #ff4652"
+          style="--color: #ff3635"
         >
           <YouTubeIcon class="icon"/>
         </a>
@@ -50,9 +50,9 @@
     .default-layout__footer {
       height: 100px;
       width: 100%;
-      padding: 20px 40px;
+      padding: 80px 40px 40px;
 
-      background-color: $black-brighter;
+      background-color: black;
       color: white;
 
       position: relative;
