@@ -22,7 +22,7 @@
           <CButton
             class="hero-section__join-button"
             discord
-            href="https://discord.gg/VSQryKx"
+            href="https://discord.gg/tN5Wcab"
             new-tab
             :size="2"
           >
@@ -448,6 +448,13 @@
 
       @include mobile {
         transform: rotate(90deg);
+      }
+
+      .icon {
+        width: 24px;
+
+        position: relative;
+        left: 2px;
       }
     }
   }

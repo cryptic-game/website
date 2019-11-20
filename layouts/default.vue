@@ -13,7 +13,7 @@
       <div class="default-layout__footer-icon-links">
         <a
           class="default-layout__footer-icon-link"
-          href="https://discord.gg/VSQryKx"
+          href="https://discord.gg/tN5Wcab"
           style="--color: #7289DA"
         >
           <DiscordIcon class="icon"/>
