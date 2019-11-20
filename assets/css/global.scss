@@ -1,0 +1,64 @@
+@import "variables";
+@import "mobile";
+
+:root {
+  --navbar-height: 100px;
+
+  @include mobile {
+    --navbar-height: 80px;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+html, body {
+  background: black;
+
+  z-index: 0;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  font-family: "Alata", sans-serif;
+
+  color: white;
+}
+
+html, body, #__nuxt, #__layout, .fill-screen {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.link {
+  color: $blue;
+  text-decoration: none;
+
+  transition: 100ms linear opacity;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.centered-container {
+  width: $content-width;
+  margin: 0 auto;
+
+  @media (max-width: #{$content-width + $content-padding * 2}) {
+    width: 100%;
+    padding: 0 #{$content-padding};
+  }
+}
+
+.icon {
+  fill: currentColor;
+}

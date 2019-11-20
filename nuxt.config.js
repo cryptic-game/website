@@ -11,7 +11,8 @@ export default {
       { hid: "description", name: "description", content: process.env.npm_package_description || "" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Alata&display=swap" }
     ]
   },
   /*
@@ -22,7 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
-    "tachyons/css/tachyons.css"
+    "@/assets/css/global.scss"
   ],
   /*
   ** Plugins to load before mounting the App
@@ -57,8 +58,18 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    // eslint-disable-next-line no-empty-function
     extend(config, ctx) {
+      const svgRule = config.module.rules.find(rule => rule.test.test(".svg"));
+
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/;
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: [
+          "babel-loader",
+          "vue-svg-loader"
+        ]
+      });
     }
   }
 };

@@ -1,55 +1,108 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="default-layout fill-screen">
+    <CNavbar/>
+    <div class="default-layout__content">
+      <nuxt/>
+    </div>
+    <footer class="default-layout__footer">
+      <div class="default-layout__footer-links">
+        <nuxt-link class="link" to="/imprint">
+          Imprint
+        </nuxt-link>
+      </div>
+      <div class="default-layout__footer-icon-links">
+        <a
+          class="default-layout__footer-icon-link"
+          href="https://discord.gg/tN5Wcab"
+          style="--color: #7289DA"
+        >
+          <DiscordIcon class="icon"/>
+        </a>
+        <a
+          class="default-layout__footer-icon-link"
+          href="https://github.com/cryptic-game"
+          style="--color: #4078c0"
+        >
+          <GitHubIcon class="icon"/>
+        </a>
+        <a
+          class="default-layout__footer-icon-link"
+          href="https://www.youtube.com/channel/UCD1cNWfpafkrCxQqWezpZjQ"
+          style="--color: #ff3635"
+        >
+          <YouTubeIcon class="icon"/>
+        </a>
+      </div>
+    </footer>
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<style lang="scss" scoped>
+  @import "~@/assets/css/variables";
+  @import "~@/assets/css/mobile";
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  .default-layout {
+    .default-layout__content {
+      margin-top: var(--navbar-height);
+      min-height: calc(100vh - var(--navbar-height));
+    }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+    .default-layout__footer {
+      height: 100px;
+      width: 100%;
+      padding: 80px 40px 40px;
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+      background-color: black;
+      color: white;
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+      position: relative;
+      z-index: 1;
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .default-layout__footer-links {
+        display: flex;
+        justify-content: center;
+      }
+
+      .default-layout__footer-icon-links {
+        display: flex;
+        justify-content: center;
+
+        .default-layout__footer-icon-link {
+          width: 40px;
+          color: white;
+          margin: 0 10px;
+
+          transition: 120ms linear color;
+          &:hover {
+            color: var(--color);
+          }
+        }
+      }
+
+      @include mobile {
+        flex-wrap: wrap;
+        height: fit-content;
+
+        .default-layout__footer-icon-links,.default-layout__footer-links {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
 </style>
+
+<script>
+  import CNavbar from "@/components/CNavbar";
+  import DiscordIcon from "@/assets/icons/discord.svg";
+  import YouTubeIcon from "@/assets/icons/youtube.svg";
+  import GitHubIcon from "@/assets/icons/github.svg";
+
+  export default {
+    components: { CNavbar, DiscordIcon, YouTubeIcon, GitHubIcon }
+  };
+</script>
