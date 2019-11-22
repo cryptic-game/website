@@ -9,6 +9,9 @@
         <nuxt-link class="link" to="/imprint">
           Imprint
         </nuxt-link>
+        <a class="link" href="https://the-morpheus.de/faq-en.html" target="_blank">
+          Privacy Policy
+        </a>
       </div>
       <div class="default-layout__footer-icon-links">
         <a
@@ -48,9 +51,8 @@
     }
 
     .default-layout__footer {
-      height: 100px;
       width: 100%;
-      padding: 80px 40px 40px;
+      padding: 60px 40px 40px;
 
       background-color: black;
       color: white;
@@ -65,6 +67,17 @@
       .default-layout__footer-links {
         display: flex;
         justify-content: center;
+        align-items: center;
+
+        @include notMobile {
+          & > .link:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+
+        @include mobile {
+          flex-direction: column;
+        }
       }
 
       .default-layout__footer-icon-links {
@@ -85,7 +98,7 @@
 
       @include mobile {
         flex-wrap: wrap;
-        height: fit-content;
+        padding: 30px;
 
         .default-layout__footer-icon-links,.default-layout__footer-links {
           width: 100%;
