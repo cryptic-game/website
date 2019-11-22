@@ -223,7 +223,7 @@
     z-index: 1;
     position: relative;
     overflow: auto;
-    padding: 20px 0;
+    padding: 30px 0;
 
     .section__title {
       margin-top: 0;
@@ -235,6 +235,7 @@
   .hero-section {
     background: transparent;
     height: 100vh;
+    padding: 20px 0;
 
     display: flex;
     justify-content: flex-end;
