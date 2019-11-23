@@ -14,6 +14,7 @@ module.exports = {
     "plugin:vue/essential"
   ],
   "rules": {
+    "no-unused-vars": "warn",
     "indent": "off",
     "no-dupe-class-members": "error",
     "no-multiple-empty-lines": ["warn", {

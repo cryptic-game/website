@@ -34,7 +34,7 @@
         </div>
       </section>
       <section class="section second-section">
-        <div class="second-section__content centered-container">
+        <div class="second-section__content centered-container flex-with-gutter">
           <span>
             You can already play an early version:
           </span>
@@ -61,24 +61,9 @@
         </h2>
         <div class="blog-section__content">
           <div></div>
-          <div class="blog-section__posts">
-            <div v-for="(post, i) in blogPosts" :key="i" class="blog-section__post">
-              <img :src="post.image" class="post__image"/>
-              <div class="post__info">
-                <span class="post__date">{{ new Date(post.date).toLocaleDateString() }}</span>
-                <span class="post__title">
-                  {{ post.title }}
-                </span>
-                <div class="post__footer">
-                  <span class="post__read-time">
-                    <b>{{ post.readTime }} minute{{ post.readTime === 1 ? "" : "s" }}</b> read time
-                  </span>
-                  <nuxt-link class="post__link link" :to="getPostLink(post.slug)">
-                    Read
-                  </nuxt-link>
-                </div>
-              </div>
-            </div>
+          <div class="blog-section__posts flex-with-gutter">
+            <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post"/>
+            <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
           </div>
           <div class="blog-section__more-button-container">
             <nuxt-link class="blog-section__more-button link" to="/blog">
@@ -309,15 +294,6 @@
         font-size: 1.5rem;
       }
 
-      & > :not(:last-child) {
-        margin-right: 10px;
-
-        @include mobile {
-          margin-bottom: 20px;
-          margin-right: 0;
-        }
-      }
-
       @include mobile {
         flex-direction: column;
         justify-content: center;
@@ -356,67 +332,6 @@
       @include mobile {
         flex-wrap: wrap;
         width: 100%;
-      }
-    }
-
-    .blog-section__post {
-      background: $black-brighter;
-      color: white;
-
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-
-      border-radius: 3px;
-
-      &:not(:last-child) {
-        margin-right: $gutter-size;
-
-        @include mobile {
-          margin-right: 0;
-          margin-bottom: $gutter-size;
-        }
-      }
-
-      .post__info {
-        padding: 20px;
-      }
-
-      .post__image {
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
-      }
-
-      .post__date {
-        display: block;
-      }
-
-      .post__title {
-        display: block;
-
-        font-size: 1.2rem;
-        font-weight: bold;
-
-        color: white;
-      }
-
-      .post__footer {
-        display: flex;
-        justify-content: space-between;
-
-        margin-top: 20px;
-      }
-
-      .post__link {
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-        }
       }
     }
 
@@ -547,6 +462,9 @@
 </style>
 
 <script>
+  import { blogAPI } from "@/assets/js/blog";
+  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import BlogPostCard from "@/components/BlogPostCard";
   import CButton from "@/components/CButton";
   import DiscordIcon from "@/assets/icons/discord.svg";
   import GamepadIcon from "@/assets/icons/gamepad.svg";
@@ -562,6 +480,7 @@
 
   export default {
     components: {
+      BlogPostCard,
       GamepadIcon,
       NoteIcon,
       DiscordIcon,
@@ -575,28 +494,16 @@
       PaintbrushIcon,
       ShieldIcon
     },
+    async asyncData() {
+      return {
+        blogPosts: Array.from(await blogAPI.posts.browse({
+          limit: 2,
+          include: "slug,title,feature_image,reading_time,published_at"
+        })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
+      };
+    },
     data: () => ({
-      blogPosts: [
-        {
-          slug: "/pre-alpha-1-now-playable",
-          title: "Pre-Alpha 1 now playable",
-          date: "2019-06-05",
-          readTime: 1,
-          image: "https://github.com/cryptic-game/graphics/blob/master/wallpaper/Cryptic%20Wallpaper%201b.png?raw=true"
-        },
-        {
-          slug: "/pre-alpha-1-now-playable",
-          title: "Pre-Alpha 1 now playable",
-          date: "2019-06-11",
-          readTime: 2,
-          image: "https://github.com/cryptic-game/graphics/blob/master/wallpaper/Cryptic%20Wallpaper%201b.png?raw=true"
-        }
-      ]
-    }),
-    methods: {
-      getPostLink(slug) {
-        return `/blog/${slug}`;
-      }
-    }
+      blogPosts: []
+    })
   };
 </script>

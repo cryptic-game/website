@@ -37,7 +37,7 @@ html, body, #__nuxt, #__layout, .fill-screen {
   overflow-x: hidden;
 }
 
-.link {
+.link, .formatted a {
   color: $blue;
   text-decoration: none;
 
@@ -61,4 +61,17 @@ html, body, #__nuxt, #__layout, .fill-screen {
 
 .icon {
   fill: currentColor;
+}
+
+.flex-with-gutter {
+  display: flex;
+
+  & > *:not(:last-child) {
+    margin-right: $gutter-size;
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: $gutter-size;
+    }
+  }
 }
