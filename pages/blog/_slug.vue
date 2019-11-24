@@ -35,6 +35,10 @@
     margin-top: 40px;
 
     ::v-deep {
+      .kg-card {
+        margin: 20px;
+      }
+
       .kg-image-card {
         width: 100%;
         margin: 0;
