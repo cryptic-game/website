@@ -13,10 +13,7 @@
 
 <style scoped lang="scss">
   .post {
-    h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
+
   }
 
   .post__title {
