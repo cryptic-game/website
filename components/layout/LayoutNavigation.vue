@@ -1,12 +1,12 @@
 <template>
-  <nav class="c-navbar" :class="{ scrolled: scrollPosition !== 0, open }">
-    <div class="c-navbar__toggle" @click="open = !open">
+  <nav class="layout-navigation" :class="{ 'show-background': _showBackground, open }">
+    <div class="layout-navigation__toggle" @click="open = !open">
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <div class="c-navbar__container">
-      <div class="c-navbar__links">
+    <div class="layout-navigation__container">
+      <div class="layout-navigation__links">
         <template v-for="item in $options.navigationItems">
           <nuxt-link
             v-if="item.to"
@@ -33,10 +33,10 @@
 </template>
 
 <style scoped lang="scss">
-  @import "~@/assets/css/variables";
-  @import "~@/assets/css/mobile";
+  @import "~@/assets/css/_variables";
+  @import "~@/assets/css/_mobile";
 
-  .c-navbar {
+  .layout-navigation {
     height: var(--navbar-height);
 
     position: fixed;
@@ -53,24 +53,25 @@
     align-items: center;
 
     background-color: transparent;
-    transition: 300ms linear background-color;
+    transition: 200ms linear background-color;
 
-    &.scrolled {
-      background-color: rgba(0, 0, 0, 0.9);
+    &.show-background {
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.7);
     }
   }
 
-  .c-navbar__toggle {
+  .layout-navigation__toggle {
     display: none;
   }
 
-  .c-navbar__container {
+  .layout-navigation__container {
     margin: 0 auto;
     max-width: 100%;
     width: 1000px;
   }
 
-  .c-navbar__links {
+  .layout-navigation__links {
     float: right;
 
     a {
@@ -103,7 +104,7 @@
   }
 
   @include mobile {
-    .c-navbar__toggle {
+    .layout-navigation__toggle {
       display: block;
 
       position: relative;
@@ -131,7 +132,7 @@
       }
     }
 
-    .c-navbar__container {
+    .layout-navigation__container {
       pointer-events: none;
 
       background-color: black;
@@ -153,7 +154,7 @@
       transition: 200ms ease-out opacity;
     }
 
-    .c-navbar__links {
+    .layout-navigation__links {
       float: none;
 
       & > a {
@@ -169,8 +170,8 @@
       }
     }
 
-    .c-navbar.open {
-      .c-navbar__toggle > span {
+    .layout-navigation.open {
+      .layout-navigation__toggle > span {
         &:nth-child(1) {
           transform: translateY(10px) rotate(45deg);
         }
@@ -184,13 +185,13 @@
         }
       }
 
-      .c-navbar__container {
+      .layout-navigation__container {
         pointer-events: auto;
 
         opacity: 1;
       }
 
-      .c-navbar__links > a {
+      .layout-navigation__links > a {
         transform: translateX(0);
         opacity: 1;
 
@@ -232,12 +233,23 @@
   ];
 
   export default {
-    name: "CNavbar",
+    name: "LayoutNavigation",
     navigationItems: NAVIGATION_ITEMS,
+    props: {
+      showBackground: {
+        type: null,
+        default: "beforeScroll"
+      }
+    },
     data: () => ({
       scrollPosition: 0,
       open: false
     }),
+    computed: {
+      _showBackground() {
+        return this.showBackground === true || (this.showBackground === "onScroll" && this.scrollPosition !== 0);
+      }
+    },
     mounted() {
       const scrollListener = () => {
         this.scrollPosition = window.scrollY;

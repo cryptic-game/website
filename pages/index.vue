@@ -479,6 +479,8 @@
   import ShieldIcon from "@/assets/icons/shield.svg";
 
   export default {
+    name: "IndexPage",
+    layout: "landing-page",
     components: {
       BlogPostCard,
       GamepadIcon,
