@@ -7,22 +7,26 @@
     </div>
     <div class="c-navbar__container">
       <div class="c-navbar__links">
-        <nuxt-link to="/" class="require-exact-active" @click.native.passive="open = false">
-          Home
-        </nuxt-link>
-        <a href="https://play.cryptic-game.net" @click.native.passive="open = false">Play</a>
-        <nuxt-link to="/blog" @click.native.passive="open = false">
-          Blog
-        </nuxt-link>
-        <nuxt-link to="/roadmap" @click.native.passive="open = false">
-          Roadmap
-        </nuxt-link>
-        <nuxt-link to="/contribute" @click.native.passive="open = false">
-          Contribute
-        </nuxt-link>
-        <nuxt-link to="/team" @click.native.passive="open = false">
-          Team
-        </nuxt-link>
+        <template v-for="item in $options.navigationItems">
+          <nuxt-link
+            v-if="item.to"
+            :key="item.to"
+            :class="{ 'require-exact-active': item.requireExactActive }"
+            :to="item.to"
+            @click.native.passive="open = false"
+          >
+            {{ item.label }}
+          </nuxt-link>
+          <a
+            v-else
+            :key="item.to"
+            rel="noopener"
+            :href="item.href"
+            @click.native.passive="open = false"
+          >
+            {{ item.label }}
+          </a>
+        </template>
       </div>
     </div>
   </nav>
@@ -199,8 +203,37 @@
 </style>
 
 <script>
+  const NAVIGATION_ITEMS = [
+    {
+      label: "Home",
+      to: "/",
+      requireExactActive: true
+    },
+    {
+      label: "Play",
+      href: "https://play.cryptic-game.net"
+    },
+    {
+      label: "Blog",
+      to: "/blog"
+    },
+    {
+      label: "Roadmap",
+      to: "/roadmap"
+    },
+    {
+      label: "Contribute",
+      to: "/contribute"
+    },
+    {
+      label: "Team",
+      to: "/team"
+    }
+  ];
+
   export default {
     name: "CNavbar",
+    navigationItems: NAVIGATION_ITEMS,
     data: () => ({
       scrollPosition: 0,
       open: false
