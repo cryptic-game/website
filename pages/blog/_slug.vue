@@ -1,6 +1,7 @@
 <template>
   <div class="post-page">
     <article class="post centered-container formatted">
+      <img :src="post.image" class="post__image"/>
       <span>{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
       <h1 class="post__title">
         {{ post.title }}
@@ -16,6 +17,13 @@
 <style scoped lang="scss">
   .post {
 
+  }
+
+  .post__image {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: cover;
+    margin-bottom: 20px;
   }
 
   .post__title {
