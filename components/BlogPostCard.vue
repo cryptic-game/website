@@ -6,7 +6,7 @@
       <span class="blog-post-card__title">
         {{ post.title }}
       </span>
-      {{ post.excerpt }}
+      <span class="blog-post-card__excerpt">{{ post.excerpt }}</span>
       <div class="blog-post-card__footer">
         <span class="blog-post-card__reading-time">
           <b>{{ Math.max(1, post.readingTime) }} minute{{ Math.max(1, post.readingTime) === 1 ? "" : "s" }}</b>
@@ -37,6 +37,14 @@
 
   .blog-post-card__info {
     padding: 20px;
+  }
+
+  .blog-post-card__excerpt {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
   }
 
   .blog-post-card__image {
