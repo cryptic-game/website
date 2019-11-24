@@ -7,7 +7,7 @@
     </div>
     <div class="c-navbar__container">
       <div class="c-navbar__links">
-        <nuxt-link to="/" @click.native.passive="open = false">
+        <nuxt-link to="/" class="require-exact-active" @click.native.passive="open = false">
           Home
         </nuxt-link>
         <a href="https://play.cryptic-game.net" @click.native.passive="open = false">Play</a>
@@ -90,7 +90,7 @@
         transition: 200ms linear opacity;
       }
 
-      &:hover {
+      &:hover, &.nuxt-link-active:not(.require-exact-active), &.require-exact-active.nuxt-link-exact-active {
         &::after {
           opacity: 1;
         }
