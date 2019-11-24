@@ -1,5 +1,8 @@
 @import "variables";
 @import "mobile";
+@import "link";
+
+@import "formatted";
 
 :root {
   --navbar-height: 100px;
@@ -38,15 +41,7 @@ html, body, #__nuxt, #__layout, .fill-screen {
 }
 
 .link {
-  color: $blue;
-  text-decoration: none;
-
-  transition: 100ms linear opacity;
-  opacity: 1;
-
-  &:hover {
-    opacity: 0.8;
-  }
+  @extend %link;
 }
 
 .centered-container {
@@ -61,4 +56,17 @@ html, body, #__nuxt, #__layout, .fill-screen {
 
 .icon {
   fill: currentColor;
+}
+
+.flex-with-gutter {
+  display: flex;
+
+  & > *:not(:last-child) {
+    margin-right: $gutter-size;
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: $gutter-size;
+    }
+  }
 }

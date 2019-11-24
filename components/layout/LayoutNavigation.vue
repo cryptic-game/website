@@ -1,38 +1,42 @@
 <template>
-  <nav class="c-navbar" :class="{ scrolled: scrollPosition !== 0, open }">
-    <div class="c-navbar__toggle" @click="open = !open">
+  <nav class="layout-navigation" :class="{ 'show-background': _showBackground, open }">
+    <div class="layout-navigation__toggle" @click="open = !open">
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <div class="c-navbar__container">
-      <div class="c-navbar__links">
-        <nuxt-link to="/" @click.native.passive="open = false">
-          Home
-        </nuxt-link>
-        <a href="https://play.cryptic-game.net" @click.native.passive="open = false">Play</a>
-        <nuxt-link to="/blog" @click.native.passive="open = false">
-          Blog
-        </nuxt-link>
-        <nuxt-link to="/roadmap" @click.native.passive="open = false">
-          Roadmap
-        </nuxt-link>
-        <nuxt-link to="/contribute" @click.native.passive="open = false">
-          Contribute
-        </nuxt-link>
-        <nuxt-link to="/team" @click.native.passive="open = false">
-          Team
-        </nuxt-link>
+    <div class="layout-navigation__container">
+      <div class="layout-navigation__links">
+        <template v-for="item in $options.navigationItems">
+          <nuxt-link
+            v-if="item.to"
+            :key="item.to"
+            :class="{ 'require-exact-active': item.requireExactActive }"
+            :to="item.to"
+            @click.native.passive="open = false"
+          >
+            {{ item.label }}
+          </nuxt-link>
+          <a
+            v-else
+            :key="item.to"
+            rel="noopener"
+            :href="item.href"
+            @click.native.passive="open = false"
+          >
+            {{ item.label }}
+          </a>
+        </template>
       </div>
     </div>
   </nav>
 </template>
 
 <style scoped lang="scss">
-  @import "~@/assets/css/variables";
-  @import "~@/assets/css/mobile";
+  @import "~@/assets/css/_variables";
+  @import "~@/assets/css/_mobile";
 
-  .c-navbar {
+  .layout-navigation {
     height: var(--navbar-height);
 
     position: fixed;
@@ -49,24 +53,25 @@
     align-items: center;
 
     background-color: transparent;
-    transition: 300ms linear background-color;
+    transition: 200ms linear background-color;
 
-    &.scrolled {
-      background-color: rgba(0, 0, 0, 0.9);
+    &.show-background {
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.7);
     }
   }
 
-  .c-navbar__toggle {
+  .layout-navigation__toggle {
     display: none;
   }
 
-  .c-navbar__container {
+  .layout-navigation__container {
     margin: 0 auto;
     max-width: 100%;
     width: 1000px;
   }
 
-  .c-navbar__links {
+  .layout-navigation__links {
     float: right;
 
     a {
@@ -90,7 +95,7 @@
         transition: 200ms linear opacity;
       }
 
-      &:hover {
+      &:hover, &.nuxt-link-active:not(.require-exact-active), &.require-exact-active.nuxt-link-exact-active {
         &::after {
           opacity: 1;
         }
@@ -99,7 +104,7 @@
   }
 
   @include mobile {
-    .c-navbar__toggle {
+    .layout-navigation__toggle {
       display: block;
 
       position: relative;
@@ -127,7 +132,7 @@
       }
     }
 
-    .c-navbar__container {
+    .layout-navigation__container {
       pointer-events: none;
 
       background-color: black;
@@ -149,7 +154,7 @@
       transition: 200ms ease-out opacity;
     }
 
-    .c-navbar__links {
+    .layout-navigation__links {
       float: none;
 
       & > a {
@@ -165,8 +170,8 @@
       }
     }
 
-    .c-navbar.open {
-      .c-navbar__toggle > span {
+    .layout-navigation.open {
+      .layout-navigation__toggle > span {
         &:nth-child(1) {
           transform: translateY(10px) rotate(45deg);
         }
@@ -180,13 +185,13 @@
         }
       }
 
-      .c-navbar__container {
+      .layout-navigation__container {
         pointer-events: auto;
 
         opacity: 1;
       }
 
-      .c-navbar__links > a {
+      .layout-navigation__links > a {
         transform: translateX(0);
         opacity: 1;
 
@@ -199,12 +204,52 @@
 </style>
 
 <script>
+  const NAVIGATION_ITEMS = [
+    {
+      label: "Home",
+      to: "/",
+      requireExactActive: true
+    },
+    {
+      label: "Play",
+      href: "https://play.cryptic-game.net"
+    },
+    {
+      label: "Blog",
+      to: "/blog"
+    },
+    {
+      label: "Roadmap",
+      to: "/roadmap"
+    },
+    {
+      label: "Contribute",
+      to: "/contribute"
+    },
+    {
+      label: "Team",
+      to: "/team"
+    }
+  ];
+
   export default {
-    name: "CNavbar",
+    name: "LayoutNavigation",
+    navigationItems: NAVIGATION_ITEMS,
+    props: {
+      showBackground: {
+        type: null,
+        default: "beforeScroll"
+      }
+    },
     data: () => ({
       scrollPosition: 0,
       open: false
     }),
+    computed: {
+      _showBackground() {
+        return this.showBackground === true || (this.showBackground === "onScroll" && this.scrollPosition !== 0);
+      }
+    },
     mounted() {
       const scrollListener = () => {
         this.scrollPosition = window.scrollY;

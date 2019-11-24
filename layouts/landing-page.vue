@@ -1,7 +1,7 @@
 <template>
-  <div class="default-layout fill-screen">
-    <LayoutNavigation :show-background="true"/>
-    <div class="default-layout__content">
+  <div class="landing-page-layout fill-screen">
+    <LayoutNavigation show-background="onScroll"/>
+    <div class="landing-page-layout__content">
       <nuxt/>
     </div>
     <LayoutFooter/>
@@ -12,8 +12,8 @@
   @import "~@/assets/css/variables";
   @import "~@/assets/css/mobile";
 
-  .default-layout {
-    .default-layout__content {
+  .landing-page-layout {
+    .landing-page-layout__content {
       margin-top: var(--navbar-height);
       min-height: calc(100vh - var(--navbar-height));
     }
