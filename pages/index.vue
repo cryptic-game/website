@@ -39,7 +39,7 @@
             You can already play an early version:
           </span>
           <span class="second-section__version">
-            Cryptic Pre Alpha 3
+            Cryptic Pre Alpha 2
           </span>
           <CButton blue outline text-color="white" to="/blog">
             <template v-slot:icon>
