@@ -1,0 +1,33 @@
+{
+  "name": "cryptic",
+  "version": "1.0.0",
+  "description": "The Official Cryptic Website",
+  "author": "The Cryptic Team",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@tryghost/content-api": "^1.3.4",
+    "lodash.omit": "^4.5.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-vue": "^6.0.1",
+    "fibers": "^4.0.2",
+    "sass": "^1.23.3",
+    "sass-loader": "^8.0.0",
+    "vue-svg-loader": "^0.14.0"
+  }
+}
