@@ -1,6 +1,6 @@
 <template>
   <div class="posts-page">
-    <div class="centered-container posts">
+    <div class="content posts">
       <BlogPostCard
         v-for="post in posts"
         :key="post.slug"
@@ -13,13 +13,12 @@
 </template>
 
 <style scoped lang="scss">
-  @import "~@/assets/css/mobile";
-  @import "~@/assets/css/variables";
+  @use "~@/assets/css/variables";
 
   .posts {
     .posts__post {
       width: 100%;
-      margin-bottom: $gutter-size;
+      margin-bottom: variables.$gutter-size;
     }
   }
 </style>

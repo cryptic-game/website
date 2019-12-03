@@ -90,8 +90,8 @@
 </script>
 
 <style scoped lang="scss">
-  @import "~@/assets/css/mobile";
-  @import "~@/assets/css/variables";
+  @use "~@/assets/css/utilities/screenSize";
+  @use "~@/assets/css/variables";
 
   .c-button {
     display: flex;
@@ -118,21 +118,21 @@
     }
 
     &.green {
-      --color: #{$green};
-      --on-color: #{$on-green};
-      --hover-color: #{$green-darker};
+      --color: #{variables.$green};
+      --on-color: #{variables.$on-green};
+      --hover-color: #{variables.$green-darker};
     }
 
     &.blue {
-      --color: #{$blue};
-      --on-color: #{$on-blue};
-      --hover-color: #{$blue-darker};
+      --color: #{variables.$blue};
+      --on-color: #{variables.$on-blue};
+      --hover-color: #{variables.$blue-darker};
     }
 
     &.discord {
-      --color: #{$discord};
-      --on-color: #{$on-discord};
-      --hover-color: #{$discord-darker};
+      --color: #{variables.$discord};
+      --on-color: #{variables.$on-discord};
+      --hover-color: #{variables.$discord-darker};
     }
 
     transition: 120ms ease-out;
@@ -160,7 +160,7 @@
       font-size: calc(var(--size) * 0.5rem + 0.6rem);
       width: max-content;
 
-      @include mobile {
+      @include screenSize.mobile {
         font-size: calc(var(--size) * 0.5rem + 0.5rem);
       }
     }
@@ -170,7 +170,7 @@
       margin-right: 8px;
       width: calc(var(--size) * 0.7rem + 1rem);
 
-      @include mobile {
+      @include screenSize.mobile {
         width: calc(var(--size) * 0.7rem + 0.8rem);
       }
     }

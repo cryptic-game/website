@@ -1,6 +1,6 @@
 <template>
   <div class="post-page">
-    <article class="post centered-container formatted">
+    <article class="post content formatted">
       <img :src="post.image" class="post__image"/>
       <span>{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
       <h1 class="post__title">

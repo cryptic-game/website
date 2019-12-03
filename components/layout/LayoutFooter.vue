@@ -17,29 +17,28 @@
         href="https://discord.gg/tN5Wcab"
         style="--color: #7289DA"
       >
-        <DiscordIcon class="icon"/>
+        <DiscordIcon/>
       </a>
       <a
         class="layout-footer__icon-link"
         href="https://github.com/cryptic-game"
         style="--color: #4078c0"
       >
-        <GitHubIcon class="icon"/>
+        <GitHubIcon/>
       </a>
       <a
         class="layout-footer__icon-link"
         href="https://www.youtube.com/channel/UCD1cNWfpafkrCxQqWezpZjQ"
         style="--color: #ff3635"
       >
-        <YouTubeIcon class="icon"/>
+        <YouTubeIcon/>
       </a>
     </div>
   </footer>
 </template>
 
 <style scoped lang="scss">
-  @import "~@/assets/css/variables";
-  @import "~@/assets/css/mobile";
+  @use "~@/assets/css/utilities/screenSize";
 
   .layout-footer {
     width: 100%;
@@ -60,13 +59,13 @@
       justify-content: center;
       align-items: center;
 
-      @include notMobile {
+      @include screenSize.notMobile {
         & > .link:not(:last-child) {
           margin-right: 20px;
         }
       }
 
-      @include mobile {
+      @include screenSize.mobile {
         flex-direction: column;
       }
     }
@@ -87,7 +86,7 @@
       }
     }
 
-    @include mobile {
+    @include screenSize.mobile {
       flex-wrap: wrap;
       padding: 30px;
 

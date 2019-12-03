@@ -1,6 +1,6 @@
 <template>
   <main class="imprint-page">
-    <div class="centered-container">
+    <div class="content">
       <h1>Imprint</h1>
       <p>Cedric Mössner</p>
       <p>

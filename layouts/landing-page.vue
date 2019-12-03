@@ -9,12 +9,8 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "~@/assets/css/variables";
-  @import "~@/assets/css/mobile";
-
   .landing-page-layout {
     .landing-page-layout__content {
-      margin-top: var(--navbar-height);
       min-height: calc(100vh - var(--navbar-height));
     }
   }

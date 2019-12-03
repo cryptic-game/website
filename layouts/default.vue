@@ -9,9 +9,6 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "~@/assets/css/variables";
-  @import "~@/assets/css/mobile";
-
   .default-layout {
     .default-layout__content {
       margin-top: var(--navbar-height);

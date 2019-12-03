@@ -32,9 +32,20 @@
   </nav>
 </template>
 
+<style lang="scss">
+  @use "~@/assets/css/utilities/screenSize";
+
+  :root {
+    --navbar-height: 100px;
+
+    @include screenSize.mobile {
+      --navbar-height: 80px;
+    }
+  }
+</style>
+
 <style scoped lang="scss">
-  @import "~@/assets/css/_variables";
-  @import "~@/assets/css/_mobile";
+  @use "~@/assets/css/utilities/screenSize";
 
   .layout-navigation {
     height: var(--navbar-height);
@@ -103,7 +114,7 @@
     }
   }
 
-  @include mobile {
+  @include screenSize.mobile {
     .layout-navigation__toggle {
       display: block;
 
@@ -142,6 +153,7 @@
       right: 0;
       bottom: 0;
       width: 100%;
+      height: 100vh;
 
       display: flex;
       align-items: center;

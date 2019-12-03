@@ -21,11 +21,10 @@
 </template>
 
 <style scoped lang="scss">
-  @import "~@/assets/css/variables";
-  @import "~@/assets/css/mobile";
+  @use "~@/assets/css/variables";
 
   .blog-post-card {
-    background: $black-brighter;
+    background: variables.$black-brighter;
     color: white;
 
     overflow: hidden;

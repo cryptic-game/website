@@ -1,205 +1,202 @@
 <template>
-  <div class="index-page">
-    <main>
-      <video
-        class="background-video"
-        autoplay
-        muted
-        loop
-      >
-        <source src="@/assets/video/background.mp4" type="video/mp4"/>
-      </video>
-      <section class="section hero-section">
-        <div class="hero-section__content centered-container">
-          <span class="hero-section__slogan">
-            Don’t <b>play</b> the game, <span><br/><b>create</b> the game</span>
-          </span>
-          <h1 class="hero-section__title">
-            An Open Source Game <br/>
-            by <b>The Morpheus Tutorials</b>
-          </h1>
-          <span class="hero-section__c2a">Join us today!</span>
-          <CButton
-            class="hero-section__join-button"
-            discord
-            href="https://discord.gg/tN5Wcab"
-            new-tab
-            :size="2"
-          >
-            <template v-slot:icon>
-              <DiscordIcon class="icon"/>
-            </template>
-            Join our Discord
-          </CButton>
+  <main class="index-page">
+    <video
+      class="background-video"
+      autoplay
+      muted
+      loop
+    >
+      <source src="@/assets/video/background.mp4" type="video/mp4"/>
+    </video>
+    <section class="section hero-section">
+      <div class="hero-section__content content">
+        <span class="hero-section__slogan">
+          Don’t <b>play</b> the game, <span><br/><b>create</b> the game</span>
+        </span>
+        <h1 class="hero-section__title">
+          An Open Source Game <br/>
+          by <b>The Morpheus Tutorials</b>
+        </h1>
+        <span class="hero-section__c2a">Join us today!</span>
+        <CButton
+          class="hero-section__join-button"
+          discord
+          href="https://discord.gg/tN5Wcab"
+          new-tab
+          :size="2"
+        >
+          <template v-slot:icon>
+            <DiscordIcon class="icon"/>
+          </template>
+          Join our Discord
+        </CButton>
+      </div>
+    </section>
+    <section class="section second-section">
+      <div class="second-section__content content flex-with-gutter">
+        <span>
+          You can already play an early version:
+        </span>
+        <span class="second-section__version">
+          Cryptic Pre Alpha 2
+        </span>
+        <CButton blue outline text-color="white" to="/blog">
+          <template v-slot:icon>
+            <NoteIcon class="icon"/>
+          </template>
+          Read the Blog Post
+        </CButton>
+        <CButton green outline text-color="white" href="https://play.cryptic-game.net">
+          <template v-slot:icon>
+            <GamepadIcon class="icon"/>
+          </template>
+          Play Now
+        </CButton>
+      </div>
+    </section>
+    <section class="section blog-section">
+      <h2 class="section__title content">
+        Blog
+      </h2>
+      <div class="blog-section__content">
+        <div></div>
+        <div class="blog-section__posts flex-with-gutter">
+          <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post"/>
+          <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
         </div>
-      </section>
-      <section class="section second-section">
-        <div class="second-section__content centered-container flex-with-gutter">
-          <span>
-            You can already play an early version:
-          </span>
-          <span class="second-section__version">
-            Cryptic Pre Alpha 2
-          </span>
-          <CButton blue outline text-color="white" to="/blog">
-            <template v-slot:icon>
-              <NoteIcon class="icon"/>
-            </template>
-            Read the Blog Post
-          </CButton>
-          <CButton green outline text-color="white" href="https://play.cryptic-game.net">
-            <template v-slot:icon>
-              <GamepadIcon class="icon"/>
-            </template>
-            Play Now
-          </CButton>
+        <div class="blog-section__more-button-container">
+          <nuxt-link class="blog-section__more-button link" to="/blog">
+            <ArrowRightIcon class="icon"/>
+          </nuxt-link>
         </div>
-      </section>
-      <section class="section blog-section">
-        <h2 class="section__title centered-container">
-          Blog
+      </div>
+    </section>
+    <section class="section desc-section">
+      <div class="desc-section__content content">
+        <div class="desc-section__part">
+          <h2 class="desc-section__title">
+            The Project
+          </h2>
+          <p>
+            The project "Cryptic" was initiated by the german YouTuber
+            <a class="link" href="https://the-morpheus.de/">The Morpheus</a>. It was first announced on October 15,
+            2017 with an
+            <a class="link" href="https://www.youtube.com/watch?v=iOJhuw7eABk">announcement video (german)</a>.
+            The goal of the project is to create a unique experience for the players, but primarily make
+            it possible for people interested in coding and computer science to develop and improve their existing
+            skills and create something great. This includes the determining of the game content, the design, sounds,
+            the programming, the testing and the server maintenance.
+          </p>
+          <p>
+            Together, we daily strive to make Cryptic better and want to give you an interesting, adventurous and
+            playful introduction into the world of hacking.
+          </p>
+        </div>
+        <div class="desc-section__part">
+          <h2 class="desc-section__title">
+            What is Cryptic?
+          </h2>
+          <p>
+            Cryptic is a MMO Hacking-Simulation with realtime strategy elements. Using specific programs and command,
+            you can infiltrate the systems of other players and the global infrastructure. Level up your hardware and
+            software, produce your own malware in your development center or communicate with other players to plan
+            a joint attack. But this is just the beginning.
+          </p>
+          <p>
+            Help the cyber police as a white hat to put a stop to the activities of malicious hackers or become a
+            black hat, cripple whole networks and spy the other players.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section groups-section">
+      <div class="content">
+        <h2 class="section__title">
+          Groups
         </h2>
-        <div class="blog-section__content">
-          <div></div>
-          <div class="blog-section__posts flex-with-gutter">
-            <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post"/>
-            <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
-          </div>
-          <div class="blog-section__more-button-container">
-            <nuxt-link class="blog-section__more-button link" to="/blog">
-              <ArrowRightIcon class="icon"/>
-            </nuxt-link>
-          </div>
-        </div>
-      </section>
-      <section class="section desc-section">
-        <div class="desc-section__content centered-container">
-          <div class="desc-section__part">
-            <h2 class="desc-section__title">
-              The Project
-            </h2>
-            <p>
-              The project "Cryptic" was initiated by the german YouTuber
-              <a class="link" href="https://the-morpheus.de/">The Morpheus</a>. It was first announced on October 15,
-              2017 with an
-              <a class="link" href="https://www.youtube.com/watch?v=iOJhuw7eABk">announcement video (german)</a>.
-              The goal of the project is to create a unique experience for the players, but primarily make
-              it possible for people interested in coding and computer science to develop and improve their existing
-              skills and create something great. This includes the determining of the game content, the design, sounds,
-              the programming, the testing and the server maintenance.
-            </p>
-            <p>
-              Together, we daily strive to make Cryptic better and want to give you an interesting, adventurous and
-              playful introduction into the world of hacking.
-            </p>
-          </div>
-          <div class="desc-section__part">
-            <h2 class="desc-section__title">
-              What is Cryptic?
-            </h2>
-            <p>
-              Cryptic is a MMO Hacking-Simulation with realtime strategy elements. Using specific programs and command,
-              you can infiltrate the systems of other players and the global infrastructure. Level up your hardware and
-              software, produce your own malware in your development center or communicate with other players to plan
-              a joint attack. But this is just the beginning.
-            </p>
-            <p>
-              Help the cyber police as a white hat to put a stop to the activities of malicious hackers or become a
-              black hat, cripple whole networks and spy the other players.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="section groups-section">
-        <div class="centered-container">
-          <h2 class="section__title">
-            Groups
-          </h2>
-          <div class="groups-section__groups">
-            <div class="groups-section__group">
-              <WindowIcon class="icon"/>
-              <h3 class="groups-section__group-title">
-                Frontend
-              </h3>
-            </div>
-            <div class="groups-section__group">
-              <CodeIcon class="icon"/>
-              <h3 class="groups-section__group-title">
-                Backend
-              </h3>
-            </div>
-            <div class="groups-section__group">
-              <GamepadIcon class="icon"/>
-              <h3 class="groups-section__group-title">
-                Gamedesign
-              </h3>
-            </div>
-            <div class="groups-section__group">
-              <PaintbrushIcon class="icon"/>
-              <h3 class="groups-section__group-title">
-                Design
-              </h3>
-            </div>
-            <div class="groups-section__group">
-              <GlobeIcon class="icon"/>
-              <h3 class="groups-section__group-title">
-                Website
-              </h3>
-            </div>
-            <div class="groups-section__group">
-              <ShieldIcon class="icon"/>
-              <h3 class="groups-section__group-title">
-                Security
-              </h3>
-            </div>
-            <div class="groups-section__group">
-              <LanguageIcon class="icon"/>
-              <h3 class="groups-section__group-title">
-                Translation
-              </h3>
-            </div>
-            <div class="groups-section__group">
-              <ABCIcon class="icon"/>
-              <h3 class="groups-section__group-title">
-                Correction
-              </h3>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section faq-section">
-        <div class="centered-container">
-          <h2 class="section__title">
-            FAQ
-          </h2>
-          <div>
-            <h3 class="faq-section__question">
-              How can I contribute?
+        <div class="groups-section__groups">
+          <div class="groups-section__group">
+            <WindowIcon class="icon"/>
+            <h3 class="groups-section__group-title">
+              Frontend
             </h3>
-            Read our
-            <nuxt-link class="link" to="/contributing">Contributing Guide</nuxt-link>.
           </div>
-          <div>
-            <h3 class="faq-section__question">
-              How is the project financed?
+          <div class="groups-section__group">
+            <CodeIcon class="icon"/>
+            <h3 class="groups-section__group-title">
+              Backend
             </h3>
-            Nobody gets paid for working on the project, but we have to pay for our servers. So if you want to sponsor
-            us, <a class="link" href="https://www.patreon.com/user?u=5322110">support The Morpheus on Patreon</a>.
+          </div>
+          <div class="groups-section__group">
+            <GamepadIcon class="icon"/>
+            <h3 class="groups-section__group-title">
+              Gamedesign
+            </h3>
+          </div>
+          <div class="groups-section__group">
+            <PaintbrushIcon class="icon"/>
+            <h3 class="groups-section__group-title">
+              Design
+            </h3>
+          </div>
+          <div class="groups-section__group">
+            <GlobeIcon class="icon"/>
+            <h3 class="groups-section__group-title">
+              Website
+            </h3>
+          </div>
+          <div class="groups-section__group">
+            <ShieldIcon class="icon"/>
+            <h3 class="groups-section__group-title">
+              Security
+            </h3>
+          </div>
+          <div class="groups-section__group">
+            <LanguageIcon class="icon"/>
+            <h3 class="groups-section__group-title">
+              Translation
+            </h3>
+          </div>
+          <div class="groups-section__group">
+            <ABCIcon class="icon"/>
+            <h3 class="groups-section__group-title">
+              Correction
+            </h3>
           </div>
         </div>
-      </section>
-    </main>
-  </div>
+      </div>
+    </section>
+    <section class="section faq-section">
+      <div class="content">
+        <h2 class="section__title">
+          FAQ
+        </h2>
+        <div>
+          <h3 class="faq-section__question">
+            How can I contribute?
+          </h3>
+          Read our
+          <nuxt-link class="link" to="/contributing">Contributing Guide</nuxt-link>.
+        </div>
+        <div>
+          <h3 class="faq-section__question">
+            How is the project financed?
+          </h3>
+          Nobody gets paid for working on the project, but we have to pay for our servers. So if you want to sponsor
+          us, <a class="link" href="https://www.patreon.com/user?u=5322110">support The Morpheus on Patreon</a>.
+        </div>
+      </div>
+    </section>
+  </main>
 </template>
 
 <style scoped lang="scss">
-  @import "~@/assets/css/mobile";
-  @import "~@/assets/css/variables";
+  @use "~@/assets/css/utilities/screenSize";
+  @use "~@/assets/css/variables";
 
   .index-page {
     background-color: black;
     width: 100%;
-    margin-top: calc(-1 * var(--navbar-height));
   }
 
   .section {
@@ -275,7 +272,7 @@
     background-image: url("~@/assets/image/green_background.jpg");
     background-attachment: fixed;
 
-    @include notMobile {
+    @include screenSize.notMobile {
       height: 150px;
     }
 
@@ -294,13 +291,13 @@
         font-size: 1.5rem;
       }
 
-      @include mobile {
+      @include screenSize.mobile {
         flex-direction: column;
         justify-content: center;
       }
     }
 
-    @include mobile {
+    @include screenSize.mobile {
       padding: 20px 0;
     }
   }
@@ -312,10 +309,10 @@
       display: flex;
       justify-content: center;
 
-      @include mobile {
+      @include screenSize.mobile {
         flex-direction: column;
 
-        padding: 0 $content-padding;
+        padding: 0 variables.$content-padding;
       }
 
       & > div:nth-child(1) {
@@ -327,9 +324,9 @@
       display: flex;
       align-items: stretch;
 
-      width: $content-width;
+      width: variables.$content-width;
 
-      @include mobile {
+      @include screenSize.mobile {
         flex-wrap: wrap;
         width: 100%;
       }
@@ -342,7 +339,7 @@
 
       width: $more-button-container-width;
 
-      @include mobile {
+      @include screenSize.mobile {
         width: 100%;
         height: $more-button-container-width;
         flex-direction: column;
@@ -362,7 +359,7 @@
       align-items: center;
       justify-content: center;
 
-      @include mobile {
+      @include screenSize.mobile {
         transform: rotate(90deg);
       }
 
@@ -381,7 +378,7 @@
     .desc-section__content {
       display: flex;
 
-      @include mobile {
+      @include screenSize.mobile {
         flex-wrap: wrap;
       }
     }
@@ -391,11 +388,11 @@
       text-align: justify;
 
       &:not(:last-child) {
-        margin-right: $gutter-size;
+        margin-right: variables.$gutter-size;
 
-        @include mobile {
+        @include screenSize.mobile {
           margin-right: 0;
-          margin-bottom: $gutter-size / 2;
+          margin-bottom: variables.$gutter-size / 2;
         }
       }
     }

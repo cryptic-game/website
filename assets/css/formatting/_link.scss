@@ -1,7 +1,7 @@
-@import "variables";
+@use "../variables";
 
 %link {
-  color: $blue;
+  color: variables.$blue;
   text-decoration: none;
 
   transition: 100ms linear opacity;
