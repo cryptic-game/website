@@ -7,6 +7,9 @@
       <a class="link" href="https://the-morpheus.de/faq-en.html" target="_blank">
         Privacy Policy
       </a>
+      <nuxt-link class="link" to="/status">
+        Status
+      </nuxt-link>
     </div>
     <div class="layout-footer__icon-links">
       <a
