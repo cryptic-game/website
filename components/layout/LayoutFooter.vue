@@ -1,8 +1,8 @@
 <template>
   <footer class="layout-footer">
     <div class="layout-footer__links">
-      <nuxt-link class="link" to="/imprint">
-        Imprint
+      <nuxt-link class="link" to="/legal-notice">
+        Legal Notice
       </nuxt-link>
       <a class="link" href="https://the-morpheus.de/faq-en.html" target="_blank">
         Privacy Policy

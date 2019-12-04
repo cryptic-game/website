@@ -1,8 +1,10 @@
 @use "link";
 @use "heading";
+@use "paragraph";
 
 $_elements: (
   a: "link",
+  p: "paragraph",
   h1: "heading--1",
   h2: "heading--2",
   h3: "heading--3",

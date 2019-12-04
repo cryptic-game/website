@@ -1,7 +1,7 @@
 <template>
-  <main class="imprint-page">
-    <div class="content">
-      <h1>Imprint</h1>
+  <main class="legal-notice-page">
+    <div class="content formatted">
+      <h1>Legal notice</h1>
       <p>Cedric Mössner</p>
       <p>
         Hedwig-Kettler-Str. 1<br/>
@@ -21,5 +21,6 @@
 
 <script>
   export default {
+    name: "LegalNoticePage"
   };
 </script>
