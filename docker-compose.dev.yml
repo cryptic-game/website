@@ -1,8 +1,0 @@
-version: '3.7'
-services:
-    website:
-        container_name: cryptic_game_website
-        build: .
-        restart: always
-        ports:
-          - "8088:80"
