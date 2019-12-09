@@ -1,5 +1,6 @@
 <template>
   <main class="legal-notice-page">
+    <KNavigationBar title="Legal Notice"/>
     <div class="content formatted">
       <h1>Legal notice</h1>
       <p>Cedric Mössner</p>
@@ -20,7 +21,10 @@
 </style>
 
 <script>
+  import KNavigationBar from "kiste/components/KNavigationBar";
+
   export default {
-    name: "LegalNoticePage"
+    name: "LegalNoticePage",
+    components: { KNavigationBar }
   };
 </script>

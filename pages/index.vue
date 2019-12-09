@@ -1,5 +1,6 @@
 <template>
   <main class="index-page">
+    <KNavigationBar background-after-scroll/>
     <video
       class="background-video"
       autoplay
@@ -65,7 +66,7 @@
           <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
         </div>
         <div class="blog-section__more-button-container">
-          <nuxt-link class="blog-section__more-button link" to="/blog">
+          <nuxt-link class="blog-section__more-button link center-content" to="/blog">
             <ArrowRightIcon class="icon"/>
           </nuxt-link>
         </div>
@@ -187,21 +188,23 @@
         </div>
       </div>
     </section>
+    <KFooter/>
   </main>
 </template>
 
 <style scoped lang="scss">
-  @use "~@/assets/css/utilities/screenSize";
-  @use "~@/assets/css/variables";
+  @use "~kiste/css/mixins/screenSize";
 
   .index-page {
-    background-color: black;
     width: 100%;
+
+    ::selection {
+      background-color: var(--colors-green);
+    }
   }
 
   .section {
     width: 100%;
-    background-color: black;
     z-index: 1;
     position: relative;
     overflow: auto;
@@ -216,7 +219,7 @@
 
   .hero-section {
     background: transparent;
-    height: 100vh;
+    height: calc(100vh - var(--x-navbar-height));
     padding: 20px 0;
 
     display: flex;
@@ -279,7 +282,6 @@
     .second-section__content {
       height: 100%;
 
-      display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 1.2rem;
@@ -312,7 +314,7 @@
       @include screenSize.mobile {
         flex-direction: column;
 
-        padding: 0 variables.$content-padding;
+        padding: 0 var(--content-padding);
       }
 
       & > div:nth-child(1) {
@@ -324,7 +326,7 @@
       display: flex;
       align-items: stretch;
 
-      width: variables.$content-width;
+      width: var(--content-width);
 
       @include screenSize.mobile {
         flex-wrap: wrap;
@@ -348,16 +350,12 @@
 
     .blog-section__more-button {
       $size: 45px;
-      background-color: #1d1d1d;
+      background-color: var(--colors-background-a);
       color: white;
       border-radius: 50%;
 
       width: $size;
       height: $size;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
       @include screenSize.mobile {
         transform: rotate(90deg);
@@ -388,11 +386,11 @@
       text-align: justify;
 
       &:not(:last-child) {
-        margin-right: variables.$gutter-size;
+        margin-right: var(--gutter-size);
 
         @include screenSize.mobile {
           margin-right: 0;
-          margin-bottom: variables.$gutter-size / 2;
+          margin-bottom: 5px;
         }
       }
     }
@@ -459,6 +457,8 @@
 </style>
 
 <script>
+  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KFooter from "kiste/components/KFooter";
   import { blogAPI } from "@/assets/js/blog";
   import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard";
@@ -477,8 +477,10 @@
 
   export default {
     name: "IndexPage",
-    layout: "landing-page",
+    layout: "none",
     components: {
+      KNavigationBar,
+      KFooter,
       BlogPostCard,
       GamepadIcon,
       NoteIcon,

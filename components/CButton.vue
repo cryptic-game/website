@@ -38,8 +38,8 @@
       color: colorPropEnum.computedProperty,
       style() {
         return {
-          "--size": this.size,
-          "--overwrite-on-color": this.textColor
+          "--x-size": this.size,
+          "--x-c-color": this.textColor
         };
       }
     },
@@ -90,8 +90,7 @@
 </script>
 
 <style scoped lang="scss">
-  @use "~@/assets/css/utilities/screenSize";
-  @use "~@/assets/css/variables";
+  @use "~kiste/css/mixins/screenSize";
 
   .c-button {
     display: flex;
@@ -112,66 +111,66 @@
     box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.7);
 
     &.white {
-      --color: white;
-      --on-color: black;
-      --hover-color: #d7d7d7;
+      --x-color: white;
+      --x-c-color: black;
+      --x-a-color: #d7d7d7;
     }
 
     &.green {
-      --color: #{variables.$green};
-      --on-color: #{variables.$on-green};
-      --hover-color: #{variables.$green-darker};
+      --x-color: var(--colors-green);
+      --x-c-color: var(--colors-green-c);
+      --x-a-color: var(--colors-green-a);
     }
 
     &.blue {
-      --color: #{variables.$blue};
-      --on-color: #{variables.$on-blue};
-      --hover-color: #{variables.$blue-darker};
+      --x-color: var(--colors-blue);
+      --x-c-color: var(--colors-blue-c);
+      --x-a-color: var(--colors-blue-a);
     }
 
     &.discord {
-      --color: #{variables.$discord};
-      --on-color: #{variables.$on-discord};
-      --hover-color: #{variables.$discord-darker};
+      --x-color: var(--colors-discord);
+      --x-c-color: var(--colors-discord-c);
+      --x-a-color: var(--colors-discord-a);
     }
 
     transition: 120ms ease-out;
     transition-property: background-color, color;
 
-    background: var(--color);
-    color: var(--overwrite-on-color, var(--on-color));
+    background: var(--x-color);
+    color: var(--x-c-color);
 
     &.outline {
       background: transparent;
 
-      border: 2px solid var(--color);
+      border: 2px solid var(--x-color);
     }
 
     &:hover {
-      background: var(--hover-color);
+      background: var(--x-a-color);
 
       &.outline {
-        background: var(--color);
-        color: var(--on-color);
+        background: var(--x-color);
+        color: var(--x-c-color);
       }
     }
 
     .c-button__content {
-      font-size: calc(var(--size) * 0.5rem + 0.6rem);
+      font-size: calc(var(--x-size) * 0.5rem + 0.6rem);
       width: max-content;
 
       @include screenSize.mobile {
-        font-size: calc(var(--size) * 0.5rem + 0.5rem);
+        font-size: calc(var(--x-size) * 0.5rem + 0.5rem);
       }
     }
 
     .c-button__icon::v-deep .icon {
       display: block;
       margin-right: 8px;
-      width: calc(var(--size) * 0.7rem + 1rem);
+      width: calc(var(--x-size) * 0.7rem + 1rem);
 
       @include screenSize.mobile {
-        width: calc(var(--size) * 0.7rem + 0.8rem);
+        width: calc(var(--x-size) * 0.7rem + 0.8rem);
       }
     }
   }

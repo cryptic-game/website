@@ -1,27 +1,21 @@
 <template>
   <div class="default-layout fill-screen">
-    <LayoutNavigation :show-background="true"/>
-    <div class="default-layout__content">
+    <KApp>
       <nuxt/>
-    </div>
-    <LayoutFooter/>
+      <KFooter/>
+    </KApp>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .default-layout {
-    .default-layout__content {
-      margin-top: var(--navbar-height);
-      min-height: calc(100vh - var(--navbar-height));
-    }
-  }
+
 </style>
 
 <script>
-  import LayoutFooter from "@/components/layout/LayoutFooter";
-  import LayoutNavigation from "@/components/layout/LayoutNavigation";
+  import KApp from "kiste/components/KApp";
+  import KFooter from "kiste/components/KFooter";
 
   export default {
-    components: { LayoutNavigation, LayoutFooter }
+    components: { KApp, KFooter }
   };
 </script>

@@ -1,37 +1,34 @@
 <template>
   <div class="post-page">
-    <article class="post content formatted">
-      <img :src="post.image" class="post__image"/>
+    <KNavigationBar title="Blog"/>
+    <article class="content formatted">
+      <img :src="post.image" class="post-page__image"/>
       <span>{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
-      <h1 class="post__title">
+      <h1 class="post-page__title">
         {{ post.title }}
       </h1>
       <span>by {{ post.authors.map(author => author.name).join(", ") }} | reading time:
         {{ Math.max(1, post.readingTime) }} minute{{ Math.max(1, post.readingTime) === 1 ? "" : "s" }}</span>
-      <div class="post__content" v-html="post.html">
+      <div class="post-page__content" v-html="post.html">
       </div>
     </article>
   </div>
 </template>
 
 <style scoped lang="scss">
-  .post {
-
-  }
-
-  .post__image {
+  .post-page__image {
     width: 100%;
     max-height: 75vh;
     object-fit: cover;
     margin-bottom: 20px;
   }
 
-  .post__title {
+  .post-page__title {
     margin-top: 0;
     margin-bottom: 5px;
   }
 
-  .post__content {
+  .post-page__content {
     margin-top: 40px;
 
     ::v-deep {
@@ -59,11 +56,13 @@
 </style>
 
 <script>
+  import KNavigationBar from "kiste/components/KNavigationBar";
   import { blogAPI } from "@/assets/js/blog";
   import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
 
   export default {
     name: "PostPage",
+    components: { KNavigationBar },
     async asyncData({ route }) {
       return {
         post: mapObjectKeys(blogAPI.mappings.post, await blogAPI.posts.read({

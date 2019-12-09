@@ -21,10 +21,8 @@
 </template>
 
 <style scoped lang="scss">
-  @use "~@/assets/css/variables";
-
   .blog-post-card {
-    background: variables.$black-brighter;
+    background: var(--colors-background-a);
     color: white;
 
     overflow: hidden;

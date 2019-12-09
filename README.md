@@ -11,9 +11,9 @@ ___
 
 You can clone the repository with:
 
-`git clone https://github.com/cryptic-game/website.git`
-
-Then [read the documentation](docs/README.md) :notebook:.
+```bash
+git clone https://github.com/cryptic-game/website.git
+```
 
 ### Project setup
 ```

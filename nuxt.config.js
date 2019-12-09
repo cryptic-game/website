@@ -1,8 +1,6 @@
 export default {
   mode: "universal",
-  /*
-  ** Headers of the page
-  */
+
   head: {
     title: process.env.npm_package_name || "",
     meta: [
@@ -15,45 +13,79 @@ export default {
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Alata&display=swap" }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
+
+
   loading: { color: "#fff" },
-  /*
-  ** Global CSS
-  */
+
+  // Global CSS
   css: [
-    "@/assets/css/global.scss"
+    "@/assets/global.scss"
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
+
   plugins: [
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
+
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    "@nuxtjs/eslint-module"
+    "@nuxtjs/eslint-module",
+    "kiste/nuxt"
   ],
-  /*
-  ** Nuxt.js modules
-  */
+
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/pwa"
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
+
+  kiste: {
+    theme: {
+      colors: {
+        background: "black/white/#1d1c1c",
+        discord: "#7289DA/white/#6a7fca"
+      }
+    },
+    navigationItems: [
+      {
+        label: "Home",
+        to: "/"
+      },
+      {
+        label: "Play",
+        href: "https://play.cryptic-game.net"
+      },
+      {
+        label: "Blog",
+        to: "/blog"
+      },
+      {
+        label: "Roadmap",
+        to: "/roadmap"
+      },
+      {
+        label: "Contribute",
+        to: "/contribute"
+      },
+      {
+        label: "Team",
+        to: "/team"
+      }
+    ],
+    footerItems: [
+      {
+        label: "Legal Notice",
+        to: "/legal-notice"
+      },
+      {
+        label: "Privacy Policy",
+        href: "https://the-morpheus.de/faq-en.html"
+      },
+      {
+        label: "Status",
+        to: "/status"
+      }
+    ]
   },
-  /*
-  ** Build configuration
-  */
+
   build: {
     /*
     ** You can extend webpack config here
