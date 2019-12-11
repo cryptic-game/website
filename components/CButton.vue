@@ -1,17 +1,13 @@
 <script>
   import { createPropEnum, oneOf } from "@/assets/js/propUtils";
 
-  const colorPropEnum = createPropEnum(["white", "green", "blue", "discord"], "white");
+  const colorPropertyEnum = createPropEnum(["white", "green", "blue", "discord"], "white");
 
   export default {
     name: "CButton",
     props: {
-      type: oneOf(["text", "password"], {
-        default: "text"
-      }),
-      size: oneOf([1, 2, 3, 4], {
-        default: 1
-      }),
+      type: oneOf(["text", "password"], { default: "text" }),
+      size: oneOf([1, 2, 3, 4], { default: 1 }),
       outline: {
         type: Boolean,
         default: false
@@ -28,62 +24,51 @@
         type: String,
         default: null
       },
+      // eslint-disable-next-line unicorn/no-keyword-prefix
       newTab: {
         type: Boolean,
         default: false
       },
-      ...colorPropEnum.props
+      ...colorPropertyEnum.props
     },
     computed: {
-      color: colorPropEnum.computedProperty,
-      style() {
+      color: colorPropertyEnum.computedProperty,
+      style () {
         return {
           "--x-size": this.size,
           "--x-c-color": this.textColor
         };
       }
     },
-    render(h) {
-      let rootEl;
-      let props;
-      let attrs = {};
+    render (h) {
+      let rootElement;
+      let properties;
+      let attributes = {};
 
       if (this.to) {
-        rootEl = "nuxt-link";
-        props = {
-          to: this.to
-        };
+        rootElement = "nuxt-link";
+        properties = { to: this.to };
       } else if (this.href) {
-        rootEl = "a";
-        attrs = {
-          href: this.href
-        };
+        rootElement = "a";
+        attributes = { href: this.href };
       } else {
-        rootEl = "button";
-        attrs = {
+        rootElement = "button";
+        attributes = {
           type: this.type,
           target: this.newTab ? "_blank" : "_self",
           rel: "noopener"
         };
       }
 
-      return h(rootEl, {
+      return h(rootElement, {
         class: ["c-button", this.color, { outline: this.outline }],
         style: this.style,
-        attrs,
-        props,
+        attrs: attributes,
+        props: properties,
         on: this.$listeners
       }, [
-        h("span", {
-          class: "c-button__icon"
-        }, [
-          this.$slots.icon
-        ]),
-        h("span", {
-          class: "c-button__content"
-        }, [
-          this.$slots.default
-        ])
+        h("span", { class: "c-button__icon" }, [this.$slots.icon]),
+        h("span", { class: "c-button__content" }, [this.$slots.default])
       ]);
     }
   };

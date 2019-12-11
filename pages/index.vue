@@ -457,12 +457,12 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
-  import KFooter from "kiste/components/KFooter";
+  import KNavigationBar from "kiste/components/KNavigationBar.vue";
+  import KFooter from "kiste/components/KFooter.vue";
   import { blogAPI } from "@/assets/js/blog";
   import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
-  import BlogPostCard from "@/components/BlogPostCard";
-  import CButton from "@/components/CButton";
+  import BlogPostCard from "@/components/BlogPostCard.vue";
+  import CButton from "@/components/CButton.vue";
   import DiscordIcon from "@/assets/icons/discord.svg";
   import GamepadIcon from "@/assets/icons/gamepad.svg";
   import NoteIcon from "@/assets/icons/note.svg";
@@ -495,16 +495,16 @@
       PaintbrushIcon,
       ShieldIcon
     },
-    async asyncData() {
+    async asyncData () {
       return {
-        blogPosts: Array.from(await blogAPI.posts.browse({
-          limit: 2,
-          include: "slug,title,feature_image,reading_time,published_at"
-        })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
+        blogPosts: [
+          ...await blogAPI.posts.browse({
+            limit: 2,
+            include: "slug,title,feature_image,reading_time,published_at"
+          })
+        ].map(post => mapObjectKeys(blogAPI.mappings.post, post))
       };
     },
-    data: () => ({
-      blogPosts: []
-    })
+    data: () => ({ blogPosts: [] })
   };
 </script>

@@ -97,10 +97,8 @@
       }
     },
     computed: {
-      imageStyle() {
-        return {
-          height: this.imageHeight
-        };
+      imageStyle () {
+        return { height: this.imageHeight };
       }
     }
   };

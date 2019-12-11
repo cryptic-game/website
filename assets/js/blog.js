@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import GhostContentAPI from "@tryghost/content-api";
 
 export const blogAPI = new GhostContentAPI({

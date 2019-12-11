@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-default-export
 export default {
   mode: "universal",
 
@@ -14,16 +15,12 @@ export default {
     ]
   },
 
-
   loading: { color: "#fff" },
 
   // Global CSS
-  css: [
-    "@/assets/global.scss"
-  ],
+  css: ["@/assets/global.scss"],
 
-  plugins: [
-  ],
+  plugins: [],
 
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
@@ -90,7 +87,8 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+    // eslint-disable-next-line no-unused-vars
+    extend (config, context) {
       const svgRule = config.module.rules.find(rule => rule.test.test(".svg"));
 
       svgRule.test = /\.(png|jpe?g|gif|webp)$/;

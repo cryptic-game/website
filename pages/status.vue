@@ -15,7 +15,7 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "kiste/components/KNavigationBar.vue";
 
   export default {
     name: "StatusPage",

@@ -56,14 +56,14 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "kiste/components/KNavigationBar.vue";
   import { blogAPI } from "@/assets/js/blog";
   import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
 
   export default {
     name: "PostPage",
     components: { KNavigationBar },
-    async asyncData({ route }) {
+    async asyncData ({ route }) {
       return {
         post: mapObjectKeys(blogAPI.mappings.post, await blogAPI.posts.read({
           slug: route.params.slug,
@@ -71,8 +71,6 @@
         }))
       };
     },
-    data: () => ({
-      post: {}
-    })
+    data: () => ({ post: {} })
   };
 </script>

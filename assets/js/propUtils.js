@@ -1,4 +1,7 @@
-export function oneOf(items, options) {
+/* eslint-disable unicorn/prevent-abbreviations */
+// "prop" is a Vue-specific term
+
+export function oneOf (items, options) {
   return {
     ...options,
     type: null,
@@ -6,19 +9,17 @@ export function oneOf(items, options) {
   };
 }
 
-export function createPropEnum(items, defaultValue) {
-  const props = {};
+export function createPropEnum (items, defaultValue) {
+  const properties = {};
 
   items.forEach(item => {
-    props[item] = {
+    properties[item] = {
       type: Boolean,
       default: false
     };
   });
 
-  const computedProperty = function() {
-    return items.find(item => this[item]) || defaultValue;
-  };
+  const computedProperty = vm => items.find(item => vm[item]) || defaultValue;
 
-  return { props, computedProperty };
+  return { props: properties, computedProperty };
 }
