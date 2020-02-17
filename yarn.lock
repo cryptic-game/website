@@ -789,10 +789,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@moritzruth/eslint-config@^1.0.4":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@moritzruth/eslint-config/-/eslint-config-1.0.7.tgz#04a78500052e609444cb54c12b08a93974daf8f3"
-  integrity sha512-alxajq0OdHLhKSAC/vTFrLIZZewpw+Ch8T0n0qLIRawKFe8yKf7YYy+z0mHcAaHUTYsO465llzo3YyKC557+0g==
+"@moritzruth/eslint-config@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@moritzruth/eslint-config/-/eslint-config-1.0.8.tgz#09b7e1d8ba1ad0950ec7b46a617ae695e8c5c4ea"
+  integrity sha512-mHbWBm7us+FxOsaszO5OOXfIsQLpyEry+jitr8gY7ni6KMCHPHmgM9yN57FDXcyvaPEVyAyemN5wFEcF3U3jEg==
   dependencies:
     eslint-plugin-import "^2.19.1"
     eslint-plugin-markdown "^1.0.1"
