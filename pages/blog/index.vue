@@ -31,22 +31,15 @@
 
 <script>
   import KNavigationBar from "kiste/components/KNavigationBar.vue";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard.vue";
 
   export default {
     name: "PostsPage",
     components: { BlogPostCard, KNavigationBar },
-    async asyncData () {
+    async asyncData({ $axios }) {
       return {
-        posts: [
-          ...await blogAPI
-            .posts
-            .browse({ include: "slug,title,feature_image,reading_time,published_at" })
-        ].map(post => mapObjectKeys(blogAPI.mappings.post, post))
+        posts: await $axios.$get("/api/posts")
       };
-    },
-    data: () => ({ posts: [] })
+    }
   };
 </script>

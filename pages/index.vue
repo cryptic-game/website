@@ -55,25 +55,34 @@
         </CButton>
       </div>
     </section>
-    <section class="section blog-section">
-      <h2 class="section__title content">
-        Blog
-      </h2>
-      <div class="blog-section__content">
-        <div></div>
-        <div class="blog-section__posts flex-with-gutter">
-          <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post"/>
-          <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
+    <ApolloQuery
+      :query="gql => gql`
+        query FetchBlogPosts {
+          blogPosts(limit: 2) {
+            ...blogPost
+          }
+        }
+
+        ${this.$options.blogPostFragment}
+      `"
+      v-slot="{ result: { loading, error, data } }"
+    >
+      <section class="section blog-section" v-if="!error">
+        <div class="blog-section__content content">
+          <h2 class="section__title">
+            Blog
+          </h2>
+          <div class="blog-section__posts flex-with-gutter">
+            <LoadingHead v-if="loading" :size="200"/>
+            <template v-else-if="data">
+              <BlogPostCard v-for="post in data.blogPosts" :key="post.slug" :post="post"/>
+            </template>
+          </div>
         </div>
-        <div class="blog-section__more-button-container">
-          <nuxt-link class="blog-section__more-button link center-content" to="/blog">
-            <ArrowRightIcon class="icon"/>
-          </nuxt-link>
-        </div>
-      </div>
-    </section>
+      </section>
+    </ApolloQuery>
     <section class="section desc-section">
-      <div class="desc-section__content content">
+      <div class="desc-section__content content flex-with-gutter">
         <div class="desc-section__part">
           <h2 class="desc-section__title">
             The Project
@@ -239,7 +248,7 @@
       display: inline-block;
 
       position: absolute;
-      top: -40vh;
+      top: -30vh;
       right: 15%;
       font-size: 1.6rem;
       text-align: right;
@@ -305,67 +314,13 @@
   }
 
   .blog-section {
-    $more-button-container-width: 70px;
-
-    .blog-section__content {
-      display: flex;
-      justify-content: center;
-
-      @include screenSize.mobile {
-        flex-direction: column;
-
-        padding: 0 var(--content-padding);
-      }
-
-      & > div:nth-child(1) {
-        width: $more-button-container-width;
-      }
-    }
-
     .blog-section__posts {
       display: flex;
       align-items: stretch;
 
-      width: var(--content-width);
-
       @include screenSize.mobile {
         flex-wrap: wrap;
         width: 100%;
-      }
-    }
-
-    .blog-section__more-button-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-
-      width: $more-button-container-width;
-
-      @include screenSize.mobile {
-        width: 100%;
-        height: $more-button-container-width;
-        flex-direction: column;
-      }
-    }
-
-    .blog-section__more-button {
-      $size: 45px;
-      background-color: var(--colors-background-a);
-      color: white;
-      border-radius: 50%;
-
-      width: $size;
-      height: $size;
-
-      @include screenSize.mobile {
-        transform: rotate(90deg);
-      }
-
-      .icon {
-        width: 24px;
-
-        position: relative;
-        left: 2px;
       }
     }
   }
@@ -384,15 +339,6 @@
     .desc-section__part {
       width: 100%;
       text-align: justify;
-
-      &:not(:last-child) {
-        margin-right: var(--gutter-size);
-
-        @include screenSize.mobile {
-          margin-right: 0;
-          margin-bottom: 5px;
-        }
-      }
     }
 
     .desc-section__title {
@@ -459,14 +405,11 @@
 <script>
   import KNavigationBar from "kiste/components/KNavigationBar.vue";
   import KFooter from "kiste/components/KFooter.vue";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard.vue";
   import CButton from "@/components/CButton.vue";
   import DiscordIcon from "@/assets/icons/discord.svg";
   import GamepadIcon from "@/assets/icons/gamepad.svg";
   import NoteIcon from "@/assets/icons/note.svg";
-  import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
   import WindowIcon from "@/assets/icons/window.svg";
   import ABCIcon from "@/assets/icons/abc.svg";
   import CodeIcon from "@/assets/icons/code.svg";
@@ -474,11 +417,13 @@
   import LanguageIcon from "@/assets/icons/language.svg";
   import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
   import ShieldIcon from "@/assets/icons/shield.svg";
+  import LoadingHead from "@/components/LoadingHead.vue";
 
   export default {
     name: "IndexPage",
     layout: "none",
     components: {
+      LoadingHead,
       KNavigationBar,
       KFooter,
       BlogPostCard,
@@ -486,7 +431,6 @@
       NoteIcon,
       DiscordIcon,
       CButton,
-      ArrowRightIcon,
       WindowIcon,
       ABCIcon,
       CodeIcon,
@@ -495,16 +439,6 @@
       PaintbrushIcon,
       ShieldIcon
     },
-    async asyncData () {
-      return {
-        blogPosts: [
-          ...await blogAPI.posts.browse({
-            limit: 2,
-            include: "slug,title,feature_image,reading_time,published_at"
-          })
-        ].map(post => mapObjectKeys(blogAPI.mappings.post, post))
-      };
-    },
-    data: () => ({ blogPosts: [] })
+    blogPostFragment: BlogPostCard.fragments.blogPost
   };
 </script>

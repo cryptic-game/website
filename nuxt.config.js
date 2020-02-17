@@ -1,9 +1,8 @@
-// eslint-disable-next-line import/no-default-export
-export default {
+module.exports = {
   mode: "universal",
 
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Cryptic",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -29,9 +28,8 @@ export default {
   ],
 
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/axios",
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
+    "@nuxtjs/axios"
   ],
 
   kiste: {
@@ -87,10 +85,8 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    // eslint-disable-next-line no-unused-vars
-    extend (config, context) {
+    extend (config) {
       const svgRule = config.module.rules.find(rule => rule.test.test(".svg"));
-
       svgRule.test = /\.(png|jpe?g|gif|webp)$/;
 
       config.module.rules.push({
@@ -100,6 +96,17 @@ export default {
           "vue-svg-loader"
         ]
       });
+
+      // See https://vue-apollo.netlify.com/guide/components/query.html#query-with-gql-files
+      const vueRule = config.module.rules.find(rule => rule.test.test(".vue"));
+      vueRule.options = {
+        ...vueRule.options,
+        transpileOptions: {
+          transforms: {
+            dangerousTaggedTemplateString: true
+          }
+        }
+      };
     }
   }
 };

@@ -1,8 +1,9 @@
+const path = require("path");
+
 module.exports = {
   "root": true,
   "env": {
     browser: true,
-    node: true,
     es6: true
   },
   "parserOptions": {
@@ -16,8 +17,18 @@ module.exports = {
   "settings": {
     "import/resolver": {
       webpack: {
-        config: "webpack.resolve.js"
+        config: path.resolve(__dirname, "./webpack.resolve.js")
       }
     }
+  },
+  "rules": {
+    "nuxt/no-cjs-in-config": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/prevent-abbreviations": ["warn", {
+      whitelist: {
+        req: true,
+        res: true
+      }
+    }]
   }
 };

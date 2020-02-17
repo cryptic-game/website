@@ -1,22 +1,20 @@
 <template>
   <div class="blog-post-card">
-    <img :src="post.image" class="blog-post-card__image" :style="imageStyle"/>
-    <div class="blog-post-card__info">
-      <span class="blog-post-card__date">{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
+    <nuxt-link :to="`/blog/${post.slug}`">
+      <img
+        class="blog-post-card__image"
+        :alt="postImage === null ? '' : postImage.altText"
+        :src="`/uploads/${post.imageID}`"
+        :style="imageStyle"
+      />
+    </nuxt-link>
+    <nuxt-link class="link blog-post-card__info" :to="`/blog/${post.slug}`">
+      <span class="blog-post-card__date">{{ new Date(parseInt(post.publishedAt)).toLocaleDateString() }}</span>
       <span class="blog-post-card__title">
-        {{ post.title }}
-      </span>
-      <span class="blog-post-card__excerpt">{{ post.excerpt }}</span>
-      <div class="blog-post-card__footer">
-        <span class="blog-post-card__reading-time">
-          <b>{{ Math.max(1, post.readingTime) }} minute{{ Math.max(1, post.readingTime) === 1 ? "" : "s" }}</b>
-          reading time
+          {{ post.title }}
         </span>
-        <nuxt-link class="blog-post-card__link link" :to="`/blog/${post.slug}`">
-          Read
-        </nuxt-link>
-      </div>
-    </div>
+      <span class="blog-post-card__excerpt">{{ post.excerpt }}</span>
+    </nuxt-link>
   </div>
 </template>
 
@@ -34,6 +32,8 @@
 
   .blog-post-card__info {
     padding: 20px;
+    display: block;
+    color: white;
   }
 
   .blog-post-card__excerpt {
@@ -60,26 +60,7 @@
     font-size: 1.2rem;
     font-weight: bold;
 
-    color: white;
     margin-bottom: 8px;
-  }
-
-  .blog-post-card__footer {
-    display: flex;
-    justify-content: space-between;
-
-    margin-top: 20px;
-  }
-
-  .blog-post-card__link {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
   }
 </style>
 
@@ -94,6 +75,21 @@
       imageHeight: {
         type: String,
         default: undefined
+      }
+    },
+    data: () => ({
+      postImage: null,
+      postImagePromise: null
+    }),
+    watch: {
+      post(post, oldPost) {
+        if (this.postImage === null || oldPost.imageID !== this.postImage.id) {
+          if (this.postImagePromise !== null) {
+            this.postImagePromise.cancel();
+          }
+
+          this.postImagePromise = this.$axios.$get(`/api/uploads/${post.imageID}`);
+        }
       }
     },
     computed: {

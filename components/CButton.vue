@@ -6,7 +6,6 @@
   export default {
     name: "CButton",
     props: {
-      type: oneOf(["text", "password"], { default: "text" }),
       size: oneOf([1, 2, 3, 4], { default: 1 }),
       outline: {
         type: Boolean,
@@ -54,7 +53,6 @@
       } else {
         rootElement = "button";
         attributes = {
-          type: this.type,
           target: this.newTab ? "_blank" : "_self",
           rel: "noopener"
         };
