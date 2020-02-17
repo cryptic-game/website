@@ -11,4 +11,8 @@ R.use("/users", UsersRouter);
 
 R.use("/uploads", UploadsRouter);
 
+R.use((req, res) => {
+  res.status(404).send();
+});
+
 export default R;
