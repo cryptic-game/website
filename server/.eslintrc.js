@@ -17,6 +17,9 @@ module.exports = {
   },
   rules: {
     "import/no-default-export": "off",
-    "unicorn/no-fn-reference-in-iterator": "off"
+    "unicorn/no-fn-reference-in-iterator": "off",
+    "newline-per-chained-call": "off",
+    "capitalized-comments": "off",
+    "callback-return": "off"
   }
 };

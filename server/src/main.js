@@ -1,12 +1,12 @@
 import path from "path";
 import { Nuxt, Builder } from "nuxt";
 import express from "express";
+import fs from "fs-extra";
 import config from "./config";
 import { sequelize } from "./sequelize";
 import Router from "./routes";
 
 const expressApp = express();
-
 expressApp.use(Router);
 
 async function startNuxt () {
@@ -28,6 +28,8 @@ async function startNuxt () {
 }
 
 async function start() {
+  await fs.ensureDir(config.uploadsPath);
+
   sequelize();
 
   await startNuxt();
