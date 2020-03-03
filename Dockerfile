@@ -5,9 +5,6 @@ MAINTAINER faq@cryptic-game.net
 WORKDIR /app
 ADD . /app
 
-RUN npm i -g npm && npm i -g yarn
-
-
 RUN yarn
 RUN yarn build
 EXPOSE 3000
