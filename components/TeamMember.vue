@@ -1,11 +1,7 @@
 <template>
   <div class="member">
     <div class="image">
-      <img
-        :alt="name + ' Github\'s Avatar'"
-        :src="'https://github.com/' + githubName + '.png?size=44'"
-        height="44px"
-        width="44px">
+      <img :alt="name + ' Github\'s Avatar'" :src="'https://github.com/' + githubName + '.png?size=44'">
     </div>
     <div class="info">
       <span>{{ name }}{{role ? ' - ' + role : ''}}</span>
@@ -33,9 +29,13 @@
 
     div.image {
       margin-right: 10px;
+      width: 44px;
+      height: 44px;
 
       img {
         border-radius: 50%;
+        width: 100%;
+        height: 100%;
       }
     }
 
