@@ -3,7 +3,8 @@
   <div class="member">
 
     <div class="image">
-      <img :alt="name + ' Github\'s Avatar'" :src="'https://github.com/' + githubName + '.png?size=44'">
+      <img :alt="name + ' Github\'s Avatar'" :src="'https://github.com/' + githubName + '.png?size=44'" height="44px"
+           width="44px">
     </div>
 
     <div class="info">
@@ -34,13 +35,9 @@
 
     div.image {
       margin-right: 10px;
-      width: 44px;
-      height: 44px;
 
       img {
         border-radius: 50%;
-        width: 100%;
-        height: 100%;
       }
     }
 
