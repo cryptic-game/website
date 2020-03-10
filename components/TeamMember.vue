@@ -34,9 +34,13 @@
 
     div.image {
       margin-right: 10px;
+      width: 44px;
+      height: 44px;
 
       img {
         border-radius: 50%;
+        width: 100%;
+        height: 100%;
       }
     }
 
