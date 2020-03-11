@@ -4,54 +4,58 @@
     <div class="content formatted">
       <h1>Contribute</h1>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Arcu ac tortor dignissim convallis aenean. Ac felis donec et odio pellentesque diam. Dolor sed
-        viverra ipsum nunc aliquet bibendum enim. Interdum velit laoreet id donec ultrices tincidunt. Lacus viverra
-        vitae congue eu consequat ac. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada.
-        Nascetur ridiculus mus mauris vitae ultricies leo integer. At tempor commodo ullamcorper a. Orci ac auctor augue
-        mauris augue. Lobortis mattis aliquam faucibus purus in massa tempor nec. Sit amet facilisis magna etiam tempor
-        orci eu. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Lacus sed turpis tincidunt id. Est sit
-        amet facilisis magna etiam tempor orci eu lobortis. Tristique magna sit amet purus.
+      <p class="heading--5">
+        We develop a multiplayer browser game!
+        <br>
+        You want to participate? - Then you have come to the right place!
       </p>
-
       <p>
-        Pellentesque adipiscing commodo elit at imperdiet. Odio tempor orci dapibus ultrices in iaculis nunc sed augue.
-        Pellentesque elit ullamcorper dignissim cras tincidunt. Sollicitudin ac orci phasellus egestas tellus rutrum
-        tellus pellentesque. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Aenean et tortor at
-        risus. Fermentum iaculis eu non diam. Pellentesque habitant morbi tristique senectus et netus et. Ac auctor
-        augue mauris augue neque gravida. Sed enim ut sem viverra aliquet eget. Elementum eu facilisis sed odio morbi
-        quis commodo.
-      </p>
-
-      <p>
-        Aenean vel elit scelerisque mauris. Sapien et ligula ullamcorper malesuada. Semper auctor neque vitae tempus.
-        Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. Ut diam quam nulla porttitor massa id. Id
-        leo in vitae turpis massa sed elementum tempus egestas. At in tellus integer feugiat scelerisque varius morbi
-        enim nunc. Ut etiam sit amet nisl purus in. Scelerisque viverra mauris in aliquam sem. Cursus euismod quis
-        viverra nibh. Quis auctor elit sed vulputate mi sit amet mauris. Neque aliquam vestibulum morbi blandit cursus
-        risus at. Neque laoreet suspendisse interdum consectetur libero.
-      </p>
-
-      <p>
-        Elementum integer enim neque volutpat ac tincidunt. Amet massa vitae tortor condimentum lacinia quis vel. Dolor
-        sit amet consectetur adipiscing elit. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque.
-        Auctor elit sed vulputate mi. Accumsan lacus vel facilisis volutpat est velit. Leo integer malesuada nunc vel
-        risus commodo viverra maecenas accumsan. Elit sed vulputate mi sit amet. Vitae et leo duis ut. Adipiscing diam
-        donec adipiscing tristique risus. Est ante in nibh mauris cursus mattis. Luctus venenatis lectus magna fringilla
-        urna porttitor. Suscipit tellus mauris a diam maecenas sed enim. Scelerisque varius morbi enim nunc faucibus. Id
-        interdum velit laoreet id donec. Mattis nunc sed blandit libero volutpat sed. Sagittis orci a scelerisque purus
-        semper.
-      </p>
-
-      <p>
-        Sem fringilla ut morbi tincidunt augue interdum. Tortor vitae purus faucibus ornare suspendisse sed nisi. Velit
-        euismod in pellentesque massa placerat. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium
-        vulputate sapien. Condimentum lacinia quis vel eros donec ac odio tempor. Nascetur ridiculus mus mauris vitae
-        ultricies leo integer malesuada. Nisl vel pretium lectus quam id. Laoreet non curabitur gravida arcu ac tortor
-        dignissim convallis aenean. Orci dapibus ultrices in iaculis nunc. Donec ultrices tincidunt arcu non sodales
-        neque. In nibh mauris cursus mattis molestie a. Mauris rhoncus aenean vel elit. Volutpat commodo sed egestas
-        egestas.
+        The community project is a joint effort of many volunteer members. We are a team of administrators, designers,
+        software developers and game designers. It takes a lot of time, good skills, motivation, passion and discipline
+        from every single person in the community to make Cryptic a successful game.
+        <br><br>
+        The community project offers many opportunities for you to participate, whether you have programming skills or
+        not. At the same time, you will immediately join a friendly and motivated team.
+        <br>
+        The backend is developed in Java and Python.
+        <br>
+        The entire interface of the game is developed in Angular and the corresponding web languages HTML, SCSS and
+        TypeScript.
+        <br><br>
+        The Cryptic website is developed in Vue.js in combination with Nuxt.js.
+        <br><br>
+        <strong>
+          If you have any questions or want to get started right away, feel free to join the
+          <a href="https://discord.gg/tN5Wcab">Discord server</a>.
+        </strong>
+        If you know more than one programming language, that's even better.
+        <br><br>
+        There are also areas for non-programmers, including game design, graphic design, security, pentester and text
+        control.
+        <br><br>
+        Testing the game is an important part of the process leading up to release, because a game with lots of bugs
+        isn't a good game. Testing Information about the performance and stability of Cryptic under real conditions can
+        be very useful for developers. Therefore we would be happy if you test the game thoroughly.
+        <br><br>
+        Furthermore, the game needs to be translated into many languages to make Cryptic accessible to many interested
+        players. This applies not only to the game but also to the website.
+        <br><br>
+        If you want to work on the game design you need creativity. All content that has to be programmed has to be
+        defined and written in documents. These documents are then handed over to the programming team for
+        implementation. This means that existing ideas must be worked out in writing for later development. But before
+        we work out anything in writing, we will discuss it together in the team and everybody can bring in his
+        suggestions. Of course, players are also allowed to contribute new game ideas.
+        <br><br>
+        The Texte Team also has a lot to do on our blog. To keep it up to date, a team has to adapt it constantly -
+        write new tutorials, report about updates of the game and much more!
+        <br><br>
+        Do you want to join the project? Then just have a look at our <a href="https://discord.gg/tN5Wcab">Discord
+        server</a>.
+        <br><br>
+        This is where all the teams organize themselves and discuss further steps.
+        <br><br>
+        When you get to the server, read everything in the channels - there you will find further instructions on how
+        to apply. If you got to the channel "bot-use-only" and entered "!ls" you have done everything right. 😉
       </p>
     </div>
   </main>
@@ -61,6 +65,7 @@
   div.content {
     display: flex;
     flex-direction: column;
+    text-align: justify;
 
     div.group {
       display: flex;
