@@ -26,7 +26,7 @@
         <br><br>
         <strong>
           If you have any questions or want to get started right away, feel free to join the
-          <a href="https://discord.gg/tN5Wcab">Discord server</a>.
+          <a href="https://discord.gg/tN5Wcab">Discord Server</a>.
         </strong>
         If you know more than one programming language, that's even better.
         <br><br>
@@ -51,7 +51,7 @@
         <br><br>
         <strong>
           Do you want to join the project? Then just have a look at our <a href="https://discord.gg/tN5Wcab">Discord
-          server</a>.
+          Server</a>.
         </strong>
         <br><br>
         This is where all the teams organize themselves and discuss further steps.
