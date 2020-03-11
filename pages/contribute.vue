@@ -49,8 +49,10 @@
         The Texte Team also has a lot to do on our blog. To keep it up to date, a team has to adapt it constantly -
         write new tutorials, report about updates of the game and much more!
         <br><br>
-        Do you want to join the project? Then just have a look at our <a href="https://discord.gg/tN5Wcab">Discord
-        server</a>.
+        <strong>
+          Do you want to join the project? Then just have a look at our <a href="https://discord.gg/tN5Wcab">Discord
+          server</a>.
+        </strong>
         <br><br>
         This is where all the teams organize themselves and discuss further steps.
         <br><br>
