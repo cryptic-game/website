@@ -65,13 +65,10 @@
 
 <style lang="scss" scoped>
   div.content {
-    display: flex;
-    flex-direction: column;
     text-align: justify;
 
-    div.group {
-      display: flex;
-      flex-direction: column;
+    p.heading--5 {
+      text-align: start;
     }
   }
 </style>
