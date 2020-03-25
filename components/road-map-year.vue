@@ -38,7 +38,7 @@
 
     div.roadmap-version-group {
       padding-left: 1rem;
-      border-left: 0.1rem solid #2de179;
+      border-left: 0.2rem solid #2de179;
       flex-grow: 1;
     }
   }
