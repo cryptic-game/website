@@ -27,9 +27,18 @@
           :size="2"
         >
           <template v-slot:icon>
-            <DiscordIcon class="icon"/>
+            <img
+              alt="Discord Logo"
+              class="icon"
+              src="https://discordapp.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg">
           </template>
-          Join our Discord
+          <div style="display: flex;flex-direction: row; align-items: center">
+            <span>Join our</span>
+            <img
+              alt="Discord"
+              src="https://discordapp.com/assets/93608abbd20d90c13004925014a9fd01.svg"
+              style="margin-left:5px;height: 30px">
+          </div>
         </CButton>
       </div>
     </section>
@@ -177,7 +186,8 @@
             How can I contribute?
           </h3>
           Read our
-          <nuxt-link class="link" to="/contributing">Contributing Guide</nuxt-link>.
+          <nuxt-link class="link" to="/contributing">Contributing Guide</nuxt-link>
+          .
         </div>
         <div>
           <h3 class="faq-section__question">
@@ -459,11 +469,10 @@
 <script>
   import KNavigationBar from "kiste/components/KNavigationBar";
   import KFooter from "kiste/components/KFooter";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import {blogAPI} from "@/assets/js/blog";
+  import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard";
   import CButton from "@/components/CButton";
-  import DiscordIcon from "@/assets/icons/discord.svg";
   import GamepadIcon from "@/assets/icons/gamepad.svg";
   import NoteIcon from "@/assets/icons/note.svg";
   import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
@@ -484,7 +493,6 @@
       BlogPostCard,
       GamepadIcon,
       NoteIcon,
-      DiscordIcon,
       CButton,
       ArrowRightIcon,
       WindowIcon,
