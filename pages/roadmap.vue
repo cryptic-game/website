@@ -181,12 +181,18 @@
         </road-map-version>
       </road-map-date>
 
-      <road-map-date month="October" state="finished" year="2017">
-        <road-map-version version="Project Launch">
-          <p class="heading--6">In October 2017, the project was initiated by The Morpheus Tutorials as an open source
-            browser game for his community.</p>
-        </road-map-version>
-      </road-map-date>
+      <div class="project-launch">
+
+        <h1>Project Launch</h1>
+
+        <div class="date">
+          <span class="month">October</span>
+          <span class="year">2017</span>
+        </div>
+
+        <p>In October 2017, the project was initiated by The Morpheus Tutorials<br>as an open source
+          browser game for his community.</p>
+      </div>
     </div>
   </main>
 </template>
@@ -194,6 +200,55 @@
 <style lang="scss" scoped>
   p {
     margin: 0;
+  }
+
+  div.project-launch {
+    background: rgb(52, 152, 219);
+    background: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgba(52, 103, 219, 1) 100%);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem;
+    margin: 7rem 4rem;
+
+    border-radius: 0.4rem;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      letter-spacing: 1rem;
+    }
+
+    div.date {
+      display: flex;
+      flex-direction: column;
+      /*align-items: center;*/
+
+      span {
+        line-height: 2.5rem;
+      }
+
+      span.month {
+        font-size: 1.5rem;
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+      }
+
+      span.year {
+        letter-spacing: 0.3rem;
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      margin-top: 3rem;
+      font-size: 1.3rem;
+      text-align: center;
+    }
   }
 </style>
 
