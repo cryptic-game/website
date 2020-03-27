@@ -21,11 +21,15 @@
 <style lang="scss" scoped>
   div.roadmap-sprint {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     margin-bottom: 1rem;
 
     p {
       margin: 0;
+
+      &.group {
+        color: darken(#fff, 20%);
+      }
     }
   }
 

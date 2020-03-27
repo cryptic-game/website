@@ -24,9 +24,6 @@
 
     h4 {
       margin: 0 0 1rem;
-
-      span {
-      }
     }
 
     div.roadmap-sprints {
