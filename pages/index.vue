@@ -2,10 +2,10 @@
   <main class="index-page">
     <KNavigationBar background-after-scroll/>
     <video
-      class="background-video"
       autoplay
-      muted
+      class="background-video"
       loop
+      muted
     >
       <source src="@/assets/video/background.mp4" type="video/mp4"/>
     </video>
@@ -20,11 +20,11 @@
         </h1>
         <span class="hero-section__c2a">Join us today!</span>
         <CButton
+          :size="2"
           class="hero-section__join-button"
           discord
           href="https://discord.gg/tN5Wcab"
           new-tab
-          :size="2"
         >
           <template v-slot:icon>
             <DiscordIcon class="icon"/>
@@ -47,7 +47,7 @@
           </template>
           Read the Blog Post
         </CButton>
-        <CButton green outline text-color="white" href="https://play.cryptic-game.net">
+        <CButton green href="https://play.cryptic-game.net" outline text-color="white">
           <template v-slot:icon>
             <GamepadIcon class="icon"/>
           </template>
@@ -62,8 +62,8 @@
       <div class="blog-section__content">
         <div></div>
         <div class="blog-section__posts flex-with-gutter">
-          <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post"/>
-          <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
+          <BlogPostCard :key="post.slug" :post="post" v-for="post in blogPosts"/>
+          <div style="width: 100%; height: 100%; flex-grow: 1" v-if="blogPosts.length === 1"></div>
         </div>
         <div class="blog-section__more-button-container">
           <nuxt-link class="blog-section__more-button link center-content" to="/blog">
@@ -177,14 +177,16 @@
             How can I contribute?
           </h3>
           Read our
-          <nuxt-link class="link" to="/contributing">Contributing Guide</nuxt-link>.
+          <nuxt-link class="link" to="/contribute">Contributing Guide</nuxt-link>
+          .
         </div>
         <div>
-          <h3 class="faq-section__question">
-            How is the project financed?
-          </h3>
-          Nobody gets paid for working on the project, but we have to pay for our servers. So if you want to sponsor
-          us, <a class="link" href="https://www.patreon.com/user?u=5322110">support The Morpheus on Patreon</a>.
+          <h3 class="faq-section__question">How is the project financed?</h3>
+          Nothing, Cryptic is a community project of YouTuber The Morpheus Tutorials
+          and is mainly used to give the community the opportunity to develop a game.
+          It is not intended to make profit in any way, but we have to pay for our servers.
+          So if you want to help us, please support <a class="link" href="https://www.patreon.com/user?u=5322110">The
+          Morpheus on Patreon</a>.
         </div>
       </div>
     </section>
@@ -192,7 +194,7 @@
   </main>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   @use "~kiste/css/mixins/screenSize";
 
   .index-page {
@@ -459,8 +461,8 @@
 <script>
   import KNavigationBar from "kiste/components/KNavigationBar";
   import KFooter from "kiste/components/KFooter";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import {blogAPI} from "@/assets/js/blog";
+  import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard";
   import CButton from "@/components/CButton";
   import DiscordIcon from "@/assets/icons/discord.svg";
