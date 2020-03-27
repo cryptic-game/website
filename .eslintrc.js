@@ -24,7 +24,7 @@ module.exports = {
     }],
     "no-console": "off",
     "no-extra-parens": "warn",
-    "linebreak-style": ["warn", "unix"],
+    "linebreak-style": ["error", "unix"],
     "object-curly-spacing": ["warn", "always"],
     "no-template-curly-in-string": "warn",
     "array-callback-return": "error",
