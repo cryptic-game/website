@@ -1,15 +1,20 @@
 <template>
-
   <div :class="'roadmap-date-group roadmap-state-' + state">
     <div class="roadmap-date-display">
-      <h3 class="roadmap-date-year">{{ year }}</h3>
-      <h5 class="roadmap-date-month">{{ month }}</h5>
+      <h3 class="roadmap-date-year">
+        {{ year }}
+      </h3>
+      <h5 class="roadmap-date-month">
+        {{ month }}
+      </h5>
     </div>
     <div class="roadmap-version-group">
-      <slot></slot>
+      <div class="roadmap-version-line"></div>
+      <div class="roadmap-version-content">
+        <slot></slot>
+      </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -46,21 +51,32 @@
     }
 
     div.roadmap-version-group {
-      padding-left: 1rem;
-      border-left: 0.2rem solid #2de179;
       flex-grow: 1;
+
+      display: flex;
+      flex-direction: row;
+
+      div.roadmap-version-line {
+        width: 0.2rem;
+        height: 100%;
+        border-radius: 1rem;
+        margin: 0 1.5rem 0 1rem;
+      }
+
+      div.roadmap-version-content {
+      }
     }
 
-    &.roadmap-state-next div.roadmap-version-group {
-      border-color: #EABF11;
+    &.roadmap-state-next div.roadmap-version-group div.roadmap-version-line {
+      background-color: #EABF11;
     }
 
-    &.roadmap-state-current div.roadmap-version-group {
-      border-color: #2DCC70;
+    &.roadmap-state-current div.roadmap-version-group div.roadmap-version-line {
+      background-color: #2DCC70;
     }
 
-    &.roadmap-state-finished div.roadmap-version-group {
-      border-color: #3598DC;
+    &.roadmap-state-finished div.roadmap-version-group div.roadmap-version-line {
+      background-color: #3598DC;
     }
   }
 

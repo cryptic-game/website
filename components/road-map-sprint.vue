@@ -1,10 +1,12 @@
 <template>
-
   <div class="roadmap-sprint">
-    <p class="action">{{ action }}</p>
-    <p class="group">{{ group }}</p>
+    <p class="action">
+      {{ action }}
+    </p>
+    <p class="group">
+      {{ group }}
+    </p>
   </div>
-
 </template>
 
 <script>
@@ -28,7 +30,7 @@
       margin: 0;
 
       &.group {
-        color: darken(#fff, 20%);
+        color: darken(#fff, 30%);
       }
     }
   }
