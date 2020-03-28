@@ -24,6 +24,7 @@
 
     h4 {
       margin: 0 0 1rem;
+      line-height: 2rem;
     }
 
     div.roadmap-sprints {

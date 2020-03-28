@@ -26,11 +26,15 @@
     grid-template-columns: 1.5fr 1fr;
     margin-bottom: 1rem;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     p {
       margin: 0;
 
       &.group {
-        color: darken(#fff, 30%);
+        color: darken(#fff, 50%);
       }
     }
   }

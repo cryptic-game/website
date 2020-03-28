@@ -2,7 +2,7 @@
   <main class="team-page">
     <KNavigationBar title="Roadmap"></KNavigationBar>
     <div class="content formatted">
-      <h1>Roadmap</h1>
+      <h1 class="title">Roadmap</h1>
 
       <road-map-date month="from July" state="next" year="2020">
         <road-map-version version="Pre Alpha 3">
@@ -190,14 +190,19 @@
           <span class="year">2017</span>
         </div>
 
-        <p>In October 2017, the project was initiated by The Morpheus Tutorials<br>as an open source
-          browser game for his community.</p>
+        <p>
+          On October 15, 2017, The Morpheus Tutorials<br> initiated the project for his community as a browser game.
+        </p>
       </div>
     </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
+  h1.title {
+    margin-bottom: 5rem;
+  }
+
   p {
     margin: 0;
   }
@@ -221,6 +226,7 @@
       text-transform: uppercase;
       font-size: 3rem;
       letter-spacing: 1rem;
+      text-align: center;
     }
 
     div.date {
@@ -241,6 +247,15 @@
       span.year {
         letter-spacing: 0.3rem;
         font-size: 4rem;
+      }
+    }
+
+
+    @media (max-width: 800px) {
+      margin: 7rem 0;
+
+      h1 {
+        letter-spacing: 0.2rem;
       }
     }
 

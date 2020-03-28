@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    margin-bottom: 2rem;
+    margin: 0 0 10rem;
 
     div.roadmap-date-display {
       transform: translateX(-0.5rem) translateY(6.75rem) rotate(-90deg);
@@ -58,13 +58,13 @@
 
       div.roadmap-version-line {
         width: 0.2rem;
-        height: 100%;
+        /*height: 100%;*/
         border-radius: 1rem;
         margin: 0 1.5rem 0 1rem;
       }
 
-      div.roadmap-version-content {
-      }
+      /*div.roadmap-version-content {*/
+      /*}*/
     }
 
     &.roadmap-state-next div.roadmap-version-group div.roadmap-version-line {
@@ -90,6 +90,7 @@
         justify-content: flex-start;
         flex-direction: row;
         align-items: center;
+        margin-bottom: 1rem;
 
         h3.roadmap-date-year {
           margin-right: 1rem;
