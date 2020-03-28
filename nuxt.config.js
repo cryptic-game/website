@@ -36,6 +36,16 @@ export default {
     "@nuxtjs/pwa"
   ],
 
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/not-found.vue')
+      })
+    }
+  },
+
   kiste: {
     theme: {
       colors: {
