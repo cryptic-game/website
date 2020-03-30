@@ -49,7 +49,7 @@
 
       <div class="group">
         <h6>Videoproducer</h6>
-        <TeamMember github-name="Nocuma" name="Nibiru" role="Head of Videoproduction"></TeamMember>
+        <TeamMember github-name="Nocuma" name="Lars" role="Head of Videoproduction"></TeamMember>
       </div>
 
       <div class="group">
