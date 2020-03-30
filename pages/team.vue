@@ -82,7 +82,7 @@
         <TeamMember github-name="use-to" name="USE-TO" role="Admin"></TeamMember>
         <TeamMember github-name="SpartanerSpaten" name="EinSpaten" role="Admin"></TeamMember>
         <TeamMember github-name="mieasy" name="Mieasy" role="Admin"></TeamMember>
-        <TeamMember github-name="xxx" name="TheProgrammer" role="Admin"></TeamMember>
+        <TeamMember github-name="TheProgrammer21" name="TheProgrammer" role="Admin"></TeamMember>
       </div>
     </div>
   </main>
