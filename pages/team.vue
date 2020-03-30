@@ -5,28 +5,84 @@
       <h1>Team</h1>
 
       <div class="group">
-        <h6>Team Management</h6>
-        <TeamMember github-name="Chaozz66" name="Chaozz" role="Head"></TeamMember>
+        <h6>Project Management</h6>
+        <TeamMember github-name="DevMimas" name="Marius" role="Project Manager"></TeamMember>
+        <TeamMember github-name="Chaozz66" name="Chaozz" role="Community Manager"></TeamMember>
+        <TeamMember github-name="TheMorpheus407" name="Morpheus " role="Community Manager"></TeamMember>
         <!--        <TeamMember github-name="DevMimas" name="Marius"></TeamMember>-->
       </div>
 
       <div class="group">
-        <h6>Gamedesign</h6>
-        <TeamMember github-name="DevMimas" name="Marius" role="Head"></TeamMember>
+        <h6>Backend & Frontend</h6>
+        <TeamMember github-name="Defelo" name="Defelo" role="Head of Development"></TeamMember>
       </div>
 
       <div class="group">
-        <h6>Development</h6>
-        <TeamMember github-name="Defelo" name="Defelo" role="Head of Development"></TeamMember>
-        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Backend Head"></TeamMember>
-        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Backend Head Assistant"></TeamMember>
-        <TeamMember github-name="MaxiHuHe04" name="MaxiHuHe04" role="Frontend Head"></TeamMember>
-        <TeamMember github-name="MarcelCoding" name="Marcel" role="Frontend Head Assistant"></TeamMember>
+        <h6>Backend</h6>
+        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Backend"></TeamMember>
+        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head Assistant"></TeamMember>
+        <TeamMember github-name="MarcelCoding" name="Marcel" role="Contributor"></TeamMember>
+      </div>
+
+      <div class="group">
+        <h6>Frontend</h6>
+        <TeamMember github-name="MaxiHuHe04" name="MaxiHuHe04" role="Head of Frontend"></TeamMember>
+        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant"></TeamMember>
+        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Contributor"></TeamMember>
+      </div>
+
+      <div class="group">
+        <h6>Gamedesign</h6>
+        <TeamMember github-name="DevMimas" name="Marius" role="Head of Gamedesign"></TeamMember>
+        <TeamMember github-name="Maulwurf852" name="Maulwurf" role="Head Assistant"></TeamMember>
+        <TeamMember github-name="Tristan-Hoermann" name="Tristan" role="Head Assistant"></TeamMember>
+        <TeamMember github-name="Dev-Fabian" name="Fabian" role="Contributor"></TeamMember>
+        <TeamMember github-name="xxx" name="Yannes" role="Contributor"></TeamMember>
+        <TeamMember github-name="Chaozz66" name="Chaozz" role="Contributor"></TeamMember>
       </div>
 
       <div class="group">
         <h6>Design</h6>
-        <TeamMember github-name="Chaozz66" name="Chaozz" role="Head"></TeamMember>
+        <TeamMember github-name="Chaozz66" name="Chaozz" role="Head of Design"></TeamMember>
+        <TeamMember github-name="DevMimas" name="Marius" role="Contributor"></TeamMember>
+      </div>
+
+      <div class="group">
+        <h6>Videoproducer</h6>
+        <TeamMember github-name="xxx" name="Nibiru" role="Head of Videoproduction"></TeamMember>
+      </div>
+
+      <div class="group">
+        <h6>Sounddesign</h6>
+        <TeamMember github-name="Captches" name="Captches" role="Head of Sounddesign"></TeamMember>
+      </div>
+
+      <div class="group">
+        <h6>Website</h6>
+        <TeamMember github-name="RiseofRice" name="RiseofRice" role="Head of Website"></TeamMember>
+        <TeamMember github-name="moritzruth" name="Moritz" role="Contributor"></TeamMember>
+        <TeamMember github-name="MarcelCoding" name="Marcel" role="Contributor"></TeamMember>
+      </div>
+
+      <div class="group">
+        <h6>Security</h6>
+        <TeamMember github-name="xxx" name="Capfly" role="Head of Security"></TeamMember>
+      </div>
+
+      <div class="group">
+        <h6>Server Admin</h6>
+        <TeamMember github-name="xxx" name="Jokur" role="Admin"></TeamMember>
+        <TeamMember github-name="LordRazor" name="LordRazor" role="Admin"></TeamMember>
+        <TeamMember github-name="use-to" name="USE-TO" role="Admin"></TeamMember>
+      </div>
+
+      <div class="group">
+        <h6>Inactive Members</h6>
+        <TeamMember github-name="FelixRewer" name="Felix" role="Admin"></TeamMember>
+        <TeamMember github-name="use-to" name="USE-TO" role="Admin"></TeamMember>
+        <TeamMember github-name="xxx" name="EinSpaten" role="Admin"></TeamMember>
+        <TeamMember github-name="mieasy" name="Mieasy" role="Admin"></TeamMember>
+        <TeamMember github-name="xxx" name="TheProgrammer" role="Admin"></TeamMember>
       </div>
     </div>
   </main>
