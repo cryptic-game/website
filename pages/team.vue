@@ -37,7 +37,7 @@
         <TeamMember github-name="Maulwurf852" name="Maulwurf" role="Head Assistant"></TeamMember>
         <TeamMember github-name="Tristan-Hoermann" name="Tristan" role="Head Assistant"></TeamMember>
         <TeamMember github-name="Dev-Fabian" name="Fabian" role="Contributor"></TeamMember>
-        <TeamMember github-name="xxx" name="Yannes" role="Contributor"></TeamMember>
+        <TeamMember github-name="T2brozz" name="Yannes" role="Contributor"></TeamMember>
         <TeamMember github-name="Chaozz66" name="Chaozz" role="Contributor"></TeamMember>
       </div>
 
@@ -49,7 +49,7 @@
 
       <div class="group">
         <h6>Videoproducer</h6>
-        <TeamMember github-name="xxx" name="Nibiru" role="Head of Videoproduction"></TeamMember>
+        <TeamMember github-name="Nocuma" name="Nibiru" role="Head of Videoproduction"></TeamMember>
       </div>
 
       <div class="group">
@@ -71,7 +71,7 @@
 
       <div class="group">
         <h6>Server Admin</h6>
-        <TeamMember github-name="xxx" name="Jokur" role="Admin"></TeamMember>
+        <TeamMember github-name="kurzdev" name="Jokur" role="Admin"></TeamMember>
         <TeamMember github-name="LordRazor" name="LordRazor" role="Admin"></TeamMember>
         <TeamMember github-name="use-to" name="USE-TO" role="Admin"></TeamMember>
       </div>
@@ -80,7 +80,7 @@
         <h6>Inactive Members</h6>
         <TeamMember github-name="FelixRewer" name="Felix" role="Admin"></TeamMember>
         <TeamMember github-name="use-to" name="USE-TO" role="Admin"></TeamMember>
-        <TeamMember github-name="xxx" name="EinSpaten" role="Admin"></TeamMember>
+        <TeamMember github-name="SpartanerSpaten" name="EinSpaten" role="Admin"></TeamMember>
         <TeamMember github-name="mieasy" name="Mieasy" role="Admin"></TeamMember>
         <TeamMember github-name="xxx" name="TheProgrammer" role="Admin"></TeamMember>
       </div>
