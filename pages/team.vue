@@ -66,7 +66,7 @@
 
       <div class="group">
         <h6>Security</h6>
-        <TeamMember github-name="xxx" name="Capfly" role="Head of Security"></TeamMember>
+        <TeamMember github-name="Capfly" name="Capfly" role="Head of Security"></TeamMember>
       </div>
 
       <div class="group">
