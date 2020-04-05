@@ -192,7 +192,8 @@
         </div>
         <div class="more-at-faq">
           More at the
-          <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>.
+          <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>
+          .
         </div>
       </div>
     </section>
@@ -443,9 +444,17 @@
   }
 
   .faq-section {
-    .faq-section__question {
-      margin-top: 25px;
-      font-size: 1.3rem;
+    div {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: justify;
+      line-height: 25px;
+
+      h3.faq-section__question {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+      }
     }
 
     .more-at-faq {
