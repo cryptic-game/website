@@ -24,8 +24,7 @@
       <div class="faq-section">
         <h3 class="faq-section__question"> Where do I can see all heads of departments?</h3>
         You find all departments and their contact persons in the
-        <NuxtLink :to="'/team'" class="link">Team page</NuxtLink>
-        .
+        <NuxtLink :to="'/team'" class="link">Team page</NuxtLink>.
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question"> What departments exist within the project?</h3>

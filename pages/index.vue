@@ -192,8 +192,7 @@
         </div>
         <div class="more-at-faq">
           More at the
-          <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>
-          .
+          <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>.
         </div>
       </div>
     </section>
