@@ -176,7 +176,8 @@
           <h3 class="faq-section__question"> What is the "community project"?</h3>
           The "community project" is a projekt that has been announced in october 2017, where we build a 2 dimensional
           game from scratch. The team consists of people from different age groups, which meet in discord to work on
-          that project.
+          that project. You can find more information in the
+        <a class="link" href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw" target="_blank">specification sheet</a>.
         </div>
         <div>
           <h3 class="faq-section__question"> Do I have to be able to code?</h3>
