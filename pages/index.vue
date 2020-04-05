@@ -191,11 +191,9 @@
           know the basics of your programming language. Everything else you will learn in the course of the project.
         </div>
         <div class="more-at-faq">
-          <h2>
-            More at the
-            <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>
-            .
-          </h2>
+          More at the
+          <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>
+          .
         </div>
       </div>
     </section>
