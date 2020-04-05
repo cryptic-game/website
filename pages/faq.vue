@@ -91,7 +91,8 @@
     margin-bottom: 25px;
 
     div.faq-section {
-      margin-bottom: 50px;
+      margin-top: 30px;
+      margin-bottom: 30px;
       text-align: justify;
 
       h3.faq-section__question {
