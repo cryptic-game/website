@@ -96,6 +96,7 @@
 
       h3.faq-section__question {
         margin-top: 25px;
+        margin-bottom: 10px;
         font-size: 1.3rem;
       }
     }
