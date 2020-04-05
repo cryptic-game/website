@@ -93,6 +93,7 @@
       margin-top: 30px;
       margin-bottom: 30px;
       text-align: justify;
+      line-height: 25px;
 
       h3.faq-section__question {
         margin-top: 25px;
