@@ -78,11 +78,11 @@
 
       <div class="group">
         <h6>Inactive Members</h6>
-        <TeamMember github-name="FelixRewer" name="Felix" role="Admin"></TeamMember>
-        <TeamMember github-name="use-to" name="USE-TO" role="Admin"></TeamMember>
-        <TeamMember github-name="SpartanerSpaten" name="EinSpaten" role="Admin"></TeamMember>
-        <TeamMember github-name="mieasy" name="Mieasy" role="Admin"></TeamMember>
-        <TeamMember github-name="TheProgrammer21" name="TheProgrammer" role="Admin"></TeamMember>
+        <TeamMember github-name="FelixRewer" name="Felix" role="ex-Head of Frontend"></TeamMember>
+        <TeamMember github-name="use-to" name="USE-TO" role="ex-Head of Development"></TeamMember>
+        <TeamMember github-name="SpartanerSpaten" name="EinSpaten" role="ex-Head of Backend"></TeamMember>
+        <TeamMember github-name="mieasy" name="Mieasy" role="ex-Head of Backend"></TeamMember>
+        <TeamMember github-name="TheProgrammer21" name="TheProgrammer" role="ex-Head of Administration"></TeamMember>
       </div>
     </div>
   </main>
