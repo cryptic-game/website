@@ -217,9 +217,9 @@
         </h2>
         <div>
           <h3 class="faq-section__question"> What is the "community project"?</h3>
-          The "community project" is a projekt that has been announced in october 2017, where we build a 2 dimensional
-          game from scratch. The team consists of people from different age groups, which meet in discord to work on
-          that project. You can find more information in the
+          The "community project" is a project that has been announced in October 2017 by The Morpheus Tutorials.
+          We build a 2-dimensional browser game from scratch. The team consists of people of different age groups.
+          We meet in Discord to work together. You can find more information in the
           <a
             class="link"
             href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw"
@@ -227,15 +227,15 @@
         </div>
         <div>
           <h3 class="faq-section__question"> Do I have to be able to code?</h3>
-          No, you don't have to be able to code in order to help developing the game.
-          You can also join teams like gamedesign, text and graphic design.
+          No, you don't have to be able to code in order to help develop the game.
+          You can also join teams like game design, text, and graphic design.
         </div>
         <div>
           <h3 class="faq-section__question"> Is it possible for a beginner to help with the coding?</h3>
-          As a beginner, this project might be too difficult for you, so we might advise the beginners to continue
-          improving their skills.
-          You can decide between backend: Python/Java or frontend: TypeScript + HTML. In your department you should
-          know the basics of your programming language. Everything else you will learn in the course of the project.
+          As a beginner, this project might be too difficult for you, so we might advise beginners to continue
+          improving their skills. You can decide between the backend in Python or Java and the frontend in
+          Angular and HTML. In your department, you should know the basics of the respective programming language.
+          Everything else you will learn in the course of the project.
         </div>
         <div class="more-at-faq">
           <span>More at the <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>.</span>
