@@ -2,7 +2,7 @@
   <div class="post-page">
     <KNavigationBar title="Blog"/>
     <article class="content formatted">
-      <img :src="post.image" class="post-page__image"/>
+      <img :src="post.image" class="post-page__image" :alt="`Title Image from: ${post.title}`"/>
       <span>{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
       <h1 class="post-page__title">
         {{ post.title }}
@@ -57,13 +57,13 @@
 
 <script>
   import KNavigationBar from "kiste/components/KNavigationBar";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import {blogAPI} from "@/assets/js/blog";
+  import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
 
   export default {
     name: "PostPage",
-    components: { KNavigationBar },
-    async asyncData({ route }) {
+    components: {KNavigationBar},
+    async asyncData({route}) {
       return {
         post: mapObjectKeys(blogAPI.mappings.post, await blogAPI.posts.read({
           slug: route.params.slug,

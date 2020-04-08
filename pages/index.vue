@@ -12,11 +12,11 @@
     <section class="section hero-section">
       <div class="hero-section__content content">
         <span class="hero-section__slogan">
-          Don’t <b>play</b> the game, <span><br/><b>create</b> the game</span>
+          Don’t <strong>play</strong> the game, <span><br/><strong>create</strong> the game</span>
         </span>
         <h1 class="hero-section__title">
           An Open Source Game <br/>
-          by <b>The Morpheus Tutorials</b>
+          by <strong>The Morpheus Tutorials</strong>
         </h1>
         <span class="hero-section__c2a">Join us today!</span>
         <CButton
@@ -121,48 +121,91 @@
             <h3 class="groups-section__group-title">
               Frontend
             </h3>
+            <p class="groups-section__group-text">
+              The frontend team creates the gaming surface, where Cryptic is played. DThis includes all conceivable game
+              elements e.g. a desktop, or various apps within the game, which provides an interesting feeling. The
+              challenge is to code complex game mechanics without any game engine. You should bring knowlege of website
+              developement, expertise in TypeScript, Angular and Git. In the ideal case, you bring SCSS knowlege too.
+            </p>
           </div>
           <div class="groups-section__group">
             <CodeIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Backend
             </h3>
+            <p class="groups-section__group-text">
+              The backend team codes the complex game logic and is responsible to maintain it. Another part is the
+              testing of the backend-structures as well as the writing of a performant code, so there are no performance
+              issues. You should bring good knowlege of Java, Python and Git.
+            </p>
           </div>
           <div class="groups-section__group">
             <GamepadIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Gamedesign
             </h3>
+            <p class="groups-section__group-text">
+              The game design team deals on a theoretical level with the content, characteristics and factors that must
+              be present for the design of an exciting game. This means that we work out all the content of the game
+              together. This includes e.g. the development of a desktop, the invention of various hacker attacks and a
+              terminal or an experience system and their respective logic. The most important requirement is to be
+              creative and to keep an eye on the connection between many different factors and parameters.
+            </p>
           </div>
           <div class="groups-section__group">
             <PaintbrushIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Design
             </h3>
+            <p class="groups-section__group-text">
+              The design team is split into three different sectors. The sector “graphics“ creates all required icons,
+              design templates und additional footage, which is needed by the game or website. “Videoproduction“ creates
+              all different kinds from videos such as trailers, intros and animations. The sector “sounddesign“ composes
+              whole pieces of music and creates sound effects.
+            </p>
           </div>
           <div class="groups-section__group">
             <GlobeIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Website
             </h3>
+            <p class="groups-section__group-text">
+              The website team is developing the website and maintains it. This includes the development of various menu
+              pages, a header and footer, as well as other functions and areas that will be implemented during the
+              course. You should have knowledge of web technologies such as HTML, SCSS and Vue.js.
+            </p>
           </div>
           <div class="groups-section__group">
             <ShieldIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Security
             </h3>
+            <p class="groups-section__group-text">
+              The security team deals with code audits, penetration testing and developement of security concepts, for
+              you can play Cryptic in a secure environment. Experiences in web-hacking e.g. XSS and SQLi, and experience
+              in dealing with tools such as nmap, sqlmap and burp are mandatory.
+            </p>
           </div>
           <div class="groups-section__group">
             <LanguageIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Translation
             </h3>
+            <p class="groups-section__group-text">
+              In the translation section, all relevant texts are translated into the respective foreign language. You
+              should have good German and foreign language skills. We are currently looking for translators for English.
+            </p>
           </div>
           <div class="groups-section__group">
             <ABCIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Correction
             </h3>
+            <p class="groups-section__group-text">
+              The text team writes and corrects all possible texts that arise for the project and game. You should like
+              to deal with texts as well as have good German and English language skills. We are currently starting to
+              introduce a wiki for Cryptic, so we are still looking for active editors.
+            </p>
           </div>
         </div>
       </div>
@@ -192,9 +235,7 @@
           know the basics of your programming language. Everything else you will learn in the course of the project.
         </div>
         <div class="more-at-faq">
-          More at the
-          <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>
-          .
+          <span>More at the <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>.</span>
         </div>
       </div>
     </section>
@@ -422,7 +463,7 @@
       .groups-section__group {
         padding: 20px;
 
-        width: 25%;
+        width: 50%;
         min-width: 150px;
 
         .groups-section__group-title {
@@ -432,6 +473,10 @@
           text-transform: uppercase;
           font-size: 1.1rem;
           letter-spacing: 2px;
+        }
+
+        .groups-section__group-text {
+          text-align: justify;
         }
 
         .icon {
