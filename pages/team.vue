@@ -59,6 +59,13 @@
       </div>
 
       <div class="group">
+        <h6>Editorial office & Translation</h6>
+        <TeamMember github-name="andyRonck" name="Aronck" role="Head of Editorial office & Translation"></TeamMember>
+        <TeamMember github-name="cephox" name="ce_phox " role="Contributor"></TeamMember>
+        <TeamMember github-name="DevMimas" name="Marius " role="Contributor"></TeamMember>
+      </div>
+
+      <div class="group">
         <h6>Website</h6>
         <TeamMember github-name="RiseofRice" name="RiseofRice" role="Head of Website"></TeamMember>
         <TeamMember github-name="moritzruth" name="Moritz" role="Contributor"></TeamMember>
