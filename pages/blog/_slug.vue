@@ -2,7 +2,7 @@
   <div class="post-page">
     <KNavigationBar title="Blog"/>
     <article class="content formatted">
-      <img :src="post.image" class="post-page__image" :alt="`Title Image from: ${post.title}`"/>
+      <img :alt="`Title Image from: ${post.title}`" :src="post.image" class="post-page__image"/>
       <span>{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
       <h1 class="post-page__title">
         {{ post.title }}
@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   .post-page__image {
     width: 100%;
     max-height: 75vh;

@@ -16,7 +16,7 @@
   </main>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>
 
@@ -25,6 +25,6 @@
 
   export default {
     name: "LegalNoticePage",
-    components: { KNavigationBar }
+    components: {KNavigationBar}
   };
 </script>

@@ -220,7 +220,10 @@
           The "community project" is a projekt that has been announced in october 2017, where we build a 2 dimensional
           game from scratch. The team consists of people from different age groups, which meet in discord to work on
           that project. You can find more information in the
-        <a class="link" href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw" target="_blank">specification sheet</a>.
+          <a
+            class="link"
+            href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw"
+            target="_blank">specification sheet</a>.
         </div>
         <div>
           <h3 class="faq-section__question"> Do I have to be able to code?</h3>
@@ -444,6 +447,10 @@
           margin-bottom: 5px;
         }
       }
+
+      p {
+        line-height: 25px;
+      }
     }
 
     .desc-section__title {
@@ -458,13 +465,14 @@
       justify-content: space-evenly;
       flex-wrap: wrap;
 
-      width: 100%;
+      margin: -20px;
+      width: calc(100% + 40px);
 
       .groups-section__group {
         padding: 20px;
 
         width: 50%;
-        min-width: 150px;
+        min-width: 300px;
 
         .groups-section__group-title {
           margin: 20px auto 0;
@@ -476,6 +484,7 @@
         }
 
         .groups-section__group-text {
+          line-height: 25px;
           text-align: justify;
         }
 
@@ -490,6 +499,8 @@
   }
 
   .faq-section {
+    line-height: 25px;
+
     div {
       margin-top: 30px;
       margin-bottom: 30px;
@@ -526,8 +537,8 @@
 <script>
   import KNavigationBar from "kiste/components/KNavigationBar";
   import KFooter from "kiste/components/KFooter";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import {blogAPI} from "@/assets/js/blog";
+  import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard";
   import CButton from "@/components/CButton";
   import DiscordIcon from "@/assets/icons/discord.svg";
