@@ -42,7 +42,7 @@
           </road-map-sprint>
 
           <road-map-sprint
-            action="Implement Basis for Music/Sounds"
+            action="Implement Base for Music/Sounds"
             group="Gamedesign, Frontend, Sounddesign">
           </road-map-sprint>
         </road-map-version>
@@ -51,7 +51,7 @@
       <road-map-date month="from Mai" state="current" year="2019">
         <road-map-version version="Pre Alpha 2">
           <road-map-sprint
-            action="Basis for various Computer Hardware"
+            action="Base for various Computer Hardware"
             group="Gamedesign, Backend">
           </road-map-sprint>
 
@@ -66,12 +66,12 @@
           </road-map-sprint>
 
           <road-map-sprint
-            action="Basis for system utilization"
+            action="Base for system utilization"
             group="Gamedesign, Backend">
           </road-map-sprint>
 
           <road-map-sprint
-            action="Basis for network system with private & public network"
+            action="Base for network system with private & public network"
             group="Gamedesign, Backend, Frontend">
           </road-map-sprint>
 
@@ -111,7 +111,7 @@
           </road-map-sprint>
 
           <road-map-sprint
-            action="Basis for hardware exchange among players"
+            action="Base for hardware exchange among players"
             group="Gamedesign, Backend, Frontend">
           </road-map-sprint>
 
@@ -125,7 +125,7 @@
       <road-map-date month="from June" state="finished" year="2018">
         <road-map-version version="Pre Alpha 1">
           <road-map-sprint
-            action="Basis for user account system"
+            action="Base for user account system"
             group="Gamedesign, Backend">
           </road-map-sprint>
 
@@ -140,7 +140,7 @@
           </road-map-sprint>
 
           <road-map-sprint
-            action="Implementing the Basis for Desktop"
+            action="Implementing the Base for Desktop"
             group="Gamedesign, Backend, Frontend, Design">
           </road-map-sprint>
 
