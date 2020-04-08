@@ -45,6 +45,7 @@
         <h6>Design</h6>
         <TeamMember github-name="Chaozz66" name="Chaozz" role="Head of Design"></TeamMember>
         <TeamMember github-name="DevMimas" name="Marius" role="Contributor"></TeamMember>
+        <TeamMember github-name="Nocuma" name="Lars" role="Contributor"></TeamMember>
       </div>
 
       <div class="group">
