@@ -1,7 +1,7 @@
 {
   "name": "cryptic",
   "version": "1.0.0",
-  "description": "The Official Cryptic Website",
+  "description": "An open-source multiplayer hacking browser game.",
   "author": "The Cryptic Team",
   "private": true,
   "scripts": {

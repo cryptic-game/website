@@ -2,7 +2,7 @@ export default {
   mode: "universal",
 
   head: {
-    title: "Cryptic",
+    title: "Cryptic Game",
     meta: [
       {charset: "utf-8"},
       {name: "viewport", content: "width=device-width, initial-scale=1"},
