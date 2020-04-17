@@ -12,6 +12,6 @@
   import KApp from "kiste/components/KApp";
 
   export default {
-    components: { KApp }
+    components: {KApp}
   };
 </script>
