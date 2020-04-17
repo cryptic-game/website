@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   .status-page {
     height: 100%;
   }
@@ -19,6 +19,6 @@
 
   export default {
     name: "StatusPage",
-    components: { KNavigationBar }
+    components: {KNavigationBar}
   };
 </script>

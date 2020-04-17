@@ -68,7 +68,7 @@
     text-align: justify;
 
     p.heading--5 {
-      text-align: left;
+      text-align: start;
     }
   }
 </style>
