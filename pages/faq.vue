@@ -113,6 +113,11 @@
 
   export default {
     name: "StatusPage",
-    components: {KNavigationBar}
+    components: {KNavigationBar},
+    head() {
+      return {
+        titleTemplate: "FAQ - %s"
+      };
+    }
   };
 </script>

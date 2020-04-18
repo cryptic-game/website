@@ -19,6 +19,11 @@
 
   export default {
     name: "StatusPage",
-    components: {KNavigationBar}
+    components: {KNavigationBar},
+    head() {
+      return {
+        titleTemplate: "Status - %s"
+      };
+    }
   };
 </script>

@@ -75,6 +75,11 @@
 
   export default {
     name: "ContributePage",
-    components: {KNavigationBar}
+    components: {KNavigationBar},
+    head() {
+      return {
+        titleTemplate: "Contribute - %s"
+      };
+    }
   };
 </script>

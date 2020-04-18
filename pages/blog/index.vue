@@ -47,6 +47,11 @@
     },
     data: () => ({
       posts: []
-    })
+    }),
+    head() {
+      return {
+        titleTemplate: "Blog - %s"
+      };
+    }
   };
 </script>
