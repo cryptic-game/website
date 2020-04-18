@@ -1,6 +1,6 @@
 <template>
   <div class="blog-post-card">
-    <img :src="post.image" class="blog-post-card__image" :style="imageStyle"/>
+    <img :alt="`Title Image from: ${post.title}`" :src="post.image" :style="imageStyle" class="blog-post-card__image"/>
     <div class="blog-post-card__info">
       <span class="blog-post-card__date">{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
       <span class="blog-post-card__title">
@@ -9,10 +9,10 @@
       <span class="blog-post-card__excerpt">{{ post.excerpt }}</span>
       <div class="blog-post-card__footer">
         <span class="blog-post-card__reading-time">
-          <b>{{ Math.max(1, post.readingTime) }} minute{{ Math.max(1, post.readingTime) === 1 ? "" : "s" }}</b>
+          <strong>{{ Math.max(1, post.readingTime) }} minute{{ Math.max(1, post.readingTime) === 1 ? "" : "s" }}</strong>
           reading time
         </span>
-        <nuxt-link class="blog-post-card__link link" :to="`/blog/${post.slug}`">
+        <nuxt-link :to="`/blog/${post.slug}`" class="blog-post-card__link link">
           Read
         </nuxt-link>
       </div>
@@ -20,7 +20,7 @@
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   .blog-post-card {
     background: var(--colors-background-a);
     color: white;

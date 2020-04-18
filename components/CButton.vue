@@ -1,5 +1,5 @@
 <script>
-  import { createPropEnum, oneOf } from "@/assets/js/propUtils";
+  import {createPropEnum, oneOf} from "@/assets/js/propUtils";
 
   const colorPropEnum = createPropEnum(["white", "green", "blue", "discord"], "white");
 
@@ -68,7 +68,7 @@
       }
 
       return h(rootEl, {
-        class: ["c-button", this.color, { outline: this.outline }],
+        class: ["c-button", this.color, {outline: this.outline}],
         style: this.style,
         attrs,
         props,
@@ -89,7 +89,7 @@
   };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   @use "~kiste/css/mixins/screenSize";
 
   .c-button {

@@ -7,18 +7,18 @@
       </h1>
       <div class="posts-page__posts">
         <BlogPostCard
-          v-for="post in posts"
           :key="post.slug"
+          :post="post"
           class="posts-page__post"
           image-height="50vh"
-          :post="post"
+          v-for="post in posts"
         />
       </div>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   .posts-page__posts {
     margin-top: 40px;
 
@@ -31,13 +31,13 @@
 
 <script>
   import KNavigationBar from "kiste/components/KNavigationBar";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import {blogAPI} from "@/assets/js/blog";
+  import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard";
 
   export default {
     name: "PostsPage",
-    components: { BlogPostCard, KNavigationBar },
+    components: {BlogPostCard, KNavigationBar},
     async asyncData() {
       return {
         posts: Array.from(await blogAPI.posts.browse({
