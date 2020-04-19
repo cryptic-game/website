@@ -7,9 +7,16 @@ export default {
       {charset: "utf-8"},
       {name: "viewport", content: "width=device-width, initial-scale=1"},
       {hid: "description", name: "description", content: process.env.npm_package_description || ""},
-      {hid: "og:image", name:"og:image", content:'open-graph.jpg'},
-      {hid: "twitter:site", name:"twitter:site", content: "@Cryptic_Game"},
-      {hid: "twitter:card", name:"twitter:card", content: "summary_large_image"}
+      {hid: "og:description", name: "og:description", content: process.env.npm_package_description || ""},
+      {hid: "twitter:description", name: "twitter:description", content: process.env.npm_package_description || ""},
+      {hid: "og:title", name: "og:title", content: 'Cryptic Game'},
+      {hid: "og:url", name: "og:url", content: "https://cryptic-game.net/"},
+      {hid: "twitter:url", name: "og:url", content: "https://cryptic-game.net/"},
+      {hid: "og:type", name: "og:type", content: 'website'},
+      {hid: "og:image", name: "og:image", content: 'https://cryptic-game.net/open-graph.jpg'},
+      {hid: "twitter:image", name: "og:image", content: 'https://cryptic-game.net/open-graph.jpg'},
+      {hid: "twitter:site", name: "twitter:site", content: "@Cryptic_Game"},
+      {hid: "twitter:card", name: "twitter:card", content: "summary_large_image"}
     ],
     link: [
       {rel: "icon", type: "image/x-icon", href: "/favicon.ico"},

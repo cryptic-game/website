@@ -275,6 +275,11 @@
 
   export default {
     name: "RoadMapPage",
-    components: {RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar}
+    components: {RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar},
+    head() {
+      return {
+        titleTemplate: "Roadmap - %s"
+      };
+    }
   };
 </script>

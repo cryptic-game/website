@@ -114,6 +114,11 @@
 
   export default {
     name: "TeamPage",
-    components: {TeamMember, KNavigationBar}
+    components: {TeamMember, KNavigationBar},
+    head() {
+      return {
+        titleTemplate: "Team - %s"
+      };
+    }
   };
 </script>

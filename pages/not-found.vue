@@ -13,7 +13,12 @@
 
   export default {
     name: "not-found",
-    components: {KNavigationBar}
+    components: {KNavigationBar},
+    head() {
+      return {
+        titleTemplate: "Not Found - %s"
+      };
+    }
   };
 </script>
 
