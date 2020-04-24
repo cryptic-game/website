@@ -1,7 +1,7 @@
 <template>
   <main class="team-page">
     <KNavigationBar title="Contribute"></KNavigationBar>
-    <div class="content">
+    <div class="content formatted">
       <h1>Contribute</h1>
       <p class="heading--5">
         We develop a multiplayer browser game!
@@ -23,9 +23,8 @@
           If you have any questions or want to get started right away, feel free to join the
           <a href="https://discord.gg/tN5Wcab">Discord Server</a>.
         </strong>
-        If you know more than one programming language, that's even better.
-        There are also areas for non-programmers, including game design, graphic design, security, pentester and text
-        control.
+        If you know more than one programming language, this is even better. There are also areas for non-programmers,
+        including game design, graphic design, security, testers and text correction.
         <br><br>
         Testing the game is an important part of the process leading up to release, because a game with lots of bugs
         isn't a good game. Testing Information about the performance and stability of Cryptic under real conditions can
@@ -39,12 +38,12 @@
         we work out anything in writing, we will discuss it together in the team and everybody can bring in his
         suggestions. Of course, players are also allowed to contribute new game ideas.
         <br>
-        The Texte Team also has a lot to do on our blog. To keep it up to date, a team has to adapt it constantly -
-        write new tutorials, report about updates of the game and much more!
+        The text team also has a lot to do in our blog. To keep it up to date, a team has to constantly adapt it - write
+        new tutorials, report on updates to the game and much more!
         <br><br>
         <strong>
           Do you want to join the project? Then just have a look at our <a href="https://discord.gg/tN5Wcab">Discord
-            Server</a>.
+          Server</a>.
         </strong>
         <br>
         This is where all the teams organize themselves and discuss further steps.
@@ -61,6 +60,10 @@
     margin-bottom: 30px;
     text-align: justify;
     line-height: 25px;
+
+    h1 {
+      line-height: normal;
+    }
 
     p.heading--5 {
       margin-top: 25px;
