@@ -35,7 +35,7 @@
         <h6>Gamedesign</h6>
         <TeamMember github-name="DevMimas" name="Marius" role="Head of Gamedesign"></TeamMember>
         <TeamMember github-name="Maulwurf852" name="Maulwurf" role="Head Assistant"></TeamMember>
-        <TeamMember github-name="Tristan-Hoermann" name="Tristan" role="Head Assistant"></TeamMember>
+        <TeamMember github-name="Tristan-Hoermann" name="Tristan-H11" role="Head Assistant"></TeamMember>
         <TeamMember github-name="Dev-Fabian" name="Fabian" role="Contributor"></TeamMember>
         <TeamMember github-name="T2brozz" name="Yannes" role="Contributor"></TeamMember>
         <TeamMember github-name="Chaozz66" name="Chaozz" role="Contributor"></TeamMember>
