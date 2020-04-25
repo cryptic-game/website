@@ -242,7 +242,9 @@
         </div>
       </div>
     </section>
-    <KFooter/>
+    <section class="footer">
+      <KFooter/>
+    </section>
   </main>
 </template>
 
@@ -359,6 +361,7 @@
   }
 
   .blog-section {
+    background-color: #000;
     $more-button-container-width: 70px;
 
     .blog-section__content {
@@ -460,6 +463,8 @@
   }
 
   .groups-section {
+    background-color: #000;
+
     .groups-section__groups {
       display: flex;
       justify-content: space-evenly;
@@ -499,6 +504,7 @@
   }
 
   .faq-section {
+    background-color: #000;
     line-height: 25px;
 
     div {
@@ -531,6 +537,17 @@
 
     object-fit: cover;
     opacity: 0.7;
+  }
+
+  section.footer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+
+    footer{
+      position: static;
+    }
   }
 </style>
 
