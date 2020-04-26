@@ -109,7 +109,7 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
   import TeamMember from "../components/TeamMember";
 
   export default {

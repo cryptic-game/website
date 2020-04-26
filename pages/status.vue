@@ -15,7 +15,7 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
 
   export default {
     name: "StatusPage",

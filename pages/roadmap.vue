@@ -268,7 +268,7 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
   import RoadMapDate from "../components/road-map-date";
   import RoadMapVersion from "../components/road-map-version";
   import RoadMapSprint from "../components/road-map-sprint";

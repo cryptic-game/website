@@ -30,7 +30,7 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
   import {blogAPI} from "@/assets/js/blog";
   import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard";

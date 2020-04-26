@@ -552,7 +552,7 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
   import KFooter from "kiste/components/KFooter";
   import {blogAPI} from "@/assets/js/blog";
   import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
