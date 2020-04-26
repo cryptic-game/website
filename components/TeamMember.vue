@@ -4,7 +4,7 @@
       <img :alt="name + ' Github\'s Avatar'" :src="'https://github.com/' + githubName + '.png?size=44'">
     </div>
     <div class="info">
-      <span>{{ name }}{{role ? ' - ' + role : ''}}</span>
+      <span>{{ name }}{{ role ? ' - ' + role : '' }}</span>
       <a :href="'https://github.com/' + githubName">Github</a>
     </div>
   </div>
@@ -29,8 +29,8 @@
 
     div.image {
       margin-right: 10px;
-      min-width: 44px;
-      min-height: 44px;
+      width: 44px;
+      height: 44px;
 
       img {
         border-radius: 50%;
