@@ -242,7 +242,7 @@
         </div>
       </div>
     </section>
-    <section class="footer">
+    <section class="footer-section">
       <KFooter/>
     </section>
   </main>
@@ -539,14 +539,14 @@
     opacity: 0.7;
   }
 
-  section.footer {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
+  .footer-section {
+    background-color: black;
+    position: relative;
+    z-index: 1;
 
-    footer{
-      position: static;
+    &::v-deep .k-footer {
+      margin: 0 auto;
+      padding-bottom: 20px;
     }
   }
 </style>
