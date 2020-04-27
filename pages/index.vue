@@ -363,6 +363,8 @@
   .blog-section {
     background-color: #000;
     $more-button-container-width: 70px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 
     .blog-section__content {
       display: flex;
@@ -429,6 +431,8 @@
 
   .desc-section {
     background: rgba(0, 0, 0, 0.8);
+    padding-bottom: 50px;
+    padding-top: 50px;
 
     .desc-section__content {
       display: flex;
@@ -464,6 +468,7 @@
 
   .groups-section {
     background-color: #000;
+    padding-bottom: 50px;
 
     .groups-section__groups {
       display: flex;

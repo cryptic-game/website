@@ -40,12 +40,23 @@
 </template>
 
 <style lang="scss">
-  @use "~kiste/css/mixins/screenSize";
+  @mixin mobile() {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+
+  @mixin notMobile() {
+    @media (min-width: 1001px) {
+      @content;
+    }
+  }
+
 
   .k-app {
     --x-navbar-height: 100px;
 
-    @include screenSize.mobile {
+    @include mobile {
       --x-navbar-height: 80px;
     }
   }
@@ -97,8 +108,10 @@
   }
 
   .k-navigation-bar__logo {
-    height: 80px;
-    width: auto;
+    height: 70px;
+    min-height: 70px;
+    width: 46.3833px;
+    min-width: 46.3833px;
     margin-right: 20px;
   }
 
@@ -117,7 +130,7 @@
     opacity: 0;
     transform: translateY(10px);
 
-    @include screenSize.notMobile {
+    @include notMobile {
       font-size: 2rem;
     }
   }
@@ -173,7 +186,7 @@
     }
   }
 
-  @include screenSize.mobile {
+  @include mobile {
     .k-navigation-bar__toggle {
       display: block;
 
@@ -203,9 +216,10 @@
     }
 
     .k-navigation-bar__logo {
+      min-height: 50px;
+      height: 50px;
+      width: 55.1px;
       order: 2;
-      height: 60px;
-
       margin-right: 0;
     }
 
@@ -283,13 +297,13 @@
 </style>
 
 <script>
-  import { isNuxt } from "kiste/js/isNuxt";
-  import { toModifierClasses } from "kiste/js/toModifierClasses";
+  import {isNuxt} from "kiste/js/isNuxt";
+  import {toModifierClasses} from "kiste/js/toModifierClasses";
   import CrypticHeadLogo from "@/assets/cryptic_head.svg";
 
   export default {
     name: "KNavigationBar",
-    components: { CrypticHeadLogo },
+    components: {CrypticHeadLogo},
     props: {
       backgroundAfterScroll: {
         type: Boolean,
@@ -308,7 +322,7 @@
       scrolled: vm => vm.scrollPosition > 60,
       showBackground: vm => vm.backgroundAfterScroll ? vm.scrollPosition > 0 : true,
       classes() {
-        const { open, scrolled, showBackground } = this;
+        const {open, scrolled, showBackground} = this;
 
         return toModifierClasses({
           open,
@@ -324,7 +338,7 @@
         this.scrollPosition = window.scrollY;
       };
 
-      window.addEventListener("scroll", scrollListener, { passive: true });
+      window.addEventListener("scroll", scrollListener, {passive: true});
 
       this.$kiste.navigationBar = this;
 
