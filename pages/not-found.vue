@@ -1,5 +1,5 @@
 <template>
-  <main class="team-page">
+  <main class="not-found-page">
     <KNavigationBar title="Not found"></KNavigationBar>
     <div class="content formatted">
       <h1>Not found</h1>
@@ -23,5 +23,7 @@
 </script>
 
 <style scoped>
-
+  main.not-found-page {
+    margin-bottom: 5rem;
+  }
 </style>

@@ -93,11 +93,10 @@
 <style lang="scss" scoped>
   .faq-page {
     height: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 5rem;
 
     div.faq-section {
       margin-top: 30px;
-      margin-bottom: 30px;
       text-align: justify;
       line-height: 25px;
 

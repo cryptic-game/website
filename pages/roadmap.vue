@@ -250,7 +250,6 @@
       }
     }
 
-
     @media (max-width: 800px) {
       margin: 7rem 0;
 

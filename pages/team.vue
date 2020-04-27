@@ -100,6 +100,7 @@
   div.content {
     display: flex;
     flex-direction: column;
+    margin-bottom: 5rem;
 
     div.group {
       display: flex;

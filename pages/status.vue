@@ -11,6 +11,7 @@
 <style lang="scss" scoped>
   .status-page {
     height: 100%;
+    margin-bottom: 5rem;
   }
 </style>
 

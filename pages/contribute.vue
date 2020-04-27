@@ -57,7 +57,7 @@
 <style lang="scss" scoped>
   div.content {
     margin-top: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 5rem;
     text-align: justify;
     line-height: 25px;
 
