@@ -1,7 +1,7 @@
 <template>
   <div class="member">
     <div class="image">
-      <img :alt="name + ' Github\'s Avatar'" :src="'https://github.com/' + githubName + '.png?size=44'">
+      <img alt="" :src="'https://github.com/' + githubName + '.png?size=44'">
     </div>
     <div class="info">
       <span>{{ name }}{{ role ? ' - ' + role : '' }}</span>
