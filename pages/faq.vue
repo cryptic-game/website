@@ -20,14 +20,16 @@
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question"> Is it possible for a beginner to help with the coding?</h3>
-        As a beginner, this project might be too difficult for you, so we might advise beginners to continue improving their skills.
-        You can decide between the backend in Python or Java and the frontend in Angular and HTML. In your department, you should know the
+        As a beginner, this project might be too difficult for you, so we might advise beginners to continue improving
+        their skills.
+        You can decide between the backend in Python or Java and the frontend in Angular and HTML. In your department,
+        you should know the
         basics of the respective programming language. Everything else you will learn in the course of the project.
       </div>
       <div class="faq-section">
-        <h3 class="faq-section__question"> Where do I can see all heads of departments?</h3>
-        You find all departments and their contact persons in the
-        <NuxtLink :to="'/team'" class="link">Team page</NuxtLink>.
+        <h3 class="faq-section__question">Where can I see all the heads of the departments?</h3>
+        You can find all departments and their contact persons in the
+        <span><NuxtLink :to="'/team'" class="link">Team page</NuxtLink>.</span>
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question"> What departments exist within the project?</h3>
@@ -91,11 +93,10 @@
 <style lang="scss" scoped>
   .faq-page {
     height: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 5rem;
 
     div.faq-section {
       margin-top: 30px;
-      margin-bottom: 30px;
       text-align: justify;
       line-height: 25px;
 
@@ -109,7 +110,7 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
 
   export default {
     name: "StatusPage",

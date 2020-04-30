@@ -242,7 +242,9 @@
         </div>
       </div>
     </section>
-    <KFooter/>
+    <section class="footer-section">
+      <KFooter/>
+    </section>
   </main>
 </template>
 
@@ -359,7 +361,10 @@
   }
 
   .blog-section {
+    background-color: #000;
     $more-button-container-width: 70px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 
     .blog-section__content {
       display: flex;
@@ -426,6 +431,8 @@
 
   .desc-section {
     background: rgba(0, 0, 0, 0.8);
+    padding-bottom: 50px;
+    padding-top: 50px;
 
     .desc-section__content {
       display: flex;
@@ -460,6 +467,9 @@
   }
 
   .groups-section {
+    background-color: #000;
+    padding-bottom: 50px;
+
     .groups-section__groups {
       display: flex;
       justify-content: space-evenly;
@@ -499,6 +509,7 @@
   }
 
   .faq-section {
+    background-color: #000;
     line-height: 25px;
 
     div {
@@ -532,10 +543,21 @@
     object-fit: cover;
     opacity: 0.7;
   }
+
+  .footer-section {
+    background-color: black;
+    position: relative;
+    z-index: 1;
+
+    &::v-deep .k-footer {
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+  }
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
   import KFooter from "kiste/components/KFooter";
   import {blogAPI} from "@/assets/js/blog";
   import {mapObjectKeys} from "@/assets/js/mapObjectKeys";

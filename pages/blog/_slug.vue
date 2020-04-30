@@ -56,7 +56,7 @@
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
   import {blogAPI} from "@/assets/js/blog";
   import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
 
@@ -75,21 +75,21 @@
       post: {}
     }),
     head() {
-      const content = this.post.excerpt.replace(/\r?[\n|\r]/g, " ").split(' ').filter(data => data).join(" ") || "";
+      const content = this.post.excerpt.replace(/\r?[\n|\r]/g, " ").split(" ").filter(data => data).join(" ") || "";
       return {
         titleTemplate: `${this.post.title} - %s`,
         meta: [
           {hid: "og:title", name: "og:title", content: this.post.title},
-          {hid: "description", name: "description", content: content},
-          {hid: "og:description", name: "og:description", content: content},
-          {hid: "twitter:description", name: "twitter:description", content: content},
+          {hid: "description", name: "description", content},
+          {hid: "og:description", name: "og:description", content},
+          {hid: "twitter:description", name: "twitter:description", content},
           {hid: "og:url", name: "og:url", content: `https://cryptic-game.net/blog/${this.post.slug}`},
           {hid: "twitter:url", name: "og:url", content: `https://cryptic-game.net/blog/${this.post.slug}`},
-          {hid: "og:image", name: "og:image", content: this.post.image || 'https://cryptic-game.net/open-graph.jpg'},
+          {hid: "og:image", name: "og:image", content: this.post.image || "https://cryptic-game.net/open-graph.jpg"},
           {
             hid: "twitter:image",
             name: "og:image",
-            content: this.post.image || 'https://cryptic-game.net/open-graph.jpg'
+            content: this.post.image || "https://cryptic-game.net/open-graph.jpg"
           }
         ]
       };

@@ -95,7 +95,7 @@ export default {
     footerItems: [
       {
         label: "Legal Notice",
-        to: "/legal-notice"
+        href: "https://the-morpheus.de/#signup"
       },
       {
         label: "Privacy Policy",
