@@ -67,7 +67,7 @@ module.exports = {
     "strict": ["error", "never"],
     "array-bracket-spacing": ["error", "never"],
     "array-element-newline": ["error", "consistent"],
-    "block-spacing":  "error",
+    "block-spacing": "error",
     "brace-style": "error",
     "comma-dangle": "error",
     "comma-spacing": "error",

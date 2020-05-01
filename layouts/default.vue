@@ -16,6 +16,6 @@
   import KFooter from "kiste/components/KFooter";
 
   export default {
-    components: { KApp, KFooter }
+    components: {KApp, KFooter}
   };
 </script>

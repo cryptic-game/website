@@ -8,17 +8,23 @@
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   .status-page {
     height: 100%;
+    margin-bottom: 5rem;
   }
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
 
   export default {
     name: "StatusPage",
-    components: { KNavigationBar }
+    components: {KNavigationBar},
+    head() {
+      return {
+        titleTemplate: "Status - %s"
+      };
+    }
   };
 </script>

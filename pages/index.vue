@@ -2,29 +2,29 @@
   <main class="index-page">
     <KNavigationBar background-after-scroll/>
     <video
-      class="background-video"
       autoplay
-      muted
+      class="background-video"
       loop
+      muted
     >
       <source src="@/assets/video/background.mp4" type="video/mp4"/>
     </video>
     <section class="section hero-section">
       <div class="hero-section__content content">
         <span class="hero-section__slogan">
-          Don’t <b>play</b> the game, <span><br/><b>create</b> the game</span>
+          Don’t <strong>play</strong> the game, <span><br/><strong>create</strong> the game</span>
         </span>
         <h1 class="hero-section__title">
           An Open Source Game <br/>
-          by <b>The Morpheus Tutorials</b>
+          by <strong>The Morpheus Tutorials</strong>
         </h1>
         <span class="hero-section__c2a">Join us today!</span>
         <CButton
+          :size="2"
           class="hero-section__join-button"
           discord
           href="https://discord.gg/tN5Wcab"
           new-tab
-          :size="2"
         >
           <template v-slot:icon>
             <DiscordIcon class="icon"/>
@@ -47,7 +47,7 @@
           </template>
           Read the Blog Post
         </CButton>
-        <CButton green outline text-color="white" href="https://play.cryptic-game.net">
+        <CButton green href="https://play.cryptic-game.net" outline text-color="white">
           <template v-slot:icon>
             <GamepadIcon class="icon"/>
           </template>
@@ -62,8 +62,8 @@
       <div class="blog-section__content">
         <div></div>
         <div class="blog-section__posts flex-with-gutter">
-          <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post"/>
-          <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
+          <BlogPostCard :key="post.slug" :post="post" v-for="post in blogPosts"/>
+          <div style="width: 100%; height: 100%; flex-grow: 1" v-if="blogPosts.length === 1"></div>
         </div>
         <div class="blog-section__more-button-container">
           <nuxt-link class="blog-section__more-button link center-content" to="/blog">
@@ -121,48 +121,91 @@
             <h3 class="groups-section__group-title">
               Frontend
             </h3>
+            <p class="groups-section__group-text">
+              The frontend team creates the gaming surface, where Cryptic is played. DThis includes all conceivable game
+              elements e.g. a desktop, or various apps within the game, which provides an interesting feeling. The
+              challenge is to code complex game mechanics without any game engine. You should bring knowlege of website
+              developement, expertise in TypeScript, Angular and Git. In the ideal case, you bring SCSS knowlege too.
+            </p>
           </div>
           <div class="groups-section__group">
             <CodeIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Backend
             </h3>
+            <p class="groups-section__group-text">
+              The backend team codes the complex game logic and is responsible to maintain it. Another part is the
+              testing of the backend-structures as well as the writing of a performant code, so there are no performance
+              issues. You should bring good knowlege of Java, Python and Git.
+            </p>
           </div>
           <div class="groups-section__group">
             <GamepadIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Gamedesign
             </h3>
+            <p class="groups-section__group-text">
+              The game design team deals on a theoretical level with the content, characteristics and factors that must
+              be present for the design of an exciting game. This means that we work out all the content of the game
+              together. This includes e.g. the development of a desktop, the invention of various hacker attacks and a
+              terminal or an experience system and their respective logic. The most important requirement is to be
+              creative and to keep an eye on the connection between many different factors and parameters.
+            </p>
           </div>
           <div class="groups-section__group">
             <PaintbrushIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Design
             </h3>
+            <p class="groups-section__group-text">
+              The design team is split into three different sectors. The sector “graphics“ creates all required icons,
+              design templates und additional footage, which is needed by the game or website. “Videoproduction“ creates
+              all different kinds from videos such as trailers, intros and animations. The sector “sounddesign“ composes
+              whole pieces of music and creates sound effects.
+            </p>
           </div>
           <div class="groups-section__group">
             <GlobeIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Website
             </h3>
+            <p class="groups-section__group-text">
+              The website team is developing the website and maintains it. This includes the development of various menu
+              pages, a header and footer, as well as other functions and areas that will be implemented during the
+              course. You should have knowledge of web technologies such as HTML, SCSS and Vue.js.
+            </p>
           </div>
           <div class="groups-section__group">
             <ShieldIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Security
             </h3>
+            <p class="groups-section__group-text">
+              The security team deals with code audits, penetration testing and developement of security concepts, for
+              you can play Cryptic in a secure environment. Experiences in web-hacking e.g. XSS and SQLi, and experience
+              in dealing with tools such as nmap, sqlmap and burp are mandatory.
+            </p>
           </div>
           <div class="groups-section__group">
             <LanguageIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Translation
             </h3>
+            <p class="groups-section__group-text">
+              In the translation section, all relevant texts are translated into the respective foreign language. You
+              should have good German and foreign language skills. We are currently looking for translators for English.
+            </p>
           </div>
           <div class="groups-section__group">
             <ABCIcon class="icon"/>
             <h3 class="groups-section__group-title">
               Correction
             </h3>
+            <p class="groups-section__group-text">
+              The text team writes and corrects all possible texts that arise for the project and game. You should like
+              to deal with texts as well as have good German and English language skills. We are currently starting to
+              introduce a wiki for Cryptic, so we are still looking for active editors.
+            </p>
           </div>
         </div>
       </div>
@@ -173,26 +216,39 @@
           FAQ
         </h2>
         <div>
-          <h3 class="faq-section__question">
-            How can I contribute?
-          </h3>
-          Read our
-          <nuxt-link class="link" to="/contributing">Contributing Guide</nuxt-link>.
+          <h3 class="faq-section__question"> What is the "community project"?</h3>
+          The "community project" is a project that has been announced in October 2017 by The Morpheus Tutorials.
+          We build a 2-dimensional browser game from scratch. The team consists of people of different age groups.
+          We meet in Discord to work together. You can find more information in the
+          <a
+            class="link"
+            href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw"
+            target="_blank">specification sheet</a>.
         </div>
         <div>
-          <h3 class="faq-section__question">
-            How is the project financed?
-          </h3>
-          Nobody gets paid for working on the project, but we have to pay for our servers. So if you want to sponsor
-          us, <a class="link" href="https://www.patreon.com/user?u=5322110">support The Morpheus on Patreon</a>.
+          <h3 class="faq-section__question"> Do I have to be able to code?</h3>
+          No, you don't have to be able to code in order to help develop the game.
+          You can also join teams like game design, text, and graphic design.
+        </div>
+        <div>
+          <h3 class="faq-section__question"> Is it possible for a beginner to help with the coding?</h3>
+          As a beginner, this project might be too difficult for you, so we might advise beginners to continue
+          improving their skills. You can decide between the backend in Python or Java and the frontend in
+          Angular and HTML. In your department, you should know the basics of the respective programming language.
+          Everything else you will learn in the course of the project.
+        </div>
+        <div class="more-at-faq">
+          <span>More at the <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>.</span>
         </div>
       </div>
     </section>
-    <KFooter/>
+    <section class="footer-section">
+      <KFooter/>
+    </section>
   </main>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   @use "~kiste/css/mixins/screenSize";
 
   .index-page {
@@ -305,7 +361,10 @@
   }
 
   .blog-section {
+    background-color: #000;
     $more-button-container-width: 70px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 
     .blog-section__content {
       display: flex;
@@ -325,7 +384,7 @@
     .blog-section__posts {
       display: flex;
       align-items: stretch;
-
+      min-width: 0;
       width: var(--content-width);
 
       @include screenSize.mobile {
@@ -372,6 +431,8 @@
 
   .desc-section {
     background: rgba(0, 0, 0, 0.8);
+    padding-bottom: 50px;
+    padding-top: 50px;
 
     .desc-section__content {
       display: flex;
@@ -393,6 +454,10 @@
           margin-bottom: 5px;
         }
       }
+
+      p {
+        line-height: 25px;
+      }
     }
 
     .desc-section__title {
@@ -402,18 +467,22 @@
   }
 
   .groups-section {
+    background-color: #000;
+    padding-bottom: 50px;
+
     .groups-section__groups {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
 
-      width: 100%;
+      margin: -20px;
+      width: calc(100% + 40px);
 
       .groups-section__group {
         padding: 20px;
 
-        width: 25%;
-        min-width: 150px;
+        width: 50%;
+        min-width: 300px;
 
         .groups-section__group-title {
           margin: 20px auto 0;
@@ -422,6 +491,11 @@
           text-transform: uppercase;
           font-size: 1.1rem;
           letter-spacing: 2px;
+        }
+
+        .groups-section__group-text {
+          line-height: 25px;
+          text-align: justify;
         }
 
         .icon {
@@ -435,9 +509,24 @@
   }
 
   .faq-section {
-    .faq-section__question {
+    background-color: #000;
+    line-height: 25px;
+
+    div {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: justify;
+      line-height: 25px;
+
+      h3.faq-section__question {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+      }
+    }
+
+    .more-at-faq {
       margin-top: 25px;
-      font-size: 1.3rem;
     }
   }
 
@@ -454,13 +543,24 @@
     object-fit: cover;
     opacity: 0.7;
   }
+
+  .footer-section {
+    background-color: black;
+    position: relative;
+    z-index: 1;
+
+    &::v-deep .k-footer {
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+  }
 </style>
 
 <script>
-  import KNavigationBar from "kiste/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
   import KFooter from "kiste/components/KFooter";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import {blogAPI} from "@/assets/js/blog";
+  import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard";
   import CButton from "@/components/CButton";
   import DiscordIcon from "@/assets/icons/discord.svg";
