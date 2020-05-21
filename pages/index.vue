@@ -122,7 +122,7 @@
               Frontend
             </h3>
             <p class="groups-section__group-text">
-              The frontend team creates the gaming surface, where Cryptic is played. DThis includes all conceivable game
+              The frontend team creates the gaming surface, where Cryptic is played. This includes all conceivable game
               elements e.g. a desktop, or various apps within the game, which provides an interesting feeling. The
               challenge is to code complex game mechanics without any game engine. You should bring knowlege of website
               developement, expertise in TypeScript, Angular and Git. In the ideal case, you bring SCSS knowlege too.
