@@ -19,9 +19,9 @@
 
       <div class="group">
         <h6>Backend</h6>
-        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Python"></TeamMember>
-        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head of Java"></TeamMember>
-        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant of Java"></TeamMember>
+        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Python Backend Development"></TeamMember>
+        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head of Java Backend Development"></TeamMember>
+        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant of Java Backend Development"></TeamMember>
       </div>
 
       <div class="group">
