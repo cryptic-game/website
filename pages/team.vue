@@ -19,15 +19,14 @@
 
       <div class="group">
         <h6>Backend</h6>
-        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Backend"></TeamMember>
-        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head Assistant"></TeamMember>
-        <TeamMember github-name="MarcelCoding" name="Marcel" role="Contributor"></TeamMember>
+        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Python Backend Development"></TeamMember>
+        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head of Java Backend Development"></TeamMember>
+        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant of Java Backend Development"></TeamMember>
       </div>
 
       <div class="group">
         <h6>Frontend</h6>
         <TeamMember github-name="MaxiHuHe04" name="MaxiHuHe04" role="Head of Frontend"></TeamMember>
-        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant"></TeamMember>
         <TeamMember github-name="JannikEmmerich" name="Jannik" role="Contributor"></TeamMember>
       </div>
 
