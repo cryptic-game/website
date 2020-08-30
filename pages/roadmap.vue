@@ -4,7 +4,7 @@
     <div class="content formatted">
       <h1 class="title">Roadmap</h1>
 
-      <road-map-date month="from July" state="next" year="2020">
+      <road-map-date month="from September" state="next" year="2020">
         <road-map-version version="Pre Alpha 3">
           <road-map-sprint
             action="Rewrite Backend Infrastructure"
@@ -45,10 +45,75 @@
             action="Implement Base for Music/Sounds"
             group="Gamedesign, Frontend, Sounddesign">
           </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement Base for a rank list"
+            group="Backend, Frontend, Gamedesign, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Extend Terminal"
+            group="Frontend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Extend and optimize apps"
+            group="Frontend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement router and network-switch"
+            group="Backend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement network-UI"
+            group="Backend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement base for hacker-attacks/attacksystem"
+            group="Backend, Frontend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement base for chat app"
+            group="Backend, Frontend, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement Morphcoin currency symbol"
+            group="Frontend, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Extend and optimize hardware-components"
+            group="Backend">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement switching of hardware-components"
+            group="Frontend, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Make services slow down performance"
+            group="Backend">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement PC-UI-configurator"
+            group="Frontend, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement Credits"
+            group="Backend, Frontend, Design">
+          </road-map-sprint>
         </road-map-version>
       </road-map-date>
 
-      <road-map-date month="from Mai" state="current" year="2019">
+      <road-map-date month="from May" state="current" year="2019">
         <road-map-version version="Pre Alpha 2">
           <road-map-sprint
             action="Base for various Computer Hardware"
@@ -191,7 +256,8 @@
         </div>
 
         <p>
-          On October 15, 2017, The Morpheus Tutorials<br> initiated the project for his community as a browser game.
+          On October 15, 2017, The Morpheus Tutorials<br>
+          initiated the project for his community as a browser game.
         </p>
       </div>
     </div>
