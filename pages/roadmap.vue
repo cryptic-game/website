@@ -4,7 +4,7 @@
     <div class="content formatted">
       <h1 class="title">Roadmap</h1>
 
-      <road-map-date month="from July" state="next" year="2020">
+      <road-map-date month="from September" state="next" year="2020">
         <road-map-version version="Pre Alpha 3">
           <road-map-sprint
             action="Rewrite Backend Infrastructure"
@@ -45,10 +45,75 @@
             action="Implement Base for Music/Sounds"
             group="Gamedesign, Frontend, Sounddesign">
           </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement Base for a rank list"
+            group="Backend, Frontend, Gamedesign, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Extend Terminal"
+            group="Frontend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Extend and optimize apps"
+            group="Frontend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement router and network-switch"
+            group="Backend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement network-UI"
+            group="Backend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement base for hacker-attacks/attacksystem"
+            group="Backend, Frontend, Gamedesign">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement base for chat app"
+            group="Backend, Frontend, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement Morphcoin currency symbol"
+            group="Frontend, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Extend and optimize hardware-components"
+            group="Backend">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement switching of hardware-components"
+            group="Frontend, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Make services slow down performance"
+            group="Backend">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement PC-UI-configurator"
+            group="Frontend, Design">
+          </road-map-sprint>
+
+          <road-map-sprint
+            action="Implement Credits"
+            group="Backend, Frontend, Design">
+          </road-map-sprint>
         </road-map-version>
       </road-map-date>
 
-      <road-map-date month="from Mai" state="current" year="2019">
+      <road-map-date month="from May" state="current" year="2019">
         <road-map-version version="Pre Alpha 2">
           <road-map-sprint
             action="Base for various Computer Hardware"
@@ -182,7 +247,6 @@
       </road-map-date>
 
       <div class="project-launch">
-
         <h1>Project Launch</h1>
 
         <div class="date">
@@ -191,7 +255,8 @@
         </div>
 
         <p>
-          On October 15, 2017, The Morpheus Tutorials<br> initiated the project for his community as a browser game.
+          On October 15, 2017, The Morpheus Tutorials<br>
+          initiated the project for his community as a browser game.
         </p>
       </div>
     </div>
@@ -199,86 +264,90 @@
 </template>
 
 <style lang="scss" scoped>
-  h1.title {
-    margin-bottom: 5rem;
+h1.title {
+  margin-bottom: 5rem;
+}
+
+p {
+  margin: 0;
+}
+
+div.project-launch {
+  background: rgb(52, 152, 219);
+  background: linear-gradient(
+      90deg,
+      rgba(52, 152, 219, 1) 0%,
+      rgba(52, 103, 219, 1) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem;
+  margin: 7rem 4rem;
+
+  border-radius: 0.4rem;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    text-align: center;
+  }
+
+  div.date {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+
+    span {
+      line-height: 2.5rem;
+    }
+
+    span.month {
+      font-size: 1.5rem;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    span.year {
+      letter-spacing: 0.3rem;
+      font-size: 4rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    margin: 7rem 0;
+
+    h1 {
+      letter-spacing: 0.2rem;
+    }
   }
 
   p {
-    margin: 0;
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    text-align: center;
   }
-
-  div.project-launch {
-    background: rgb(52, 152, 219);
-    background: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgba(52, 103, 219, 1) 100%);
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 2rem;
-    margin: 7rem 4rem;
-
-    border-radius: 0.4rem;
-
-    h1 {
-      text-transform: uppercase;
-      font-size: 3rem;
-      letter-spacing: 1rem;
-      text-align: center;
-    }
-
-    div.date {
-      display: flex;
-      flex-direction: column;
-      /*align-items: center;*/
-
-      span {
-        line-height: 2.5rem;
-      }
-
-      span.month {
-        font-size: 1.5rem;
-        letter-spacing: 0.5rem;
-        text-transform: uppercase;
-      }
-
-      span.year {
-        letter-spacing: 0.3rem;
-        font-size: 4rem;
-      }
-    }
-
-    @media (max-width: 800px) {
-      margin: 7rem 0;
-
-      h1 {
-        letter-spacing: 0.2rem;
-      }
-    }
-
-    p {
-      margin-top: 3rem;
-      font-size: 1.3rem;
-      text-align: center;
-    }
-  }
+}
 </style>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import RoadMapDate from "../components/road-map-date";
-  import RoadMapVersion from "../components/road-map-version";
-  import RoadMapSprint from "../components/road-map-sprint";
+import KNavigationBar from "@/components/KNavigationBar";
+import RoadMapDate from "../components/road-map-date";
+import RoadMapVersion from "../components/road-map-version";
+import RoadMapSprint from "../components/road-map-sprint";
 
-  export default {
-    name: "RoadMapPage",
-    components: {RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar},
-    head() {
-      return {
-        titleTemplate: "Roadmap - %s"
-      };
-    }
-  };
+export default {
+  name: "RoadMapPage",
+  components: {RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar},
+  head() {
+    return {
+      titleTemplate: "Roadmap - %s"
+    };
+  }
+};
 </script>
