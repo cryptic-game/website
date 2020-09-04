@@ -9,21 +9,21 @@
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+import KNavigationBar from "@/components/KNavigationBar";
 
-  export default {
-    name: "not-found",
-    components: {KNavigationBar},
-    head() {
-      return {
-        titleTemplate: "Not Found - %s"
-      };
-    }
-  };
+export default {
+  name: "not-found",
+  components: {KNavigationBar},
+  head() {
+    return {
+      titleTemplate: "Not Found - %s"
+    };
+  }
+};
 </script>
 
 <style scoped>
-  main.not-found-page {
-    margin-bottom: 5rem;
-  }
+main.not-found-page {
+  margin-bottom: 5rem;
+}
 </style>

@@ -62,8 +62,8 @@
       <div class="blog-section__content">
         <div></div>
         <div class="blog-section__posts flex-with-gutter">
-          <BlogPostCard :key="post.slug" :post="post" v-for="post in blogPosts"/>
-          <div style="width: 100%; height: 100%; flex-grow: 1" v-if="blogPosts.length === 1"></div>
+          <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post"/>
+          <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
         </div>
         <div class="blog-section__more-button-container">
           <nuxt-link class="blog-section__more-button link center-content" to="/blog">
@@ -249,362 +249,362 @@
 </template>
 
 <style lang="scss" scoped>
-  @use "~kiste/css/mixins/screenSize";
+@use "~kiste/css/mixins/screenSize";
 
-  .index-page {
-    width: 100%;
+.index-page {
+  width: 100%;
 
-    ::selection {
-      background-color: var(--colors-green);
-    }
+  ::selection {
+    background-color: var(--colors-green);
+  }
+}
+
+.section {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  overflow: auto;
+  padding: 30px 0;
+
+  .section__title {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-size: 3rem;
+  }
+}
+
+.hero-section {
+  background: transparent;
+  height: calc(100vh - var(--x-navbar-height));
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+  flex-direction: row-reverse;
+
+  position: relative;
+
+  .hero-section__content {
+    position: relative;
+    padding: 20px 20px 10vh;
   }
 
-  .section {
-    width: 100%;
-    z-index: 1;
-    position: relative;
-    overflow: auto;
-    padding: 30px 0;
+  .hero-section__slogan {
+    display: inline-block;
 
-    .section__title {
-      margin-top: 0;
-      margin-bottom: 1.2rem;
-      font-size: 3rem;
-    }
-  }
+    position: absolute;
+    top: -40vh;
+    right: 15%;
+    font-size: 1.6rem;
+    text-align: right;
 
-  .hero-section {
-    background: transparent;
-    height: calc(100vh - var(--x-navbar-height));
-    padding: 20px 0;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    align-content: flex-end;
-    flex-direction: row-reverse;
-
-    position: relative;
-
-    .hero-section__content {
+    & > span:nth-child(2) {
       position: relative;
-      padding: 20px 20px 10vh;
-    }
 
-    .hero-section__slogan {
-      display: inline-block;
-
-      position: absolute;
-      top: -40vh;
-      right: 15%;
-      font-size: 1.6rem;
-      text-align: right;
-
-      & > span:nth-child(2) {
-        position: relative;
-
-        right: -40px;
-      }
-    }
-
-    .hero-section__title {
-      margin: 0 0 5px;
-      font-size: 1.1rem;
-      font-weight: normal;
-    }
-
-    .hero-section__c2a {
-      font-size: 4rem;
-      font-weight: bold;
-
-      @media (max-width: 580px) {
-        font-size: 11vw;
-      }
-    }
-
-    .hero-section__join-button {
-      margin-top: 20px;
+      right: -40px;
     }
   }
 
-  .second-section {
-    background-image: url("~@/assets/image/green_background.jpg");
-    background-attachment: fixed;
+  .hero-section__title {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+    font-weight: normal;
+  }
 
-    @include screenSize.notMobile {
-      height: 150px;
+  .hero-section__c2a {
+    font-size: 4rem;
+    font-weight: bold;
+
+    @media (max-width: 580px) {
+      font-size: 11vw;
     }
+  }
 
-    .second-section__content {
-      height: 100%;
+  .hero-section__join-button {
+    margin-top: 20px;
+  }
+}
 
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1.2rem;
-      text-align: center;
+.second-section {
+  background-image: url("~@/assets/image/green_background.jpg");
+  background-attachment: fixed;
 
-      .second-section__version {
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 1.5rem;
-      }
+  @include screenSize.notMobile {
+    height: 150px;
+  }
 
-      @include screenSize.mobile {
-        flex-direction: column;
-        justify-content: center;
-      }
+  .second-section__content {
+    height: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+
+    .second-section__version {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.5rem;
     }
 
     @include screenSize.mobile {
-      padding: 20px 0;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
-  .blog-section {
-    background-color: #000;
-    $more-button-container-width: 70px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+  @include screenSize.mobile {
+    padding: 20px 0;
+  }
+}
 
-    .blog-section__content {
-      display: flex;
-      justify-content: center;
+.blog-section {
+  background-color: #000;
+  $more-button-container-width: 70px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 
-      @include screenSize.mobile {
-        flex-direction: column;
+  .blog-section__content {
+    display: flex;
+    justify-content: center;
 
-        padding: 0 var(--content-padding);
-      }
+    @include screenSize.mobile {
+      flex-direction: column;
 
-      & > div:nth-child(1) {
-        width: $more-button-container-width;
-      }
+      padding: 0 var(--content-padding);
     }
 
-    .blog-section__posts {
-      display: flex;
-      align-items: stretch;
-      min-width: 0;
-      width: var(--content-width);
-
-      @include screenSize.mobile {
-        flex-wrap: wrap;
-        width: 100%;
-      }
-    }
-
-    .blog-section__more-button-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-
+    & > div:nth-child(1) {
       width: $more-button-container-width;
+    }
+  }
+
+  .blog-section__posts {
+    display: flex;
+    align-items: stretch;
+    min-width: 0;
+    width: var(--content-width);
+
+    @include screenSize.mobile {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  .blog-section__more-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: $more-button-container-width;
+
+    @include screenSize.mobile {
+      width: 100%;
+      height: $more-button-container-width;
+      flex-direction: column;
+    }
+  }
+
+  .blog-section__more-button {
+    $size: 45px;
+    background-color: var(--colors-background-a);
+    color: white;
+    border-radius: 50%;
+
+    width: $size;
+    height: $size;
+
+    @include screenSize.mobile {
+      transform: rotate(90deg);
+    }
+
+    .icon {
+      width: 24px;
+
+      position: relative;
+      left: 2px;
+    }
+  }
+}
+
+.desc-section {
+  background: rgba(0, 0, 0, 0.8);
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+  .desc-section__content {
+    display: flex;
+
+    @include screenSize.mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  .desc-section__part {
+    width: 100%;
+    text-align: justify;
+
+    &:not(:last-child) {
+      margin-right: var(--gutter-size);
 
       @include screenSize.mobile {
-        width: 100%;
-        height: $more-button-container-width;
-        flex-direction: column;
+        margin-right: 0;
+        margin-bottom: 5px;
       }
     }
 
-    .blog-section__more-button {
-      $size: 45px;
-      background-color: var(--colors-background-a);
-      color: white;
-      border-radius: 50%;
+    p {
+      line-height: 25px;
+    }
+  }
 
-      width: $size;
-      height: $size;
+  .desc-section__title {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+}
 
-      @include screenSize.mobile {
-        transform: rotate(90deg);
+.groups-section {
+  background-color: #000;
+  padding-bottom: 50px;
+
+  .groups-section__groups {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin: -20px;
+    width: calc(100% + 40px);
+
+    .groups-section__group {
+      padding: 20px;
+
+      width: 50%;
+      min-width: 300px;
+
+      .groups-section__group-title {
+        margin: 20px auto 0;
+        width: fit-content;
+
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+      }
+
+      .groups-section__group-text {
+        line-height: 25px;
+        text-align: justify;
       }
 
       .icon {
-        width: 24px;
+        width: 50px;
 
-        position: relative;
-        left: 2px;
+        margin: 0 auto;
+        display: block;
       }
     }
   }
+}
 
-  .desc-section {
-    background: rgba(0, 0, 0, 0.8);
-    padding-bottom: 50px;
-    padding-top: 50px;
+.faq-section {
+  background-color: #000;
+  line-height: 25px;
 
-    .desc-section__content {
-      display: flex;
-
-      @include screenSize.mobile {
-        flex-wrap: wrap;
-      }
-    }
-
-    .desc-section__part {
-      width: 100%;
-      text-align: justify;
-
-      &:not(:last-child) {
-        margin-right: var(--gutter-size);
-
-        @include screenSize.mobile {
-          margin-right: 0;
-          margin-bottom: 5px;
-        }
-      }
-
-      p {
-        line-height: 25px;
-      }
-    }
-
-    .desc-section__title {
-      font-size: 2rem;
-      margin-top: 0;
-    }
-  }
-
-  .groups-section {
-    background-color: #000;
-    padding-bottom: 50px;
-
-    .groups-section__groups {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-
-      margin: -20px;
-      width: calc(100% + 40px);
-
-      .groups-section__group {
-        padding: 20px;
-
-        width: 50%;
-        min-width: 300px;
-
-        .groups-section__group-title {
-          margin: 20px auto 0;
-          width: fit-content;
-
-          text-transform: uppercase;
-          font-size: 1.1rem;
-          letter-spacing: 2px;
-        }
-
-        .groups-section__group-text {
-          line-height: 25px;
-          text-align: justify;
-        }
-
-        .icon {
-          width: 50px;
-
-          margin: 0 auto;
-          display: block;
-        }
-      }
-    }
-  }
-
-  .faq-section {
-    background-color: #000;
+  div {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
     line-height: 25px;
 
-    div {
-      margin-top: 30px;
-      margin-bottom: 30px;
-      text-align: justify;
-      line-height: 25px;
-
-      h3.faq-section__question {
-        margin-top: 25px;
-        margin-bottom: 10px;
-        font-size: 1.3rem;
-      }
-    }
-
-    .more-at-faq {
+    h3.faq-section__question {
       margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
     }
   }
 
-  .background-video {
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    opacity: 0.7;
+  .more-at-faq {
+    margin-top: 25px;
   }
+}
 
-  .footer-section {
-    background-color: black;
-    position: relative;
-    z-index: 1;
+.background-video {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
 
-    &::v-deep .k-footer {
-      margin: 0 auto;
-      padding-bottom: 20px;
-    }
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.footer-section {
+  background-color: black;
+  position: relative;
+  z-index: 1;
+
+  &::v-deep .k-footer {
+    margin: 0 auto;
+    padding-bottom: 20px;
   }
+}
 </style>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import KFooter from "kiste/components/KFooter";
-  import {blogAPI} from "@/assets/js/blog";
-  import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
-  import BlogPostCard from "@/components/BlogPostCard";
-  import CButton from "@/components/CButton";
-  import DiscordIcon from "@/assets/icons/discord.svg";
-  import GamepadIcon from "@/assets/icons/gamepad.svg";
-  import NoteIcon from "@/assets/icons/note.svg";
-  import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
-  import WindowIcon from "@/assets/icons/window.svg";
-  import ABCIcon from "@/assets/icons/abc.svg";
-  import CodeIcon from "@/assets/icons/code.svg";
-  import GlobeIcon from "@/assets/icons/globe.svg";
-  import LanguageIcon from "@/assets/icons/language.svg";
-  import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
-  import ShieldIcon from "@/assets/icons/shield.svg";
+import KNavigationBar from "@/components/KNavigationBar";
+import KFooter from "kiste/components/KFooter";
+import {blogAPI} from "@/assets/js/blog";
+import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
+import BlogPostCard from "@/components/BlogPostCard";
+import CButton from "@/components/CButton";
+import DiscordIcon from "@/assets/icons/discord.svg";
+import GamepadIcon from "@/assets/icons/gamepad.svg";
+import NoteIcon from "@/assets/icons/note.svg";
+import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
+import WindowIcon from "@/assets/icons/window.svg";
+import ABCIcon from "@/assets/icons/abc.svg";
+import CodeIcon from "@/assets/icons/code.svg";
+import GlobeIcon from "@/assets/icons/globe.svg";
+import LanguageIcon from "@/assets/icons/language.svg";
+import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
+import ShieldIcon from "@/assets/icons/shield.svg";
 
-  export default {
-    name: "IndexPage",
-    layout: "none",
-    components: {
-      KNavigationBar,
-      KFooter,
-      BlogPostCard,
-      GamepadIcon,
-      NoteIcon,
-      DiscordIcon,
-      CButton,
-      ArrowRightIcon,
-      WindowIcon,
-      ABCIcon,
-      CodeIcon,
-      GlobeIcon,
-      LanguageIcon,
-      PaintbrushIcon,
-      ShieldIcon
-    },
-    async asyncData() {
-      return {
-        blogPosts: Array.from(await blogAPI.posts.browse({
-          limit: 2,
-          include: "slug,title,feature_image,reading_time,published_at"
-        })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
-      };
-    },
-    data: () => ({
-      blogPosts: []
-    })
-  };
+export default {
+  name: "IndexPage",
+  layout: "none",
+  components: {
+    KNavigationBar,
+    KFooter,
+    BlogPostCard,
+    GamepadIcon,
+    NoteIcon,
+    DiscordIcon,
+    CButton,
+    ArrowRightIcon,
+    WindowIcon,
+    ABCIcon,
+    CodeIcon,
+    GlobeIcon,
+    LanguageIcon,
+    PaintbrushIcon,
+    ShieldIcon
+  },
+  async asyncData() {
+    return {
+      blogPosts: Array.from(await blogAPI.posts.browse({
+        limit: 2,
+        include: "slug,title,feature_image,reading_time,published_at"
+      })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
+    };
+  },
+  data: () => ({
+    blogPosts: []
+  })
+};
 </script>

@@ -55,34 +55,34 @@
 </template>
 
 <style lang="scss" scoped>
-  div.content {
-    margin-top: 25px;
-    margin-bottom: 5rem;
-    text-align: justify;
-    line-height: 25px;
+div.content {
+  margin-top: 25px;
+  margin-bottom: 5rem;
+  text-align: justify;
+  line-height: 25px;
 
-    h1 {
-      line-height: normal;
-    }
-
-    p.heading--5 {
-      margin-top: 25px;
-      line-height: 30px;
-      font-size: 1.3rem;
-    }
+  h1 {
+    line-height: normal;
   }
+
+  p.heading--5 {
+    margin-top: 25px;
+    line-height: 30px;
+    font-size: 1.3rem;
+  }
+}
 </style>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+import KNavigationBar from "@/components/KNavigationBar";
 
-  export default {
-    name: "ContributePage",
-    components: {KNavigationBar},
-    head() {
-      return {
-        titleTemplate: "Contribute - %s"
-      };
-    }
-  };
+export default {
+  name: "ContributePage",
+  components: {KNavigationBar},
+  head() {
+    return {
+      titleTemplate: "Contribute - %s"
+    };
+  }
+};
 </script>
