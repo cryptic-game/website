@@ -9,7 +9,6 @@
         <TeamMember github-name="DevMimas" name="Marius" role="Project Manager"></TeamMember>
         <TeamMember github-name="Chaozz66" name="Chaozz" role="Community Manager"></TeamMember>
         <TeamMember github-name="TheMorpheus407" name="Morpheus " role="Community Manager"></TeamMember>
-        <!--        <TeamMember github-name="DevMimas" name="Marius"></TeamMember>-->
       </div>
 
       <div class="group">
@@ -19,9 +18,9 @@
 
       <div class="group">
         <h6>Backend</h6>
-        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Python Backend"></TeamMember>
-        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head of Java Backend"></TeamMember>
-        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant of Java Backend"></TeamMember>
+        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Python Backend Development"></TeamMember>
+        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head of Java Backend Development"></TeamMember>
+        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant of Java Backend Development"></TeamMember>
       </div>
 
       <div class="group">
@@ -34,7 +33,7 @@
         <h6>Gamedesign</h6>
         <TeamMember github-name="DevMimas" name="Marius" role="Head of Gamedesign"></TeamMember>
         <TeamMember github-name="Maulwurf852" name="Maulwurf" role="Head Assistant"></TeamMember>
-        <TeamMember github-name="Tristan-Hoermann" name="Tristan-H11" role="Head Assistant"></TeamMember>
+        <TeamMember github-name="Tristan-H11" name="Tristan-H11" role="Head Assistant"></TeamMember>
         <TeamMember github-name="Dev-Fabian" name="Fabian" role="Contributor"></TeamMember>
         <TeamMember github-name="T2brozz" name="T2brozz" role="Contributor"></TeamMember>
         <TeamMember github-name="Chaozz66" name="Chaozz" role="Contributor"></TeamMember>
@@ -66,21 +65,18 @@
 
       <div class="group">
         <h6>Website</h6>
-        <TeamMember github-name="RiseofRice" name="RiseofRice" role="Head of Website"></TeamMember>
-        <TeamMember github-name="moritzruth" name="Moritz" role="Contributor"></TeamMember>
-        <TeamMember github-name="MarcelCoding" name="Marcel" role="Contributor"></TeamMember>
       </div>
 
       <div class="group">
         <h6>Security</h6>
-        <TeamMember github-name="Capfly" name="Capfly" role="Head of Security"></TeamMember>
+        <TeamMember github-name="iiestIT" name="iiest_TF" role="Head of Security"></TeamMember>
       </div>
 
       <div class="group">
         <h6>Server Admin</h6>
         <TeamMember github-name="kurzdev" name="Jokur" role="Admin"></TeamMember>
         <TeamMember github-name="LordRazor" name="LordRazor" role="Admin"></TeamMember>
-        <TeamMember github-name="use-to" name="USE-TO" role="Admin"></TeamMember>
+        <TeamMember github-name="felbinger" name="NicoF2000" role="Admin"></TeamMember>
       </div>
 
       <div class="group">
@@ -90,35 +86,40 @@
         <TeamMember github-name="SpartanerSpaten" name="EinSpaten" role="ex-Head of Backend"></TeamMember>
         <TeamMember github-name="mieasy" name="Mieasy" role="ex-Head of Backend"></TeamMember>
         <TeamMember github-name="TheProgrammer21" name="TheProgrammer" role="ex-Head of Administration"></TeamMember>
+        <TeamMember github-name="RiseofRice" name="RiseofRice" role="ex-Head of Website"></TeamMember>
+        <TeamMember github-name="moritzruth" name="Moritz" role="ex-Website-Contributor"></TeamMember>
       </div>
     </div>
   </main>
 </template>
 
-<script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import TeamMember from "../components/TeamMember";
-
-  export default {
-    name: "TeamPage",
-    components: { TeamMember, KNavigationBar },
-    head() {
-      return {
-        titleTemplate: "Team - %s"
-      };
-    }
-  };
-</script>
-
 <style lang="scss" scoped>
-div.content {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5rem;
-
-  div.group {
+  div.content {
     display: flex;
     flex-direction: column;
+    margin-bottom: 5rem;
+
+    div.group {
+      display: flex;
+      flex-direction: column;
+    }
   }
-}
 </style>
+
+<script>
+import KNavigationBar from "@/components/KNavigationBar";
+import TeamMember from "../components/TeamMember";
+
+export default {
+  name: "TeamPage",
+  components: {
+    TeamMember,
+    KNavigationBar
+  },
+  head() {
+    return {
+      titleTemplate: "Team - %s"
+    };
+  }
+};
+</script>
