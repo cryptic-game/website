@@ -6,9 +6,9 @@
 
       <div class="group">
         <h6>Project Management</h6>
+        <TeamMember github-name="TheMorpheus407" name="Morpheus" role="Community Manager"></TeamMember>
         <TeamMember github-name="DevMimas" name="Marius" role="Project Manager"></TeamMember>
         <TeamMember github-name="Chaozz66" name="Chaozz" role="Community Manager"></TeamMember>
-        <TeamMember github-name="TheMorpheus407" name="Morpheus " role="Community Manager"></TeamMember>
       </div>
 
       <div class="group">
@@ -18,9 +18,9 @@
 
       <div class="group">
         <h6>Backend</h6>
-        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Python Backend Development"></TeamMember>
-        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head of Java Backend Development"></TeamMember>
-        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant of Java Backend Development"></TeamMember>
+        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Python Backend"></TeamMember>
+        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head of Java Backend"></TeamMember>
+        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant of Java Backend"></TeamMember>
       </div>
 
       <div class="group">
@@ -34,16 +34,16 @@
         <TeamMember github-name="DevMimas" name="Marius" role="Head of Gamedesign"></TeamMember>
         <TeamMember github-name="Maulwurf852" name="Maulwurf" role="Head Assistant"></TeamMember>
         <TeamMember github-name="Tristan-H11" name="Tristan-H11" role="Head Assistant"></TeamMember>
+        <TeamMember github-name="Chaozz66" name="Chaozz" role="Contributor"></TeamMember>
         <TeamMember github-name="Dev-Fabian" name="Fabian" role="Contributor"></TeamMember>
         <TeamMember github-name="T2brozz" name="T2brozz" role="Contributor"></TeamMember>
-        <TeamMember github-name="Chaozz66" name="Chaozz" role="Contributor"></TeamMember>
       </div>
 
       <div class="group">
         <h6>Design</h6>
         <TeamMember github-name="Chaozz66" name="Chaozz" role="Head of Design"></TeamMember>
-        <TeamMember github-name="DevMimas" name="Marius" role="Contributor"></TeamMember>
         <TeamMember github-name="Nocuma" name="Lars" role="Contributor"></TeamMember>
+        <TeamMember github-name="DevMimas" name="Marius" role="Contributor"></TeamMember>
       </div>
 
       <div class="group">
@@ -82,7 +82,6 @@
       <div class="group">
         <h6>Inactive Members</h6>
         <TeamMember github-name="FelixRewer" name="Felix" role="ex-Head of Frontend"></TeamMember>
-        <TeamMember github-name="use-to" name="USE-TO" role="ex-Head of Development"></TeamMember>
         <TeamMember github-name="SpartanerSpaten" name="EinSpaten" role="ex-Head of Backend"></TeamMember>
         <TeamMember github-name="mieasy" name="Mieasy" role="ex-Head of Backend"></TeamMember>
         <TeamMember github-name="TheProgrammer21" name="TheProgrammer" role="ex-Head of Administration"></TeamMember>
@@ -94,16 +93,16 @@
 </template>
 
 <style lang="scss" scoped>
-  div.content {
+div.content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+
+  div.group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem;
-
-    div.group {
-      display: flex;
-      flex-direction: column;
-    }
   }
+}
 </style>
 
 <script>
