@@ -6,7 +6,7 @@
 
       <div class="group">
         <h6>Project Management</h6>
-        <TeamMember github-name="TheMorpheus407" name="Morpheus " role="Community Manager"></TeamMember>
+        <TeamMember github-name="TheMorpheus407" name="Morpheus" role="Community Manager"></TeamMember>
         <TeamMember github-name="DevMimas" name="Marius" role="Project Manager"></TeamMember>
         <TeamMember github-name="Chaozz66" name="Chaozz" role="Community Manager"></TeamMember>
       </div>
