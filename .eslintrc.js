@@ -1,36 +1,36 @@
 const INLINE_ELEMENTS = require("eslint-plugin-vue/lib/utils/inline-non-void-elements");
 
 module.exports = {
-  "root": true,
-  "env": {
-    "browser": true,
+  root: true,
+  env: {
+    browser: true
   },
-  "parserOptions": {
-    "parser": "babel-eslint"
+  parserOptions: {
+    parser: "babel-eslint"
   },
-  "extends": [
+  extends: [
     "@nuxtjs",
     "plugin:nuxt/recommended",
     "plugin:vue/essential"
   ],
-  "rules": {
+  rules: {
     "no-unused-vars": "warn",
-    "indent": "off",
+    indent: "off",
     "no-dupe-class-members": "error",
     "no-multiple-empty-lines": ["warn", {
-      "max": 1,
-      "maxEOF": 0,
-      "maxBOF": 0
+      max: 1,
+      maxEOF: 0,
+      maxBOF: 0
     }],
     "no-console": "off",
     "no-extra-parens": "warn",
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": "off",
     "object-curly-spacing": ["warn", "always"],
     "no-template-curly-in-string": "warn",
     "array-callback-return": "error",
     "dot-location": "warn",
     "dot-notation": "warn",
-    "eqeqeq": "error",
+    eqeqeq: "error",
     "no-caller": "error",
     "no-case-declarations": "warn",
     "no-empty-function": "warn",
@@ -64,7 +64,7 @@ module.exports = {
     "no-sync": "error",
     "array-bracket-newline": ["error", "consistent"],
     "prefer-promise-reject-errors": "error",
-    "strict": ["error", "never"],
+    strict: ["error", "never"],
     "array-bracket-spacing": ["error", "never"],
     "array-element-newline": ["error", "consistent"],
     "block-spacing": "error",
@@ -79,7 +79,7 @@ module.exports = {
     "key-spacing": "error",
     "keyword-spacing": "error",
     "max-len": ["warn", {
-      "code": 120
+      code: 120
     }],
     "multiline-ternary": ["error", "always-multiline"],
     "new-parens": "error",
@@ -89,7 +89,7 @@ module.exports = {
     "no-new-object": "error",
     "no-plusplus": "error",
     "no-trailing-spaces": ["error", {
-      "skipBlankLines": true
+      skipBlankLines: true
     }],
     "no-underscore-dangle": "error",
     "no-unneeded-ternary": "error",
@@ -100,17 +100,17 @@ module.exports = {
     "padded-blocks": ["error", "never"],
     "prefer-object-spread": "error",
     "quote-props": ["error", "as-needed"],
-    "quotes": ["error", "double"],
-    "semi": ["error", "always", {
-      "omitLastInOneLineBlock": false
+    quotes: ["error", "double"],
+    semi: ["error", "always", {
+      omitLastInOneLineBlock: false
     }],
     "semi-spacing": "error",
     "semi-style": "error",
     "space-before-blocks": "error",
     "space-before-function-paren": ["error", {
-      "anonymous": "never",
-      "named": "never",
-      "asyncArrow": "always"
+      anonymous: "never",
+      named: "never",
+      asyncArrow: "always"
     }],
     "space-in-parens": "error",
     "space-infix-ops": "error",
@@ -135,18 +135,18 @@ module.exports = {
     "prefer-spread": "error",
     "prefer-template": "error",
     "sort-imports": ["error", {
-      "ignoreDeclarationSort": true
+      ignoreDeclarationSort: true
     }],
     "template-curly-spacing": "error",
     "nuxt/no-cjs-in-config": "off",
     "vue/html-closing-bracket-spacing": ["error", {
-      "startTag": "never",
-      "endTag": "never",
-      "selfClosingTag": "never"
+      startTag: "never",
+      endTag: "never",
+      selfClosingTag: "never"
     }],
     "vue/script-indent": ["warn", 2, {
-      "baseIndent": 1,
-      "switchCase": 1
+      baseIndent: 1,
+      switchCase: 1
     }],
     "vue/no-v-html": "off",
     "vue/html-self-closing": "off",
