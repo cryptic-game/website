@@ -1,0 +1,56 @@
+name: Docker Build
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore: [ '**.md' ]
+
+env:
+  DOCKER_PLATFORMS: linux/amd64 #linux/arm/v7,linux/arm64/v8,linux/s390x,linux/ppc64le
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: crazy-max/ghaction-docker-buildx@v3
+
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+      - name: Create Version
+        id: prepare
+        run: |
+          VERSION=latest
+          IMAGE_NAME=crypticcp/website
+          TAGS="--tag $IMAGE_NAME:${VERSION}"
+          echo ::set-output name=version::$VERSION
+          echo ::set-output name=image_name::$IMAGE_NAME
+          echo ::set-output name=buildx_args::--platform $DOCKER_PLATFORMS \
+            --build-arg VERSION=$VERSION \
+            --build-arg SERVICE_NAME=${{ matrix.service }} \
+            --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
+            --build-arg VCS_REF=${GITHUB_SHA::8} \
+            ${TAGS} --file ./Dockerfile ./
+      - name: Docker Buildx (build)
+        run: docker buildx build --output "type=image,push=false" ${{ steps.prepare.outputs.buildx_args }}
+
+      - name: Log into registry
+        run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+
+      - name: Docker Buildx (push)
+        run: docker buildx build --output "type=image,push=true" ${{ steps.prepare.outputs.buildx_args }}
+
+      - name: Docker Check Manifest
+        run: docker run --rm mplatform/mquery ${{ steps.prepare.outputs.image_name }}:${{ steps.prepare.outputs.version }}
+
+      - name: Clear
+        if: always()
+        run: rm -f ${HOME}/.docker/config.json
