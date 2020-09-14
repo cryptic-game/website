@@ -63,8 +63,9 @@ div.roadmap-date-group {
       margin: 0 1.5rem 0 1rem;
     }
 
-    /*div.roadmap-version-content {*/
-    /*}*/
+    div.roadmap-version-content {
+      flex-grow: 1;
+    }
   }
 
   &.roadmap-state-next div.roadmap-version-group div.roadmap-version-line {
