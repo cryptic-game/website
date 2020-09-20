@@ -16,9 +16,9 @@ export function createPropEnum(items, defaultValue) {
     };
   });
 
-  const computedProperty = function () {
+  const computedProperty = function() {
     return items.find(item => this[item]) || defaultValue;
   };
 
-  return { props, computedProperty };
+  return {props, computedProperty};
 }
