@@ -91,34 +91,34 @@
 </template>
 
 <style lang="scss" scoped>
-  .faq-page {
-    height: 100%;
-    margin-bottom: 5rem;
+.faq-page {
+  height: 100%;
+  margin-bottom: 5rem;
 
-    div.faq-section {
-      margin-top: 30px;
-      text-align: justify;
-      line-height: 25px;
+  div.faq-section {
+    margin-top: 30px;
+    text-align: justify;
+    line-height: 25px;
 
-      h3.faq-section__question {
-        margin-top: 25px;
-        margin-bottom: 10px;
-        font-size: 1.3rem;
-      }
+    h3.faq-section__question {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
     }
   }
+}
 </style>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+import KNavigationBar from "@/components/KNavigationBar";
 
-  export default {
-    name: "StatusPage",
-    components: {KNavigationBar},
-    head() {
-      return {
-        titleTemplate: "FAQ - %s"
-      };
-    }
-  };
+export default {
+  name: "StatusPage",
+  components: {KNavigationBar},
+  head() {
+    return {
+      titleTemplate: "FAQ - %s"
+    };
+  }
+};
 </script>

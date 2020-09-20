@@ -21,7 +21,8 @@
         <h6>Backend</h6>
         <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Python Backend Development"></TeamMember>
         <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head of Java Backend Development"></TeamMember>
-        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant of Java Backend Development"></TeamMember>
+        <TeamMember github-name="MarcelCoding" name="Marcel"
+                    role="Head Assistant of Java Backend Development"></TeamMember>
       </div>
 
       <div class="group">
@@ -96,29 +97,29 @@
 </template>
 
 <style lang="scss" scoped>
-  div.content {
+div.content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+
+  div.group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem;
-
-    div.group {
-      display: flex;
-      flex-direction: column;
-    }
   }
+}
 </style>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import TeamMember from "../components/TeamMember";
+import KNavigationBar from "@/components/KNavigationBar";
+import TeamMember from "../components/TeamMember";
 
-  export default {
-    name: "TeamPage",
-    components: {TeamMember, KNavigationBar},
-    head() {
-      return {
-        titleTemplate: "Team - %s"
-      };
-    }
-  };
+export default {
+  name: "TeamPage",
+  components: {TeamMember, KNavigationBar},
+  head() {
+    return {
+      titleTemplate: "Team - %s"
+    };
+  }
+};
 </script>

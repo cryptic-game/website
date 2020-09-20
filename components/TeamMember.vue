@@ -1,7 +1,7 @@
 <template>
   <div class="member">
     <div class="image">
-      <img alt="" :src="'https://github.com/' + githubName + '.png?size=44'">
+      <img :src="'https://github.com/' + githubName + '.png?size=44'" alt="">
     </div>
     <div class="info">
       <span>{{ name }}{{ role ? ' - ' + role : '' }}</span>
@@ -11,37 +11,37 @@
 </template>
 
 <script>
-  export default {
-    name: "TeamMember",
-    props: {
-      name: String,
-      role: String,
-      githubName: String
-    }
-  };
+export default {
+  name: "TeamMember",
+  props: {
+    name: String,
+    role: String,
+    githubName: String
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-  div.member {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 10px;
+div.member {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
 
-    div.image {
-      margin-right: 10px;
-      width: 44px;
-      height: 44px;
+  div.image {
+    margin-right: 10px;
+    width: 44px;
+    height: 44px;
 
-      img {
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    div.info {
-      display: flex;
-      flex-direction: column;
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
     }
   }
+
+  div.info {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>

@@ -199,86 +199,86 @@
 </template>
 
 <style lang="scss" scoped>
-  h1.title {
-    margin-bottom: 5rem;
+h1.title {
+  margin-bottom: 5rem;
+}
+
+p {
+  margin: 0;
+}
+
+div.project-launch {
+  background: rgb(52, 152, 219);
+  background: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgba(52, 103, 219, 1) 100%);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem;
+  margin: 7rem 4rem;
+
+  border-radius: 0.4rem;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    text-align: center;
+  }
+
+  div.date {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+
+    span {
+      line-height: 2.5rem;
+    }
+
+    span.month {
+      font-size: 1.5rem;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    span.year {
+      letter-spacing: 0.3rem;
+      font-size: 4rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    margin: 7rem 0;
+
+    h1 {
+      letter-spacing: 0.2rem;
+    }
   }
 
   p {
-    margin: 0;
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    text-align: center;
   }
-
-  div.project-launch {
-    background: rgb(52, 152, 219);
-    background: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgba(52, 103, 219, 1) 100%);
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 2rem;
-    margin: 7rem 4rem;
-
-    border-radius: 0.4rem;
-
-    h1 {
-      text-transform: uppercase;
-      font-size: 3rem;
-      letter-spacing: 1rem;
-      text-align: center;
-    }
-
-    div.date {
-      display: flex;
-      flex-direction: column;
-      /*align-items: center;*/
-
-      span {
-        line-height: 2.5rem;
-      }
-
-      span.month {
-        font-size: 1.5rem;
-        letter-spacing: 0.5rem;
-        text-transform: uppercase;
-      }
-
-      span.year {
-        letter-spacing: 0.3rem;
-        font-size: 4rem;
-      }
-    }
-
-    @media (max-width: 800px) {
-      margin: 7rem 0;
-
-      h1 {
-        letter-spacing: 0.2rem;
-      }
-    }
-
-    p {
-      margin-top: 3rem;
-      font-size: 1.3rem;
-      text-align: center;
-    }
-  }
+}
 </style>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import RoadMapDate from "../components/road-map-date";
-  import RoadMapVersion from "../components/road-map-version";
-  import RoadMapSprint from "../components/road-map-sprint";
+import KNavigationBar from "@/components/KNavigationBar";
+import RoadMapDate from "../components/road-map-date";
+import RoadMapVersion from "../components/road-map-version";
+import RoadMapSprint from "../components/road-map-sprint";
 
-  export default {
-    name: "RoadMapPage",
-    components: {RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar},
-    head() {
-      return {
-        titleTemplate: "Roadmap - %s"
-      };
-    }
-  };
+export default {
+  name: "RoadMapPage",
+  components: {RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar},
+  head() {
+    return {
+      titleTemplate: "Roadmap - %s"
+    };
+  }
+};
 </script>

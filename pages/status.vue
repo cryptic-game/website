@@ -9,22 +9,22 @@
 </template>
 
 <style lang="scss" scoped>
-  .status-page {
-    height: 100%;
-    margin-bottom: 5rem;
-  }
+.status-page {
+  height: 100%;
+  margin-bottom: 5rem;
+}
 </style>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+import KNavigationBar from "@/components/KNavigationBar";
 
-  export default {
-    name: "StatusPage",
-    components: {KNavigationBar},
-    head() {
-      return {
-        titleTemplate: "Status - %s"
-      };
-    }
-  };
+export default {
+  name: "StatusPage",
+  components: {KNavigationBar},
+  head() {
+    return {
+      titleTemplate: "Status - %s"
+    };
+  }
+};
 </script>
