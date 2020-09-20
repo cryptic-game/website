@@ -26,6 +26,7 @@
                 v-else
                 :key="item.label"
                 rel="noopener"
+                target="_blank"
                 :href="item.href"
                 @click.passive="open = false"
               >

@@ -24,6 +24,8 @@
           class="hero-section__join-button"
           discord
           href="https://discord.gg/tN5Wcab"
+          rel="noopener"
+          target="_blank"
           new-tab
         >
           <template v-slot:icon>
@@ -47,7 +49,13 @@
           </template>
           Read the Blog Post
         </CButton>
-        <CButton green href="https://play.cryptic-game.net" outline text-color="white">
+        <CButton
+          green
+          href="https://play.cryptic-game.net"
+          target="_blank"
+          rel="noopener"
+          outline
+          text-color="white">
           <template v-slot:icon>
             <GamepadIcon class="icon"/>
           </template>
@@ -122,7 +130,7 @@
               Frontend
             </h3>
             <p class="groups-section__group-text">
-              The frontend team creates the gaming surface, where Cryptic is played. DThis includes all conceivable game
+              The frontend team creates the gaming surface, where Cryptic is played. This includes all conceivable game
               elements e.g. a desktop, or various apps within the game, which provides an interesting feeling. The
               challenge is to code complex game mechanics without any game engine. You should bring knowlege of website
               developement, expertise in TypeScript, Angular and Git. In the ideal case, you bring SCSS knowlege too.
