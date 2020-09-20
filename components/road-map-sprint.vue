@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
 div.roadmap-sprint {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 1rem;
 
   &:last-child {

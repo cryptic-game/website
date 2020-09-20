@@ -4,31 +4,31 @@
     <div class="content formatted">
       <h1 class="title">Roadmap</h1>
 
-      <road-map-date state="next" year="2020/2021" month="Planed For The Future">
+      <road-map-date state="next" year="2021/2022" month="Planed For The Future">
 
         <road-map-version version="Pre Alpha 3.5">
           <road-map-sprint
+            action="Implement base for Music/Sounds"
+            group="Gamedesign, Frontend, Sounddesign">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement Cryptic UI Design"
+            group="Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
             action="Implement Credits"
-            group="Backend, Frontend, Design">
+            group="Gamedesign, Backend, Frontend, Design, Text">
           </road-map-sprint>
           <road-map-sprint
             action="Cryptic Wiki: Game instructions"
             group="Editorial Office">
           </road-map-sprint>
-          <road-map-sprint
-            action="Implement Base for Music/Sounds"
-            group="Gamedesign, Frontend, Sounddesign">
-          </road-map-sprint>
         </road-map-version>
 
         <road-map-version version="Pre Alpha 3.4">
           <road-map-sprint
-            action="Extend and optimize apps"
-            group="Frontend, Gamedesign">
-          </road-map-sprint>
-          <road-map-sprint
-            action="Make services slow down performance"
-            group="Backend">
+            action="Implement base for mining pool"
+            group="Gamedesign, Backend, Frontend, Design">
           </road-map-sprint>
           <road-map-sprint
             action="Implement PC-UI-configurator"
@@ -36,11 +36,11 @@
           </road-map-sprint>
           <road-map-sprint
             action="Implement switching of hardware-components"
-            group="Frontend, Design">
+            group="Gamedesign, Frontend, Design">
           </road-map-sprint>
           <road-map-sprint
             action="Extend and optimize hardware-components"
-            group="Backend">
+            group="Gamedesign, Backend">
           </road-map-sprint>
           <road-map-sprint
             action="Implement Morphcoin currency symbol"
@@ -48,67 +48,75 @@
           </road-map-sprint>
           <road-map-sprint
             action="Implement base for chat app"
-            group="Backend, Frontend, Design">
+            group="Gamedesign, Backend, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Make services slow down performance"
+            group="Gamedesign, Backend">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Further developing/optimizing apps"
+            group="Gamedesign, Frontend, Design">
           </road-map-sprint>
         </road-map-version>
 
         <road-map-version version="Pre Alpha 3.3">
           <road-map-sprint
-            action="Further developing/optimizing apps"
-            group="Frontend, Design, Gamedesign">
-          </road-map-sprint>
-          <road-map-sprint
             action="Implement base for hacker-attacks/attacksystem"
-            group="Backend, Frontend, Gamedesign">
+            group="Gamedesign, Backend, Frontend">
           </road-map-sprint>
           <road-map-sprint
-            action="Implement Firewall-App"
+            action="Implement base for firewall app"
             group="Gamedesign, Backend, Frontend, Design">
           </road-map-sprint>
           <road-map-sprint
-            action="Basis for user management system"
-            group="Backend, Frontend, Design, Gamedesign">
+            action="Implement base for user management system"
+            group="Gamedesign, Backend, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Further developing/optimizing apps"
+            group="Gamedesign, Frontend, Design">
           </road-map-sprint>
         </road-map-version>
 
         <road-map-version version="Pre Alpha 3.2">
           <road-map-sprint
-            action="Further developing/optimizing apps"
-            group="Frontend, Design, Gamedesign">
-          </road-map-sprint>
-          <road-map-sprint
             action="Implement IP address and replace UUID in apps"
-            group="Backend, Frontend, Design, Gamedesign">
-          </road-map-sprint>
-          <road-map-sprint
-            action="Implement network-UI"
-            group="Frontend, Design, Gamedesign">
+            group="Gamedesign, Backend, Frontend, Design">
           </road-map-sprint>
           <road-map-sprint
             action="Implement router and network-switch"
-            group="Backend, Gamedesign">
+            group="Gamedesign, Backend">
           </road-map-sprint>
           <road-map-sprint
-            action="Expand Network System"
-            group="Backend, Gamedesign">
+            action="Expand network system"
+            group="Gamedesign, Backend">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement network-UI"
+            group="Gamedesign, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Further developing/optimizing apps"
+            group="Gamedesign, Frontend, Design">
           </road-map-sprint>
         </road-map-version>
         <road-map-version version="Pre Alpha 3.1">
           <road-map-sprint
-            action="Further developing/optimizing apps"
-            group="Frontend, Design, Gamedesign">
+            action="Implement account verification"
+            group="Gamedesign, Backend, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement base for a rank list"
+            group="Gamedesign, Backend, Frontend, Design">
           </road-map-sprint>
           <road-map-sprint
             action="Extend Terminal"
-            group="Frontend, Gamedesign">
+            group="Gamedesign, Frontend">
           </road-map-sprint>
           <road-map-sprint
-            action="Implement Base for a rank list"
-            group="Backend, Frontend, Gamedesign, Design">
-          </road-map-sprint>
-          <road-map-sprint
-            action="Implement Cryptic UI Design"
-            group="Design, Frontend">
+            action="Further developing/optimizing apps"
+            group="Gamedesign, Frontend, Design">
           </road-map-sprint>
         </road-map-version>
       </road-map-date>
