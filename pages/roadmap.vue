@@ -4,51 +4,140 @@
     <div class="content formatted">
       <h1 class="title">Roadmap</h1>
 
-      <road-map-date month="from July" state="next" year="2020">
-        <road-map-version version="Pre Alpha 3">
-          <road-map-sprint
-            action="Rewrite Backend Infrastructure"
-            group="Backend, Security">
-          </road-map-sprint>
+      <road-map-date state="next" year="2021/2022" month="Planed For The Future">
 
+        <road-map-version version="Pre Alpha 3.5">
           <road-map-sprint
-            action="Rewrite Frontend Infrastructure"
-            group="Frontend, Security">
+            action="Implement base for Music/Sounds"
+            group="Gamedesign, Frontend, Sounddesign">
           </road-map-sprint>
-
           <road-map-sprint
             action="Implement Cryptic UI Design"
-            group="Design, Frontend">
+            group="Frontend, Design">
           </road-map-sprint>
-
           <road-map-sprint
-            action="Cryptic Wiki"
+            action="Implement Credits"
+            group="Gamedesign, Backend, Frontend, Design, Text">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Cryptic Wiki: Game instructions"
             group="Editorial Office">
           </road-map-sprint>
+        </road-map-version>
 
+        <road-map-version version="Pre Alpha 3.4">
           <road-map-sprint
-            action="Implementing the IP-Address"
+            action="Implement base for mining pool"
+            group="Gamedesign, Backend, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement PC-UI-configurator"
+            group="Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement switching of hardware-components"
+            group="Gamedesign, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Extend and optimize hardware-components"
+            group="Gamedesign, Backend">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement Morphcoin currency symbol"
+            group="Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement base for chat app"
+            group="Gamedesign, Backend, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Make services slow down performance"
+            group="Gamedesign, Backend">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Further developing/optimizing apps"
+            group="Gamedesign, Frontend, Design">
+          </road-map-sprint>
+        </road-map-version>
+
+        <road-map-version version="Pre Alpha 3.3">
+          <road-map-sprint
+            action="Implement base for hacker-attacks/attacksystem"
             group="Gamedesign, Backend, Frontend">
           </road-map-sprint>
-
           <road-map-sprint
-            action="Expand Network System"
+            action="Implement base for firewall app"
             group="Gamedesign, Backend, Frontend, Design">
           </road-map-sprint>
-
           <road-map-sprint
-            action="Implement Firewall-App"
+            action="Implement base for user management system"
             group="Gamedesign, Backend, Frontend, Design">
           </road-map-sprint>
-
           <road-map-sprint
-            action="Implement Base for Music/Sounds"
-            group="Gamedesign, Frontend, Sounddesign">
+            action="Further developing/optimizing apps"
+            group="Gamedesign, Frontend, Design">
+          </road-map-sprint>
+        </road-map-version>
+
+        <road-map-version version="Pre Alpha 3.2">
+          <road-map-sprint
+            action="Implement IP address and replace UUID in apps"
+            group="Gamedesign, Backend, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement router and network-switch"
+            group="Gamedesign, Backend">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Expand network system"
+            group="Gamedesign, Backend">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement network-UI"
+            group="Gamedesign, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Further developing/optimizing apps"
+            group="Gamedesign, Frontend, Design">
+          </road-map-sprint>
+        </road-map-version>
+        <road-map-version version="Pre Alpha 3.1">
+          <road-map-sprint
+            action="Implement account verification"
+            group="Gamedesign, Backend, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Implement base for a rank list"
+            group="Gamedesign, Backend, Frontend, Design">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Extend Terminal"
+            group="Gamedesign, Frontend">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Further developing/optimizing apps"
+            group="Gamedesign, Frontend, Design">
           </road-map-sprint>
         </road-map-version>
       </road-map-date>
 
-      <road-map-date month="from Mai" state="current" year="2019">
+      <road-map-date month="from February" year="2020" state="current">
+        <road-map-version version="Pre Alpha 3.0">
+          <road-map-sprint
+            action="Rewrite Backend Infrastructure"
+            group="Backend, Security">
+          </road-map-sprint>
+          <road-map-sprint
+            action="Rewrite Frontend Infrastructure"
+            group="Frontend, Security">
+          </road-map-sprint>
+          <br>
+          <br>
+          <br>
+        </road-map-version>
+      </road-map-date>
+
+      <road-map-date month="from May" state="finished" year="2019">
         <road-map-version version="Pre Alpha 2">
           <road-map-sprint
             action="Base for various Computer Hardware"
@@ -191,7 +280,8 @@
         </div>
 
         <p>
-          On October 15, 2017, The Morpheus Tutorials<br> initiated the project for his community as a browser game.
+          On October 15, 2017, The Morpheus Tutorials<br>
+          initiated the project for his community as a browser game.
         </p>
       </div>
     </div>

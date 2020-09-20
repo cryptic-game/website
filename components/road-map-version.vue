@@ -21,6 +21,11 @@ div.roadmap-version {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 1.5rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   h4 {
     margin: 0 0 1rem;
