@@ -340,6 +340,23 @@
   </main>
 </template>
 
+<script>
+  import KNavigationBar from "@/components/KNavigationBar";
+  import RoadMapDate from "../components/road-map-date";
+  import RoadMapVersion from "../components/road-map-version";
+  import RoadMapSprint from "../components/road-map-sprint";
+
+  export default {
+    name: "RoadMapPage",
+    components: { RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar },
+    head() {
+      return {
+        titleTemplate: "Roadmap - %s"
+      };
+    }
+  };
+</script>
+
 <style lang="scss" scoped>
 h1.title {
   margin-bottom: 5rem;
@@ -407,20 +424,3 @@ div.project-launch {
   }
 }
 </style>
-
-<script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import RoadMapDate from "../components/road-map-date";
-  import RoadMapVersion from "../components/road-map-version";
-  import RoadMapSprint from "../components/road-map-sprint";
-
-  export default {
-    name: "RoadMapPage",
-    components: { RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar },
-    head() {
-      return {
-        titleTemplate: "Roadmap - %s"
-      };
-    }
-  };
-</script>

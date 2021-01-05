@@ -14,9 +14,18 @@
   export default {
     name: "TeamMember",
     props: {
-      name: String,
-      role: String,
-      githubName: String
+      name: {
+        type: String,
+        default: "Loading..."
+      },
+      role: {
+        type: String,
+        default: "Loading..."
+      },
+      githubName: {
+        type: String,
+        default: "Loading..."
+      }
     }
   };
 </script>

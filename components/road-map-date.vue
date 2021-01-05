@@ -21,9 +21,18 @@
   export default {
     name: "RoadMapDate",
     props: {
-      year: String,
-      month: String,
-      state: String
+      year: {
+        type: String,
+        default: "Loading..."
+      },
+      month: {
+        type: String,
+        default: "Loading..."
+      },
+      state: {
+        type: String,
+        default: "Loading..."
+      }
     }
   };
 </script>

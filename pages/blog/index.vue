@@ -18,17 +18,6 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-.posts-page__posts {
-  margin-top: 40px;
-
-  .posts-page__post {
-    width: 100%;
-    margin-bottom: var(--gutter-size);
-  }
-}
-</style>
-
 <script>
   import KNavigationBar from "@/components/KNavigationBar";
   import { blogAPI } from "@/assets/js/blog";
@@ -55,3 +44,14 @@
     }
   };
 </script>
+
+<style lang="scss" scoped>
+.posts-page__posts {
+  margin-top: 40px;
+
+  .posts-page__post {
+    width: 100%;
+    margin-bottom: var(--gutter-size);
+  }
+}
+</style>

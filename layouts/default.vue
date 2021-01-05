@@ -7,10 +7,6 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
-
 <script>
   import KApp from "kiste/components/KApp";
   import KFooter from "kiste/components/KFooter";
@@ -19,3 +15,7 @@
     components: { KApp, KFooter }
   };
 </script>
+
+<style lang="scss" scoped>
+
+</style>

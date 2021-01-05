@@ -22,6 +22,29 @@
   </div>
 </template>
 
+<script>
+  export default {
+    name: "BlogPostCard",
+    props: {
+      post: {
+        type: Object,
+        required: true
+      },
+      imageHeight: {
+        type: String,
+        default: undefined
+      }
+    },
+    computed: {
+      imageStyle() {
+        return {
+          height: this.imageHeight
+        };
+      }
+    }
+  };
+</script>
+
 <style lang="scss" scoped>
 .blog-post-card {
   background: var(--colors-background-a);
@@ -84,26 +107,3 @@
   }
 }
 </style>
-
-<script>
-  export default {
-    name: "BlogPostCard",
-    props: {
-      post: {
-        type: Object,
-        required: true
-      },
-      imageHeight: {
-        type: String,
-        default: undefined
-      }
-    },
-    computed: {
-      imageStyle() {
-        return {
-          height: this.imageHeight
-        };
-      }
-    }
-  };
-</script>

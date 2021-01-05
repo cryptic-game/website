@@ -40,6 +40,66 @@
   </div>
 </template>
 
+<script>
+  import { isNuxt } from "kiste/js/isNuxt";
+  import { toModifierClasses } from "kiste/js/toModifierClasses";
+  import CrypticHeadLogo from "@/assets/cryptic_head.svg";
+
+  export default {
+    name: "KNavigationBar",
+    components: { CrypticHeadLogo },
+    props: {
+      backgroundAfterScroll: {
+        type: Boolean,
+        default: false
+      },
+      title: {
+        type: String,
+        default: ""
+      }
+    },
+    data: () => ({
+      open: false,
+      scrollPosition: 0
+    }),
+    computed: {
+      scrolled: vm => vm.scrollPosition > 60,
+      showBackground: vm => vm.backgroundAfterScroll ? vm.scrollPosition > 0 : true,
+      classes() {
+        const { open, scrolled, showBackground } = this;
+
+        return toModifierClasses({
+          open,
+          scrolled,
+          showBackground
+        });
+      },
+      items: vm => vm.$kiste.navigationItems,
+      isNuxt
+    },
+    mounted() {
+      const scrollListener = () => {
+        this.scrollPosition = window.scrollY;
+      };
+
+      window.addEventListener("scroll", scrollListener, { passive: true });
+
+      this.$kiste.navigationBar = this;
+
+      this.$on("hook:beforeDestroy", () => {
+        window.removeEventListener("scroll", scrollListener);
+      });
+
+      scrollListener();
+    },
+    destroyed() {
+      if (this.$kiste.navigationBar === this) {
+        this.$kiste.navigationBar = null;
+      }
+    }
+  };
+</script>
+
 <style lang="scss">
 @mixin mobile() {
   @media (max-width: 1000px) {
@@ -295,63 +355,3 @@
   }
 }
 </style>
-
-<script>
-  import { isNuxt } from "kiste/js/isNuxt";
-  import { toModifierClasses } from "kiste/js/toModifierClasses";
-  import CrypticHeadLogo from "@/assets/cryptic_head.svg";
-
-  export default {
-    name: "KNavigationBar",
-    components: { CrypticHeadLogo },
-    props: {
-      backgroundAfterScroll: {
-        type: Boolean,
-        default: false
-      },
-      title: {
-        type: String,
-        default: ""
-      }
-    },
-    data: () => ({
-      open: false,
-      scrollPosition: 0
-    }),
-    computed: {
-      scrolled: vm => vm.scrollPosition > 60,
-      showBackground: vm => vm.backgroundAfterScroll ? vm.scrollPosition > 0 : true,
-      classes() {
-        const { open, scrolled, showBackground } = this;
-
-        return toModifierClasses({
-          open,
-          scrolled,
-          showBackground
-        });
-      },
-      items: vm => vm.$kiste.navigationItems,
-      isNuxt
-    },
-    mounted() {
-      const scrollListener = () => {
-        this.scrollPosition = window.scrollY;
-      };
-
-      window.addEventListener("scroll", scrollListener, { passive: true });
-
-      this.$kiste.navigationBar = this;
-
-      this.$on("hook:beforeDestroy", () => {
-        window.removeEventListener("scroll", scrollListener);
-      });
-
-      scrollListener();
-    },
-    destroyed() {
-      if (this.$kiste.navigationBar === this) {
-        this.$kiste.navigationBar = null;
-      }
-    }
-  };
-</script>

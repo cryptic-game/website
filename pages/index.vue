@@ -264,6 +264,59 @@
   </main>
 </template>
 
+<script>
+  import KNavigationBar from "@/components/KNavigationBar";
+  import KFooter from "kiste/components/KFooter";
+  import { blogAPI } from "@/assets/js/blog";
+  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import BlogPostCard from "@/components/BlogPostCard";
+  import CButton from "@/components/CButton";
+  import DiscordIcon from "@/assets/icons/discord.svg";
+  import GamepadIcon from "@/assets/icons/gamepad.svg";
+  import NoteIcon from "@/assets/icons/note.svg";
+  import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
+  import WindowIcon from "@/assets/icons/window.svg";
+  import ABCIcon from "@/assets/icons/abc.svg";
+  import CodeIcon from "@/assets/icons/code.svg";
+  import GlobeIcon from "@/assets/icons/globe.svg";
+  import LanguageIcon from "@/assets/icons/language.svg";
+  import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
+  import ShieldIcon from "@/assets/icons/shield.svg";
+
+  export default {
+    name: "IndexPage",
+    components: {
+      KNavigationBar,
+      KFooter,
+      BlogPostCard,
+      GamepadIcon,
+      NoteIcon,
+      DiscordIcon,
+      CButton,
+      ArrowRightIcon,
+      WindowIcon,
+      ABCIcon,
+      CodeIcon,
+      GlobeIcon,
+      LanguageIcon,
+      PaintbrushIcon,
+      ShieldIcon
+    },
+    layout: "none",
+    async asyncData() {
+      return {
+        blogPosts: Array.from(await blogAPI.posts.browse({
+          limit: 2,
+          include: "slug,title,feature_image,reading_time,published_at"
+        })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
+      };
+    },
+    data: () => ({
+      blogPosts: []
+    })
+  };
+</script>
+
 <style lang="scss" scoped>
 @use "~kiste/css/mixins/screenSize";
 
@@ -571,56 +624,3 @@
   }
 }
 </style>
-
-<script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import KFooter from "kiste/components/KFooter";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
-  import BlogPostCard from "@/components/BlogPostCard";
-  import CButton from "@/components/CButton";
-  import DiscordIcon from "@/assets/icons/discord.svg";
-  import GamepadIcon from "@/assets/icons/gamepad.svg";
-  import NoteIcon from "@/assets/icons/note.svg";
-  import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
-  import WindowIcon from "@/assets/icons/window.svg";
-  import ABCIcon from "@/assets/icons/abc.svg";
-  import CodeIcon from "@/assets/icons/code.svg";
-  import GlobeIcon from "@/assets/icons/globe.svg";
-  import LanguageIcon from "@/assets/icons/language.svg";
-  import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
-  import ShieldIcon from "@/assets/icons/shield.svg";
-
-  export default {
-    name: "IndexPage",
-    components: {
-      KNavigationBar,
-      KFooter,
-      BlogPostCard,
-      GamepadIcon,
-      NoteIcon,
-      DiscordIcon,
-      CButton,
-      ArrowRightIcon,
-      WindowIcon,
-      ABCIcon,
-      CodeIcon,
-      GlobeIcon,
-      LanguageIcon,
-      PaintbrushIcon,
-      ShieldIcon
-    },
-    layout: "none",
-    async asyncData() {
-      return {
-        blogPosts: Array.from(await blogAPI.posts.browse({
-          limit: 2,
-          include: "slug,title,feature_image,reading_time,published_at"
-        })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
-      };
-    },
-    data: () => ({
-      blogPosts: []
-    })
-  };
-</script>
