@@ -4,10 +4,6 @@
   </KApp>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
-
 <script>
   import KApp from "kiste/components/KApp";
 
@@ -15,3 +11,7 @@
     components: { KApp }
   };
 </script>
+
+<style lang="scss" scoped>
+
+</style>

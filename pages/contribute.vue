@@ -54,6 +54,20 @@
   </main>
 </template>
 
+<script>
+  import KNavigationBar from "@/components/KNavigationBar";
+
+  export default {
+    name: "ContributePage",
+    components: { KNavigationBar },
+    head() {
+      return {
+        titleTemplate: "Contribute - %s"
+      };
+    }
+  };
+</script>
+
 <style lang="scss" scoped>
 div.content {
   margin-top: 25px;
@@ -72,17 +86,3 @@ div.content {
   }
 }
 </style>
-
-<script>
-  import KNavigationBar from "@/components/KNavigationBar";
-
-  export default {
-    name: "ContributePage",
-    components: { KNavigationBar },
-    head() {
-      return {
-        titleTemplate: "Contribute - %s"
-      };
-    }
-  };
-</script>

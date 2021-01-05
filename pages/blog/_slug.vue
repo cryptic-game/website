@@ -15,46 +15,6 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-.post-page__image {
-  width: 100%;
-  max-height: 75vh;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.post-page__title {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.post-page__content {
-  margin-top: 40px;
-
-  ::v-deep {
-    .kg-card {
-      margin: 20px;
-    }
-
-    .kg-image-card {
-      width: 100%;
-      margin: 0;
-
-      .kg-image {
-        max-height: 75vh;
-        max-width: 100%;
-        object-fit: cover;
-      }
-
-      figcaption {
-        margin-top: 5px;
-        margin-left: 1.1rem;
-      }
-    }
-  }
-}
-</style>
-
 <script>
   import KNavigationBar from "@/components/KNavigationBar";
   import { blogAPI } from "@/assets/js/blog";
@@ -96,3 +56,43 @@
     }
   };
 </script>
+
+<style lang="scss" scoped>
+.post-page__image {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.post-page__title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.post-page__content {
+  margin-top: 40px;
+
+  ::v-deep {
+    .kg-card {
+      margin: 20px;
+    }
+
+    .kg-image-card {
+      width: 100%;
+      margin: 0;
+
+      .kg-image {
+        max-height: 75vh;
+        max-width: 100%;
+        object-fit: cover;
+      }
+
+      figcaption {
+        margin-top: 5px;
+        margin-left: 1.1rem;
+      }
+    }
+  }
+}
+</style>

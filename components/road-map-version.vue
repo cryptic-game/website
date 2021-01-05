@@ -11,7 +11,10 @@
   export default {
     name: "RoadMapVersion",
     props: {
-      version: String
+      version: {
+        type: String,
+        default: "Loading..."
+      }
     }
   };
 </script>

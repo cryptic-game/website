@@ -95,19 +95,6 @@
   </main>
 </template>
 
-<style lang="scss" scoped>
-div.content {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5rem;
-
-  div.group {
-    display: flex;
-    flex-direction: column;
-  }
-}
-</style>
-
 <script>
   import KNavigationBar from "@/components/KNavigationBar";
   import TeamMember from "../components/TeamMember";
@@ -122,3 +109,16 @@ div.content {
     }
   };
 </script>
+
+<style lang="scss" scoped>
+div.content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+
+  div.group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+</style>

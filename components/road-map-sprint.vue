@@ -14,8 +14,14 @@
     name: "RoadMapSprint",
 
     props: {
-      action: String,
-      group: String
+      action: {
+        type: String,
+        default: "Loading..."
+      },
+      group: {
+        type: String,
+        default: "Loading..."
+      }
     }
   };
 </script>

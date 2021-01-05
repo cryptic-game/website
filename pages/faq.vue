@@ -73,7 +73,13 @@
         </h3>
         Upload your work to the corresponding GitHub repository. Note: please keep an eye on
         the procedure for commits, branches and pull requests in the
-        <a class="link" href="https://github.com/cryptic-game/cryptic/blob/master/conventions.md" target="_blank">conventions</a>.
+        <a
+          class="link"
+          href="https://github.com/cryptic-game/cryptic/blob/master/conventions.md"
+          target="_blank"
+        >
+          conventions
+        </a>.
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
@@ -117,6 +123,20 @@
   </div>
 </template>
 
+<script>
+  import KNavigationBar from "@/components/KNavigationBar";
+
+  export default {
+    name: "StatusPage",
+    components: { KNavigationBar },
+    head() {
+      return {
+        titleTemplate: "FAQ - %s"
+      };
+    }
+  };
+</script>
+
 <style lang="scss" scoped>
 .faq-page {
   height: 100%;
@@ -135,17 +155,3 @@
   }
 }
 </style>
-
-<script>
-  import KNavigationBar from "@/components/KNavigationBar";
-
-  export default {
-    name: "StatusPage",
-    components: { KNavigationBar },
-    head() {
-      return {
-        titleTemplate: "FAQ - %s"
-      };
-    }
-  };
-</script>
