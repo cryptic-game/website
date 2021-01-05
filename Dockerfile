@@ -1,15 +1,15 @@
-FROM node:12-alpine
+FROM node:14-alpine
 
 WORKDIR /app
 
 COPY package.json ./
-COPY yarn.lock ./
-RUN yarn
+COPY package-lock.json ./
+RUN npm ci
 
 COPY . ./
-RUN yarn build
+RUN npm run build
 
 EXPOSE 3000
 ENV HOST 0.0.0.0
 
-ENTRYPOINT ["yarn", "start"]
+ENTRYPOINT ["npm", "run", "start"]
