@@ -30,28 +30,28 @@
 </style>
 
 <script>
-import KNavigationBar from "@/components/KNavigationBar";
-import {blogAPI} from "@/assets/js/blog";
-import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
-import BlogPostCard from "@/components/BlogPostCard";
+  import KNavigationBar from "@/components/KNavigationBar";
+  import { blogAPI } from "@/assets/js/blog";
+  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import BlogPostCard from "@/components/BlogPostCard";
 
-export default {
-  name: "PostsPage",
-  components: {BlogPostCard, KNavigationBar},
-  async asyncData() {
-    return {
-      posts: Array.from(await blogAPI.posts.browse({
-        include: "slug,title,feature_image,reading_time,published_at"
-      })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
-    };
-  },
-  data: () => ({
-    posts: []
-  }),
-  head() {
-    return {
-      titleTemplate: "Blog - %s"
-    };
-  }
-};
+  export default {
+    name: "PostsPage",
+    components: { BlogPostCard, KNavigationBar },
+    async asyncData() {
+      return {
+        posts: Array.from(await blogAPI.posts.browse({
+          include: "slug,title,feature_image,reading_time,published_at"
+        })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
+      };
+    },
+    data: () => ({
+      posts: []
+    }),
+    head() {
+      return {
+        titleTemplate: "Blog - %s"
+      };
+    }
+  };
 </script>

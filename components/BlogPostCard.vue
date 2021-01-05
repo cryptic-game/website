@@ -10,8 +10,8 @@
       <div class="blog-post-card__footer">
         <span class="blog-post-card__reading-time">
           <strong>{{ Math.max(1, post.readingTime) }} minute{{
-              Math.max(1, post.readingTime) === 1 ? "" : "s"
-            }}</strong>
+            Math.max(1, post.readingTime) === 1 ? "" : "s"
+          }}</strong>
           reading time
         </span>
         <nuxt-link :to="`/blog/${post.slug}`" class="blog-post-card__link link">
@@ -86,24 +86,24 @@
 </style>
 
 <script>
-export default {
-  name: "BlogPostCard",
-  props: {
-    post: {
-      type: Object,
-      required: true
+  export default {
+    name: "BlogPostCard",
+    props: {
+      post: {
+        type: Object,
+        required: true
+      },
+      imageHeight: {
+        type: String,
+        default: undefined
+      }
     },
-    imageHeight: {
-      type: String,
-      default: undefined
+    computed: {
+      imageStyle() {
+        return {
+          height: this.imageHeight
+        };
+      }
     }
-  },
-  computed: {
-    imageStyle() {
-      return {
-        height: this.imageHeight
-      };
-    }
-  }
-};
+  };
 </script>

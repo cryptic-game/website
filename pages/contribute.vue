@@ -43,7 +43,7 @@
         <br><br>
         <strong>
           Do you want to join the project? Then just have a look at our <a href="https://discord.gg/tN5Wcab">Discord
-          Server</a>.
+            Server</a>.
         </strong>
         <br>
         This is where all the teams organize themselves and discuss further steps.
@@ -74,15 +74,15 @@ div.content {
 </style>
 
 <script>
-import KNavigationBar from "@/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
 
-export default {
-  name: "ContributePage",
-  components: {KNavigationBar},
-  head() {
-    return {
-      titleTemplate: "Contribute - %s"
-    };
-  }
-};
+  export default {
+    name: "ContributePage",
+    components: { KNavigationBar },
+    head() {
+      return {
+        titleTemplate: "Contribute - %s"
+      };
+    }
+  };
 </script>
