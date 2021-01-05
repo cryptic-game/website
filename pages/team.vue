@@ -109,16 +109,16 @@ div.content {
 </style>
 
 <script>
-import KNavigationBar from "@/components/KNavigationBar";
-import TeamMember from "../components/TeamMember";
+  import KNavigationBar from "@/components/KNavigationBar";
+  import TeamMember from "../components/TeamMember";
 
-export default {
-  name: "TeamPage",
-  components: { TeamMember, KNavigationBar },
-  head() {
-    return {
-      titleTemplate: "Team - %s"
-    };
-  }
-};
+  export default {
+    name: "TeamPage",
+    components: { TeamMember, KNavigationBar },
+    head() {
+      return {
+        titleTemplate: "Team - %s"
+      };
+    }
+  };
 </script>

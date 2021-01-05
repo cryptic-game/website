@@ -11,14 +11,14 @@
 </template>
 
 <script>
-export default {
-  name: "TeamMember",
-  props: {
-    name: String,
-    role: String,
-    githubName: String
-  }
-};
+  export default {
+    name: "TeamMember",
+    props: {
+      name: String,
+      role: String,
+      githubName: String
+    }
+  };
 </script>
 
 <style lang="scss" scoped>

@@ -20,5 +20,5 @@ export function createPropEnum(items, defaultValue) {
     return items.find(item => this[item]) || defaultValue;
   };
 
-  return {props, computedProperty};
+  return { props, computedProperty };
 }

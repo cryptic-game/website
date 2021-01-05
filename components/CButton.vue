@@ -1,92 +1,92 @@
 <script>
-import {createPropEnum, oneOf} from "@/assets/js/propUtils";
+  import { createPropEnum, oneOf } from "@/assets/js/propUtils";
 
-const colorPropEnum = createPropEnum(["white", "green", "blue", "discord"], "white");
+  const colorPropEnum = createPropEnum(["white", "green", "blue", "discord"], "white");
 
-export default {
-  name: "CButton",
-  props: {
-    type: oneOf(["text", "password"], {
-      default: "text"
-    }),
-    size: oneOf([1, 2, 3, 4], {
-      default: 1
-    }),
-    outline: {
-      type: Boolean,
-      default: false
+  export default {
+    name: "CButton",
+    props: {
+      type: oneOf(["text", "password"], {
+        default: "text"
+      }),
+      size: oneOf([1, 2, 3, 4], {
+        default: 1
+      }),
+      outline: {
+        type: Boolean,
+        default: false
+      },
+      textColor: {
+        type: String,
+        default: null
+      },
+      to: {
+        type: String,
+        default: null
+      },
+      href: {
+        type: String,
+        default: null
+      },
+      newTab: {
+        type: Boolean,
+        default: false
+      },
+      ...colorPropEnum.props
     },
-    textColor: {
-      type: String,
-      default: null
+    computed: {
+      color: colorPropEnum.computedProperty,
+      style() {
+        return {
+          "--x-size": this.size,
+          "--x-c-color": this.textColor
+        };
+      }
     },
-    to: {
-      type: String,
-      default: null
-    },
-    href: {
-      type: String,
-      default: null
-    },
-    newTab: {
-      type: Boolean,
-      default: false
-    },
-    ...colorPropEnum.props
-  },
-  computed: {
-    color: colorPropEnum.computedProperty,
-    style() {
-      return {
-        "--x-size": this.size,
-        "--x-c-color": this.textColor
-      };
-    }
-  },
-  render(h) {
-    let rootEl;
-    let props;
-    let attrs = {};
+    render(h) {
+      let rootEl;
+      let props;
+      let attrs = {};
 
-    if (this.to) {
-      rootEl = "nuxt-link";
-      props = {
-        to: this.to
-      };
-    } else if (this.href) {
-      rootEl = "a";
-      attrs = {
-        href: this.href
-      };
-    } else {
-      rootEl = "button";
-      attrs = {
-        type: this.type,
-        target: this.newTab ? "_blank" : "_self",
-        rel: "noopener"
-      };
-    }
+      if (this.to) {
+        rootEl = "nuxt-link";
+        props = {
+          to: this.to
+        };
+      } else if (this.href) {
+        rootEl = "a";
+        attrs = {
+          href: this.href
+        };
+      } else {
+        rootEl = "button";
+        attrs = {
+          type: this.type,
+          target: this.newTab ? "_blank" : "_self",
+          rel: "noopener"
+        };
+      }
 
-    return h(rootEl, {
-      class: ["c-button", this.color, {outline: this.outline}],
-      style: this.style,
-      attrs,
-      props,
-      on: this.$listeners
-    }, [
-      h("span", {
-        class: "c-button__icon"
+      return h(rootEl, {
+        class: ["c-button", this.color, { outline: this.outline }],
+        style: this.style,
+        attrs,
+        props,
+        on: this.$listeners
       }, [
-        this.$slots.icon
-      ]),
-      h("span", {
-        class: "c-button__content"
-      }, [
-        this.$slots.default
-      ])
-    ]);
-  }
-};
+        h("span", {
+          class: "c-button__icon"
+        }, [
+          this.$slots.icon
+        ]),
+        h("span", {
+          class: "c-button__content"
+        }, [
+          this.$slots.default
+        ])
+      ]);
+    }
+  };
 </script>
 
 <style lang="scss" scoped>
