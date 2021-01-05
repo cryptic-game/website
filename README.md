@@ -17,27 +17,27 @@ git clone https://github.com/cryptic-game/website.git
 
 ### Project setup
 ```
-yarn
+npm i
 ```
 
 ### Compile and hot-reload for development
 ```
-yarn dev
+npm run dev
 ```
 
 ### Compile and minify for production
 ```
-yarn build
+npm run build
 ```
 
 ### Start the built files
 ```
-yarn start
+npm run start
 ```
 
 ### Lint and fix files
 ```
-yarn lint
+npm run lint
 ```
 
 ___
