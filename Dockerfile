@@ -7,9 +7,9 @@ COPY yarn.lock ./
 RUN yarn
 
 COPY . ./
-RUN yarn build
+RUN npm run build
 
 EXPOSE 3000
 ENV HOST 0.0.0.0
 
-ENTRYPOINT ["yarn", "start"]
+ENTRYPOINT ["npm", "run", "start"]
