@@ -12,9 +12,9 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@nuxtjs/axios": "5.12.2",
+    "@nuxtjs/axios": "5.12.5",
     "@nuxtjs/pwa": "3.0.2",
-    "@tryghost/content-api": "1.4.4",
+    "@tryghost/content-api": "1.4.11",
     "nuxt": "2.14.5"
   },
   "devDependencies": {
