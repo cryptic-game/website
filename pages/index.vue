@@ -28,7 +28,7 @@
           rel="noopener"
           target="_blank"
         >
-          <template v-slot:icon>
+          <template #icon>
             <DiscordIcon class="icon"/>
           </template>
           Join our Discord
@@ -44,7 +44,7 @@
           Cryptic Pre Alpha 2
         </span>
         <CButton blue outline text-color="white" to="/blog">
-          <template v-slot:icon>
+          <template #icon>
             <NoteIcon class="icon"/>
           </template>
           Read the Blog Post
@@ -55,8 +55,9 @@
           outline
           rel="noopener"
           target="_blank"
-          text-color="white">
-          <template v-slot:icon>
+          text-color="white"
+        >
+          <template #icon>
             <GamepadIcon class="icon"/>
           </template>
           Play Now
@@ -224,22 +225,29 @@
           FAQ
         </h2>
         <div>
-          <h3 class="faq-section__question"> What is the "community project"?</h3>
+          <h3 class="faq-section__question">
+            What is the "community project"?
+          </h3>
           The "community project" is a project that has been announced in October 2017 by The Morpheus Tutorials.
           We build a 2-dimensional browser game from scratch. The team consists of people of different age groups.
           We meet in Discord to work together. You can find more information in the
           <a
             class="link"
             href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw"
-            target="_blank">specification sheet</a>.
+            target="_blank"
+          >specification sheet</a>.
         </div>
         <div>
-          <h3 class="faq-section__question"> Do I have to be able to code?</h3>
+          <h3 class="faq-section__question">
+            Do I have to be able to code?
+          </h3>
           No, you don't have to be able to code in order to help develop the game.
           You can also join teams like game design, text, and graphic design.
         </div>
         <div>
-          <h3 class="faq-section__question"> Is it possible for a beginner to help with the coding?</h3>
+          <h3 class="faq-section__question">
+            Is it possible for a beginner to help with the coding?
+          </h3>
           As a beginner, this project might be too difficult for you, so we might advise beginners to continue
           improving their skills. You can decide between the backend in Python or Java and the frontend in
           Angular and HTML. In your department, you should know the basics of the respective programming language.
@@ -565,54 +573,54 @@
 </style>
 
 <script>
-import KNavigationBar from "@/components/KNavigationBar";
-import KFooter from "kiste/components/KFooter";
-import {blogAPI} from "@/assets/js/blog";
-import {mapObjectKeys} from "@/assets/js/mapObjectKeys";
-import BlogPostCard from "@/components/BlogPostCard";
-import CButton from "@/components/CButton";
-import DiscordIcon from "@/assets/icons/discord.svg";
-import GamepadIcon from "@/assets/icons/gamepad.svg";
-import NoteIcon from "@/assets/icons/note.svg";
-import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
-import WindowIcon from "@/assets/icons/window.svg";
-import ABCIcon from "@/assets/icons/abc.svg";
-import CodeIcon from "@/assets/icons/code.svg";
-import GlobeIcon from "@/assets/icons/globe.svg";
-import LanguageIcon from "@/assets/icons/language.svg";
-import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
-import ShieldIcon from "@/assets/icons/shield.svg";
+  import KNavigationBar from "@/components/KNavigationBar";
+  import KFooter from "kiste/components/KFooter";
+  import { blogAPI } from "@/assets/js/blog";
+  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
+  import BlogPostCard from "@/components/BlogPostCard";
+  import CButton from "@/components/CButton";
+  import DiscordIcon from "@/assets/icons/discord.svg";
+  import GamepadIcon from "@/assets/icons/gamepad.svg";
+  import NoteIcon from "@/assets/icons/note.svg";
+  import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
+  import WindowIcon from "@/assets/icons/window.svg";
+  import ABCIcon from "@/assets/icons/abc.svg";
+  import CodeIcon from "@/assets/icons/code.svg";
+  import GlobeIcon from "@/assets/icons/globe.svg";
+  import LanguageIcon from "@/assets/icons/language.svg";
+  import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
+  import ShieldIcon from "@/assets/icons/shield.svg";
 
-export default {
-  name: "IndexPage",
-  layout: "none",
-  components: {
-    KNavigationBar,
-    KFooter,
-    BlogPostCard,
-    GamepadIcon,
-    NoteIcon,
-    DiscordIcon,
-    CButton,
-    ArrowRightIcon,
-    WindowIcon,
-    ABCIcon,
-    CodeIcon,
-    GlobeIcon,
-    LanguageIcon,
-    PaintbrushIcon,
-    ShieldIcon
-  },
-  async asyncData() {
-    return {
-      blogPosts: Array.from(await blogAPI.posts.browse({
-        limit: 2,
-        include: "slug,title,feature_image,reading_time,published_at"
-      })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
-    };
-  },
-  data: () => ({
-    blogPosts: []
-  })
-};
+  export default {
+    name: "IndexPage",
+    components: {
+      KNavigationBar,
+      KFooter,
+      BlogPostCard,
+      GamepadIcon,
+      NoteIcon,
+      DiscordIcon,
+      CButton,
+      ArrowRightIcon,
+      WindowIcon,
+      ABCIcon,
+      CodeIcon,
+      GlobeIcon,
+      LanguageIcon,
+      PaintbrushIcon,
+      ShieldIcon
+    },
+    layout: "none",
+    async asyncData() {
+      return {
+        blogPosts: Array.from(await blogAPI.posts.browse({
+          limit: 2,
+          include: "slug,title,feature_image,reading_time,published_at"
+        })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
+      };
+    },
+    data: () => ({
+      blogPosts: []
+    })
+  };
 </script>

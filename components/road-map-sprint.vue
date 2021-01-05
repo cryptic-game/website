@@ -10,14 +10,14 @@
 </template>
 
 <script>
-export default {
-  name: "road-map-sprint",
+  export default {
+    name: "RoadMapSprint",
 
-  props: {
-    action: String,
-    group: String
-  }
-};
+    props: {
+      action: String,
+      group: String
+    }
+  };
 </script>
 
 <style lang="scss" scoped>

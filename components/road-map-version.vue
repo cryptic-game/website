@@ -8,12 +8,12 @@
 </template>
 
 <script>
-export default {
-  name: "road-map-version",
-  props: {
-    version: String
-  }
-};
+  export default {
+    name: "RoadMapVersion",
+    props: {
+      version: String
+    }
+  };
 </script>
 
 <style lang="scss" scoped>
@@ -39,4 +39,3 @@ div.roadmap-version {
   }
 }
 </style>
-

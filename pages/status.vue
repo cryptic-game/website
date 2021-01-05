@@ -16,15 +16,15 @@
 </style>
 
 <script>
-import KNavigationBar from "@/components/KNavigationBar";
+  import KNavigationBar from "@/components/KNavigationBar";
 
-export default {
-  name: "StatusPage",
-  components: {KNavigationBar},
-  head() {
-    return {
-      titleTemplate: "Status - %s"
-    };
-  }
-};
+  export default {
+    name: "StatusPage",
+    components: { KNavigationBar },
+    head() {
+      return {
+        titleTemplate: "Status - %s"
+      };
+    }
+  };
 </script>

@@ -18,14 +18,14 @@
 </template>
 
 <script>
-export default {
-  name: "road-map-date",
-  props: {
-    year: String,
-    month: String,
-    state: String
-  }
-};
+  export default {
+    name: "RoadMapDate",
+    props: {
+      year: String,
+      month: String,
+      state: String
+    }
+  };
 </script>
 
 <style lang="scss" scoped>
