@@ -58,7 +58,7 @@
 
       <div class="group">
         <h6>Editorial office & Translation</h6>
-        <TeamMember github-name="andyRonck" name="Aronck" role="Head of Editorial office & Translation"></TeamMember>
+        <TeamMember github-name="aronck8" name="Aronck" role="Head of Editorial office & Translation"></TeamMember>
         <TeamMember github-name="cephox" name="ce_phox " role="Contributor"></TeamMember>
         <TeamMember github-name="DevMimas" name="Marius " role="Contributor"></TeamMember>
       </div>
