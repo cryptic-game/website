@@ -74,7 +74,6 @@
 
       <div class="group">
         <h6>Server Admin</h6>
-        <TeamMember github-name="kurzdev" name="Jokur" role="Admin"></TeamMember>
         <TeamMember github-name="LordRazor" name="LordRazor" role="Admin"></TeamMember>
         <TeamMember github-name="felbinger" name="NicoF2000" role="Admin"></TeamMember>
       </div>
