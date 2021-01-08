@@ -1,5 +1,5 @@
 export default {
-  mode: "universal",
+  target: "static",
 
   head: {
     title: "Cryptic Game",

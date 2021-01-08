@@ -1,9 +1,11 @@
-name: Build Website
+name: CI
 
-on: [ push ]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
 
 jobs:
-
   lint:
     runs-on: ubuntu-latest
 
@@ -45,4 +47,30 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build
+      - run: npm run generate
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: cryptic-website
+          path: dist
+
+  deploy:
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: cryptic-website
+          path: dist
+
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
