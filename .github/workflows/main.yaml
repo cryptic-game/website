@@ -69,6 +69,8 @@ jobs:
           name: cryptic-website
           path: dist
 
+      - run: cp dist/index.html dist/404.html
+
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v2
         with:
