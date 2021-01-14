@@ -14,7 +14,7 @@
   "dependencies": {
     "@nuxtjs/axios": "5.12.5",
     "@nuxtjs/pwa": "3.3.4",
-    "@tryghost/content-api": "1.4.12",
+    "@tryghost/content-api": "1.4.13",
     "nuxt": "2.14.12"
   },
   "devDependencies": {
