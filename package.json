@@ -15,7 +15,8 @@
     "@nuxtjs/axios": "5.12.5",
     "@nuxtjs/pwa": "3.3.4",
     "@tryghost/content-api": "1.4.13",
-    "nuxt": "2.14.12"
+    "nuxt": "2.14.12",
+    "nuxt-i18n": "^6.18.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "5.0.0",

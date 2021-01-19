@@ -1,3 +1,6 @@
+import en from "./locales/en.json";
+import de from "./locales/de.json";
+
 export default {
   target: "static",
 
@@ -42,8 +45,19 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
+    "nuxt-i18n"
   ],
+
+  i18n: {
+    lazy: true,
+    locales: ["en", "de"],
+    defaultLocale: "en",
+    vueI18n: {
+      fallbackLocale: "en",
+      messages: { en, de }
+    }
+  },
 
   router: {
     extendRoutes(routes, resolve) {
