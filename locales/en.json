@@ -30,25 +30,72 @@
       "securityDescription": "The security team deals with code audits, penetration testing and developement of security concepts, for you can play Cryptic in a secure environment. Experiences in web-hacking e.g. XSS and SQLi, and experience in dealing with tools such as nmap, sqlmap and burp are mandatory.",
       "translationDescription": "In the translation section, all relevant texts are translated into the respective foreign language. You should have good German and foreign language skills. We are currently looking for translators for English.",
       "correctionDescription": "The text team writes and corrects all possible texts that arise for the project and game. You should like to deal with texts as well as have good German and English language skills. We are currently starting to introduce a wiki for Cryptic, so we are still looking for active editors."
+    }
+  },
+  "faq": {
+    "communityProject": {
+      "communityProject": "What is the \"community project\"?",
+      "description": "The \"community project\" is a project that has been announced in October 2017 by The Morpheus Tutorials. We build a 2-dimensional browser game from scratch. The team consists of people of different age groups. We meet in Discord to work together. You can find more information in the",
+      "sheet": "specification sheet"
     },
-    "faq": {
-      "communityProject": {
-        "communityProject": "What is the \"community project\"?",
-        "description": "The \"community project\" is a project that has been announced in October 2017 by The Morpheus Tutorials. We build a 2-dimensional browser game from scratch. The team consists of people of different age groups. We meet in Discord to work together. You can find more information in the",
-        "sheet": "specification sheet"
-      },
-      "requirements": {
-        "requirements": "Do I have to be able to code?",
-        "description": "No, you don't have to be able to code in order to help develop the game. You can also join teams like game design, text, and graphic design."
-      },
-      "beginner": {
-        "beginner": "Is it possible for a beginner to help with the coding?",
-        "description": "As a beginner, this project might be too difficult for you, so we might advise beginners to continue improving their skills. You can decide between the backend in Python or Java and the frontend in Angular and HTML. In your department, you should know the basics of the respective programming language. Everything else you will learn in the course of the project."
-      },
-      "more": {
-        "more": "More at the ",
-        "faqPage": "FAQ page"
-      }
+    "requirements": {
+      "requirements": "Do I have to be able to code?",
+      "description": "No, you don't have to be able to code in order to help develop the game. You can also join teams like game design, text, and graphic design."
+    },
+    "beginner": {
+      "beginner": "Is it possible for a beginner to help with the coding?",
+      "description": "As a beginner, this project might be too difficult for you, so we might advise beginners to continue improving their skills. You can decide between the backend in Python or Java and the frontend in Angular and HTML. In your department, you should know the basics of the respective programming language. Everything else you will learn in the course of the project."
+    },
+    "more": {
+      "more": "More at the ",
+      "faqPage": "FAQ page"
+    },
+    "heads": {
+      "heads": "Where can I see all the heads of the departments?",
+      "description": "You can find all departments and their contact persons in the",
+      "teamPage": "Team page"
+    },
+    "departments": {
+      "departments": "What departments exist within the project?",
+      "description": "The project is split into multiple categories: Game design, Design, Frontend, Backend, Text and Security."
+    },
+    "progress": {
+      "progress": "Where can I see the progress of the development?",
+      "description": "The latest progress of the development can be tracked on GitHub. Additionally, there are updates, visible on the website or at"
+    },
+    "new": {
+      "new": "I am new. How can I start?",
+      "description": "In Discord, you can assign yourself roles for the department you want to work for. You can get in touch with the specific department head."
+    },
+    "ticketFound": {
+      "ticketFound": "I've found a ticket that I want to work on, how should I proceed?",
+      "description": "Contact the respective head and tell them which issue you want to work on. Additionally, there are meetings in each department sometimes."
+    },
+    "ticketDone": {
+      "ticketDone": "I am done with a ticket. What should I do next?",
+      "description": "Upload your work to the corresponding GitHub repository. Note: please keep an eye on the procedure for commits, branches and pull requests in the",
+      "conventions": "conventions"
+    },
+    "headAssistant": {
+      "headAssistant": "What does a \"head assistant\" do?",
+      "description": "A head assistant is a person who has actively helped in the development of the game for a long time. They are promoted by their head and assists him/her. The head assistant can lead the team and is also a contact person for the team."
+    },
+    "contributor": {
+      "contributor": "What is a \"contributor\"?",
+      "description": "Additionally to the other roles, there is the contributor. The rank is given as a reward to people who have been particularly noticed for their good work."
+    },
+    "conflicts": {
+      "conflicts": "I am in a leading position now and there are conflicts in my team. Who should I contact?",
+      "description": "Contact the head team. We want to solve and prevent conflicts as fast as possible for the user's convenience."
+    },
+    "problem": {
+      "problem": "Who should I contact if I don't have enough time to continue working, or if I don't feel like working on the project / in my current position anymore?",
+      "description": "That's no problem. In that case, get in touch with your head to talk about your needs."
+    },
+    "funding": {
+      "funding": "How is the project financed?",
+      "description": "Nobody gets paid for working on the project, but we have to pay for our servers, so we depend on donations and sponsors. So if you want to sponsor us,",
+      "patreon": "support The Morpheus on Patreon"
     }
   }
 }

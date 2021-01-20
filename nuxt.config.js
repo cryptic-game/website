@@ -52,7 +52,7 @@ export default {
   i18n: {
     lazy: true,
     locales: ["en", "de"],
-    defaultLocale: "en",
+    defaultLocale: "de",
     vueI18n: {
       fallbackLocale: "en",
       messages: { en, de }

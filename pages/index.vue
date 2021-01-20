@@ -198,28 +198,28 @@
           <h3 class="faq-section__question">
             {{ $t("home.faq.communityProject.communityProject") }}
           </h3>
-          {{ $t("home.faq.communityProject.description") }}
+          {{ $t("faq.communityProject.description") }}
           <a
             class="link"
             href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw"
             target="_blank"
-          >{{ $t("home.faq.communityProject.sheet") }}</a>.
+          >{{ $t("faq.communityProject.sheet") }}</a>.
         </div>
         <div>
           <h3 class="faq-section__question">
-            {{ $t("home.faq.requirements.requirements") }}
+            {{ $t("faq.requirements.requirements") }}
           </h3>
-          {{ $t("home.faq.requirements.description") }}
+          {{ $t("faq.requirements.description") }}
         </div>
         <div>
           <h3 class="faq-section__question">
-            {{ $t("home.faq.beginner.beginner") }}
+            {{ $t("faq.beginner.beginner") }}
           </h3>
-          {{ $t("home.faq.beginner.description") }}
+          {{ $t("faq.beginner.description") }}
         </div>
         <div class="more-at-faq">
-          <span>{{ $t("home.faq.more.more") }}
-            <NuxtLink :to="'/faq'" class="link">{{ $t("home.faq.more.faqPage") }}</NuxtLink>.
+          <span>{{ $t("faq.more.more") }}
+            <NuxtLink :to="'/faq'" class="link">{{ $t("faq.more.faqPage") }}</NuxtLink>.
           </span>
         </div>
       </div>
