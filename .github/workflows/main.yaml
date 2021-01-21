@@ -49,7 +49,16 @@ jobs:
 
       - run: npm ci
 
+      - name: Prepare build
+        id: prepare_build
+        run: |
+          if [ "${{ github.event_name == 'pull_request' }}" == "true" ]; then
+            echo ::set-output name=folder::"/pr/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')/"
+          fi
+
       - run: npm run generate
+        env:
+          BASE_HREF: ${{ steps.prepare_build.outputs.folder }}
 
       - uses: actions/upload-artifact@v2
         with:
@@ -59,7 +68,10 @@ jobs:
   deploy:
     needs: [ build ]
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
+
+    environment:
+      name: gh-pages
+      url: https://www.cryptic-game.net/${{ steps.prepare_deploy.outputs.folder }}
 
     steps:
       - uses: actions/checkout@v2
@@ -69,13 +81,32 @@ jobs:
           name: cryptic-website
           path: dist
 
-      - run: cp dist/index.html dist/404.html
+      - name: Prepare deploy
+        id: prepare_deploy
+        run: |
+          cp dist/index.html dist/404.html
+
+          if [ "${{ github.event_name == 'pull_request' }}" == "true" ]; then
+            echo ::set-output name=folder::"pr/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')"
+            echo ::set-output name=clean_exclude::""
+          else
+            echo ::set-output name=clean_exclude::"['pr']"
+            echo "www.cryptic-game.net" > dist/CNAME
+            touch dist/.nojekyll
+          fi
 
       - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          target_branch: gh-pages
-          build_dir: dist
-          fqdn: www.cryptic-game.net
-        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY_NAME: ${{ github.repository }}
+          BRANCH: gh-pages
+          FOLDER: dist
+          TARGET_FOLDER: ${{ steps.prepare_deploy.outputs.folder }}
+          CLEAN_EXCLUDE: ${{ steps.prepare_deploy.outputs.clean_exclude }}
+          CLEAN: true
+
+          # https://github.com/crazy-max/ghaction-github-pages/blob/dev/src/git.ts#L3-L8
+          COMMIT_MESSAGE: Deploy to GitHub pages
+          GIT_CONFIG_NAME: github-actions[bot]
+          GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
