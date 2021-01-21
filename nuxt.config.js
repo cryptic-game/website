@@ -60,6 +60,7 @@ export default {
   },
 
   router: {
+    base: process.env.BASE_HREF || undefined,
     extendRoutes(routes, resolve) {
       routes.push({
         name: "custom",
