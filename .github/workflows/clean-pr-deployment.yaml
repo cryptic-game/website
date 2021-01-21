@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+    types: [ closed ]
+
+jobs:
+  clean-pr-deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare clean pr deployment
+        id: prepare_deploy
+        run: |
+          mkdir /tmp/empty-folder
+          echo ::set-output name=folder::"pr/$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")"
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY_NAME: ${{ github.repository }}
+          BRANCH: gh-pages
+          FOLDER: /tmp/empty-folder
+          TARGET_FOLDER: ${{ steps.prepare_deploy.outputs.folder }}
+          CLEAN: true
+
+          # https://github.com/crazy-max/ghaction-github-pages/blob/dev/src/git.ts#L3-L8
+          COMMIT_MESSAGE: Deploy to GitHub pages
+          GIT_CONFIG_NAME: github-actions[bot]
+          GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
