@@ -52,9 +52,16 @@ jobs:
       - name: Prepare build
         id: prepare_build
         run: |
+          folder=""
           if [ "${{ github.event_name == 'pull_request' }}" == "true" ]; then
-            echo ::set-output name=folder::"/pr/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')/"
+            folder="/pr/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')/"
           fi
+
+          if [ "${{ github.repository_owner == 'cryptic-game' }}" ]; then
+            folder=$(echo ${{ github.repository }} | sed -e 's/\/.*\///g');
+          fi
+
+          echo ::set-output name=folder::"$(echo $folder)"
 
       - run: npm run generate
         env:
@@ -71,7 +78,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: https://www.cryptic-game.net/${{ steps.prepare_deploy.outputs.folder }}
+      url: ${{ steps.prepare_deploy.outputs.url }}/${{ steps.prepare_deploy.outputs.folder }}
 
     steps:
       - uses: actions/checkout@v2
@@ -85,20 +92,29 @@ jobs:
         id: prepare_deploy
         run: |
           cp dist/index.html dist/404.html
+          url="";
+
+          if [[ "${{ github.repository_owner == 'cryptic-game' }} ]]; then
+            echo ::set-output name=url::"https://www.cryptic-game.net"
+          else
+            echo ::set-output name=url::"${{ github.repository_owner }}.github.io/$(echo ${{ github.repository }} | sed -e 's/\/.*\///g')";
+          fi
 
           if [ "${{ github.event_name == 'pull_request' }}" == "true" ]; then
             echo ::set-output name=folder::"pr/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')"
             echo ::set-output name=clean_exclude::""
           else
             echo ::set-output name=clean_exclude::"['pr']"
-            echo "www.cryptic-game.net" > dist/CNAME
+            if [[ "${{ github.repository_owner == 'cryptic-game' }} ]]; then
+              echo "www.cryptic-game.net" > dist/CNAME
+            fi
             touch dist/.nojekyll
           fi
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPOSITORY_NAME: ${{ github.repository }}
           BRANCH: gh-pages
           FOLDER: dist
