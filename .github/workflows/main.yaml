@@ -53,11 +53,11 @@ jobs:
         id: prepare_build
         run: |
           folder=""
-          if [ "${{ github.event_name == 'pull_request' }}" == "true" ]; then
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
             folder="/pr/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')/"
           fi
 
-          if [ "${{ github.repository_owner == 'cryptic-game' }}" ]; then
+          if [ "${{ github.repository_owner }}" != "cryptic-game" ]; then
             folder=$(echo ${{ github.repository }} | sed -e 's/\/.*\///g');
           fi
 
@@ -94,18 +94,18 @@ jobs:
           cp dist/index.html dist/404.html
           url="";
 
-          if [[ "${{ github.repository_owner == 'cryptic-game' }} ]]; then
+          if [[ "${{ github.repository_owner }}" == "cryptic-game" ]]; then
             echo ::set-output name=url::"https://www.cryptic-game.net"
           else
             echo ::set-output name=url::"${{ github.repository_owner }}.github.io/$(echo ${{ github.repository }} | sed -e 's/\/.*\///g')";
           fi
 
-          if [ "${{ github.event_name == 'pull_request' }}" == "true" ]; then
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
             echo ::set-output name=folder::"pr/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')"
             echo ::set-output name=clean_exclude::""
           else
             echo ::set-output name=clean_exclude::"['pr']"
-            if [[ "${{ github.repository_owner == 'cryptic-game' }} ]]; then
+            if [[ "${{ github.repository_owner }}" == "cryptic-game" ]]; then
               echo "www.cryptic-game.net" > dist/CNAME
             fi
             touch dist/.nojekyll
