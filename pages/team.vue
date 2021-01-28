@@ -4,89 +4,15 @@
     <div class="content formatted">
       <h1>Team</h1>
 
-      <div class="group">
-        <h6>Project Management</h6>
-        <TeamMember github-name="TheMorpheus407" name="Morpheus" role="Community Manager"></TeamMember>
-        <TeamMember github-name="DevMimas" name="Marius" role="Project Manager"></TeamMember>
-        <TeamMember github-name="Chaozz66" name="Chaozz" role="Community Manager"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Backend & Frontend</h6>
-        <TeamMember github-name="Defelo" name="Defelo" role="Head of Development"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Backend</h6>
-        <TeamMember github-name="TheCataliasTNT2k" name="TNT2k" role="Head of Python Backend"></TeamMember>
-        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Head of Java Backend"></TeamMember>
-        <TeamMember github-name="MarcelCoding" name="Marcel" role="Head Assistant of Java Backend"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Frontend</h6>
-        <TeamMember github-name="MaxiHuHe04" name="MaxiHuHe04" role="Head of Frontend"></TeamMember>
-        <TeamMember github-name="JannikEmmerich" name="Jannik" role="Contributor"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Gamedesign</h6>
-        <TeamMember github-name="DevMimas" name="Marius" role="Head of Gamedesign"></TeamMember>
-        <TeamMember github-name="Maulwurf852" name="Maulwurf" role="Head Assistant"></TeamMember>
-        <TeamMember github-name="Tristan-H11" name="Tristan-H11" role="Head Assistant"></TeamMember>
-        <TeamMember github-name="Chaozz66" name="Chaozz" role="Contributor"></TeamMember>
-        <TeamMember github-name="Dev-Fabian" name="Fabian" role="Contributor"></TeamMember>
-        <TeamMember github-name="T2brozz" name="T2brozz" role="Contributor"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Design</h6>
-        <TeamMember github-name="Chaozz66" name="Chaozz" role="Head of Design"></TeamMember>
-        <TeamMember github-name="Nocuma" name="Lars" role="Contributor"></TeamMember>
-        <TeamMember github-name="DevMimas" name="Marius" role="Contributor"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Videoproducer</h6>
-        <TeamMember github-name="Nocuma" name="Lars" role="Head of Videoproduction"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Sounddesign</h6>
-        <TeamMember github-name="Captches" name="Captches" role="Head of Sounddesign"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Editorial office & Translation</h6>
-        <TeamMember github-name="aronck8" name="Aronck" role="Head of Editorial office & Translation"></TeamMember>
-        <TeamMember github-name="cephox" name="ce_phox " role="Contributor"></TeamMember>
-        <TeamMember github-name="DevMimas" name="Marius " role="Contributor"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Website</h6>
-      </div>
-
-      <div class="group">
-        <h6>Security</h6>
-        <TeamMember github-name="iiestIT" name="iiest_TF" role="Head of Security"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Server Admin</h6>
-        <TeamMember github-name="LordRazor" name="LordRazor" role="Admin"></TeamMember>
-        <TeamMember github-name="felbinger" name="NicoF2000" role="Admin"></TeamMember>
-      </div>
-
-      <div class="group">
-        <h6>Inactive Members</h6>
-        <TeamMember github-name="FelixRewer" name="Felix" role="ex-Head of Frontend"></TeamMember>
-        <TeamMember github-name="SpartanerSpaten" name="EinSpaten" role="ex-Head of Backend"></TeamMember>
-        <TeamMember github-name="mieasy" name="Mieasy" role="ex-Head of Backend"></TeamMember>
-        <TeamMember github-name="TheProgrammer21" name="TheProgrammer" role="ex-Head of Administration"></TeamMember>
-        <TeamMember github-name="RiseofRice" name="RiseofRice" role="ex-Head of Website"></TeamMember>
-        <TeamMember github-name="moritzruth" name="Moritz" role="ex-Website-Contributor"></TeamMember>
-        <TeamMember github-name="use-to" name="Felix" role="ex-Head of Development"></TeamMember>
+      <div class="grid">
+        <TeamMember
+          v-for="member in members"
+          :key="member.id"
+          :name="member.name"
+          :github-id="member.github_id"
+          :department="getDepartmentName(member.department_id)"
+        >
+        </TeamMember>
       </div>
     </div>
   </main>
@@ -102,10 +28,33 @@
       TeamMember,
       KNavigationBar
     },
+    data() {
+      return {
+        members: [],
+        departments: []
+      };
+    },
+    async fetch() {
+      this.departments = await fetch(
+        "https://admin.test.cryptic-game.net/api/website/team/department/list"
+      ).then(result => result.json());
+      this.members = await fetch(
+        "https://admin.test.cryptic-game.net/api/website/team/member/list"
+      ).then(result => result.json());
+    },
     head() {
       return {
         titleTemplate: "Team - %s"
       };
+    },
+    methods: {
+      getDepartmentName(id) {
+        for (const department of this.departments) {
+          if (department.id === id) {
+            return department.name;
+          }
+        }
+      }
     }
   };
 </script>
@@ -116,9 +65,25 @@ div.content {
   flex-direction: column;
   margin-bottom: 5rem;
 
-  div.group {
-    display: flex;
-    flex-direction: column;
+  $cube: 0.625rem;
+
+  .grid {
+    display: grid;
+
+    &:not(.error) {
+      grid-template-columns: repeat(auto-fill, minmax($cube * 20, 1fr));
+      grid-gap: $cube * 2;
+    }
+
+    &.error {
+      height: calc(100% * 0.5);
+    }
+
+    div.error {
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+    }
   }
 }
 </style>
