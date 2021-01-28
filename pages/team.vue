@@ -40,7 +40,9 @@
       ).then(result => result.json());
       this.members = await fetch(
         "https://admin.test.cryptic-game.net/api/website/team/member/list"
-      ).then(result => result.json());
+      ).then(result => result.text())
+        .then(result => JSON.parse(result))
+        .then(result => result.sort(() => Math.random() - 0.5));
     },
     head() {
       return {
