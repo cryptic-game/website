@@ -71,7 +71,7 @@ div.content {
     display: grid;
 
     &:not(.error) {
-      grid-template-columns: repeat(auto-fill, minmax($cube * 20, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax($cube * 17, 1fr));
       grid-gap: $cube * 2;
     }
 
