@@ -1,12 +1,8 @@
 <template>
   <div class="member">
-    <div class="image">
-      <img :src="'https://github.com/' + githubName + '.png?size=44'" alt="">
-    </div>
-    <div class="info">
-      <span>{{ name }}{{ role ? ' - ' + role : '' }}</span>
-      <a :href="'https://github.com/' + githubName">Github</a>
-    </div>
+    <img :src="'https://avatars.githubusercontent.com/u/' + githubId" alt="">
+    <span class="name">{{ name }}</span>
+    <span class="department">{{ department }}</span>
   </div>
 </template>
 
@@ -18,39 +14,50 @@
         type: String,
         default: "Loading..."
       },
-      role: {
+      department: {
         type: String,
         default: "Loading..."
       },
-      githubName: {
-        type: String,
-        default: "Loading..."
+      githubId: {
+        type: Number,
+        default: 0
       }
     }
   };
 </script>
 
 <style lang="scss" scoped>
-div.member {
+
+$cube: 0.625rem;
+$transition: 250ms;
+$transition-type: ease-in-out;
+
+.member {
   display: flex;
-  flex-direction: row;
-  padding-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: $cube * 3;
 
-  div.image {
-    margin-right: 10px;
-    width: 44px;
-    height: 44px;
+  border-radius: $cube * 0.7;
+  border: transparent solid $cube * 0.2;
+  transition: border-color $transition $transition-type, background-color $transition $transition-type;
 
-    img {
-      border-radius: 50%;
-      width: 100%;
-      height: 100%;
-    }
+  &:hover {
+    border-color: darken(#18740a, 10%);
+    background-color: transparentize(darken(#18740a, 10%), 0.5);
+    //cursor: pointer;
   }
 
-  div.info {
-    display: flex;
-    flex-direction: column;
+  img {
+    border-radius: 50%;
+    width: 100%;
+    margin-bottom: $cube * 1.5;
+  }
+
+  span.department {
+    color: darken(#fff, 40%);
   }
 }
+
 </style>
