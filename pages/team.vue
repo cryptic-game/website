@@ -86,6 +86,7 @@
         <TeamMember github-name="TheProgrammer21" name="TheProgrammer" role="ex-Head of Administration"></TeamMember>
         <TeamMember github-name="RiseofRice" name="RiseofRice" role="ex-Head of Website"></TeamMember>
         <TeamMember github-name="moritzruth" name="Moritz" role="ex-Website-Contributor"></TeamMember>
+        <TeamMember github-name="use-to" name="Felix" role="ex-Head of Development"></TeamMember>
       </div>
     </div>
   </main>
