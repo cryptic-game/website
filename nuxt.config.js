@@ -23,7 +23,7 @@ export default {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Alata&display=swap" }
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Open+Sans&display=swap" }
     ]
   },
 
@@ -31,15 +31,14 @@ export default {
 
   // Global CSS
   css: [
-    "@/assets/global.scss"
+    "@/assets/css/global.scss"
   ],
 
   plugins: [],
 
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    "@nuxtjs/eslint-module",
-    "kiste/nuxt"
+    "@nuxtjs/eslint-module"
   ],
 
   modules: [
@@ -48,7 +47,6 @@ export default {
     "@nuxtjs/pwa",
     "nuxt-i18n"
   ],
-
   i18n: {
     lazy: true,
     locales: ["en", "de"],
@@ -57,69 +55,6 @@ export default {
       fallbackLocale: "en",
       messages: { en, de }
     }
-  },
-
-  router: {
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: "custom",
-        path: "*",
-        component: resolve(__dirname, "pages/not-found.vue")
-      });
-    }
-  },
-
-  kiste: {
-    theme: {
-      colors: {
-        background: "black/white/#1d1c1c",
-        discord: "#7289DA/white/#6a7fca"
-      }
-    },
-    navigationItems: [
-      {
-        label: "Home",
-        to: "/"
-      },
-      {
-        label: "Play",
-        href: "https://play.cryptic-game.net"
-      },
-      {
-        label: "Blog",
-        to: "/blog"
-      },
-      {
-        label: "FAQ",
-        to: "/faq"
-      },
-      {
-        label: "Roadmap",
-        to: "/roadmap"
-      },
-      {
-        label: "Contribute",
-        to: "/contribute"
-      },
-      {
-        label: "Team",
-        to: "/team"
-      }
-    ],
-    footerItems: [
-      {
-        label: "Legal Notice",
-        href: "https://the-morpheus.de/#signup"
-      },
-      {
-        label: "Privacy Policy",
-        href: "https://the-morpheus.de/faq-en.html"
-      },
-      {
-        label: "Status",
-        to: "/status"
-      }
-    ]
   },
 
   build: {

@@ -1,0 +1,6 @@
+.content {
+  max-width: calc(100vw - var(--content-padding) * 2);
+  width: var(--content-width);
+  padding: 0 var(--content-padding);
+  margin: 0 auto;
+}

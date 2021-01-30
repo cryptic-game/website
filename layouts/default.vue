@@ -1,18 +1,18 @@
 <template>
   <div class="default-layout fill-screen">
-    <KApp>
+    <App>
       <nuxt/>
-      <KFooter/>
-    </KApp>
+      <Footer/>
+    </App>
   </div>
 </template>
 
 <script>
-  import KApp from "kiste/components/KApp";
-  import KFooter from "kiste/components/KFooter";
+  import App from "@/components/App";
+  import Footer from "@/components/Footer";
 
   export default {
-    components: { KApp, KFooter }
+    components: { App, Footer }
   };
 </script>
 

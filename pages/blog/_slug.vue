@@ -1,6 +1,6 @@
 <template>
   <div class="post-page">
-    <KNavigationBar title="Blog"/>
+    <NavigationBar title="Blog"/>
     <article class="content formatted">
       <img :alt="`Title Image from: ${post.title}`" :src="post.image" class="post-page__image"/>
       <span>{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
@@ -16,13 +16,13 @@
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+  import NavigationBar from "@/components/NavigationBar";
   import { blogAPI } from "@/assets/js/blog";
   import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
 
   export default {
     name: "PostPage",
-    components: { KNavigationBar },
+    components: { NavigationBar },
     async asyncData({ route }) {
       return {
         post: mapObjectKeys(blogAPI.mappings.post, await blogAPI.posts.read({

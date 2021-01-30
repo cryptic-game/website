@@ -1,7 +1,21 @@
 {
+  "footer": {
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "serverStatus": "Status"
+  },
+  "navbar": {
+    "home": "Home",
+    "play": "Play",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "roadmap": "Roadmap",
+    "contribute": "Contribute",
+    "team": "Team"
+  },
   "home": {
     "createTheGame": "Don’t <strong>play</strong> the game, <span><br/><strong>create</strong> the game</span>",
-    "openSource": "An Open Source Game <br/>by <strong>The Morpheus Tutorials</strong>",
+  "openSource": "An Open Source Game <br/>by <strong>The Morpheus Tutorials</strong>",
     "joinUs": "Join us today!",
     "joinDiscord": "Join our Discord",
     "playEarlyVersion": "You can already play an early version:",

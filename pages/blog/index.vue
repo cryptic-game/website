@@ -1,6 +1,6 @@
 <template>
   <div class="posts-page">
-    <KNavigationBar title="Blog"/>
+    <NavigationBar title="Blog"/>
     <div class="content">
       <h1 class="heading--1">
         Blog
@@ -19,14 +19,14 @@
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+  import NavigationBar from "@/components/NavigationBar";
   import { blogAPI } from "@/assets/js/blog";
   import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard";
 
   export default {
     name: "PostsPage",
-    components: { BlogPostCard, KNavigationBar },
+    components: { BlogPostCard, NavigationBar },
     async asyncData() {
       return {
         posts: Array.from(await blogAPI.posts.browse({

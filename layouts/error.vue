@@ -1,6 +1,6 @@
 <template>
   <main class="not-found-page">
-    <KNavigationBar title="Not found"></KNavigationBar>
+    <NavigationBar title="Not found"></NavigationBar>
     <div class="content formatted">
       <h1>Not found</h1>
       <p class="heading--5">
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+  import NavigationBar from "@/components/NavigationBar";
 
   export default {
     name: "NotFound",
-    components: { KNavigationBar },
+    components: { NavigationBar },
     head() {
       return {
         titleTemplate: "Not Found - %s"

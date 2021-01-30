@@ -1,14 +1,14 @@
 <template>
-  <KApp>
+  <App>
     <nuxt/>
-  </KApp>
+  </App>
 </template>
 
 <script>
-  import KApp from "kiste/components/KApp";
+  import App from "@/components/App";
 
   export default {
-    components: { KApp }
+    components: { App }
   };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <main class="team-page">
-    <KNavigationBar title="Team"/>
+    <NavigationBar title="Team"/>
     <div class="content formatted">
       <h1>Team</h1>
 
@@ -92,14 +92,14 @@
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+  import NavigationBar from "@/components/NavigationBar";
   import TeamMember from "../components/TeamMember";
 
   export default {
     name: "TeamPage",
     components: {
       TeamMember,
-      KNavigationBar
+      NavigationBar
     },
     head() {
       return {

@@ -1,6 +1,6 @@
 <template>
   <main class="index-page">
-    <KNavigationBar background-after-scroll/>
+    <NavigationBar background-after-scroll/>
     <video
       autoplay
       class="background-video"
@@ -196,7 +196,7 @@
         </h2>
         <div>
           <h3 class="faq-section__question">
-            {{ $t("home.faq.communityProject.communityProject") }}
+            {{ $t("faq.communityProject.communityProject") }}
           </h3>
           {{ $t("faq.communityProject.description") }}
           <a
@@ -225,14 +225,14 @@
       </div>
     </section>
     <section class="footer-section">
-      <KFooter/>
+      <Footer/>
     </section>
   </main>
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import KFooter from "kiste/components/KFooter";
+  import NavigationBar from "@/components/NavigationBar";
+  import Footer from "@/components/Footer";
   import { blogAPI } from "@/assets/js/blog";
   import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
   import BlogPostCard from "@/components/BlogPostCard";
@@ -252,8 +252,8 @@
   export default {
     name: "IndexPage",
     components: {
-      KNavigationBar,
-      KFooter,
+      NavigationBar,
+      Footer,
       BlogPostCard,
       GamepadIcon,
       NoteIcon,
@@ -284,7 +284,7 @@
 </script>
 
 <style lang="scss" scoped>
-@use "~kiste/css/mixins/screenSize";
+@use "../assets/css/mixins/screenSize";
 
 .index-page {
   width: 100%;
@@ -584,7 +584,7 @@
   position: relative;
   z-index: 1;
 
-  &::v-deep .k-footer {
+  &::v-deep .footer {
     margin: 0 auto;
     padding-bottom: 20px;
   }

@@ -1,0 +1,22 @@
+@use "link";
+@use "heading";
+@use "paragraph";
+
+$_elements: (
+  "paragraph": ("p", "ul"),
+  "link": "a",
+  "heading--1": "h1",
+  "heading--2": "h2",
+  "heading--3": "h3",
+  "heading--4": "h4",
+  "heading--5": "h5",
+  "heading--6": "h6",
+);
+
+@each $class, $tags in $_elements {
+  @each $tag in $tags {
+    #{$tag}.formatted, .formatted #{$tag}, .#{$class} {
+      @extend %#{$class};
+    }
+  }
+}
