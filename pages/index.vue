@@ -12,7 +12,7 @@
     <section class="section hero-section">
       <div class="hero-section__content content">
         <span class="hero-section__slogan">
-          Don’t <strong>play</strong> the game, <span><br/><strong>create</strong> the game</span>
+          <Typewriter :texts="subtitles"/>
         </span>
         <h1 class="hero-section__title">
           An Open Source Game <br/>
@@ -282,6 +282,7 @@
   import LanguageIcon from "@/assets/icons/language.svg";
   import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
   import ShieldIcon from "@/assets/icons/shield.svg";
+  import Typewriter from "@/components/Typewriter";
 
   export default {
     name: "IndexPage",
@@ -300,7 +301,8 @@
       GlobeIcon,
       LanguageIcon,
       PaintbrushIcon,
-      ShieldIcon
+      ShieldIcon,
+      Typewriter
     },
     layout: "none",
     async asyncData() {
@@ -312,8 +314,39 @@
       };
     },
     data: () => ({
-      blogPosts: []
-    })
+      blogPosts: [],
+      subtitles: ["Don’t play the game, create the game",
+                  "the cyberwar game",
+                  "the Hacker Browsergame",
+                  "get hacked!",
+                  "don't get hacked!",
+                  "the Hacker playground",
+                  "The cryptic way of hacking",
+                  "The art of hacking",
+                  "The Cyberspace",
+                  "Game of Cyberwar",
+                  "Be the most feared hacker",
+                  "The League of extraordinary Hackers",
+                  "Hackelicious",
+                  "be a 1 or 0",
+                  "Blackhack",
+                  "world of warhack",
+                  "Hackback",
+                  "Hashback"]
+    }),
+    created() {
+      this.shuffleSubtitles();
+    },
+    methods: {
+      shuffleSubtitles() {
+        // Fisher-Yates shuffle algorithm
+        for (let i = this.subtitles.length - 1; i > 0; i -= 1) {
+          const j = Math.floor(Math.random() * (i + 1));
+          // swap elements on positions i and j
+          [this.subtitles[i], this.subtitles[j]] = [this.subtitles[j], this.subtitles[i]];
+        }
+      }
+    }
   };
 </script>
 
