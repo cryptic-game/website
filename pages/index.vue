@@ -9,11 +9,11 @@
     >
       <source src="@/assets/video/background.mp4" type="video/mp4"/>
     </video>
-    <section class="section hero-section">
-      <div class="hero-section__content content">
-        <span class="hero-section__slogan">
-          <Typewriter :texts="subtitles"/>
-        </span>
+    <section class="hero-section content">
+      <span class="hero-section__slogan">
+        <Typewriter :texts="subtitles"/>
+      </span>
+      <span class="hero-section__left">
         <h1 class="hero-section__title">
           An Open Source Game <br/>
           by <strong>The Morpheus Tutorials</strong>
@@ -33,7 +33,7 @@
           </template>
           Join our Discord
         </CButton>
-      </div>
+      </span>
     </section>
     <section class="section second-section">
       <div class="second-section__content content flex-with-gutter">
@@ -378,13 +378,7 @@
 .hero-section {
   background: transparent;
   height: calc(100vh - var(--x-navbar-height));
-  padding: 20px 0;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  align-content: flex-end;
-  flex-direction: row-reverse;
+  padding: 20px 20px 10vh;
 
   position: relative;
 
@@ -395,11 +389,10 @@
 
   .hero-section__slogan {
     display: inline-block;
-
+    max-width: 55vw;
     position: absolute;
-    top: -40vh;
-    right: 15%;
-    font-size: 1.6rem;
+    right: 5%;
+    font-size: 2.5rem;
     text-align: right;
 
     & > span:nth-child(2) {
@@ -409,23 +402,28 @@
     }
   }
 
-  .hero-section__title {
-    margin: 0 0 5px;
-    font-size: 1.1rem;
-    font-weight: normal;
-  }
+  .hero-section__left {
+    position: absolute;
+    bottom: 15vh;
 
-  .hero-section__c2a {
-    font-size: 4rem;
-    font-weight: bold;
-
-    @media (max-width: 580px) {
-      font-size: 11vw;
+    .hero-section__title {
+      margin: 0 0 5px;
+      font-size: 1.1rem;
+      font-weight: normal;
     }
-  }
 
-  .hero-section__join-button {
-    margin-top: 20px;
+    .hero-section__c2a {
+      font-size: 4rem;
+      font-weight: bold;
+
+      @media (max-width: 580px) {
+        font-size: 11vw;
+      }
+    }
+
+    .hero-section__join-button {
+      margin-top: 20px;
+    }
   }
 }
 
