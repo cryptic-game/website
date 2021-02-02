@@ -1,4 +1,4 @@
-name: CI
+name: Delete PR Deployment
 
 on:
   pull_request:
@@ -9,10 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Prepare clean pr deployment
         id: prepare_deploy
         run: |
-          mkdir /tmp/empty-folder
+          mkdir ./empty-folder
           echo ::set-output name=folder::"pr/$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")"
 
       - name: Deploy
@@ -21,7 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           REPOSITORY_NAME: ${{ github.repository }}
           BRANCH: gh-pages
-          FOLDER: /tmp/empty-folder
+          FOLDER: ./empty-folder
           TARGET_FOLDER: ${{ steps.prepare_deploy.outputs.folder }}
           CLEAN: true
 
