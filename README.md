@@ -1,4 +1,4 @@
-# Cryptic - Website
+# Cryptic - Websites
 ## Welcome
 
 This is the open-source source code to the official website of cryptic-game.
