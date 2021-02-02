@@ -77,7 +77,7 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: github-pages
+      name: gh-pages
       url: ${{ steps.prepare_deploy.outputs.url }}/${{ steps.prepare_deploy.outputs.folder }}
 
     steps:
