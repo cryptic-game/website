@@ -9,11 +9,11 @@
     >
       <source src="@/assets/video/background.mp4" type="video/mp4"/>
     </video>
-    <section class="section hero-section">
-      <div class="hero-section__content content">
-        <span class="hero-section__slogan">
-          Don’t <strong>play</strong> the game, <span><br/><strong>create</strong> the game</span>
-        </span>
+    <section class="hero-section content">
+      <span class="hero-section__slogan">
+        <Typewriter :texts="subtitles"/>
+      </span>
+      <span class="hero-section__left">
         <h1 class="hero-section__title">
           An Open Source Game <br/>
           by <strong>The Morpheus Tutorials</strong>
@@ -33,7 +33,7 @@
           </template>
           Join our Discord
         </CButton>
-      </div>
+      </span>
     </section>
     <section class="section second-section">
       <div class="second-section__content content flex-with-gutter">
@@ -282,6 +282,7 @@
   import LanguageIcon from "@/assets/icons/language.svg";
   import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
   import ShieldIcon from "@/assets/icons/shield.svg";
+  import Typewriter from "@/components/Typewriter";
 
   export default {
     name: "IndexPage",
@@ -300,7 +301,8 @@
       GlobeIcon,
       LanguageIcon,
       PaintbrushIcon,
-      ShieldIcon
+      ShieldIcon,
+      Typewriter
     },
     layout: "none",
     async asyncData() {
@@ -312,8 +314,39 @@
       };
     },
     data: () => ({
-      blogPosts: []
-    })
+      blogPosts: [],
+      subtitles: ["Don’t play the game, create the game",
+                  "the cyberwar game",
+                  "the Hacker Browsergame",
+                  "get hacked!",
+                  "don't get hacked!",
+                  "the Hacker playground",
+                  "The cryptic way of hacking",
+                  "The art of hacking",
+                  "The Cyberspace",
+                  "Game of Cyberwar",
+                  "Be the most feared hacker",
+                  "The League of extraordinary Hackers",
+                  "Hackelicious",
+                  "be a 1 or 0",
+                  "Blackhack",
+                  "world of warhack",
+                  "Hackback",
+                  "Hashback"]
+    }),
+    created() {
+      this.shuffleSubtitles();
+    },
+    methods: {
+      shuffleSubtitles() {
+        // Fisher-Yates shuffle algorithm
+        for (let i = this.subtitles.length - 1; i > 0; i -= 1) {
+          const j = Math.floor(Math.random() * (i + 1));
+          // swap elements on positions i and j
+          [this.subtitles[i], this.subtitles[j]] = [this.subtitles[j], this.subtitles[i]];
+        }
+      }
+    }
   };
 </script>
 
@@ -345,13 +378,7 @@
 .hero-section {
   background: transparent;
   height: calc(100vh - var(--x-navbar-height));
-  padding: 20px 0;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  align-content: flex-end;
-  flex-direction: row-reverse;
+  padding: 20px 20px 10vh;
 
   position: relative;
 
@@ -362,11 +389,10 @@
 
   .hero-section__slogan {
     display: inline-block;
-
+    max-width: 55vw;
     position: absolute;
-    top: -40vh;
-    right: 15%;
-    font-size: 1.6rem;
+    right: 5%;
+    font-size: 2.5rem;
     text-align: right;
 
     & > span:nth-child(2) {
@@ -376,23 +402,28 @@
     }
   }
 
-  .hero-section__title {
-    margin: 0 0 5px;
-    font-size: 1.1rem;
-    font-weight: normal;
-  }
+  .hero-section__left {
+    position: absolute;
+    bottom: 15vh;
 
-  .hero-section__c2a {
-    font-size: 4rem;
-    font-weight: bold;
-
-    @media (max-width: 580px) {
-      font-size: 11vw;
+    .hero-section__title {
+      margin: 0 0 5px;
+      font-size: 1.1rem;
+      font-weight: normal;
     }
-  }
 
-  .hero-section__join-button {
-    margin-top: 20px;
+    .hero-section__c2a {
+      font-size: 4rem;
+      font-weight: bold;
+
+      @media (max-width: 580px) {
+        font-size: 11vw;
+      }
+    }
+
+    .hero-section__join-button {
+      margin-top: 20px;
+    }
   }
 }
 
