@@ -8,7 +8,10 @@
         <span></span>
       </div>
       <div class="navigation-bar__container-1 content">
-        <CrypticHeadLogo class="navigation-bar__logo"/>
+        <div class="navigation-bar__logos">
+          <CrypticHeadLogo class="navigation-bar__logo"/>
+          <LanguageSwitcher class="navigation-bar__language"/>
+        </div>
         <span class="navigation-bar__title">{{ title }}</span>
         <div class="navigation-bar__container-2">
           <div class="navigation-bar__links">
@@ -17,7 +20,7 @@
                 :is="isNuxt ? 'nuxt-link' : 'router-link'"
                 v-if="item.to"
                 :key="item.label"
-                :to="item.to"
+                :to="localePath(item.to)"
                 @click.native.passive="open = false"
               >
                 {{ $t("navbar." + item.label) }}
@@ -34,7 +37,6 @@
               </a>
             </template>
           </div>
-          <LanguageSwitcher/>
         </div>
       </div>
     </nav>
@@ -181,6 +183,12 @@
   display: none;
 }
 
+.navigation-bar__logos {
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+}
+
 .navigation-bar__logo {
   height: 70px;
   min-height: 70px;
@@ -288,13 +296,24 @@
       }
     }
   }
+  .navigation-bar__logos {
+    margin-right: 0;
+    order: 2;
+    display: flex;
+    align-items: center;
+  }
 
   .navigation-bar__logo {
     min-height: 50px;
     height: 50px;
     width: 55.1px;
-    order: 2;
     margin-right: 0;
+    order: 1;
+  }
+
+  .navigation-bar__language {
+    order: 0;
+    margin-right: 10px;
   }
 
   .navigation-bar__container-1 {

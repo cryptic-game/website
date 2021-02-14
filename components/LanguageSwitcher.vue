@@ -30,7 +30,6 @@
     },
     methods: {
       toggle() {
-        console.log(1);
         this.active = !this.active;
       }
     }
@@ -40,6 +39,7 @@
 <style lang="scss">
     .languages {
         position: fixed;
+        margin-top: 10px;
         display: flex;
         flex-direction: column;
         border-width: 1px;
@@ -54,7 +54,12 @@
         text-decoration: none;
     }
 
+    .languageItem:hover {
+       text-decoration: underline;
+    }
+
     .globe:hover {
        border-bottom: solid white 1px;
+       cursor: pointer;
     }
 </style>

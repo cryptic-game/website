@@ -38,7 +38,7 @@
         <span class="second-section__version">
           Cryptic Pre Alpha 2
         </span>
-        <CButton blue outline text-color="white" to="/blog">
+        <CButton blue outline text-color="white" :to="localePath('/blog')">
           <template #icon>
             <NoteIcon class="icon"/>
           </template>
@@ -70,7 +70,7 @@
           <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
         </div>
         <div class="blog-section__more-button-container">
-          <nuxt-link class="blog-section__more-button link center-content" to="/blog">
+          <nuxt-link class="blog-section__more-button link center-content" :to="localePath('/blog')">
             <ArrowRightIcon class="icon"/>
           </nuxt-link>
         </div>
@@ -219,7 +219,7 @@
         </div>
         <div class="more-at-faq">
           <span>{{ $t("faq.more.more") }}
-            <NuxtLink :to="'/faq'" class="link">{{ $t("faq.more.faqPage") }}</NuxtLink>.
+            <nuxt-link :to="localePath('/faq')" class="link">{{ $t("faq.more.faqPage") }}</nuxt-link>.
           </span>
         </div>
       </div>

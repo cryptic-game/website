@@ -54,6 +54,10 @@ export default {
     vueI18n: {
       fallbackLocale: "en",
       messages: { en, de }
+    },
+    detectBrowserLanguage: {
+      useCookie: false,
+      onlyOnRoot: true
     }
   },
 

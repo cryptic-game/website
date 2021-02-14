@@ -6,7 +6,7 @@
         v-if="item.to"
         :key="item.label"
         class="footer__link"
-        :to="item.to"
+        :to="localePath(item.to)"
       >
         {{ $t("footer." + item.label) }}
       </component>
