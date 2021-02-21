@@ -112,17 +112,16 @@ jobs:
           fi
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPOSITORY_NAME: ${{ github.repository }}
-          BRANCH: gh-pages
-          FOLDER: dist
-          TARGET_FOLDER: ${{ steps.prepare_deploy.outputs.folder }}
-          CLEAN_EXCLUDE: ${{ steps.prepare_deploy.outputs.clean_exclude }}
-          CLEAN: true
+          repository-name: ${{ github.repository }}
+          branch: gh-pages
+          folder: dist
+          target-folder: ${{ steps.prepare_deploy.outputs.folder }}
+          clean-exclude: ${{ steps.prepare_deploy.outputs.clean_exclude }}
+          clean: true
 
           # https://github.com/crazy-max/ghaction-github-pages/blob/dev/src/git.ts#L3-L8
-          COMMIT_MESSAGE: Deploy to GitHub pages
-          GIT_CONFIG_NAME: github-actions[bot]
-          GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          commit-message: Deploy to GitHub pages
+          git-config-name: github-actions[bot]
+          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
