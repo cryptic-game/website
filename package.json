@@ -21,12 +21,12 @@
     "@nuxtjs/eslint-config": "5.0.0",
     "@nuxtjs/eslint-module": "3.0.2",
     "babel-eslint": "10.1.0",
-    "eslint": "7.19.0",
+    "eslint": "7.20.0",
     "eslint-plugin-nuxt": "2.0.0",
     "eslint-plugin-vue": "7.6.0",
     "fibers": "5.0.0",
     "kiste": "1.2.9",
-    "sass": "1.32.6",
+    "sass": "1.32.8",
     "sass-loader": "10.1.1",
     "vue-svg-loader": "0.16.0"
   }
