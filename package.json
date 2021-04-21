@@ -23,7 +23,7 @@
     "babel-eslint": "10.1.0",
     "eslint": "7.24.0",
     "eslint-plugin-nuxt": "2.0.0",
-    "eslint-plugin-vue": "7.7.0",
+    "eslint-plugin-vue": "7.9.0",
     "fibers": "5.0.0",
     "kiste": "1.2.9",
     "sass": "1.32.11",
