@@ -15,7 +15,7 @@
     "@nuxtjs/axios": "5.13.1",
     "@nuxtjs/pwa": "3.3.5",
     "@tryghost/content-api": "1.5.1",
-    "nuxt": "2.15.3"
+    "nuxt": "2.15.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "6.0.0",
@@ -26,7 +26,7 @@
     "eslint-plugin-vue": "7.7.0",
     "fibers": "5.0.0",
     "kiste": "1.2.9",
-    "sass": "1.32.8",
+    "sass": "1.32.11",
     "sass-loader": "10.1.1",
     "vue-svg-loader": "0.16.0"
   }
