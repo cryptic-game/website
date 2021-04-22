@@ -49,23 +49,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Prepare build
-        id: prepare_build
-        run: |
-          folder=""
-          if [ "${{ github.event_name }}" == "pull_request" ]; then
-            folder="/pr/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')/"
-          fi
-
-          if [ "${{ github.repository_owner }}" != "cryptic-game" ]; then
-            folder=$(echo ${{ github.repository }} | sed -e 's/\/.*\///g');
-          fi
-
-          echo ::set-output name=folder::"$(echo $folder)"
-
       - run: npm run generate
-        env:
-          BASE_HREF: ${{ steps.prepare_build.outputs.folder }}
 
       - uses: actions/upload-artifact@v2
         with:
@@ -79,7 +63,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ steps.prepare_deploy.outputs.url }}/${{ steps.prepare_deploy.outputs.folder }}
+      url: https://www.cryptic-game.net
 
     steps:
       - uses: actions/checkout@v2
@@ -89,40 +73,10 @@ jobs:
           name: cryptic-website
           path: dist
 
-      - name: Prepare deploy
-        id: prepare_deploy
-        run: |
-          cp dist/index.html dist/404.html
-          url="";
-
-          if [[ "${{ github.repository_owner }}" == "cryptic-game" ]]; then
-            echo ::set-output name=url::"https://www.cryptic-game.net"
-          else
-            echo ::set-output name=url::"${{ github.repository_owner }}.github.io/$(echo ${{ github.repository }} | sed -e 's/\/.*\///g')";
-          fi
-
-          if [ "${{ github.event_name }}" == "pull_request" ]; then
-            echo ::set-output name=folder::"pr/$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')"
-            echo ::set-output name=clean_exclude::""
-          else
-            echo ::set-output name=clean_exclude::"['pr']"
-            if [[ "${{ github.repository_owner }}" == "cryptic-game" ]]; then
-              echo "www.cryptic-game.net" > dist/CNAME
-            fi
-            touch dist/.nojekyll
-          fi
-
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: crazy-max/ghaction-github-pages@v2
         with:
-          repository-name: ${{ github.repository }}
-          branch: gh-pages
-          folder: dist
-          target-folder: ${{ steps.prepare_deploy.outputs.folder }}
-          clean-exclude: ${{ steps.prepare_deploy.outputs.clean_exclude }}
-          clean: true
-
-          # https://github.com/crazy-max/ghaction-github-pages/blob/dev/src/git.ts#L3-L8
-          commit-message: Deploy to GitHub pages
-          git-config-name: github-actions[bot]
-          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
+          target_branch: gh-pages
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
