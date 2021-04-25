@@ -55,29 +55,3 @@ jobs:
         with:
           name: cryptic-website
           path: dist
-
-  deploy:
-    needs: [ build ]
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-
-    environment:
-      name: github-pages
-      url: https://www.cryptic-game.net
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/download-artifact@v2
-        with:
-          name: cryptic-website
-          path: dist
-
-      - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: dist
-          fqdn: www.cryptic-game.net
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
