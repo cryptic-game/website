@@ -42,7 +42,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
+    "@nuxtjs/sitemap"
   ],
 
   router: {
@@ -107,6 +108,10 @@ export default {
         to: "/status"
       }
     ]
+  },
+  sitemap: {
+    hostname: "https://cryptic-game.net",
+    gzip: true
   },
 
   build: {
