@@ -1,134 +1,117 @@
 <template>
   <div class="faq-page">
-    <KNavigationBar title="FAQ"/>
+    <NavigationBar title="FAQ"/>
     <div class="content formatted">
       <h1>FAQ</h1>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          What is the "community project"?
+          {{ $t("faq.communityProject.communityProject") }}
         </h3>
-        The "community project" is a project that has been announced in October 2017 by The Morpheus Tutorials.
-        We build a 2-dimensional browser game from scratch. The team consists of people of different age groups.
-        We meet in Discord to work together. You can find more information in the
+        {{ $t("faq.communityProject.description") }}
         <a
           class="link"
           href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw"
           target="_blank"
-        >specification sheet</a>.
+        >{{ $t("faq.communityProject.sheet") }}</a>.
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          Do I have to be able to code?
+          {{ $t("faq.requirements.requirements") }}
         </h3>
-        No, you don't have to be able to code in order to help develop the game.
-        You can also join teams like game design, text, and graphic design.
+        {{ $t("faq.requirements.description") }}
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          Is it possible for a beginner to help with the coding?
+          {{ $t("faq.beginner.beginner") }}
         </h3>
-        As a beginner, this project might be too difficult for you, so we might advise beginners to continue improving
-        their skills.
-        You can decide between the backend in Python or Java and the frontend in Angular and HTML. In your department,
-        you should know the
-        basics of the respective programming language. Everything else you will learn in the course of the project.
+        {{ $t("faq.beginner.description") }}
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          Where can I see all the heads of the departments?
+          {{ $t("faq.heads.heads") }}
         </h3>
-        You can find all departments and their contact persons in the
-        <span><NuxtLink :to="'/team'" class="link">Team page</NuxtLink>.</span>
+        {{ $t("faq.heads.description") }}
+        <span><NuxtLink :to="'/team'" class="link">{{ $t("faq.heads.teamPage") }}</NuxtLink>.</span>
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          What departments exist within the project?
+          {{ $t("faq.departments.departments") }}
         </h3>
-        The project is split into multiple categories: Game design, Design, Frontend, Backend, Text and Security.
+        {{ $t("faq.departments.description") }}
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          Where can I see the progress of the development?
+          {{ $t("faq.progress.progress") }}
         </h3>
-        The latest progress of the development can be tracked on GitHub. Additionally, there are updates, visible on the
-        website or at <a class="link" href="https://play.cryptic-game.net/" target="_blank">play.cryptic-game.net</a>.
+        {{ $t("faq.progress.description") }}
+        <a class="link" href="https://play.cryptic-game.net/" target="_blank"> play.cryptic-game.net</a>.
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          I am new. How can I start?
+          {{ $t("faq.new.new") }}
         </h3>
-        In Discord, you can assign yourself roles for the department you want to work for.
-        You can get in touch with the specific department head.
+        {{ $t("faq.new.description") }}
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          I've found a ticket that I want to work on, how should I proceed?
+          {{ $t("faq.ticketFound.ticketFound") }}
         </h3>
-        Contact the respective head and tell them which issue you want to work on. Additionally,
-        there are meetings in each department sometimes.
+        {{ $t("faq.ticketFound.description") }}
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          I am done with a ticket. What should I do next?
+          {{ $t("faq.ticketDone.ticketDone") }}
         </h3>
-        Upload your work to the corresponding GitHub repository. Note: please keep an eye on
-        the procedure for commits, branches and pull requests in the
+        {{ $t("faq.ticketDone.description") }}
         <a
           class="link"
           href="https://github.com/cryptic-game/cryptic/blob/master/conventions.md"
           target="_blank"
-        >
-          conventions
-        </a>.
+        >{{ $t("faq.ticketDone.conventions") }}</a>.
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          What does a "head assistant" do?
+          {{ $t("faq.headAssistant.headAssistant") }}
         </h3>
-        A head assistant is a person who has actively helped in the development of the game for a long time.
-        They are promoted by their head and assists him/her. The head assistant can lead the team and is also
-        a contact person for the team.
+        {{ $t("faq.headAssistant.description") }}
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          What is a "contributor"?
+          {{ $t("faq.contributor.contributor") }}
         </h3>
-        Additionally to the other roles, there is the contributor. The rank is given as
-        a reward to people who have been particularly noticed for their good work.
+        {{ $t("faq.contributor.description") }}
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          I am in a leading position now and there are conflicts in my team. Who
-          should I contact?
+          {{ $t("faq.conflicts.conflicts") }}
         </h3>
-        Contact the head team. We want to solve and prevent conflicts as fast as possible for the user's convenience.
+        {{ $t("faq.conflicts.description") }}
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          Who should I contact if I don't have enough time to continue working,
-          or if I don't feel like working on the project / in my current position anymore?
+          {{ $t("faq.problem.problem") }}
         </h3>
-        That's no problem. In that case, get in touch with your head to talk about your needs.
+        {{ $t("faq.problem.description") }}
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
-          How is the project financed?
+          {{ $t("faq.funding.funding") }}
         </h3>
-        Nobody gets paid for working on the project, but we have to pay for our servers, so we depend on donations and
-        sponsors. So if you want to sponsor us,
-        <a class="link" href="https://www.patreon.com/user?u=5322110" target="_blank">support The Morpheus on
-          Patreon</a>.
+        {{ $t("faq.funding.description") }}
+        <a class="link" href="https://www.patreon.com/user?u=5322110" target="_blank">
+          {{ $t("faq.funding.patreon") }}
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+  import NavigationBar from "@/components/NavigationBar";
 
   export default {
     name: "StatusPage",
-    components: { KNavigationBar },
+    components: { NavigationBar },
     head() {
       return {
         titleTemplate: "FAQ - %s"

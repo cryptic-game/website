@@ -1,0 +1,48 @@
+@use "../mixins/screenSize";
+
+%heading--1, %heading--2, %heading--3, %heading--4, %heading--5, %heading--6 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+%heading--1 {
+  font-size: 3.8rem;
+
+  @include screenSize.mobile {
+    font-size: 2.8rem;
+  }
+}
+
+%heading--2 {
+  font-size: 3rem;
+
+  @include screenSize.mobile {
+    font-size: 2.5rem;
+  }
+}
+
+%heading--3 {
+  font-size: 2.6rem;
+
+  @include screenSize.mobile {
+    font-size: 2.2rem;
+  }
+}
+
+%heading--4 {
+  font-size: 2.2rem;
+
+  @include screenSize.mobile {
+    font-size: 2rem;
+  }
+}
+
+%heading--5 {
+  font-size: 1.8rem;
+}
+
+%heading--6 {
+  font-size: 1.4rem;
+}

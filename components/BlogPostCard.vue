@@ -14,7 +14,7 @@
           }}</strong>
           reading time
         </span>
-        <nuxt-link :to="`/blog/${post.slug}`" class="blog-post-card__link link">
+        <nuxt-link :to="localePath(`/blog/${post.slug}`)" class="blog-post-card__link link">
           Read
         </nuxt-link>
       </div>

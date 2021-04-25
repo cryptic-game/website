@@ -90,7 +90,7 @@
 </script>
 
 <style lang="scss" scoped>
-@use "~kiste/css/mixins/screenSize";
+@use "../assets/css/mixins/screenSize";
 
 .c-button {
   display: flex;
