@@ -1,6 +1,6 @@
 <template>
   <main class="not-found-page">
-    <KNavigationBar title="Not found" />
+    <NavigationBar title="Not found" />
     <div class="content formatted">
       <h1>Not found</h1>
       <p class="heading--5">
@@ -11,14 +11,18 @@
 </template>
 
 <script>
-import KNavigationBar from '@/components/KNavigationBar'
+import NavigationBar from '@/components/NavigationBar'
 
 export default {
   name: 'NotFound',
-  components: { KNavigationBar },
+  components: { NavigationBar },
   head () {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
     return {
-      titleTemplate: 'Not Found - %s'
+      titleTemplate: 'Not Found - %s',
+      htmlAttrs: { ...i18nHead.htmlAttrs },
+      meta: [...i18nHead.meta],
+      link: [...i18nHead.link]
     }
   }
 }

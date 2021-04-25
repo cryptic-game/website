@@ -1,33 +1,36 @@
 <template>
-  <div :class="classes" class="k-navigation-bar">
-    <div class="k-navigation-bar__placeholder" />
-    <nav class="k-navigation-bar__container-0">
-      <div class="k-navigation-bar__toggle" @click="open = !open">
+  <div class="navigation-bar" :class="{ 'x-scrolled': scrolled, 'x-show-background': showBackground, 'x-open': open }">
+    <div class="navigation-bar__placeholder" />
+    <nav class="navigation-bar__container-0">
+      <div class="navigation-bar__toggle" @click="open = !open">
         <span />
         <span />
         <span />
       </div>
-      <div class="k-navigation-bar__container-1 content">
-        <component
-          :is="isNuxt ? 'nuxt-link' : 'router-link'"
-          :key="'cryptic-logo'"
-          :to="'/'"
-          @click.native.passive="open = false"
-        >
-          <CrypticHeadLogo class="k-navigation-bar__logo" />
-        </component>
-        <span class="k-navigation-bar__title">{{ title }}</span>
-        <div class="k-navigation-bar__container-2">
-          <div class="k-navigation-bar__links">
+      <div class="navigation-bar__container-1 content">
+        <div class="navigation-bar__logos">
+          <component
+            :is="isNuxt ? 'nuxt-link' : 'router-link'"
+            :key="'cryptic-logo'"
+            :to="'/'"
+            @click.native.passive="open = false"
+          >
+            <CrypticHeadLogo class="navigation-bar__logo" />
+          </component>
+          <LanguageSwitcher class="navigation-bar__language" />
+        </div>
+        <span class="navigation-bar__title">{{ title }}</span>
+        <div class="navigation-bar__container-2">
+          <div class="navigation-bar__links">
             <template v-for="item in items">
               <component
                 :is="isNuxt ? 'nuxt-link' : 'router-link'"
                 v-if="item.to"
                 :key="item.label"
-                :to="item.to"
+                :to="localePath(item.to)"
                 @click.native.passive="open = false"
               >
-                {{ item.label }}
+                {{ $t("navbar." + item.label) }}
               </component>
               <a
                 v-else
@@ -37,9 +40,10 @@
                 target="_blank"
                 @click.passive="open = false"
               >
-                {{ item.label }}
+                {{ $t("navbar." + item.label) }}
               </a>
             </template>
+            <LanguageSwitcher class="navigation-bar__language" />
           </div>
         </div>
       </div>
@@ -48,13 +52,13 @@
 </template>
 
 <script>
-import { isNuxt } from 'kiste/js/isNuxt'
-import { toModifierClasses } from 'kiste/js/toModifierClasses'
-import CrypticHeadLogo from '@/assets/cryptic_head.svg'
+import CrypticHeadLogo from '@/assets/icons/cryptic_head.svg'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
+import { isNuxt } from '@/assets/js/isNuxt'
 
 export default {
-  name: 'KNavigationBar',
-  components: { CrypticHeadLogo },
+  name: 'NavigationBar',
+  components: { CrypticHeadLogo, LanguageSwitcher },
   props: {
     backgroundAfterScroll: {
       type: Boolean,
@@ -72,16 +76,38 @@ export default {
   computed: {
     scrolled: vm => vm.scrollPosition > 60,
     showBackground: vm => vm.backgroundAfterScroll ? vm.scrollPosition > 0 : true,
-    classes () {
-      const { open, scrolled, showBackground } = this
-
-      return toModifierClasses({
-        open,
-        scrolled,
-        showBackground
-      })
+    items () {
+      return [
+        {
+          label: 'home',
+          to: '/'
+        },
+        {
+          label: 'play',
+          href: 'https://play.cryptic-game.net'
+        },
+        {
+          label: 'blog',
+          to: '/blog'
+        },
+        {
+          label: 'faq',
+          to: '/faq'
+        },
+        {
+          label: 'roadmap',
+          to: '/roadmap'
+        },
+        {
+          label: 'contribute',
+          to: '/contribute'
+        },
+        {
+          label: 'team',
+          to: '/team'
+        }
+      ]
     },
-    items: vm => vm.$kiste.navigationItems,
     isNuxt
   },
   mounted () {
@@ -90,19 +116,10 @@ export default {
     }
 
     window.addEventListener('scroll', scrollListener, { passive: true })
-
-    this.$kiste.navigationBar = this
-
     this.$on('hook:beforeDestroy', () => {
       window.removeEventListener('scroll', scrollListener)
     })
-
     scrollListener()
-  },
-  destroyed () {
-    if (this.$kiste.navigationBar === this) {
-      this.$kiste.navigationBar = null
-    }
   }
 }
 </script>
@@ -120,7 +137,7 @@ export default {
   }
 }
 
-.k-app {
+.app {
   --x-navbar-height: 100px;
 
   @include mobile {
@@ -128,18 +145,18 @@ export default {
   }
 }
 
-.k-navigation-bar {
+.navigation-bar {
   height: var(--x-navbar-height);
   position: relative;
   z-index: 100000;
 }
 
-.k-navigation-bar__placeholder {
+.navigation-bar__placeholder {
   height: var(--x-navbar-height);
   width: 100%;
 }
 
-.k-navigation-bar__container-0 {
+.navigation-bar__container-0 {
   height: var(--x-navbar-height);
 
   position: fixed;
@@ -158,23 +175,34 @@ export default {
   transition: 120ms linear background-color;
   background-color: transparent;
 
-  .k-navigation-bar.x-show-background & {
+  .navigation-bar.x-show-background & {
     background-color: var(--colors-background);
   }
 
-  .k-navigation-bar.x-scrolled & {
-    .k-navigation-bar__title {
+  .navigation-bar.x-scrolled & {
+    .navigation-bar__title {
       opacity: 1;
       transform: translateY(0);
     }
   }
 }
 
-.k-navigation-bar__toggle {
+.navigation-bar__toggle {
   display: none;
 }
 
-.k-navigation-bar__logo {
+.navigation-bar__logos {
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .navigation-bar__language {
+    display: none;
+  }
+}
+
+.navigation-bar__logo {
   height: 70px;
   min-height: 70px;
   width: 46.3833px;
@@ -182,7 +210,7 @@ export default {
   margin-right: 20px;
 }
 
-.k-navigation-bar__title {
+.navigation-bar__title {
   font-size: 1.5rem;
   font-weight: bold;
   text-overflow: ellipsis;
@@ -202,7 +230,7 @@ export default {
   }
 }
 
-.k-navigation-bar__container-1 {
+.navigation-bar__container-1 {
   max-width: 100%;
   height: 100%;
 
@@ -215,16 +243,18 @@ export default {
   padding: 0 20px;
 }
 
-.k-navigation-bar__container-2 {
+.navigation-bar__container-2 {
   width: 100%;
 }
 
-.k-navigation-bar__links {
-  float: right;
+.navigation-bar__links {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 30px;
 
-  a {
+  & > a {
     display: inline-block;
-    margin-left: 40px;
+    margin: 5px 0 5px;
     position: relative;
 
     text-decoration: none;
@@ -254,7 +284,7 @@ export default {
 }
 
 @include mobile {
-  .k-navigation-bar__toggle {
+  .navigation-bar__toggle {
     display: block;
 
     position: relative;
@@ -281,20 +311,35 @@ export default {
       }
     }
   }
+  .navigation-bar__logos {
+    margin-right: 0;
+    order: 2;
+    display: flex;
+    align-items: center;
 
-  .k-navigation-bar__logo {
+    .navigation-bar__language {
+      display: flex;
+    }
+  }
+
+  .navigation-bar__logo {
     min-height: 50px;
     height: 50px;
     width: 55.1px;
-    order: 2;
     margin-right: 0;
+    order: 1;
   }
 
-  .k-navigation-bar__container-1 {
+  .navigation-bar__language {
+    order: 0;
+    margin-right: 10px;
+  }
+
+  .navigation-bar__container-1 {
     padding-left: 50px !important;
   }
 
-  .k-navigation-bar__container-2 {
+  .navigation-bar__container-2 {
     pointer-events: none;
     background-color: var(--colors-background);
 
@@ -315,8 +360,9 @@ export default {
     transition: 200ms ease-out opacity;
   }
 
-  .k-navigation-bar__links {
-    float: none;
+  .navigation-bar__links {
+    flex-direction: column;
+    justify-content: center;
 
     & > a {
       display: block;
@@ -333,10 +379,14 @@ export default {
         top: 35px;
       }
     }
+
+    .navigation-bar__language {
+      display: none;
+    }
   }
 
-  .k-navigation-bar.x-open {
-    .k-navigation-bar__toggle > span {
+  .navigation-bar.x-open {
+    .navigation-bar__toggle > span {
       &:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
       }
@@ -350,12 +400,12 @@ export default {
       }
     }
 
-    .k-navigation-bar__container-2 {
+    .navigation-bar__container-2 {
       pointer-events: auto;
       opacity: 1;
     }
 
-    .k-navigation-bar__links > a {
+    .navigation-bar__links > a {
       transform: translateX(0);
       opacity: 1;
     }

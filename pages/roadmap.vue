@@ -1,6 +1,6 @@
 <template>
   <main class="team-page">
-    <KNavigationBar title="Roadmap" />
+    <NavigationBar title="Roadmap" />
     <div class="content formatted">
       <h1 class="title">
         Roadmap
@@ -289,14 +289,14 @@
 </template>
 
 <script>
-import KNavigationBar from '@/components/KNavigationBar'
+import NavigationBar from '@/components/NavigationBar'
 import RoadMapDate from '../components/road-map-date'
 import RoadMapVersion from '../components/road-map-version'
 import RoadMapSprint from '../components/road-map-sprint'
 
 export default {
   name: 'RoadMapPage',
-  components: { RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar },
+  components: { RoadMapSprint, RoadMapVersion, RoadMapDate, NavigationBar },
   head () {
     return {
       titleTemplate: 'Roadmap - %s'
