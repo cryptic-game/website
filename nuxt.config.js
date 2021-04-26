@@ -105,7 +105,7 @@ export default {
       },
       {
         label: "Status",
-        to: "/status"
+        href: "https://status.cryptic-game.net"
       }
     ]
   },
