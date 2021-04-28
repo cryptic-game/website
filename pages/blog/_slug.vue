@@ -50,6 +50,17 @@
             hid: "twitter:image",
             name: "og:image",
             content: this.post.image || "https://cryptic-game.net/open-graph.jpg"
+          },
+          { hid: "og:type", name: "og:type", content: "article" },
+          {
+            hid: "article:published_time",
+            name: "article:published_time",
+            content: new Date(this.post.publishedAt).toString()
+          },
+          {
+            hid: "article:author",
+            name: "article:author",
+            content: this.post.authors.map(author => author.name).join(", ")
           }
         ]
       };
