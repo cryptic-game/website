@@ -36,10 +36,10 @@
     },
     async fetch() {
       this.departments = await fetch(
-        "https://admin.staging.cryptic-game.net/api/website/team/department/list"
+        "https://api.admin.staging.cryptic-game.net/website/team/department"
       ).then(result => result.json());
       this.members = await fetch(
-        "https://admin.staging.cryptic-game.net/api/website/team/member/list"
+        "https://api.admin.staging.cryptic-game.net/website/team"
       ).then(result => result.text())
         .then(result => JSON.parse(result))
         .then(result => result.sort(() => Math.random() - 0.5));
