@@ -9,8 +9,8 @@
           v-for="member in members"
           :key="member.id"
           :name="member.name"
-          :github-id="member.github_id"
-          :department="getDepartmentName(member.department_id)"
+          :github-id="member.githubId"
+          :department="getDepartmentName(member.departmentId)"
         >
         </TeamMember>
       </div>
