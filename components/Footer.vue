@@ -32,7 +32,7 @@
         items: [
           {
             label: "legal",
-            href: "https://the-morpheus.de/#signup"
+            href: "https://the-morpheus.de/#contact"
           },
           {
             label: "privacy",
