@@ -9,8 +9,8 @@
           v-for="member in members"
           :key="member.id"
           :name="member.name"
-          :github-id="member.github_id"
-          :department="getDepartmentName(member.department_id)"
+          :github-id="member.githubId"
+          :department="getDepartmentName(member.departmentId)"
         >
         </TeamMember>
       </div>
@@ -36,10 +36,10 @@
     },
     async fetch() {
       this.departments = await fetch(
-        "https://admin.staging.cryptic-game.net/api/website/team/department/list"
+        "https://api.admin.staging.cryptic-game.net/website/team/department"
       ).then(result => result.json());
       this.members = await fetch(
-        "https://admin.staging.cryptic-game.net/api/website/team/member/list"
+        "https://api.admin.staging.cryptic-game.net/website/team"
       ).then(result => result.text())
         .then(result => JSON.parse(result))
         .then(result => result.sort(() => Math.random() - 0.5));
