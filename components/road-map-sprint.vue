@@ -10,20 +10,20 @@
 </template>
 
 <script>
-  export default {
-    name: "RoadMapSprint",
+export default {
+  name: 'RoadMapSprint',
 
-    props: {
-      action: {
-        type: String,
-        default: "Loading..."
-      },
-      group: {
-        type: String,
-        default: "Loading..."
-      }
+  props: {
+    action: {
+      type: String,
+      default: 'Loading...'
+    },
+    group: {
+      type: String,
+      default: 'Loading...'
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>

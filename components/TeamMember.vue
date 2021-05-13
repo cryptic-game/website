@@ -7,23 +7,23 @@
 </template>
 
 <script>
-  export default {
-    name: "TeamMember",
-    props: {
-      name: {
-        type: String,
-        default: "Loading..."
-      },
-      department: {
-        type: String,
-        default: "Loading..."
-      },
-      githubId: {
-        type: Number,
-        default: 0
-      }
+export default {
+  name: 'TeamMember',
+  props: {
+    name: {
+      type: String,
+      default: 'Loading...'
+    },
+    department: {
+      type: String,
+      default: 'Loading...'
+    },
+    githubId: {
+      type: Number,
+      default: 0
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,6 +1,6 @@
 <template>
   <main class="team-page">
-    <KNavigationBar title="Team"/>
+    <KNavigationBar title="Team" />
     <div class="content formatted">
       <h1>Team</h1>
 
@@ -11,54 +11,53 @@
           :name="member.name"
           :github-id="member.githubId"
           :department="getDepartmentName(member.departmentId)"
-        >
-        </TeamMember>
+        />
       </div>
     </div>
   </main>
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import TeamMember from "../components/TeamMember";
+import KNavigationBar from '@/components/KNavigationBar'
+import TeamMember from '../components/TeamMember'
 
-  export default {
-    name: "TeamPage",
-    components: {
-      TeamMember,
-      KNavigationBar
-    },
-    data() {
-      return {
-        members: [],
-        departments: []
-      };
-    },
-    async fetch() {
-      this.departments = await fetch(
-        "https://api.admin.staging.cryptic-game.net/website/team/department"
-      ).then(result => result.json());
-      this.members = await fetch(
-        "https://api.admin.staging.cryptic-game.net/website/team"
-      ).then(result => result.text())
-        .then(result => JSON.parse(result))
-        .then(result => result.sort(() => Math.random() - 0.5));
-    },
-    head() {
-      return {
-        titleTemplate: "Team - %s"
-      };
-    },
-    methods: {
-      getDepartmentName(id) {
-        for (const department of this.departments) {
-          if (department.id === id) {
-            return department.name;
-          }
+export default {
+  name: 'TeamPage',
+  components: {
+    TeamMember,
+    KNavigationBar
+  },
+  data () {
+    return {
+      members: [],
+      departments: []
+    }
+  },
+  async fetch () {
+    this.departments = await fetch(
+      'https://api.admin.staging.cryptic-game.net/website/team/department'
+    ).then(result => result.json())
+    this.members = await fetch(
+      'https://api.admin.staging.cryptic-game.net/website/team'
+    ).then(result => result.text())
+      .then(result => JSON.parse(result))
+      .then(result => result.sort(() => Math.random() - 0.5))
+  },
+  head () {
+    return {
+      titleTemplate: 'Team - %s'
+    }
+  },
+  methods: {
+    getDepartmentName (id) {
+      for (const department of this.departments) {
+        if (department.id === id) {
+          return department.name
         }
       }
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>

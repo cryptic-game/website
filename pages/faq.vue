@@ -1,6 +1,6 @@
 <template>
   <div class="faq-page">
-    <KNavigationBar title="FAQ"/>
+    <KNavigationBar title="FAQ" />
     <div class="content formatted">
       <h1>FAQ</h1>
       <div class="faq-section">
@@ -124,17 +124,17 @@
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+import KNavigationBar from '@/components/KNavigationBar'
 
-  export default {
-    name: "StatusPage",
-    components: { KNavigationBar },
-    head() {
-      return {
-        titleTemplate: "FAQ - %s"
-      };
+export default {
+  name: 'StatusPage',
+  components: { KNavigationBar },
+  head () {
+    return {
+      titleTemplate: 'FAQ - %s'
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>

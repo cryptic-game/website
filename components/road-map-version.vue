@@ -2,21 +2,21 @@
   <div class="roadmap-version">
     <h4><span> {{ version }} </span></h4>
     <div class="roadmap-sprints">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: "RoadMapVersion",
-    props: {
-      version: {
-        type: String,
-        default: "Loading..."
-      }
+export default {
+  name: 'RoadMapVersion',
+  props: {
+    version: {
+      type: String,
+      default: 'Loading...'
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>

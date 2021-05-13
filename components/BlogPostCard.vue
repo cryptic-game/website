@@ -1,6 +1,6 @@
 <template>
   <div class="blog-post-card">
-    <img :alt="`Title Image from: ${post.title}`" :src="post.image" :style="imageStyle" class="blog-post-card__image"/>
+    <img :alt="`Title Image from: ${post.title}`" :src="post.image" :style="imageStyle" class="blog-post-card__image">
     <div class="blog-post-card__info">
       <span class="blog-post-card__date">{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
       <span class="blog-post-card__title">
@@ -23,26 +23,26 @@
 </template>
 
 <script>
-  export default {
-    name: "BlogPostCard",
-    props: {
-      post: {
-        type: Object,
-        required: true
-      },
-      imageHeight: {
-        type: String,
-        default: undefined
-      }
+export default {
+  name: 'BlogPostCard',
+  props: {
+    post: {
+      type: Object,
+      required: true
     },
-    computed: {
-      imageStyle() {
-        return {
-          height: this.imageHeight
-        };
+    imageHeight: {
+      type: String,
+      default: undefined
+    }
+  },
+  computed: {
+    imageStyle () {
+      return {
+        height: this.imageHeight
       }
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>

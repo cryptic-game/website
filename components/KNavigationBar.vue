@@ -1,14 +1,14 @@
 <template>
   <div :class="classes" class="k-navigation-bar">
-    <div class="k-navigation-bar__placeholder"></div>
+    <div class="k-navigation-bar__placeholder" />
     <nav class="k-navigation-bar__container-0">
       <div class="k-navigation-bar__toggle" @click="open = !open">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span />
+        <span />
+        <span />
       </div>
       <div class="k-navigation-bar__container-1 content">
-        <CrypticHeadLogo class="k-navigation-bar__logo"/>
+        <CrypticHeadLogo class="k-navigation-bar__logo" />
         <span class="k-navigation-bar__title">{{ title }}</span>
         <div class="k-navigation-bar__container-2">
           <div class="k-navigation-bar__links">
@@ -41,63 +41,63 @@
 </template>
 
 <script>
-  import { isNuxt } from "kiste/js/isNuxt";
-  import { toModifierClasses } from "kiste/js/toModifierClasses";
-  import CrypticHeadLogo from "@/assets/cryptic_head.svg";
+import { isNuxt } from 'kiste/js/isNuxt'
+import { toModifierClasses } from 'kiste/js/toModifierClasses'
+import CrypticHeadLogo from '@/assets/cryptic_head.svg'
 
-  export default {
-    name: "KNavigationBar",
-    components: { CrypticHeadLogo },
-    props: {
-      backgroundAfterScroll: {
-        type: Boolean,
-        default: false
-      },
-      title: {
-        type: String,
-        default: ""
-      }
+export default {
+  name: 'KNavigationBar',
+  components: { CrypticHeadLogo },
+  props: {
+    backgroundAfterScroll: {
+      type: Boolean,
+      default: false
     },
-    data: () => ({
-      open: false,
-      scrollPosition: 0
-    }),
-    computed: {
-      scrolled: vm => vm.scrollPosition > 60,
-      showBackground: vm => vm.backgroundAfterScroll ? vm.scrollPosition > 0 : true,
-      classes() {
-        const { open, scrolled, showBackground } = this;
-
-        return toModifierClasses({
-          open,
-          scrolled,
-          showBackground
-        });
-      },
-      items: vm => vm.$kiste.navigationItems,
-      isNuxt
-    },
-    mounted() {
-      const scrollListener = () => {
-        this.scrollPosition = window.scrollY;
-      };
-
-      window.addEventListener("scroll", scrollListener, { passive: true });
-
-      this.$kiste.navigationBar = this;
-
-      this.$on("hook:beforeDestroy", () => {
-        window.removeEventListener("scroll", scrollListener);
-      });
-
-      scrollListener();
-    },
-    destroyed() {
-      if (this.$kiste.navigationBar === this) {
-        this.$kiste.navigationBar = null;
-      }
+    title: {
+      type: String,
+      default: ''
     }
-  };
+  },
+  data: () => ({
+    open: false,
+    scrollPosition: 0
+  }),
+  computed: {
+    scrolled: vm => vm.scrollPosition > 60,
+    showBackground: vm => vm.backgroundAfterScroll ? vm.scrollPosition > 0 : true,
+    classes () {
+      const { open, scrolled, showBackground } = this
+
+      return toModifierClasses({
+        open,
+        scrolled,
+        showBackground
+      })
+    },
+    items: vm => vm.$kiste.navigationItems,
+    isNuxt
+  },
+  mounted () {
+    const scrollListener = () => {
+      this.scrollPosition = window.scrollY
+    }
+
+    window.addEventListener('scroll', scrollListener, { passive: true })
+
+    this.$kiste.navigationBar = this
+
+    this.$on('hook:beforeDestroy', () => {
+      window.removeEventListener('scroll', scrollListener)
+    })
+
+    scrollListener()
+  },
+  destroyed () {
+    if (this.$kiste.navigationBar === this) {
+      this.$kiste.navigationBar = null
+    }
+  }
+}
 </script>
 
 <style lang="scss">

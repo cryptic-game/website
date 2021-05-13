@@ -1,6 +1,6 @@
 <template>
   <main class="team-page">
-    <KNavigationBar title="Contribute"></KNavigationBar>
+    <KNavigationBar title="Contribute" />
     <div class="content formatted">
       <h1>Contribute</h1>
       <p class="heading--5">
@@ -55,17 +55,17 @@
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+import KNavigationBar from '@/components/KNavigationBar'
 
-  export default {
-    name: "ContributePage",
-    components: { KNavigationBar },
-    head() {
-      return {
-        titleTemplate: "Contribute - %s"
-      };
+export default {
+  name: 'ContributePage',
+  components: { KNavigationBar },
+  head () {
+    return {
+      titleTemplate: 'Contribute - %s'
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -9,32 +9,32 @@
       </h5>
     </div>
     <div class="roadmap-version-group">
-      <div class="roadmap-version-line"></div>
+      <div class="roadmap-version-line" />
       <div class="roadmap-version-content">
-        <slot></slot>
+        <slot />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: "RoadMapDate",
-    props: {
-      year: {
-        type: String,
-        default: "Loading..."
-      },
-      month: {
-        type: String,
-        default: "Loading..."
-      },
-      state: {
-        type: String,
-        default: "Loading..."
-      }
+export default {
+  name: 'RoadMapDate',
+  props: {
+    year: {
+      type: String,
+      default: 'Loading...'
+    },
+    month: {
+      type: String,
+      default: 'Loading...'
+    },
+    state: {
+      type: String,
+      default: 'Loading...'
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>

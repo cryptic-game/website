@@ -1,6 +1,6 @@
 <template>
   <div class="status-page">
-    <KNavigationBar title="Status"/>
+    <KNavigationBar title="Status" />
     <div class="content formatted">
       <h1>Status</h1>
       <span class="heading--5">This page will be available as soon as Pre Alpha 3 is released.</span>
@@ -9,17 +9,17 @@
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
+import KNavigationBar from '@/components/KNavigationBar'
 
-  export default {
-    name: "StatusPage",
-    components: { KNavigationBar },
-    head() {
-      return {
-        titleTemplate: "Status - %s"
-      };
+export default {
+  name: 'StatusPage',
+  components: { KNavigationBar },
+  head () {
+    return {
+      titleTemplate: 'Status - %s'
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>

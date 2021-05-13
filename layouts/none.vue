@@ -1,15 +1,15 @@
 <template>
   <KApp>
-    <nuxt/>
+    <nuxt />
   </KApp>
 </template>
 
 <script>
-  import KApp from "kiste/components/KApp";
+import KApp from 'kiste/components/KApp'
 
-  export default {
-    components: { KApp }
-  };
+export default {
+  components: { KApp }
+}
 </script>
 
 <style lang="scss" scoped>

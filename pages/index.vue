@@ -1,21 +1,21 @@
 <template>
   <main class="index-page">
-    <KNavigationBar background-after-scroll/>
+    <KNavigationBar background-after-scroll />
     <video
       autoplay
       class="background-video"
       loop
       muted
     >
-      <source src="@/assets/video/background.mp4" type="video/mp4"/>
+      <source src="@/assets/video/background.mp4" type="video/mp4">
     </video>
     <section class="hero-section content">
       <span class="hero-section__slogan">
-        <Typewriter :texts="subtitles"/>
+        <Typewriter :texts="subtitles" />
       </span>
       <span class="hero-section__left">
         <h1 class="hero-section__title">
-          An Open Source Game <br/>
+          An Open Source Game <br>
           by <strong>The Morpheus Tutorials</strong>
         </h1>
         <span class="hero-section__c2a">Join us today!</span>
@@ -29,7 +29,7 @@
           target="_blank"
         >
           <template #icon>
-            <DiscordIcon class="icon"/>
+            <DiscordIcon class="icon" />
           </template>
           Join our Discord
         </CButton>
@@ -45,7 +45,7 @@
         </span>
         <CButton blue outline text-color="white" to="/blog">
           <template #icon>
-            <NoteIcon class="icon"/>
+            <NoteIcon class="icon" />
           </template>
           Read the Blog Post
         </CButton>
@@ -58,7 +58,7 @@
           text-color="white"
         >
           <template #icon>
-            <GamepadIcon class="icon"/>
+            <GamepadIcon class="icon" />
           </template>
           Play Now
         </CButton>
@@ -69,14 +69,14 @@
         Blog
       </h2>
       <div class="blog-section__content">
-        <div></div>
+        <div />
         <div class="blog-section__posts flex-with-gutter">
-          <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post"/>
-          <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1"></div>
+          <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post" />
+          <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1" />
         </div>
         <div class="blog-section__more-button-container">
           <nuxt-link class="blog-section__more-button link center-content" to="/blog">
-            <ArrowRightIcon class="icon"/>
+            <ArrowRightIcon class="icon" />
           </nuxt-link>
         </div>
       </div>
@@ -126,7 +126,7 @@
         </h2>
         <div class="groups-section__groups">
           <div class="groups-section__group">
-            <WindowIcon class="icon"/>
+            <WindowIcon class="icon" />
             <h3 class="groups-section__group-title">
               Frontend
             </h3>
@@ -138,7 +138,7 @@
             </p>
           </div>
           <div class="groups-section__group">
-            <CodeIcon class="icon"/>
+            <CodeIcon class="icon" />
             <h3 class="groups-section__group-title">
               Backend
             </h3>
@@ -149,7 +149,7 @@
             </p>
           </div>
           <div class="groups-section__group">
-            <GamepadIcon class="icon"/>
+            <GamepadIcon class="icon" />
             <h3 class="groups-section__group-title">
               Gamedesign
             </h3>
@@ -162,7 +162,7 @@
             </p>
           </div>
           <div class="groups-section__group">
-            <PaintbrushIcon class="icon"/>
+            <PaintbrushIcon class="icon" />
             <h3 class="groups-section__group-title">
               Design
             </h3>
@@ -174,7 +174,7 @@
             </p>
           </div>
           <div class="groups-section__group">
-            <GlobeIcon class="icon"/>
+            <GlobeIcon class="icon" />
             <h3 class="groups-section__group-title">
               Website
             </h3>
@@ -185,7 +185,7 @@
             </p>
           </div>
           <div class="groups-section__group">
-            <ShieldIcon class="icon"/>
+            <ShieldIcon class="icon" />
             <h3 class="groups-section__group-title">
               Security
             </h3>
@@ -196,7 +196,7 @@
             </p>
           </div>
           <div class="groups-section__group">
-            <LanguageIcon class="icon"/>
+            <LanguageIcon class="icon" />
             <h3 class="groups-section__group-title">
               Translation
             </h3>
@@ -206,7 +206,7 @@
             </p>
           </div>
           <div class="groups-section__group">
-            <ABCIcon class="icon"/>
+            <ABCIcon class="icon" />
             <h3 class="groups-section__group-title">
               Correction
             </h3>
@@ -259,95 +259,95 @@
       </div>
     </section>
     <section class="footer-section">
-      <KFooter/>
+      <KFooter />
     </section>
   </main>
 </template>
 
 <script>
-  import KNavigationBar from "@/components/KNavigationBar";
-  import KFooter from "kiste/components/KFooter";
-  import { blogAPI } from "@/assets/js/blog";
-  import { mapObjectKeys } from "@/assets/js/mapObjectKeys";
-  import BlogPostCard from "@/components/BlogPostCard";
-  import CButton from "@/components/CButton";
-  import DiscordIcon from "@/assets/icons/discord.svg";
-  import GamepadIcon from "@/assets/icons/gamepad.svg";
-  import NoteIcon from "@/assets/icons/note.svg";
-  import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
-  import WindowIcon from "@/assets/icons/window.svg";
-  import ABCIcon from "@/assets/icons/abc.svg";
-  import CodeIcon from "@/assets/icons/code.svg";
-  import GlobeIcon from "@/assets/icons/globe.svg";
-  import LanguageIcon from "@/assets/icons/language.svg";
-  import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
-  import ShieldIcon from "@/assets/icons/shield.svg";
-  import Typewriter from "@/components/Typewriter";
+import KNavigationBar from '@/components/KNavigationBar'
+import KFooter from 'kiste/components/KFooter'
+import { blogAPI } from '@/assets/js/blog'
+import { mapObjectKeys } from '@/assets/js/mapObjectKeys'
+import BlogPostCard from '@/components/BlogPostCard'
+import CButton from '@/components/CButton'
+import DiscordIcon from '@/assets/icons/discord.svg'
+import GamepadIcon from '@/assets/icons/gamepad.svg'
+import NoteIcon from '@/assets/icons/note.svg'
+import ArrowRightIcon from '@/assets/icons/arrow_right.svg'
+import WindowIcon from '@/assets/icons/window.svg'
+import ABCIcon from '@/assets/icons/abc.svg'
+import CodeIcon from '@/assets/icons/code.svg'
+import GlobeIcon from '@/assets/icons/globe.svg'
+import LanguageIcon from '@/assets/icons/language.svg'
+import PaintbrushIcon from '@/assets/icons/paintbrush.svg'
+import ShieldIcon from '@/assets/icons/shield.svg'
+import Typewriter from '@/components/Typewriter'
 
-  export default {
-    name: "IndexPage",
-    components: {
-      KNavigationBar,
-      KFooter,
-      BlogPostCard,
-      GamepadIcon,
-      NoteIcon,
-      DiscordIcon,
-      CButton,
-      ArrowRightIcon,
-      WindowIcon,
-      ABCIcon,
-      CodeIcon,
-      GlobeIcon,
-      LanguageIcon,
-      PaintbrushIcon,
-      ShieldIcon,
-      Typewriter
-    },
-    layout: "none",
-    async asyncData() {
-      return {
-        blogPosts: Array.from(await blogAPI.posts.browse({
-          limit: 2,
-          include: "slug,title,feature_image,reading_time,published_at"
-        })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
-      };
-    },
-    data: () => ({
-      blogPosts: [],
-      subtitles: ["Don’t play the game, create the game",
-                  "the cyberwar game",
-                  "the Hacker Browsergame",
-                  "get hacked!",
-                  "don't get hacked!",
-                  "the Hacker playground",
-                  "The cryptic way of hacking",
-                  "The art of hacking",
-                  "The Cyberspace",
-                  "Game of Cyberwar",
-                  "Be the most feared hacker",
-                  "The League of extraordinary Hackers",
-                  "Hackelicious",
-                  "be a 1 or 0",
-                  "Blackhack",
-                  "world of warhack",
-                  "Hackback",
-                  "Hashback"]
-    }),
-    created() {
-      this.shuffleSubtitles();
-    },
-    methods: {
-      shuffleSubtitles() {
-        // Fisher-Yates shuffle algorithm
-        for (let i = this.subtitles.length - 1; i > 0; i -= 1) {
-          const j = Math.floor(Math.random() * (i + 1));
-          // swap elements on positions i and j
-          [this.subtitles[i], this.subtitles[j]] = [this.subtitles[j], this.subtitles[i]];
-        }
+export default {
+  name: 'IndexPage',
+  components: {
+    KNavigationBar,
+    KFooter,
+    BlogPostCard,
+    GamepadIcon,
+    NoteIcon,
+    DiscordIcon,
+    CButton,
+    ArrowRightIcon,
+    WindowIcon,
+    ABCIcon,
+    CodeIcon,
+    GlobeIcon,
+    LanguageIcon,
+    PaintbrushIcon,
+    ShieldIcon,
+    Typewriter
+  },
+  layout: 'none',
+  async asyncData () {
+    return {
+      blogPosts: Array.from(await blogAPI.posts.browse({
+        limit: 2,
+        include: 'slug,title,feature_image,reading_time,published_at'
+      })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
+    }
+  },
+  data: () => ({
+    blogPosts: [],
+    subtitles: ['Don’t play the game, create the game',
+      'the cyberwar game',
+      'the Hacker Browsergame',
+      'get hacked!',
+      "don't get hacked!",
+      'the Hacker playground',
+      'The cryptic way of hacking',
+      'The art of hacking',
+      'The Cyberspace',
+      'Game of Cyberwar',
+      'Be the most feared hacker',
+      'The League of extraordinary Hackers',
+      'Hackelicious',
+      'be a 1 or 0',
+      'Blackhack',
+      'world of warhack',
+      'Hackback',
+      'Hashback']
+  }),
+  created () {
+    this.shuffleSubtitles()
+  },
+  methods: {
+    shuffleSubtitles () {
+      // Fisher-Yates shuffle algorithm
+      for (let i = this.subtitles.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        // swap elements on positions i and j
+        [this.subtitles[i], this.subtitles[j]] = [this.subtitles[j], this.subtitles[i]]
       }
     }
-  };
+  }
+}
 </script>
 
 <style lang="scss" scoped>
