@@ -8,7 +8,14 @@
         <span />
       </div>
       <div class="k-navigation-bar__container-1 content">
-        <CrypticHeadLogo class="k-navigation-bar__logo" />
+        <component
+          :is="isNuxt ? 'nuxt-link' : 'router-link'"
+          :key="'cryptic-logo'"
+          :to="'/'"
+          @click.native.passive="open = false"
+        >
+          <CrypticHeadLogo class="k-navigation-bar__logo" />
+        </component>
         <span class="k-navigation-bar__title">{{ title }}</span>
         <div class="k-navigation-bar__container-2">
           <div class="k-navigation-bar__links">
