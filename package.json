@@ -24,7 +24,7 @@
     "@nuxtjs/eslint-module": "3.0.2",
     "eslint": "7.28.0",
     "eslint-plugin-nuxt": "2.0.0",
-    "eslint-plugin-vue": "7.9.0",
+    "eslint-plugin-vue": "7.11.0",
     "kiste": "1.2.9",
     "sass": "1.32.13",
     "sass-loader": "^8.0.2",
