@@ -36,7 +36,7 @@ export default {
         },
         {
           label: 'privacy',
-          href: 'https://the-morpheus.de/faq-en.html'
+          href: 'https://the-morpheus.de/faq.html'
         },
         {
           label: 'serverStatus',
