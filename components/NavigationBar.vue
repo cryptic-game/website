@@ -1,5 +1,12 @@
 <template>
-  <div class="navigation-bar" :class="{ 'x-scrolled': scrolled, 'x-show-background': showBackground, 'x-open': open }">
+  <div
+    class="navigation-bar"
+    :class="{
+      'x-scrolled': scrolled,
+      'x-show-background': showBackground,
+      'x-open': open,
+    }"
+  >
     <div class="navigation-bar__placeholder" />
     <nav class="navigation-bar__container-0">
       <div class="navigation-bar__toggle" @click="open = !open">
@@ -19,7 +26,9 @@
           </component>
           <LanguageSwitcher class="navigation-bar__language" />
         </div>
-        <span class="navigation-bar__title">{{ title }}</span>
+        <span class="navigation-bar__title">{{
+          $t("navbar." + title.toLowerCase())
+        }}</span>
         <div class="navigation-bar__container-2">
           <div class="navigation-bar__links">
             <template v-for="item in items">
@@ -75,7 +84,8 @@ export default {
   }),
   computed: {
     scrolled: vm => vm.scrollPosition > 60,
-    showBackground: vm => vm.backgroundAfterScroll ? vm.scrollPosition > 0 : true,
+    showBackground: vm =>
+      vm.backgroundAfterScroll ? vm.scrollPosition > 0 : true,
     items () {
       return [
         {
@@ -211,7 +221,7 @@ export default {
 }
 
 .navigation-bar__title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -226,7 +236,7 @@ export default {
   transform: translateY(10px);
 
   @include notMobile {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -250,7 +260,7 @@ export default {
 .navigation-bar__links {
   display: flex;
   justify-content: flex-end;
-  column-gap: 30px;
+  column-gap: 20px;
 
   & > a {
     display: inline-block;

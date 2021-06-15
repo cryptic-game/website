@@ -51,13 +51,9 @@ export default {
   display: flex;
   flex-direction: column;
 
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
   border: var(--colors-background-c) solid 0.0625rem;
   border-radius: 0.25rem;
-
-  //border-width: 1px;
-  //border-style: solid;
-  //border-radius: 5px;
 }
 
 .languageItem {

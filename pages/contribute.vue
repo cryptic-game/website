@@ -28,7 +28,7 @@
           <a href="https://discord.gg/tN5Wcab">Discord Server</a>.
         </strong>
         <br>
-        {{ $t("contribute.content.first-setps") }}
+        {{ $t("contribute.content.first-steps") }}
       </p>
     </div>
   </main>
