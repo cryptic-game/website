@@ -2,7 +2,7 @@
   <main class="team-page">
     <NavigationBar title="Team" />
     <div class="content formatted">
-      <h1>Team</h1>
+      <h1>{{ $t("navbar.team") }}</h1>
 
       <div class="grid">
         <TeamMember
@@ -39,7 +39,8 @@ export default {
     ).then(result => result.json())
     this.members = await fetch(
       'https://api.admin.staging.cryptic-game.net/website/team'
-    ).then(result => result.text())
+    )
+      .then(result => result.text())
       .then(result => JSON.parse(result))
       .then(result => result.sort(() => Math.random() - 0.5))
   },

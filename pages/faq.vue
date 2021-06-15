@@ -2,7 +2,7 @@
   <div class="faq-page">
     <NavigationBar title="FAQ" />
     <div class="content formatted">
-      <h1>FAQ</h1>
+      <h1>{{ $t("navbar.faq") }}</h1>
       <div class="faq-section">
         <h3 class="faq-section__question">
           {{ $t("faq.communityProject.communityProject") }}
@@ -31,7 +31,9 @@
           {{ $t("faq.heads.heads") }}
         </h3>
         {{ $t("faq.heads.description") }}
-        <span><NuxtLink :to="'/team'" class="link">{{ $t("faq.heads.teamPage") }}</NuxtLink>.</span>
+        <span><NuxtLink :to="'/team'" class="link">{{
+          $t("faq.heads.teamPage")
+        }}</NuxtLink>.</span>
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
@@ -44,7 +46,8 @@
           {{ $t("faq.progress.progress") }}
         </h3>
         {{ $t("faq.progress.description") }}
-        <a class="link" href="https://play.cryptic-game.net/" target="_blank"> play.cryptic-game.net</a>.
+        <a class="link" href="https://play.cryptic-game.net/" target="_blank">
+          play.cryptic-game.net</a>.
       </div>
       <div class="faq-section">
         <h3 class="faq-section__question">
@@ -98,7 +101,11 @@
           {{ $t("faq.funding.funding") }}
         </h3>
         {{ $t("faq.funding.description") }}
-        <a class="link" href="https://www.patreon.com/user?u=5322110" target="_blank">
+        <a
+          class="link"
+          href="https://www.patreon.com/user?u=5322110"
+          target="_blank"
+        >
           {{ $t("faq.funding.patreon") }}
         </a>
       </div>

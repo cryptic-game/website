@@ -111,5 +111,22 @@
       "description": "Niemand wird für seine Arbeit am Projekt bezahlt, aber wir müssen unsere Server bezahlen, deswegen sind wir Abhängig von Spenden und Sponsoren. Wenn du also spenden willst,",
       "patreon": "unterstütze The Morpheus auf Patreon"
     }
+  },
+  "contribute": {
+    "heading": "Wir entwickeln ein Online-Mehrspieler Spiel für den Browser!<br />Du möchtest uns dabei helfen? - Dann bist du hier genau richtig!",
+    "content": {
+      "general": "Dieses Gemeinschaftsprojekt basiert auf der Zusammenarbeit vieler freiwilliger Helfer. Unser Team besteht dafür aus Administratoren, Designern, Softwareentwicklern und Gamedesign. Um Cryptic zu einem erfolgreichen Spiel zu entwickeln, benötigt es eine ganze Menge an Zeit, Kenntnissen, Motivation, Enthusiasmus und Durchhaltevermögen von jedem einzelnen Helfer. So bietet das Gemeinschaftsprojekt viele Möglichkeiten, dass auch du mithelfen kannst - ganz egal ob du programmieren kannst oder nicht.",
+      "technologies": {
+        "head": "Die Backend-Serverkomponenten werden in den Sprachen Java und Python entwickelt. Die gesamte Spieloberfläche wiederum wird mit Angular und dementsprechend mit HTML, SCSS und TypeScript entwickelt. Die Cryptic Webseite basiert auf Vue.js in Kombination mit Nuxt.js.",
+        "discord": "Falls du irgendwelche Fragen hast oder aber sofort durchstarten willst, dann komme doch einfach auf unseren",
+        "footer": "Wenn du helfen willst und sogar mehr als eine Programmiersprache beherrscht, freuen wir uns sehr über deine Unterstützung. Aber auch für Nicht-Programmierer gibt es einige Bereiche, in denen du helfen kannst, wie Gamedesign, Grafikdesign, Sicherheitsabteilung, Spieletester und die Text&Korrektur."
+      },
+      "testing": "Da ein Spiel mit vielen Fehlern und Bugs einfach kein gutes Spiel sein kann, ist das Testen des Spiels ein integraler Bestandteil auf dem Weg zur Veröffentlichung. Informationen darüber wie performant und stabil Cryptic unter den verschiedensten Bedingungen bei verschiedenen Nutzern läuft, sind für uns Entwickler sehr hilfreich. Deshalb freuen wir uns, wenn du unser Spiel ausgiebig testen möchtest.",
+      "translation": "Darüber hinaus muss das Spiel in viele unterschiedliche Sprachen übersetzt werden, um Cryptic vielen Interessenten aus unterschiedlichen Ländern besser zugänglich zu machen. Dasselbe gilt natürlich auch für unsere Webseite.",
+      "gamedesign": "Um dem Team für das Gamedesign zu helfen, solltest du am Besten viel Kreativität und Ideen mitbringen. Die Gamedesigner entwickeln die Ideen für alle Inhalte, die irgendwann im Spiel landen sollen, und halten diese in entsprechenden Dokumenten fest. Diese Dokumente gehen dann an das Programmierteam, die sie in das Spiel implementieren. Das heißt, dass bereits bestehende Ideen ausgearbeitet und entsprechend textlich dokumentiert werden für die spätere Entwicklung. Bevor diese Dokumente allerdings verfasst werden, wird jede Idee mit dem Team diskutiert, sodass jeder seine Vorschläge und Ideen dazu einbringen kann. Und natürlich dürfen auch Spieler jederzeit neue Ideen für Cryptic einbringen.",
+      "text": "Unser Team für Texte kümmert sich außerdem um den Blog. Um mit dem aktuellen Stand aus allen anderen Abteilungen und den neusten Entwicklungen Schritt zu halten, muss das Team ständig Anpassungen vornehmen - neue Tutorials schreiben, Neuerungen ankündigen und noch viel mehr!",
+      "discord": "Du möchtest jetzt mitmachen? Dann schaue doch mal auf unseren",
+      "first-steps": "Dort vernetzen sich alle unsere Teams, organisieren sich eigenständig und besprechen die nächsten Schritte für Cryptic. Wenn du dem Server beitrittst, lies dir einfach alles durch. In den Textkanälen findest du dann die weiteren Schritte für deine Bewerbung. Wenn du im Kanal \"bot-use-only\" angekommen bist und \"!ls\" eingegeben hast, bist du auf dem richtigen Weg! 😉"
+    }
   }
 }

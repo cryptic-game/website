@@ -9,11 +9,8 @@
         <Typewriter :texts="subtitles" />
       </span>
       <div class="hero-section__left">
-        <h1 class="hero-section__title">
-          An Open Source Game <br>
-          by <strong>The Morpheus Tutorials</strong>
-        </h1>
-        <span class="hero-section__c2a">Join us today!</span>
+        <h1 class="hero-section__title" v-html="$t('home.openSource')" />
+        <span class="hero-section__c2a">{{ $t("home.joinUs") }}</span>
         <CButton
           :size="2"
           class="hero-section__join-button"
@@ -26,7 +23,7 @@
           <template #icon>
             <DiscordIcon class="icon" />
           </template>
-          Join our Discord
+          {{ $t("home.joinDiscord") }}
         </CButton>
       </div>
     </section>
@@ -35,9 +32,7 @@
         <span>
           {{ $t("home.playEarlyVersion") }}
         </span>
-        <span class="second-section__version">
-          Cryptic Pre Alpha 2
-        </span>
+        <span class="second-section__version"> Cryptic Pre Alpha 2 </span>
         <CButton blue outline text-color="white" :to="localePath('/blog')">
           <template #icon>
             <NoteIcon class="icon" />
@@ -66,11 +61,21 @@
       <div class="blog-section__content">
         <div />
         <div class="blog-section__posts flex-with-gutter">
-          <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post" />
-          <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1" />
+          <BlogPostCard
+            v-for="post in blogPosts"
+            :key="post.slug"
+            :post="post"
+          />
+          <div
+            v-if="blogPosts.length === 1"
+            style="width: 100%; height: 100%; flex-grow: 1"
+          />
         </div>
         <div class="blog-section__more-button-container">
-          <nuxt-link class="blog-section__more-button link center-content" :to="localePath('/blog')">
+          <nuxt-link
+            class="blog-section__more-button link center-content"
+            :to="localePath('/blog')"
+          >
             <ArrowRightIcon class="icon" />
           </nuxt-link>
         </div>
@@ -219,7 +224,9 @@
         </div>
         <div class="more-at-faq">
           <span>{{ $t("faq.more.more") }}
-            <nuxt-link :to="localePath('/faq')" class="link">{{ $t("faq.more.faqPage") }}</nuxt-link>.
+            <nuxt-link :to="localePath('/faq')" class="link">{{
+              $t("faq.more.faqPage")
+            }}</nuxt-link>.
           </span>
         </div>
       </div>
@@ -273,15 +280,18 @@ export default {
   layout: 'none',
   async asyncData () {
     return {
-      blogPosts: Array.from(await blogAPI.posts.browse({
-        limit: 2,
-        include: 'slug,title,feature_image,reading_time,published_at'
-      })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
+      blogPosts: Array.from(
+        await blogAPI.posts.browse({
+          limit: 2,
+          include: 'slug,title,feature_image,reading_time,published_at'
+        })
+      ).map(post => mapObjectKeys(blogAPI.mappings.post, post))
     }
   },
   data: () => ({
     blogPosts: [],
-    subtitles: ['Don’t play the game, create the game',
+    subtitles: [
+      'Don’t play the game, create the game',
       'the cyberwar game',
       'the Hacker Browsergame',
       'get hacked!',
@@ -298,7 +308,8 @@ export default {
       'Blackhack',
       'world of warhack',
       'Hackback',
-      'Hashback']
+      'Hashback'
+    ]
   }),
   created () {
     this.shuffleSubtitles()
@@ -309,7 +320,10 @@ export default {
       for (let i = this.subtitles.length - 1; i > 0; i -= 1) {
         const j = Math.floor(Math.random() * (i + 1));
         // swap elements on positions i and j
-        [this.subtitles[i], this.subtitles[j]] = [this.subtitles[j], this.subtitles[i]]
+        [this.subtitles[i], this.subtitles[j]] = [
+          this.subtitles[j],
+          this.subtitles[i]
+        ]
       }
     }
   }
