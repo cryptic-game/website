@@ -1,12 +1,16 @@
 <template>
   <main class="team-page">
-    <KNavigationBar title="Roadmap" />
+    <NavigationBar title="Roadmap" />
     <div class="content formatted">
       <h1 class="title">
-        Roadmap
+        {{ $t("navbar.roadmap") }}
       </h1>
 
-      <road-map-date state="next" year="2021/2022" month="Planed For The Future">
+      <road-map-date
+        state="next"
+        year="2021/2022"
+        month="Planed For The Future"
+      >
         <road-map-version version="Pre Alpha 3.5">
           <road-map-sprint
             action="Implement base for Music/Sounds"
@@ -289,14 +293,14 @@
 </template>
 
 <script>
-import KNavigationBar from '@/components/KNavigationBar'
+import NavigationBar from '@/components/NavigationBar'
 import RoadMapDate from '../components/road-map-date'
 import RoadMapVersion from '../components/road-map-version'
 import RoadMapSprint from '../components/road-map-sprint'
 
 export default {
   name: 'RoadMapPage',
-  components: { RoadMapSprint, RoadMapVersion, RoadMapDate, KNavigationBar },
+  components: { RoadMapSprint, RoadMapVersion, RoadMapDate, NavigationBar },
   head () {
     return {
       titleTemplate: 'Roadmap - %s'
@@ -316,7 +320,11 @@ p {
 
 div.project-launch {
   background: rgb(52, 152, 219);
-  background: linear-gradient(90deg, rgba(52, 152, 219, 1) 0%, rgba(52, 103, 219, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 152, 219, 1) 0%,
+    rgba(52, 103, 219, 1) 100%
+  );
 
   display: flex;
   flex-direction: column;

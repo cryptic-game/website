@@ -1,18 +1,26 @@
 <template>
   <div class="default-layout fill-screen">
-    <KApp>
+    <App>
       <nuxt />
-      <KFooter />
-    </KApp>
+      <Footer />
+    </App>
   </div>
 </template>
 
 <script>
-import KApp from 'kiste/components/KApp'
-import KFooter from 'kiste/components/KFooter'
+import App from '@/components/App'
+import Footer from '@/components/Footer'
 
 export default {
-  components: { KApp, KFooter }
+  components: { App, Footer },
+  head () {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    return {
+      htmlAttrs: { ...i18nHead.htmlAttrs },
+      meta: [...i18nHead.meta],
+      link: [...i18nHead.link]
+    }
+  }
 }
 </script>
 

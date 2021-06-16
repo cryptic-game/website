@@ -1,14 +1,22 @@
 <template>
-  <KApp>
+  <App>
     <nuxt />
-  </KApp>
+  </App>
 </template>
 
 <script>
-import KApp from 'kiste/components/KApp'
+import App from '@/components/App'
 
 export default {
-  components: { KApp }
+  components: { App },
+  head () {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    return {
+      htmlAttrs: { ...i18nHead.htmlAttrs },
+      meta: [...i18nHead.meta],
+      link: [...i18nHead.link]
+    }
+  }
 }
 </script>
 

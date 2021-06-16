@@ -1,0 +1,19 @@
+@use "../mixins/screenSize";
+
+.flex-with-gutter {
+  display: flex;
+  flex-direction: row;
+
+  & > *:not(:last-child) {
+    margin-right: var(--gutter-size);
+  }
+
+  @include screenSize.mobile {
+    flex-direction: column;
+
+    & > *:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: calc(var(--gutter-size) / 2);
+    }
+  }
+}

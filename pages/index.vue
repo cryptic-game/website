@@ -1,24 +1,16 @@
 <template>
   <main class="index-page">
-    <KNavigationBar background-after-scroll />
-    <video
-      autoplay
-      class="background-video"
-      loop
-      muted
-    >
+    <NavigationBar background-after-scroll />
+    <video autoplay class="background-video" loop muted>
       <source src="@/assets/video/background.mp4" type="video/mp4">
     </video>
     <section class="hero-section content">
       <span class="hero-section__slogan">
         <Typewriter :texts="subtitles" />
       </span>
-      <span class="hero-section__left">
-        <h1 class="hero-section__title">
-          An Open Source Game <br>
-          by <strong>The Morpheus Tutorials</strong>
-        </h1>
-        <span class="hero-section__c2a">Join us today!</span>
+      <div class="hero-section__left">
+        <h1 class="hero-section__title" v-html="$t('home.openSource')" />
+        <span class="hero-section__c2a">{{ $t("home.joinUs") }}</span>
         <CButton
           :size="2"
           class="hero-section__join-button"
@@ -31,23 +23,21 @@
           <template #icon>
             <DiscordIcon class="icon" />
           </template>
-          Join our Discord
+          {{ $t("home.joinDiscord") }}
         </CButton>
-      </span>
+      </div>
     </section>
     <section class="section second-section">
       <div class="second-section__content content flex-with-gutter">
         <span>
-          You can already play an early version:
+          {{ $t("home.playEarlyVersion") }}
         </span>
-        <span class="second-section__version">
-          Cryptic Pre Alpha 2
-        </span>
-        <CButton blue outline text-color="white" to="/blog">
+        <span class="second-section__version"> Cryptic Pre Alpha 2 </span>
+        <CButton blue outline text-color="white" :to="localePath('/blog')">
           <template #icon>
             <NoteIcon class="icon" />
           </template>
-          Read the Blog Post
+          {{ $t("home.readTheBlogPost") }}
         </CButton>
         <CButton
           green
@@ -60,7 +50,7 @@
           <template #icon>
             <GamepadIcon class="icon" />
           </template>
-          Play Now
+          {{ $t("home.playNow") }}
         </CButton>
       </div>
     </section>
@@ -71,11 +61,21 @@
       <div class="blog-section__content">
         <div />
         <div class="blog-section__posts flex-with-gutter">
-          <BlogPostCard v-for="post in blogPosts" :key="post.slug" :post="post" />
-          <div v-if="blogPosts.length === 1" style="width: 100%; height: 100%; flex-grow: 1" />
+          <BlogPostCard
+            v-for="post in blogPosts"
+            :key="post.slug"
+            :post="post"
+          />
+          <div
+            v-if="blogPosts.length === 1"
+            style="width: 100%; height: 100%; flex-grow: 1"
+          />
         </div>
         <div class="blog-section__more-button-container">
-          <nuxt-link class="blog-section__more-button link center-content" to="/blog">
+          <nuxt-link
+            class="blog-section__more-button link center-content"
+            :to="localePath('/blog')"
+          >
             <ArrowRightIcon class="icon" />
           </nuxt-link>
         </div>
@@ -85,36 +85,30 @@
       <div class="desc-section__content content">
         <div class="desc-section__part">
           <h2 class="desc-section__title">
-            The Project
+            {{ $t("home.project") }}
           </h2>
           <p>
-            The project "Cryptic" was initiated by the german YouTuber
-            <a class="link" href="https://the-morpheus.de/">The Morpheus</a>. It was first announced on October 15,
-            2017 with an
-            <a class="link" href="https://www.youtube.com/watch?v=iOJhuw7eABk">announcement video (german)</a>.
-            The goal of the project is to create a unique experience for the players, but primarily make
-            it possible for people interested in coding and computer science to develop and improve their existing
-            skills and create something great. This includes the determining of the game content, the design, sounds,
-            the programming, the testing and the server maintenance.
+            {{ $t("home.projectDescription.initiated") }}
+            <a class="link" href="https://the-morpheus.de/">The Morpheus</a>.
+            {{ $t("home.projectDescription.announced") }}
+            <a class="link" href="https://www.youtube.com/watch?v=iOJhuw7eABk">
+              {{ $t("home.projectDescription.announcementVideo") }}
+            </a>
+            {{ $t("home.projectDescription.goal") }}
           </p>
           <p>
-            Together, we daily strive to make Cryptic better and want to give you an interesting, adventurous and
-            playful introduction into the world of hacking.
+            {{ $t("home.projectDescription.daily") }}
           </p>
         </div>
         <div class="desc-section__part">
           <h2 class="desc-section__title">
-            What is Cryptic?
+            {{ $t("home.crypticDescription.what") }}
           </h2>
           <p>
-            Cryptic is a MMO Hacking-Simulation with realtime strategy elements. Using specific programs and command,
-            you can infiltrate the systems of other players and the global infrastructure. Level up your hardware and
-            software, produce your own malware in your development center or communicate with other players to plan
-            a joint attack. But this is just the beginning.
+            {{ $t("home.crypticDescription.long") }}
           </p>
           <p>
-            Help the cyber police as a white hat to put a stop to the activities of malicious hackers or become a
-            black hat, cripple whole networks and spy the other players.
+            {{ $t("home.crypticDescription.help") }}
           </p>
         </div>
       </div>
@@ -122,7 +116,7 @@
     <section class="section groups-section">
       <div class="content">
         <h2 class="section__title">
-          Groups
+          {{ $t("home.groups.groups") }}
         </h2>
         <div class="groups-section__groups">
           <div class="groups-section__group">
@@ -131,10 +125,7 @@
               Frontend
             </h3>
             <p class="groups-section__group-text">
-              The frontend team creates the gaming surface, where Cryptic is played. This includes all conceivable game
-              elements e.g. a desktop, or various apps within the game, which provides an interesting feeling. The
-              challenge is to code complex game mechanics without any game engine. You should bring knowlege of website
-              developement, expertise in TypeScript, Angular and Git. In the ideal case, you bring SCSS knowlege too.
+              {{ $t("home.groups.frontendDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
@@ -143,9 +134,7 @@
               Backend
             </h3>
             <p class="groups-section__group-text">
-              The backend team codes the complex game logic and is responsible to maintain it. Another part is the
-              testing of the backend-structures as well as the writing of a performant code, so there are no performance
-              issues. You should bring good knowlege of Java, Python and Git.
+              {{ $t("home.groups.backendDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
@@ -154,11 +143,7 @@
               Gamedesign
             </h3>
             <p class="groups-section__group-text">
-              The game design team deals on a theoretical level with the content, characteristics and factors that must
-              be present for the design of an exciting game. This means that we work out all the content of the game
-              together. This includes e.g. the development of a desktop, the invention of various hacker attacks and a
-              terminal or an experience system and their respective logic. The most important requirement is to be
-              creative and to keep an eye on the connection between many different factors and parameters.
+              {{ $t("home.groups.gamedesignDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
@@ -167,10 +152,7 @@
               Design
             </h3>
             <p class="groups-section__group-text">
-              The design team is split into three different sectors. The sector “graphics“ creates all required icons,
-              design templates und additional footage, which is needed by the game or website. “Videoproduction“ creates
-              all different kinds from videos such as trailers, intros and animations. The sector “sounddesign“ composes
-              whole pieces of music and creates sound effects.
+              {{ $t("home.groups.designDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
@@ -179,9 +161,7 @@
               Website
             </h3>
             <p class="groups-section__group-text">
-              The website team is developing the website and maintains it. This includes the development of various menu
-              pages, a header and footer, as well as other functions and areas that will be implemented during the
-              course. You should have knowledge of web technologies such as HTML, SCSS and Vue.js.
+              {{ $t("home.groups.websiteDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
@@ -190,9 +170,7 @@
               Security
             </h3>
             <p class="groups-section__group-text">
-              The security team deals with code audits, penetration testing and developement of security concepts, for
-              you can play Cryptic in a secure environment. Experiences in web-hacking e.g. XSS and SQLi, and experience
-              in dealing with tools such as nmap, sqlmap and burp are mandatory.
+              {{ $t("home.groups.securityDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
@@ -201,8 +179,7 @@
               Translation
             </h3>
             <p class="groups-section__group-text">
-              In the translation section, all relevant texts are translated into the respective foreign language. You
-              should have good German and foreign language skills. We are currently looking for translators for English.
+              {{ $t("home.groups.translationDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
@@ -211,9 +188,7 @@
               Correction
             </h3>
             <p class="groups-section__group-text">
-              The text team writes and corrects all possible texts that arise for the project and game. You should like
-              to deal with texts as well as have good German and English language skills. We are currently starting to
-              introduce a wiki for Cryptic, so we are still looking for active editors.
+              {{ $t("home.groups.correctionDescription") }}
             </p>
           </div>
         </div>
@@ -226,47 +201,45 @@
         </h2>
         <div>
           <h3 class="faq-section__question">
-            What is the "community project"?
+            {{ $t("faq.communityProject.communityProject") }}
           </h3>
-          The "community project" is a project that has been announced in October 2017 by The Morpheus Tutorials.
-          We build a 2-dimensional browser game from scratch. The team consists of people of different age groups.
-          We meet in Discord to work together. You can find more information in the
+          {{ $t("faq.communityProject.description") }}
           <a
             class="link"
             href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw"
             target="_blank"
-          >specification sheet</a>.
+          >{{ $t("faq.communityProject.sheet") }}</a>.
         </div>
         <div>
           <h3 class="faq-section__question">
-            Do I have to be able to code?
+            {{ $t("faq.requirements.requirements") }}
           </h3>
-          No, you don't have to be able to code in order to help develop the game.
-          You can also join teams like game design, text, and graphic design.
+          {{ $t("faq.requirements.description") }}
         </div>
         <div>
           <h3 class="faq-section__question">
-            Is it possible for a beginner to help with the coding?
+            {{ $t("faq.beginner.beginner") }}
           </h3>
-          As a beginner, this project might be too difficult for you, so we might advise beginners to continue
-          improving their skills. You can decide between the backend in Python or Java and the frontend in
-          Angular and HTML. In your department, you should know the basics of the respective programming language.
-          Everything else you will learn in the course of the project.
+          {{ $t("faq.beginner.description") }}
         </div>
         <div class="more-at-faq">
-          <span>More at the <NuxtLink :to="'/faq'" class="link">FAQ page</NuxtLink>.</span>
+          <span>{{ $t("faq.more.more") }}
+            <nuxt-link :to="localePath('/faq')" class="link">{{
+              $t("faq.more.faqPage")
+            }}</nuxt-link>.
+          </span>
         </div>
       </div>
     </section>
     <section class="footer-section">
-      <KFooter />
+      <Footer />
     </section>
   </main>
 </template>
 
 <script>
-import KNavigationBar from '@/components/KNavigationBar'
-import KFooter from 'kiste/components/KFooter'
+import NavigationBar from '@/components/NavigationBar'
+import Footer from '@/components/Footer'
 import { blogAPI } from '@/assets/js/blog'
 import { mapObjectKeys } from '@/assets/js/mapObjectKeys'
 import BlogPostCard from '@/components/BlogPostCard'
@@ -287,8 +260,8 @@ import Typewriter from '@/components/Typewriter'
 export default {
   name: 'IndexPage',
   components: {
-    KNavigationBar,
-    KFooter,
+    NavigationBar,
+    Footer,
     BlogPostCard,
     GamepadIcon,
     NoteIcon,
@@ -307,15 +280,18 @@ export default {
   layout: 'none',
   async asyncData () {
     return {
-      blogPosts: Array.from(await blogAPI.posts.browse({
-        limit: 2,
-        include: 'slug,title,feature_image,reading_time,published_at'
-      })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
+      blogPosts: Array.from(
+        await blogAPI.posts.browse({
+          limit: 2,
+          include: 'slug,title,feature_image,reading_time,published_at'
+        })
+      ).map(post => mapObjectKeys(blogAPI.mappings.post, post))
     }
   },
   data: () => ({
     blogPosts: [],
-    subtitles: ['Don’t play the game, create the game',
+    subtitles: [
+      'Don’t play the game, create the game',
       'the cyberwar game',
       'the Hacker Browsergame',
       'get hacked!',
@@ -332,7 +308,8 @@ export default {
       'Blackhack',
       'world of warhack',
       'Hackback',
-      'Hashback']
+      'Hashback'
+    ]
   }),
   created () {
     this.shuffleSubtitles()
@@ -343,7 +320,10 @@ export default {
       for (let i = this.subtitles.length - 1; i > 0; i -= 1) {
         const j = Math.floor(Math.random() * (i + 1));
         // swap elements on positions i and j
-        [this.subtitles[i], this.subtitles[j]] = [this.subtitles[j], this.subtitles[i]]
+        [this.subtitles[i], this.subtitles[j]] = [
+          this.subtitles[j],
+          this.subtitles[i]
+        ]
       }
     }
   }
@@ -351,7 +331,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use "~kiste/css/mixins/screenSize";
+@use "../assets/css/mixins/screenSize";
 
 .index-page {
   width: 100%;

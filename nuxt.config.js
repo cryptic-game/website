@@ -1,3 +1,6 @@
+import en from './locales/en.json'
+import de from './locales/de.json'
+
 export default {
   target: 'static',
 
@@ -6,21 +9,52 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { hid: 'og:description', name: 'og:description', content: process.env.npm_package_description || '' },
-      { hid: 'twitter:description', name: 'twitter:description', content: process.env.npm_package_description || '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || ''
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: process.env.npm_package_description || ''
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: process.env.npm_package_description || ''
+      },
       { hid: 'og:title', name: 'og:title', content: 'Cryptic Game' },
       { hid: 'og:url', name: 'og:url', content: 'https://cryptic-game.net/' },
-      { hid: 'twitter:url', name: 'og:url', content: 'https://cryptic-game.net/' },
+      {
+        hid: 'twitter:url',
+        name: 'og:url',
+        content: 'https://cryptic-game.net/'
+      },
       { hid: 'og:type', name: 'og:type', content: 'website' },
-      { hid: 'og:image', name: 'og:image', content: 'https://cryptic-game.net/open-graph.jpg' },
-      { hid: 'twitter:image', name: 'og:image', content: 'https://cryptic-game.net/open-graph.jpg' },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://cryptic-game.net/open-graph.jpg'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'og:image',
+        content: 'https://cryptic-game.net/open-graph.jpg'
+      },
       { hid: 'twitter:site', name: 'twitter:site', content: '@Cryptic_Game' },
-      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' }
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Alata&display=swap' }
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Alata&display=swap'
+      }
     ]
   },
 
@@ -28,91 +62,46 @@ export default {
 
   // Global CSS
   css: [
-    '@/assets/global.scss'
+    '@/assets/css/global.scss'
   ],
 
   plugins: [],
 
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    'kiste/nuxt'
+    '@nuxtjs/eslint-module'
   ],
 
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'nuxt-i18n',
     '@nuxtjs/sitemap',
     'nuxt-lazy-load'
   ],
-
-  router: {
-    base: process.env.BASE_HREF || undefined,
-    extendRoutes (routes, resolve) {
-      routes.push({
-        name: 'custom',
-        path: '*',
-        component: resolve(__dirname, 'pages/not-found.vue')
-      })
-    }
-  },
-
-  kiste: {
-    theme: {
-      colors: {
-        background: 'black/white/#1d1c1c',
-        discord: '#7289DA/white/#6a7fca'
-      }
-    },
-    navigationItems: [
-      {
-        label: 'Home',
-        to: '/'
-      },
-      {
-        label: 'Play',
-        href: 'https://play.cryptic-game.net'
-      },
-      {
-        label: 'Blog',
-        to: '/blog'
-      },
-      {
-        label: 'FAQ',
-        to: '/faq'
-      },
-      {
-        label: 'Roadmap',
-        to: '/roadmap'
-      },
-      {
-        label: 'Contribute',
-        to: '/contribute'
-      },
-      {
-        label: 'Team',
-        to: '/team'
-      }
+  i18n: {
+    lazy: true,
+    locales: [
+      { code: 'en', iso: 'en', file: 'en.json', dir: 'ltr' },
+      { code: 'de', iso: 'de', file: 'de.json', dir: 'ltr' }
     ],
-    footerItems: [
-      {
-        label: 'Legal Notice',
-        href: 'https://the-morpheus.de/#signup'
-      },
-      {
-        label: 'Privacy Policy',
-        href: 'https://the-morpheus.de/faq-en.html'
-      },
-      {
-        label: 'Status',
-        href: 'https://status.cryptic-game.net'
-      }
-    ]
+    langDir: 'locales/',
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: { en, de }
+    },
+    detectBrowserLanguage: {
+      useCookie: false,
+      onlyOnRoot: true
+    },
+    seo: true
   },
   sitemap: {
     hostname: 'https://cryptic-game.net',
-    gzip: true
+    gzip: true,
+    i18n: true
   },
 
   build: {

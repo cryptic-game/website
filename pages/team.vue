@@ -1,8 +1,8 @@
 <template>
   <main class="team-page">
-    <KNavigationBar title="Team" />
+    <NavigationBar title="Team" />
     <div class="content formatted">
-      <h1>Team</h1>
+      <h1>{{ $t("navbar.team") }}</h1>
 
       <div class="grid">
         <TeamMember
@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import KNavigationBar from '@/components/KNavigationBar'
+import NavigationBar from '@/components/NavigationBar'
 import TeamMember from '../components/TeamMember'
 
 export default {
   name: 'TeamPage',
   components: {
     TeamMember,
-    KNavigationBar
+    NavigationBar
   },
   data () {
     return {
@@ -39,7 +39,8 @@ export default {
     ).then(result => result.json())
     this.members = await fetch(
       'https://api.admin.staging.cryptic-game.net/website/team'
-    ).then(result => result.text())
+    )
+      .then(result => result.text())
       .then(result => JSON.parse(result))
       .then(result => result.sort(() => Math.random() - 0.5))
   },
