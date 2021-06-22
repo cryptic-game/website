@@ -543,6 +543,7 @@ export default {
   .desc-section__title {
     font-size: 2rem;
     margin-top: 0;
+    text-align: left;
   }
 }
 
