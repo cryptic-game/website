@@ -3,7 +3,7 @@
     <NavigationBar title="Contribute" />
     <div class="content formatted">
       <h1 class="title">
-      {{ $t("navbar.contribute") }}
+        {{ $t("navbar.contribute") }}
       </h1>
       <p class="heading--5" v-html="$t('contribute.heading')" />
       <p>
