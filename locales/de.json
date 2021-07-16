@@ -1,132 +1,132 @@
 {
-  "footer": {
-    "legal": "Impressum",
-    "privacy": "Datenschutzerklärung",
-    "serverStatus": "Status"
-  },
-  "navbar": {
-    "home": "Startseite",
-    "play": "Spielen",
-    "blog": "Blog",
-    "faq": "FAQ",
-    "roadmap": "Roadmap",
-    "contribute": "Unterstützen",
-    "team": "Team"
-  },
-  "home": {
-    "createTheGame": "<strong>Spiel</strong> nicht das Spiel, <span><br/><strong>erstelle</strong> das Spiel</span>",
-    "openSource": "Ein Open Source Spiel <br/>von <strong>The Morpheus Tutorials</strong>",
-    "joinUs": "Mache mit!",
-    "joinDiscord": "Tritt uns auf Discord bei",
-    "playEarlyVersion": "Eine frühe Version ist schon spielbar:",
-    "readTheBlogPost": "Lies unseren Blog",
-    "playNow": "Jetzt spielen",
-    "project": "Das Projekt",
-    "projectDescription": {
-      "initiated": "Das Projekt \"Cryptic\" wurde initiiert von dem deutschen YouTuber",
-      "announced": "Es wurde zuerst am 15. Oktober 2017 in einem",
-      "announcementVideo": "Ankündigungsvideo",
-      "goal": "angekündigt. Das Ziel des Projektes ist es, eine einzigartige Spielerfahrung für die Spieler zu schaffen, hauptsächlich aber, es für Personen, die am Programmieren und Computer Sience interessiert sind, möglich zu machen, das Spiel mitzuentwickeln, ihre Fähigkeiten zu verbessern und etwas großes zu erschaffen. Das enthält die Auswahl über den Spielinhalt, das Design, Soundeffekte, das Programmieren, Testen und Serverwartung.",
-      "daily": " Wir streben täglich an, Cryptic zu verbessern und wollen eine interessante, abenteuerliche und spielerische Einleitung in die Welt des Hackens bieten."
+    "footer": {
+        "legal": "Impressum",
+        "privacy": "Datenschutzerklärung",
+        "serverStatus": "Status"
     },
-    "crypticDescription": {
-      "what": "Was ist Cryptic?",
-      "long": "Cryptic ist eine MMO Hacking-Simulation mit Echtzeit-Strategie-Elementen. Durch das Benutzen von spezifischen Programmen und Befehlen kannst du die Systeme anderer Spieler und globale Infrastruktur infiltrieren. Level deine Hardware und Software hoch, produziere deine eigene Malware in dem Entwicklungszentrum oder kommuniziere mit anderen Spielern, um einen Angriff zu planen. Aber das ist erst der Anfang.",
-      "help": "Hilf der Cyber-Polizei als ein White Hat, die Aktivität von bösartigen Hackern zu stoppen oder werde ein Blackhat, um ganze Netzwerke lahmzulegen und andere Spieler auszuspionieren."
+    "navbar": {
+        "home": "Startseite",
+        "play": "Spielen",
+        "blog": "Blog",
+        "faq": "FAQ",
+        "roadmap": "Roadmap",
+        "contribute": "Unterstützen",
+        "team": "Team"
     },
-    "groups": {
-      "groups": "Abteilungen",
-      "frontendDescription": "Das Frontend-Team entwickelt die Internetseite auf der Cryptic gespielt wird. Dazu gehören alle erdenklichen Spielelemente wie z. B. ein Desktop, oder verschiedene Apps innerhalb des Spiels, die für ein interessantes Spielgefühl sorgen. Die Herausforderung besteht darin komplexe Spielmechaniken ohne Game engine zu programmieren. Du solltest Erfahrung in der Webentwicklung mitbringen, sowie Kenntnis von TypeScript, Angular und Git, im Idealfall auch SCSS mitbringen.",
-      "backendDescription": "Das Backend-Team programmiert die komplexe Spiellogik und hält diese Instand. Ein weiterer Part ist das ausgiebige Testen der Backend-Struktur sowie das schreiben eines performanten Codes so, dass es keine Performance Engpässe gibt. Du solltest gute Kenntnis von Java oder Python, und Git mitbringen.",
-      "gamedesignDescription": "Das Game Design-Team beschäftigt sich auf theoretischer Ebene damit, welche Inhalte, Eigenschaften und Faktoren für die Gestaltung eines spannenden Spiels vorliegen müssen. Das bedeutet, dass wir gemeinsam alle Inhalte des Spiels ausarbeiten. Dazu gehört z. B. die Entwicklung eines Desktops, die Erfindung verschiedener Hacker-Attacken sowie einem Terminal oder ein Erfahrungs-System und deren jeweilige Logik. Die wichtigste Voraussetzung ist, kreativ zu sein, sowie den Zusammenhang von vielen verschiedenen Faktoren und Parametern im Blick zu haben.",
-      "designDescription": "Der Design-Bereich ist in drei Unterbereiche unterteilt. Im Bereich Grafik werden alle benötigten Icons, Designvorlagen und sonstiges Bildmaterial erstellt, welches für das Spiel oder die Webseite benötigt wird. Im Bereich Videoproduktion werden Sachen wie Video-Trailer, Intros und Animationen erstellt. Im Bereich Sounddesign werden ganze Musikstücke komponiert oder Soundeffekte erstellt.",
-      "websiteDescription": "Das Webseiten-Team entwickelt die Cryptic-Webseite und hält diese Instand. Dazu gehört das Entwickeln von verschiedenen Menü-Seiten, einer Kopf- und Fußzeile, sowie weitere Funktionen und Bereiche die im Laufe implementiert werden. Du solltest Kenntnis in Webtechnologien wie HTML, CSS und Vue.js mitbringen.",
-      "securityDescription": "Das Security-Team beschäftigt sich mit Code Audits, Penetration Tests und der Entwicklung von Security-Konzepten, sodass du Cryptic in einer Sicheren Umgebung spielen kannst. Erfahrung im Bereich Web-Hacking wie z.b. XSS, SQLi, sowie Erfahrung im Umgang mit Tools wie z.B. nmap, sqlmap, Burp, sind zwingen erforderlich.",
-      "translationDescription": "Im Bereich Übersetzung werden alle relevanten Texte in die jeweilige Fremdsprache übersetzt. Du solltest gute Deutsch- und Fremdsprachen-Kenntnisse mitbringen. Wir suchen aktuell Übersetzer für Englisch.",
-      "correctionDescription": "Das Text-Team schreibt und korrigiert alle möglichen Texte die für das Projekt und Spiel anfallen. Du solltest dich gerne mit Texten befassen wollen, sowie gute Deutsch- und Englisch-Kenntnisse mitbringen. Aktuell beginnen wir ein Wiki für Cryptic einzuführen, daher suchen wir noch aktive Texter."
+    "home": {
+        "createTheGame": "<strong>Spiel</strong> nicht das Spiel, <span><br/><strong>erstelle</strong> das Spiel</span>",
+        "openSource": "Ein Open Source Spiel <br/>von <strong>The Morpheus Tutorials</strong>",
+        "joinUs": "Mache mit!",
+        "joinDiscord": "Tritt uns auf Discord bei",
+        "playEarlyVersion": "Eine frühe Version ist schon spielbar:",
+        "readTheBlogPost": "Lies unseren Blog",
+        "playNow": "Jetzt spielen",
+        "project": "Das Projekt",
+        "projectDescription": {
+            "initiated": "Das Projekt \"Cryptic\" wurde initiiert von dem deutschen YouTuber",
+            "announced": "Es wurde zuerst am 15. Oktober 2017 in einem",
+            "announcementVideo": "Ankündigungsvideo",
+            "goal": "angekündigt. Das Ziel des Projektes ist es, eine einzigartige Spielerfahrung für die Spieler zu schaffen, hauptsächlich aber, es für Personen, die am Programmieren und Computer Sience interessiert sind, möglich zu machen, das Spiel mitzuentwickeln, ihre Fähigkeiten zu verbessern und etwas großes zu erschaffen. Das enthält die Auswahl über den Spielinhalt, das Design, Soundeffekte, das Programmieren, Testen und Serverwartung.",
+            "daily": "Wir streben täglich an, Cryptic zu verbessern und wollen eine interessante, abenteuerliche und spielerische Einleitung in die Welt des Hackens bieten."
+        },
+        "crypticDescription": {
+            "what": "Was ist Cryptic?",
+            "long": "Cryptic ist eine MMO Hacking-Simulation mit Echtzeit-Strategie-Elementen. Durch das Benutzen von spezifischen Programmen und Befehlen kannst du die Systeme anderer Spieler und globale Infrastruktur infiltrieren. Level deine Hardware und Software hoch, produziere deine eigene Malware in dem Entwicklungszentrum oder kommuniziere mit anderen Spielern, um einen Angriff zu planen. Aber das ist erst der Anfang.",
+            "help": "Hilf der Cyber-Polizei als ein White Hat, die Aktivität von bösartigen Hackern zu stoppen oder werde ein Blackhat, um ganze Netzwerke lahmzulegen und andere Spieler auszuspionieren."
+        },
+        "groups": {
+            "groups": "Abteilungen",
+            "frontendDescription": "Das Frontend-Team entwickelt die Internetseite auf der Cryptic gespielt wird. Dazu gehören alle erdenklichen Spielelemente wie z. B. ein Desktop, oder verschiedene Apps innerhalb des Spiels, die für ein interessantes Spielgefühl sorgen. Die Herausforderung besteht darin komplexe Spielmechaniken ohne Game engine zu programmieren. Du solltest Erfahrung in der Webentwicklung mitbringen, sowie Kenntnis von TypeScript, Angular und Git, im Idealfall auch SCSS mitbringen.",
+            "backendDescription": "Das Backend-Team programmiert die komplexe Spiellogik und hält diese Instand. Ein weiterer Part ist das ausgiebige Testen der Backend-Struktur sowie das schreiben eines performanten Codes so, dass es keine Performance Engpässe gibt. Du solltest gute Kenntnis von Java oder Python, und Git mitbringen.",
+            "gamedesignDescription": "Das Game Design-Team beschäftigt sich auf theoretischer Ebene damit, welche Inhalte, Eigenschaften und Faktoren für die Gestaltung eines spannenden Spiels vorliegen müssen. Das bedeutet, dass wir gemeinsam alle Inhalte des Spiels ausarbeiten. Dazu gehört z. B. die Entwicklung eines Desktops, die Erfindung verschiedener Hacker-Attacken sowie einem Terminal oder ein Erfahrungs-System und deren jeweilige Logik. Die wichtigste Voraussetzung ist, kreativ zu sein, sowie den Zusammenhang von vielen verschiedenen Faktoren und Parametern im Blick zu haben.",
+            "designDescription": "Der Design-Bereich ist in drei Unterbereiche unterteilt. Im Bereich Grafik werden alle benötigten Icons, Designvorlagen und sonstiges Bildmaterial erstellt, welches für das Spiel oder die Webseite benötigt wird. Im Bereich Videoproduktion werden Sachen wie Video-Trailer, Intros und Animationen erstellt. Im Bereich Sounddesign werden ganze Musikstücke komponiert oder Soundeffekte erstellt.",
+            "websiteDescription": "Das Webseiten-Team entwickelt die Cryptic-Webseite und hält diese Instand. Dazu gehört das Entwickeln von verschiedenen Menü-Seiten, einer Kopf- und Fußzeile, sowie weitere Funktionen und Bereiche die im Laufe implementiert werden. Du solltest Kenntnis in Webtechnologien wie HTML, CSS und Vue.js mitbringen.",
+            "securityDescription": "Das Security-Team beschäftigt sich mit Code Audits, Penetration Tests und der Entwicklung von Security-Konzepten, sodass du Cryptic in einer Sicheren Umgebung spielen kannst. Erfahrung im Bereich Web-Hacking wie z.b. XSS, SQLi, sowie Erfahrung im Umgang mit Tools wie z.B. nmap, sqlmap, Burp, sind zwingen erforderlich.",
+            "translationDescription": "Im Bereich Übersetzung werden alle relevanten Texte in die jeweilige Fremdsprache übersetzt. Du solltest gute Deutsch- und Fremdsprachen-Kenntnisse mitbringen. Wir suchen aktuell Übersetzer für Englisch.",
+            "correctionDescription": "Das Text-Team schreibt und korrigiert alle möglichen Texte die für das Projekt und Spiel anfallen. Du solltest dich gerne mit Texten befassen wollen, sowie gute Deutsch- und Englisch-Kenntnisse mitbringen. Aktuell beginnen wir ein Wiki für Cryptic einzuführen, daher suchen wir noch aktive Texter."
+        }
+    },
+    "faq": {
+        "communityProject": {
+            "communityProject": "Was ist das Community-Projekt?",
+            "description": "Das Community-Projekt wurde im Oktober 2017 angekündigt und ist ein Projekt, in welchem ein 2D Browserspiel von Grund auf entwickelt wird. Wir sind ein großes Team aus verschiedenen Altersgruppen, welches sich täglich im Discord trifft und daran arbeitet. Weitere informationen im",
+            "sheet": "Lastenheft"
+        },
+        "requirements": {
+            "requirements": "Muss ich programmieren können?",
+            "description": "Du musst nicht zwingend programmieren können. Es gibt noch weitere Abteilungen wie z. B. Gamedesign, Design und Text & Übersetzung, in denen du ohne Programmierkenntnisse mitarbeiten kannst."
+        },
+        "beginner": {
+            "beginner": "Kann ich auch als Anfänger mitprogrammieren?",
+            "description": "Als Anfänger wird es wahrscheinlich schwieriger für dich sein, einen Einstieg zu finden. In deinem Bereich solltest du die Grundlagen der gewählten Programmiersprache gut beherrschen. Du kannst dich dann entscheiden zwischen Backend: Python/Java oder Frontend: TypeScript + HTML. Alles weitere lernst du im Verlauf des Projekts."
+        },
+        "more": {
+            "more": "Mehr in unserem ",
+            "faqPage": "FAQ"
+        },
+        "heads": {
+            "heads": "Wo kann ich alle Fachbereiche und Abteilungsleiter (Heads) einsehen?",
+            "description": "Alle Abteilungen und deren Ansprechpartner findest du auf der",
+            "teamPage": "Team Seite"
+        },
+        "departments": {
+            "departments": "Welche Abteilungen gibt es hier?",
+            "description": "Das Projekt ist in die 6 großen Abteilungen Gamedesign, Design, Frontend, Backend, Correction und Security unterteilt."
+        },
+        "progress": {
+            "progress": "Wo kann man den aktuellen Entwicklungsstand einsehen?",
+            "description": "Der aktuelle Entwicklungsstand kann jederzeit auf GitHub verfolgt werden. Außerdem gibt es regelmäßig Updates auf der Website oder unter"
+        },
+        "new": {
+            "new": "Ich bin neu hier. Wie beginne ich?",
+            "description": "Du kannst dir in Discord selbst Rollen für Bereiche zuweisen, in denen du mithelfen möchtest. Außerdem kannst du dich bei den zuständigen Heads melden, wenn du z.B. im Frontend oder Gamedesign mitarbeiten möchtest."
+        },
+        "ticketFound": {
+            "ticketFound": "Ich habe eine Aufgabe gefunden, die ich erledigen möchte. Wie gehe ich vor?",
+            "description": "Wende dich an den jeweiligen Head und teile ihm mit, welches der Issues du übernehmen möchtest. Alles weitere kannst du beim Head nachfragen. Außerdem gibt es in unregelmäßigen Abständen Besprechungen in den jeweiligen Bereichen."
+        },
+        "ticketDone": {
+            "ticketDone": "Ich habe die Aufgabe abgeschlossen. Was mache ich dann?",
+            "description": "Lade deine Arbeit im entsprechenden Repository auf GitHub hoch. Beachte die Vorgehensweise für Branches und Pull Requests in der",
+            "conventions": "Convention"
+        },
+        "headAssistant": {
+            "headAssistant": "Was macht ein Head-Assistant?",
+            "description": "Ein Head-Assistant ist eine Person, welche seit längerer Zeit sich aktiv einsetzt und mitarbeitet. Diese Person wird vom Head befördert und unterstützt ihn. Der Head-Assistant kann hierbei den Bereich oder das Team mittleiten und ist auch als Ansprechperson bei möglichen Fragen da."
+        },
+        "contributor": {
+            "contributor": "Was ist ein Contributor?",
+            "description": "Zusätzlich gibt es den Contributor. Diese Person ist dem Head durch seine gute Mitarbeit besonders aufgefallen und wird mit diesem Rang belohnt."
+        },
+        "conflicts": {
+            "conflicts": "Ich bin jetzt in einer leitenden Position und es gibt Probleme im Team. An wen soll ich mich wenden?",
+            "description": "Sprich das Head-Team an. Wir wollen Konflikte schnellstmöglich unterbinden."
+        },
+        "problem": {
+            "problem": "An wen soll ich mich wenden, wenn ich keine Lust oder Zeit mehr habe am Projekt oder in meiner jetzigen Position zu arbeiten?",
+            "description": "Das ist kein Problem. In diesem Fall melde dich bei deinem jeweiligen Head ab."
+        },
+        "funding": {
+            "funding": "Wie wird das Projekt finanziert?",
+            "description": "Niemand wird für seine Arbeit am Projekt bezahlt, aber wir müssen unsere Server bezahlen, deswegen sind wir Abhängig von Spenden und Sponsoren. Wenn du also spenden willst,",
+            "patreon": "unterstütze The Morpheus auf Patreon"
+        }
+    },
+    "contribute": {
+        "heading": "Wir entwickeln ein Online-Mehrspieler Spiel für den Browser!<br />Du möchtest uns dabei helfen? - Dann bist du hier genau richtig!",
+        "content": {
+            "general": "Dieses Gemeinschaftsprojekt basiert auf der Zusammenarbeit vieler freiwilliger Helfer. Unser Team besteht dafür aus Administratoren, Designern, Softwareentwicklern und Gamedesign. Um Cryptic zu einem erfolgreichen Spiel zu entwickeln, benötigt es eine ganze Menge an Zeit, Kenntnissen, Motivation, Enthusiasmus und Durchhaltevermögen von jedem einzelnen Helfer. So bietet das Gemeinschaftsprojekt viele Möglichkeiten, dass auch du mithelfen kannst - ganz egal ob du programmieren kannst oder nicht.",
+            "technologies": {
+                "head": "Die Backend-Serverkomponenten werden in den Sprachen Java und Python entwickelt. Die gesamte Spieloberfläche wiederum wird mit Angular und dementsprechend mit HTML, SCSS und TypeScript entwickelt. Die Cryptic Webseite basiert auf Vue.js in Kombination mit Nuxt.js.",
+                "discord": "Falls du irgendwelche Fragen hast oder aber sofort durchstarten willst, dann komme doch einfach auf unseren",
+                "footer": "Wenn du helfen willst und sogar mehr als eine Programmiersprache beherrscht, freuen wir uns sehr über deine Unterstützung. Aber auch für Nicht-Programmierer gibt es einige Bereiche, in denen du helfen kannst, wie Gamedesign, Grafikdesign, Sicherheitsabteilung, Spieletester und die Text&Korrektur."
+            },
+            "testing": "Da ein Spiel mit vielen Fehlern und Bugs einfach kein gutes Spiel sein kann, ist das Testen des Spiels ein integraler Bestandteil auf dem Weg zur Veröffentlichung. Informationen darüber wie performant und stabil Cryptic unter den verschiedensten Bedingungen bei verschiedenen Nutzern läuft, sind für uns Entwickler sehr hilfreich. Deshalb freuen wir uns, wenn du unser Spiel ausgiebig testen möchtest.",
+            "translation": "Darüber hinaus muss das Spiel in viele unterschiedliche Sprachen übersetzt werden, um Cryptic vielen Interessenten aus unterschiedlichen Ländern besser zugänglich zu machen. Dasselbe gilt natürlich auch für unsere Webseite.",
+            "gamedesign": "Um dem Team für das Gamedesign zu helfen, solltest du am Besten viel Kreativität und Ideen mitbringen. Die Gamedesigner entwickeln die Ideen für alle Inhalte, die irgendwann im Spiel landen sollen, und halten diese in entsprechenden Dokumenten fest. Diese Dokumente gehen dann an das Programmierteam, die sie in das Spiel implementieren. Das heißt, dass bereits bestehende Ideen ausgearbeitet und entsprechend textlich dokumentiert werden für die spätere Entwicklung. Bevor diese Dokumente allerdings verfasst werden, wird jede Idee mit dem Team diskutiert, sodass jeder seine Vorschläge und Ideen dazu einbringen kann. Und natürlich dürfen auch Spieler jederzeit neue Ideen für Cryptic einbringen.",
+            "text": "Unser Team für Texte kümmert sich außerdem um den Blog. Um mit dem aktuellen Stand aus allen anderen Abteilungen und den neusten Entwicklungen Schritt zu halten, muss das Team ständig Anpassungen vornehmen - neue Tutorials schreiben, Neuerungen ankündigen und noch viel mehr!",
+            "discord": "Du möchtest jetzt mitmachen? Dann schaue doch mal auf unseren",
+            "first-steps": "Dort vernetzen sich alle unsere Teams, organisieren sich eigenständig und besprechen die nächsten Schritte für Cryptic. Wenn du dem Server beitrittst, lies dir einfach alles durch. In den Textkanälen findest du dann die weiteren Schritte für deine Bewerbung. 😉"
+        }
     }
-  },
-  "faq": {
-    "communityProject": {
-      "communityProject": "Was ist das Community-Projekt?",
-      "description": "Das Community-Projekt wurde im Oktober 2017 angekündigt und ist ein Projekt, in welchem ein 2D Browserspiel von Grund auf entwickelt wird. Wir sind ein großes Team aus verschiedenen Altersgruppen, welches sich täglich im Discord trifft und daran arbeitet. Weitere informationen im",
-      "sheet": "Lastenheft"
-    },
-    "requirements": {
-      "requirements": "Muss ich programmieren können?",
-      "description": "Du musst nicht zwingend programmieren können. Es gibt noch weitere Abteilungen wie z. B. Gamedesign, Design und Text & Übersetzung, in denen du ohne Programmierkenntnisse mitarbeiten kannst."
-    },
-    "beginner": {
-      "beginner": "Kann ich auch als Anfänger mitprogrammieren?",
-      "description": "Als Anfänger wird es wahrscheinlich schwieriger für dich sein, einen Einstieg zu finden. In deinem Bereich solltest du die Grundlagen der gewählten Programmiersprache gut beherrschen. Du kannst dich dann entscheiden zwischen Backend: Python/Java oder Frontend: TypScript + HTML.  Alles weitere lernst du im Verlauf des Projekts."
-    },
-    "more": {
-      "more": "Mehr in unserem",
-      "faqPage": "FAQ"
-    },
-    "heads": {
-      "heads": "Wo kann ich alle Fachbereiche und Abteilungsleiter (Heads) einsehen?",
-      "description": "Alle Abteilungen und deren Ansprechpartner findest du auf der",
-      "teamPage": "Team Seite"
-    },
-    "departments": {
-      "departments": "Welche Abteilungen gibt es hier?",
-      "description": "Das Projekt ist in die 6 großen Abteilungen Gamedesign, Design, Frontend, Backend, Correction und Security unterteilt"
-    },
-    "progress": {
-      "progress": "Wo kann man den aktuellen Entwicklungsstand einsehen?",
-      "description": "Der aktuelle Entwicklungsstand kann jederzeit auf GitHub verfolgt werden. Außerdem gibt es regelmäßig Updates auf der Website oder unter"
-    },
-    "new": {
-      "new": "Ich bin neu hier. Wie beginne ich?",
-      "description": "Du kannst dir in Discord selbst Rollen für Bereiche zuweisen, in denen du mithelfen möchtest. Außerdem kannst du dich bei den zuständigen Heads melden, wenn du z.B. im Frontend oder Gamedesign mitarbeiten möchtest."
-    },
-    "ticketFound": {
-      "ticketFound": "Ich habe eine Aufgabe gefunden, die ich erledigen möchte. Wie gehe ich vor?",
-      "description": "Wende dich an den jeweiligen Head und teile ihm mit, welches der Issues du übernehmen möchtest. Alles weitere kannst du beim Head nachfragen. Außerdem gibt es in unregelmäßigen Abständen Besprechungen in den jeweiligen Bereichen."
-    },
-    "ticketDone": {
-      "ticketDone": "Ich habe die Aufgabe abgeschlossen. Was mache ich dann?",
-      "description": "Lade deine Arbeit im entsprechenden Repository auf GitHub hoch. Beachte die Vorgehensweise für Branches und Pull Requests in der",
-      "conventions": "Convention"
-    },
-    "headAssistant": {
-      "headAssistant": "Was macht ein Head-Assistant?",
-      "description": "Ein Head-Assistant ist eine Person, welche seit längerer Zeit sich aktiv einsetzt und mitarbeitet. Diese Person wird vom Head befördert und unterstützt ihn. Der Head-Assistant kann hierbei den Bereich oder das Team mitleiten und ist auch als Ansprechperson bei möglichen Fragen da. Werde auch du Head-Assistant!"
-    },
-    "contributor": {
-      "contributor": "Was ist ein Contributor?",
-      "description": "Zusätzlich gibt es den Contributor. Diese Person ist dem Head durch seine gute Mitarbeit besonders aufgefallen und wird mit diesem Rang belohnt."
-    },
-    "conflicts": {
-      "conflicts": "Ich bin jetzt in einer leitenden Position und es gibt Probleme im Team. An wen soll ich mich wenden?",
-      "description": "Sprich das Head-Team an. Wir wollen Konflikte schnellstmöglich unterbinden."
-    },
-    "problem": {
-      "problem": "An wen soll ich mich wenden, wenn ich keine Lust oder Zeit mehr habe am Projekt oder in meiner jetzigen Position zu arbeiten?",
-      "description": "Das ist kein Problem. In diesem Fall melde dich bei deinem jeweiligen Head ab."
-    },
-    "funding": {
-      "funding": "Wie wird das Projekt finanziert?",
-      "description": "Niemand wird für seine Arbeit am Projekt bezahlt, aber wir müssen unsere Server bezahlen, deswegen sind wir Abhängig von Spenden und Sponsoren. Wenn du also spenden willst,",
-      "patreon": "unterstütze The Morpheus auf Patreon"
-    }
-  },
-  "contribute": {
-    "heading": "Wir entwickeln ein Online-Mehrspieler Spiel für den Browser!<br />Du möchtest uns dabei helfen? - Dann bist du hier genau richtig!",
-    "content": {
-      "general": "Dieses Gemeinschaftsprojekt basiert auf der Zusammenarbeit vieler freiwilliger Helfer. Unser Team besteht dafür aus Administratoren, Designern, Softwareentwicklern und Gamedesign. Um Cryptic zu einem erfolgreichen Spiel zu entwickeln, benötigt es eine ganze Menge an Zeit, Kenntnissen, Motivation, Enthusiasmus und Durchhaltevermögen von jedem einzelnen Helfer. So bietet das Gemeinschaftsprojekt viele Möglichkeiten, dass auch du mithelfen kannst - ganz egal ob du programmieren kannst oder nicht.",
-      "technologies": {
-        "head": "Die Backend-Serverkomponenten werden in den Sprachen Java und Python entwickelt. Die gesamte Spieloberfläche wiederum wird mit Angular und dementsprechend mit HTML, SCSS und TypeScript entwickelt. Die Cryptic Webseite basiert auf Vue.js in Kombination mit Nuxt.js.",
-        "discord": "Falls du irgendwelche Fragen hast oder aber sofort durchstarten willst, dann komme doch einfach auf unseren",
-        "footer": "Wenn du helfen willst und sogar mehr als eine Programmiersprache beherrscht, freuen wir uns sehr über deine Unterstützung. Aber auch für Nicht-Programmierer gibt es einige Bereiche, in denen du helfen kannst, wie Gamedesign, Grafikdesign, Sicherheitsabteilung, Spieletester und die Text&Korrektur."
-      },
-      "testing": "Da ein Spiel mit vielen Fehlern und Bugs einfach kein gutes Spiel sein kann, ist das Testen des Spiels ein integraler Bestandteil auf dem Weg zur Veröffentlichung. Informationen darüber wie performant und stabil Cryptic unter den verschiedensten Bedingungen bei verschiedenen Nutzern läuft, sind für uns Entwickler sehr hilfreich. Deshalb freuen wir uns, wenn du unser Spiel ausgiebig testen möchtest.",
-      "translation": "Darüber hinaus muss das Spiel in viele unterschiedliche Sprachen übersetzt werden, um Cryptic vielen Interessenten aus unterschiedlichen Ländern besser zugänglich zu machen. Dasselbe gilt natürlich auch für unsere Webseite.",
-      "gamedesign": "Um dem Team für das Gamedesign zu helfen, solltest du am Besten viel Kreativität und Ideen mitbringen. Die Gamedesigner entwickeln die Ideen für alle Inhalte, die irgendwann im Spiel landen sollen, und halten diese in entsprechenden Dokumenten fest. Diese Dokumente gehen dann an das Programmierteam, die sie in das Spiel implementieren. Das heißt, dass bereits bestehende Ideen ausgearbeitet und entsprechend textlich dokumentiert werden für die spätere Entwicklung. Bevor diese Dokumente allerdings verfasst werden, wird jede Idee mit dem Team diskutiert, sodass jeder seine Vorschläge und Ideen dazu einbringen kann. Und natürlich dürfen auch Spieler jederzeit neue Ideen für Cryptic einbringen.",
-      "text": "Unser Team für Texte kümmert sich außerdem um den Blog. Um mit dem aktuellen Stand aus allen anderen Abteilungen und den neusten Entwicklungen Schritt zu halten, muss das Team ständig Anpassungen vornehmen - neue Tutorials schreiben, Neuerungen ankündigen und noch viel mehr!",
-      "discord": "Du möchtest jetzt mitmachen? Dann schaue doch mal auf unseren",
-      "first-steps": "Dort vernetzen sich alle unsere Teams, organisieren sich eigenständig und besprechen die nächsten Schritte für Cryptic. Wenn du dem Server beitrittst, lies dir einfach alles durch. In den Textkanälen findest du dann die weiteren Schritte für deine Bewerbung. 😉"
-    }
-  }
 }

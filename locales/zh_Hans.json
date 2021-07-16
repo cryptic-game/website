@@ -1,0 +1,46 @@
+{
+    "footer": {
+        "privacy": "隐私政策",
+        "serverStatus": "状况",
+        "legal": "法律通知"
+    },
+    "navbar": {
+        "home": "首页",
+        "play": "玩耍",
+        "blog": "博客",
+        "faq": "常见问题",
+        "roadmap": "路线图",
+        "contribute": "贡献",
+        "team": "团队"
+    },
+    "home": {
+        "openSource": "一个开源游戏<br/>作者：<strong>The Morpheus Tutorials</strong>",
+        "joinUs": "今天就加入我们!",
+        "joinDiscord": "加入我们的 Discord",
+        "playEarlyVersion": "你已经可以玩早期版本了:",
+        "readTheBlogPost": "阅读博文",
+        "playNow": "现在播放",
+        "project": "该项目",
+        "projectDescription": {
+            "announced": "它于2017年10月15日首次宣布，以",
+            "announcementVideo": "公告视频（德文）。",
+            "initiated": "\"Cryptic\"项目是由德国YouTuber发起的",
+            "goal": "该项目的目标是为玩家创造一个独特的体验，但主要是使对编码和计算机科学感兴趣的人有可能发展和提高他们现有的技能，并创造一些伟大的东西。这包括确定游戏内容、设计、声音、编程、测试和服务器维护。",
+            "daily": "我们每天都在努力使Cryptic变得更好，并希望给你一个有趣的、冒险的、好玩的黑客世界介绍。"
+        },
+        "crypticDescription": {
+            "what": "什么是Cryptic？",
+            "help": "作为白帽子，帮助网络警察制止恶意黑客的活动，或者成为黑帽子，破坏整个网络并监视其他玩家。",
+            "long": "Cryptic是一个具有实时战略元素的MMO黑客模拟游戏。使用特定的程序和命令，你可以渗透到其他玩家的系统和全球基础设施中。提升你的硬件和软件水平，在你的开发中心生产你自己的恶意软件，或与其他玩家沟通以计划联合攻击。但这仅仅是个开始。"
+        },
+        "groups": {
+            "groups": "群体",
+            "backendDescription": "后台团队为复杂的游戏逻辑编码，并负责维护它。另一部分是对后端结构的测试，以及编写高性能的代码，所以没有性能问题。你应该对Java、Python和Git有良好的了解。",
+            "designDescription": "设计团队被分成三个不同的部门。图形 \"部门创建所有需要的图标、设计模板和额外的镜头，这是游戏或网站需要的。\"视频制作 \"部门创建所有不同类型的视频，如预告片、介绍和动画。声音设计 \"部门负责创作整个音乐作品并创造声音效果。",
+            "websiteDescription": "网站团队正在开发网站并维护它。这包括开发各种菜单页面、页眉和页脚，以及其他功能和区域，将在课程中实施。你应该具备HTML、SCSS和Vue.js等网络技术的知识。",
+            "frontendDescription": "前端团队创建了游戏表面，即玩Cryptic的地方。这包括所有可以想象的游戏元素，如桌面，或游戏中的各种应用程序，这提供了一个有趣的感觉。挑战是在没有任何游戏引擎的情况下对复杂的游戏机制进行编码。你应该具备网站开发的知识，TypeScript、Angular和Git方面的专业知识。在理想的情况下，你也要有SCSS的知识。",
+            "gamedesignDescription": "游戏设计团队在理论层面上处理内容、特点和设计一个令人兴奋的游戏所必须具备的因素。这意味着，我们一起制定游戏的所有内容。这包括例如桌面的开发、各种黑客攻击的发明和终端或体验系统以及它们各自的逻辑。最重要的要求是要有创造性，并注意许多不同因素和参数之间的联系。"
+        },
+        "createTheGame": "不要<strong>玩</strong>游戏，<span><br/><strong>创造</strong>游戏。</span>"
+    }
+}

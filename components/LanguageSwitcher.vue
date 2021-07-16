@@ -25,7 +25,8 @@ export default {
       active: false,
       languages: [
         { id: 'en', name: 'English' },
-        { id: 'de', name: 'Deutsch' }
+        { id: 'de', name: 'Deutsch' },
+        { id: 'zh', name: '简体中文（中国）' }
       ]
     }
   },
