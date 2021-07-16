@@ -2,7 +2,9 @@
   <main class="team-page">
     <NavigationBar title="Contribute" />
     <div class="content formatted">
-      <h1>{{ $t("navbar.contribute") }}</h1>
+      <h1 class="title">
+        {{ $t("navbar.contribute") }}
+      </h1>
       <p class="heading--5" v-html="$t('contribute.heading')" />
       <p>
         {{ $t("contribute.content.general") }}
@@ -63,6 +65,10 @@ div.content {
     margin-top: 25px;
     line-height: 30px;
     font-size: 1.3rem;
+    text-align: left;
+  }
+  h1.title {
+    text-align: left;
   }
 }
 </style>
