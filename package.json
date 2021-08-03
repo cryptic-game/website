@@ -27,7 +27,7 @@
     "eslint": "7.31.0",
     "eslint-plugin-nuxt": "2.0.0",
     "eslint-plugin-vue": "7.15.0",
-    "sass": "1.36.0",
+    "sass": "1.37.2",
     "sass-loader": "^8.0.2",
     "vue-svg-loader": "0.16.0"
   }
