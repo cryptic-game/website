@@ -1,1 +1,7 @@
-{}
+{
+    "footer": {
+        "legal": "Mentions Légales",
+        "privacy": "Déclaration de Protection des Données",
+        "serverStatus": "Statut"
+    }
+}
