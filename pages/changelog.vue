@@ -56,8 +56,8 @@ export default {
   },
   async fetch () {
     const response = await fetch('https://play.cryptic-game.net/assets/changelog.json')
-    const data = await response.json()
-    this.changes = data
+     this.changes =  await response.json()
+    
   },
   head () {
     return {
