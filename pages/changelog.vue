@@ -9,11 +9,28 @@
           <article>
           <div>
             <h3>{{change.name}}</h3>
-            <h4>{{change.date}}</h4>
+            <small>{{change.date}}</small>
           
           <div/>
-          <div>{{change.enhancements}}</div>
-          <div>{{change.fixes}}</div>
+
+
+
+          <div class="enhancements">
+          <h4>{{$t("changelog.enhancements")}}</h4>
+
+          <div class="enhancement" v-for="enhancement in change.enhancements" :key="enhancement">
+            <h5>{{enhancement}}<h2/>
+          </div>
+          </div>
+
+          <div class="fixes">
+          <h4>{{$t("changelog.fixes")}}</h4>
+
+          <div class="fix" v-for="fix in change.fixes" :key="fix">
+            <h5>{{fix}}<h2/>
+          </div>
+          </div>
+
         </article>
         <br/>
         </div>
@@ -51,9 +68,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .fixes{
+    margin-top: 10px;
+    background: linear-gradient(to right,rgb(26, 26, 26),rgb(26, 26, 26),rgb(26, 26, 26),rgb(221, 71, 44));
+    border-style: none;
+    border-radius: 8px;
+    color: #3EAB34;
+  }
+  .enhancements{
+    margin-top: 10px;
+    background: linear-gradient(to right,rgb(26, 26, 26),rgb(26, 26, 26),rgb(26, 26, 26),rgb(79, 185, 204));
+    border-style: none;
+    border-radius: 8px;
+    color: #3EAB34;
+  }
+  .fix{
+    margin-top: 5px;
+    color: white;
+  }
+  .enhancement{
+    color: white;
+    margin-top: 5px;
+  }
 .versionEntry{
   background: rgb(26, 26, 26);
-  color: rgb(235, 227, 184);
+  color: rgb(243, 238, 212);
   padding: 20px;
   width: 100%;
 }
