@@ -5,34 +5,35 @@
       <h1>{{ $t("navbar.changelog") }}</h1>
 
       <div class="grid">
-        <div class="versionEntry" v-for="change in changes.versions" :key="change.name">
+        <div v-for="change in changes.versions" :key="change.name" class="versionEntry">
           <article>
-          <div>
-            <h3>{{change.name}}</h3>
-            <small>{{change.date}}</small>
-          
-          <div/>
+            <div>
+              <h3>{{ change.name }}</h3>
+              <small>{{ change.date }}</small>
+              <div />
 
+              <div class="enhancements">
+                <h4>{{ $t("changelog.enhancements") }}</h4>
 
+                <div v-for="enhancement in change.enhancements" :key="enhancement" class="enhancement">
+                  <h5>
+                    {{ enhancement }}<h2 />
+                  </h5>
+                </div>
+              </div>
 
-          <div class="enhancements">
-          <h4>{{$t("changelog.enhancements")}}</h4>
+              <div class="fixes">
+                <h4>{{ $t("changelog.fixes") }}</h4>
 
-          <div class="enhancement" v-for="enhancement in change.enhancements" :key="enhancement">
-            <h5>{{enhancement}}<h2/>
-          </div>
-          </div>
-
-          <div class="fixes">
-          <h4>{{$t("changelog.fixes")}}</h4>
-
-          <div class="fix" v-for="fix in change.fixes" :key="fix">
-            <h5>{{fix}}<h2/>
-          </div>
-          </div>
-
-        </article>
-        <br/>
+                <div v-for="fix in change.fixes" :key="fix" class="fix">
+                  <h5>
+                    {{ fix }}<h2 />
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </article>
+          <br>
         </div>
       </div>
     </div>
@@ -45,25 +46,25 @@ import NavigationBar from '@/components/NavigationBar'
 export default {
   name: 'ChangelogPage',
   components: {
-    
+
     NavigationBar
-  },
-  async fetch() {
-  const response = await fetch("https://play.cryptic-game.net/assets/changelog.json");
-  const data = await response.json();
-  this.changes = data;
   },
   data () {
     return {
-      changes: [],
+      changes: []
     }
+  },
+  async fetch () {
+    const response = await fetch('https://play.cryptic-game.net/assets/changelog.json')
+    const data = await response.json()
+    this.changes = data
   },
   head () {
     return {
       titleTemplate: 'Changelog - %s'
     }
-  },
-  
+  }
+
 }
 </script>
 
