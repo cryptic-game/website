@@ -524,7 +524,7 @@ export default {
 
   .desc-section__part {
     width: 100%;
-    text-align: left;
+    text-align: justify;
 
     &:not(:last-child) {
       margin-right: var(--gutter-size);
@@ -603,6 +603,7 @@ export default {
       margin-top: 25px;
       margin-bottom: 10px;
       font-size: 1.3rem;
+      text-align: left;
     }
   }
 
