@@ -1,5 +1,5 @@
 # Cryptic - Website
-
+![Lines of code](https://img.shields.io/tokei/lines/github/cryptic-game/website?style=flat-square)
 ## Welcome
 
 This is the open-source source code to the official website of cryptic-game.
