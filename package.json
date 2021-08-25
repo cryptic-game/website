@@ -9,7 +9,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "genstart":"npm run-script generate && npm run-script start"
   },
   "dependencies": {
     "@nuxtjs/axios": "5.13.6",
