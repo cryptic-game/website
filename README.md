@@ -1,5 +1,9 @@
 # Cryptic - Website
 ![Lines of code](https://img.shields.io/tokei/lines/github/cryptic-game/website?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/cryptic-game/website?color=green&style=flat-square)
+![Website](https://img.shields.io/website?down_color=red&down_message=offline&style=flat-square&up_message=online&url=https%3A%2F%2Fcryptic-game.net)   
+![](https://img.shields.io/badge/For%20the-Community-orange?style=for-the-badge)
+![](https://img.shields.io/badge/By%20the-Community-brightgreen?style=for-the-badge)
 ## Welcome
 
 This is the open-source source code to the official website of cryptic-game.
