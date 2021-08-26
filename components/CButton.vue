@@ -158,7 +158,6 @@ export default {
   .c-button__content {
     font-size: calc(var(--x-size) * 0.5rem + 0.6rem);
     width: max-content;
-    max-width: 50vm;
 
     @include screenSize.mobile {
       font-size: calc(var(--x-size) * 0.5rem + 0.5rem);
