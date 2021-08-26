@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "devlocnetwork": "cross-env NUXT_HOST=0.0.0.0 NUXT_PORT=3000 nuxt",
+    "dev:pub": "cross-env NUXT_HOST=0.0.0.0 nuxt",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
