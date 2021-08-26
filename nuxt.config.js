@@ -47,6 +47,16 @@ export default {
         hid: 'twitter:card',
         name: 'twitter:card',
         content: 'summary_large_image'
+      },
+      {
+        name: "theme-color",
+        content: "#000000",
+        media: "(prefers-color-scheme: light)"
+      },
+      {
+        name: "theme-color",
+        content: "#000000",
+        media: "(prefers-color-scheme: dark)"
       }
     ],
     link: [
