@@ -332,7 +332,10 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/css/mixins/screenSize";
-
+.icon{
+  max-width: 100%;
+  max-height: 13vh;
+}
 .index-page {
   width: 100%;
 
@@ -403,6 +406,8 @@ export default {
 
     .hero-section__join-button {
       margin-top: 20px;
+      max-width: 100%;
+      max-height: 20vh;
     }
   }
 }
