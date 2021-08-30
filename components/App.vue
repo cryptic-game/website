@@ -32,7 +32,7 @@ export default {
     --colors-background: black;
     --colors-discord-c: white;
     --colors-discord-a: #6a7fca;
-    --colors-discord: #7289DA;
+    --colors-discord: #5865F2;
     --colors-blue-c: black;
     --colors-blue-a: #3695d8;
     --colors-blue: #39a8f3;
