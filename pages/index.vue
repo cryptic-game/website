@@ -329,7 +329,11 @@ export default {
   }
 }
 </script>
-
+<style lang="scss">
+h1{
+  word-wrap: break-word;
+}
+</style>
 <style lang="scss" scoped>
 @use "../assets/css/mixins/screenSize";
 
