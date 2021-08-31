@@ -70,31 +70,33 @@ export default {
 <style lang="scss" scoped>
   .fixes{
     margin-top: 10px;
-    background: linear-gradient(to right,rgb(26, 26, 26),rgb(26, 26, 26),rgb(26, 26, 26),rgb(221, 71, 44));
     border-style: none;
     border-radius: 8px;
-    color: #3EAB34;
+    color: rgb(221, 71, 44);
   }
   .enhancements{
     margin-top: 10px;
-    background: linear-gradient(to right,rgb(26, 26, 26),rgb(26, 26, 26),rgb(26, 26, 26),rgb(79, 185, 204));
     border-style: none;
     border-radius: 8px;
-    color: #3EAB34;
+    color: rgb(79, 185, 204);
   }
   .fix{
     margin-top: 5px;
     color: white;
+    
   }
   .enhancement{
     color: white;
     margin-top: 5px;
   }
 .versionEntry{
-  background: rgb(26, 26, 26);
-  color: rgb(243, 238, 212);
+  color: white;
   padding: 20px;
   width: 100%;
+  //background: linear-gradient(to right,black,black,black,#3EAB34);
+  border-left-style: solid;
+  border-left-width: 14px;
+  border-left-color: #3EAB34;
 }
 
 </style>
