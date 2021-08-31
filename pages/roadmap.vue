@@ -293,10 +293,10 @@
 </template>
 
 <script>
+import NavigationBar from '@/components/NavigationBar'
 import RoadMapDate from '../components/road-map-date'
 import RoadMapVersion from '../components/road-map-version'
 import RoadMapSprint from '../components/road-map-sprint'
-import NavigationBar from '@/components/NavigationBar'
 
 export default {
   name: 'RoadMapPage',

@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import TeamMember from '../components/TeamMember'
 import NavigationBar from '@/components/NavigationBar'
+import TeamMember from '../components/TeamMember'
 
 export default {
   name: 'TeamPage',
