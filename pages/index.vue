@@ -333,6 +333,19 @@ export default {
 h1{
   word-wrap: break-word;
 }
+h2{
+  word-wrap: break-word;
+}
+h3{
+  word-wrap: break-word;
+}
+h4{
+  word-wrap: break-word;
+}
+h5{
+  word-wrap: break-word;
+}
+
 </style>
 <style lang="scss" scoped>
 @use "../assets/css/mixins/screenSize";
