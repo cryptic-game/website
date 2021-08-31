@@ -83,7 +83,7 @@ export default {
   .fix{
     margin-top: 5px;
     color: white;
-
+    
   }
   .enhancement{
     color: white;
