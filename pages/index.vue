@@ -330,9 +330,6 @@ export default {
 }
 </script>
 <style lang="scss">
-h1, h2, h3, h4, h5, h6 {
-  word-wrap: break-word;
-}
 
 </style>
 <style lang="scss" scoped>
