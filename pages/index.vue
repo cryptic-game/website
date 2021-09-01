@@ -329,9 +329,6 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-
-</style>
 <style lang="scss" scoped>
 @use "../assets/css/mixins/screenSize";
 .icon{
