@@ -349,7 +349,10 @@ h5{
 </style>
 <style lang="scss" scoped>
 @use "../assets/css/mixins/screenSize";
-
+.icon{
+  max-width: 100%;
+  max-height: 13vh;
+}
 .index-page {
   width: 100%;
 
@@ -420,6 +423,8 @@ h5{
 
     .hero-section__join-button {
       margin-top: 20px;
+      max-width: 100%;
+      max-height: 20vh;
     }
   }
 }
@@ -541,7 +546,7 @@ h5{
 
   .desc-section__part {
     width: 100%;
-    text-align: left;
+    text-align: justify;
 
     &:not(:last-child) {
       margin-right: var(--gutter-size);
@@ -620,6 +625,7 @@ h5{
       margin-top: 25px;
       margin-bottom: 10px;
       font-size: 1.3rem;
+      text-align: left;
     }
   }
 
