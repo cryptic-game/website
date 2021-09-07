@@ -16,8 +16,8 @@
                 <h4>{{ $t("changelog.enhancements") }}</h4>
 
                 <div v-for="enhancement in change.enhancements" :key="enhancement" class="enhancement">
-                  <h5>
-                    {{ enhancement }}<h2 />
+                  <h5 style="font-weight: normal;">
+                    {{ enhancement }}
                   </h5>
                 </div>
               </div>
@@ -26,8 +26,8 @@
                 <h4>{{ $t("changelog.fixes") }}</h4>
 
                 <div v-for="fix in change.fixes" :key="fix" class="fix">
-                  <h5>
-                    {{ fix }}<h2 />
+                  <h5 style="font-weight: normal;">
+                    {{ fix }}
                   </h5>
                 </div>
               </div>
