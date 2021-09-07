@@ -9,7 +9,7 @@
           <article>
             <div>
               <h3>{{ change.name }}</h3>
-              <small>{{ change.date }}</small>
+              <small>{{ change.date.split("-")[0] }}-{{ change.date.split("-")[1] }}</small>
               <div />
 
               <div class="enhancements">
