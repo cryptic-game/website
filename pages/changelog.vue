@@ -9,7 +9,9 @@
           <article>
             <div>
               <h3>{{ change.name }}</h3>
-              <small>{{ change.date.split("-")[0] }}-{{ change.date.split("-")[1] }}</small>
+              <client-only>
+                <small>{{ getPrettyDate(change.date) }}</small>
+              </client-only>
               <div />
 
               <div class="enhancements">
@@ -42,7 +44,6 @@
 
 <script>
 import NavigationBar from '@/components/NavigationBar'
-
 export default {
   name: 'ChangelogPage',
   components: {
@@ -61,6 +62,18 @@ export default {
   head () {
     return {
       titleTemplate: 'Changelog - %s'
+    }
+  },
+  methods: {
+    getPrettyDate (date) {
+      switch (this.$i18n.locale) {
+        case 'de':
+          return date.split(/T|-/)[2] + '.' + date.split('-')[1] + '.' + date.split('-')[0]
+        case 'en':
+          return date.split('-')[1] + '.' + date.split(/T|-/)[2] + '.' + date.split('-')[0]
+        default:
+          return date.split(/T|-/)[2] + '.' + date.split('-')[1] + '.' + date.split('-')[0]
+      }
     }
   }
 
