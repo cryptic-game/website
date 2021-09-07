@@ -14,6 +14,7 @@
     "lint:ci": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@fontsource/jost": "^4.5.0",
     "@nuxtjs/axios": "5.13.6",
     "@nuxtjs/pwa": "3.3.5",
     "@nuxtjs/sitemap": "2.4.0",
@@ -29,8 +30,8 @@
     "env-cmd": "10.1.0",
     "eslint": "7.32.0",
     "eslint-plugin-nuxt": "2.0.0",
-    "eslint-plugin-vue": "7.16.0",
-    "sass": "1.38.1",
+    "eslint-plugin-vue": "7.17.0",
+    "sass": "1.39.0",
     "sass-loader": "8.0.2",
     "vue-svg-loader": "0.16.0"
   }

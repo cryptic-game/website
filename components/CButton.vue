@@ -98,7 +98,7 @@ export default {
   justify-items: center;
   align-content: flex-start;
   justify-content: flex-start;
-
+  max-width: 50vw;
   border-radius: 3px;
   border: none;
 

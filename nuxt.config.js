@@ -47,14 +47,14 @@ export default {
         hid: 'twitter:card',
         name: 'twitter:card',
         content: 'summary_large_image'
+      },
+      {
+        name: 'theme-color',
+        content: '#000000'
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Alata&display=swap'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
