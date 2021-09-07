@@ -66,14 +66,7 @@ export default {
   },
   methods: {
     getPrettyDate (date) {
-      switch (this.$i18n.locale) {
-        case 'de':
-          return date.split(/T|-/)[2] + '.' + date.split('-')[1] + '.' + date.split('-')[0]
-        case 'en':
-          return date.split('-')[1] + '.' + date.split(/T|-/)[2] + '.' + date.split('-')[0]
-        default:
-          return date.split(/T|-/)[2] + '.' + date.split('-')[1] + '.' + date.split('-')[0]
-      }
+      return new Intl.DateTimeFormat(this.$i18n.localeProperties.iso).format(new Date(date))
     }
   }
 
