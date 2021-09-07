@@ -11,7 +11,12 @@
         "faq": "FAQ",
         "roadmap": "Roadmap",
         "contribute": "Contribute",
-        "team": "Team"
+        "team": "Team",
+        "changelog":"Changelog"
+    },
+    "changelog":{
+        "fixes":"Fixes",
+        "enhancements":"Enhancements"
     },
     "home": {
         "createTheGame": "Don’t <strong>play</strong> the game, <span><br/><strong>create</strong> the game</span>",
