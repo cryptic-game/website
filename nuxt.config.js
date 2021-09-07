@@ -83,9 +83,9 @@ export default {
   i18n: {
     lazy: true,
     locales: [
-      { code: 'en', iso: 'en', file: 'en.json', dir: 'ltr' },
-      { code: 'de', iso: 'de', file: 'de.json', dir: 'ltr' },
-      { code: 'zh', iso: 'zh', file: 'zh_Hans.json', dir: 'ltr' }
+      { code: 'en', iso: 'en-US', file: 'en.json', dir: 'ltr' },
+      { code: 'de', iso: 'de-DE', file: 'de.json', dir: 'ltr' },
+      // { code: 'zh', iso: 'zh-Hans', file: 'zh_Hans.json', dir: 'ltr' }
     ],
     langDir: 'locales/',
     defaultLocale: 'en',
