@@ -117,20 +117,7 @@ export default {
     border-radius: 8px;
     color: rgb(222, 224, 52);
   }
-  .addition{
-    color: white;
-    margin-top: 5px;
-  }
-  .change{
-    margin-top: 5px;
-    color: white;
-  }
-  .fix{
-    margin-top: 5px;
-    color: white;
-
-  }
-  .enhancement{
+  .addition, .change, .fix, .enhancement{
     color: white;
     margin-top: 5px;
   }
