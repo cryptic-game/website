@@ -6,13 +6,14 @@
         Blog
       </h1>
       <div class="posts-page__posts">
-        <BlogPostCard
-          v-for="post in publishedPosts"
-          :key="post.id.postId"
-          :post="post"
-          class="posts-page__post"
-          image-height="50vh"
-        />
+        <div v-for="post in posts" :key="post.title">
+          <BlogPostCard
+            v-if="post.published"
+            :key="post.id.postId"
+            :post="post"
+            class="posts-page__post"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -29,18 +30,13 @@ export default {
     posts: []
   }),
   async fetch () {
-    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/de')
+    const lang = this.$i18n.localeProperties.iso.split('-')[0]
+    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
     this.posts = await response.json()
   },
   head () {
     return {
       titleTemplate: 'Blog - %s'
-    }
-  },
-  computed: {
-    // eslint-disable-next-line object-shorthand
-    publishedPosts: function () {
-      return this.posts.filter(post => post.published === true)
     }
   }
 }
