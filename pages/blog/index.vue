@@ -30,7 +30,7 @@ export default {
     posts: []
   }),
   async fetch () {
-    const lang = this.$i18n.localeProperties.iso.split('-')[0]
+    const lang = this.$i18n.locale
     const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
     this.posts = await response.json()
   },

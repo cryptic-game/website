@@ -28,7 +28,7 @@ export default {
   }),
   async fetch () {
     // example : https://api.admin.staging.cryptic-game.net/website/blog/de/long-text
-    let lang = this.$i18n.localeProperties.iso.split('-')[0]
+    let lang = this.$i18n.locale
     const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang + '/' + this.slug)
 
     // eslint-disable-next-line prefer-const
