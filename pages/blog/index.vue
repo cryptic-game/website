@@ -30,8 +30,7 @@ export default {
     posts: []
   }),
   async fetch () {
-    const lang = 'en'
-    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
+    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en')
     this.posts = await response.json()
   },
   head () {
