@@ -13,6 +13,15 @@
                 <small>{{ getPrettyDate(change.date) }}</small>
               </client-only>
               <div />
+              <div class="additions">
+                <h4>{{ $t("changelog.additions") }}</h4>
+
+                <div v-for="add in change.addtions" :key="add" class="addition">
+                  <h5 style="font-weight: normal;">
+                    {{ add }}
+                  </h5>
+                </div>
+              </div>
 
               <div class="enhancements">
                 <h4>{{ $t("changelog.enhancements") }}</h4>
@@ -85,6 +94,16 @@ export default {
     border-style: none;
     border-radius: 8px;
     color: rgb(79, 185, 204);
+  }
+  .additions{
+    margin-top: 10px;
+    border-style: none;
+    border-radius: 8px;
+    color: rgb(81, 185, 60);
+  }
+  .addition{
+    color: white;
+    margin-top: 5px;
   }
   .fix{
     margin-top: 5px;
