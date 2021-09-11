@@ -13,24 +13,43 @@
                 <small>{{ getPrettyDate(change.date) }}</small>
               </client-only>
               <div />
+              <div v-if="change.additions" class="additions">
+                <h4>{{ $t("changelog.additions") }}</h4>
 
-              <div class="enhancements">
-                <h4>{{ $t("changelog.enhancements") }}</h4>
-
-                <div v-for="enhancement in change.enhancements" :key="enhancement" class="enhancement">
-                  <h5 style="font-weight: normal;">
-                    {{ enhancement }}
-                  </h5>
+                <div v-for="add in change.additions" :key="add" class="addition">
+                  <p style="font-weight: normal;">
+                    {{ add }}
+                  </p>
                 </div>
               </div>
 
-              <div class="fixes">
+              <div v-if="change.enhancements" class="enhancements">
+                <h4>{{ $t("changelog.enhancements") }}</h4>
+
+                <div v-for="enhancement in change.enhancements" :key="enhancement" class="enhancement">
+                  <p style="font-weight: normal;">
+                    {{ enhancement }}
+                  </p>
+                </div>
+              </div>
+
+              <div v-if="change.changes" class="changes">
+                <h4>{{ $t("changelog.changes") }}</h4>
+
+                <div v-for="cha in change.changes" :key="cha" class="change">
+                  <p style="font-weight: normal;">
+                    {{ cha }}
+                  </p>
+                </div>
+              </div>
+
+              <div v-if="change.fixes" class="fixes">
                 <h4>{{ $t("changelog.fixes") }}</h4>
 
                 <div v-for="fix in change.fixes" :key="fix" class="fix">
-                  <h5 style="font-weight: normal;">
+                  <p style="font-weight: normal;">
                     {{ fix }}
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
@@ -47,7 +66,6 @@ import NavigationBar from '@/components/NavigationBar'
 export default {
   name: 'ChangelogPage',
   components: {
-
     NavigationBar
   },
   data () {
@@ -57,7 +75,18 @@ export default {
   },
   async fetch () {
     const response = await fetch('https://play.cryptic-game.net/assets/changelog.json')
-    this.changes = await response.json()
+    const changes = await response.json()
+    for (const change of changes.versions) {
+      // eslint-disable-next-line eqeqeq
+      if (!change.enhancements?.length) { change.enhancements = null }
+      // eslint-disable-next-line eqeqeq
+      if (!change.additions?.length) { change.additions = null }
+      // eslint-disable-next-line eqeqeq
+      if (!change.fixes?.length) { change.fixes = null }
+      // eslint-disable-next-line eqeqeq
+      if (!change.changes?.length) { change.changes = null }
+    }
+    this.changes = changes
   },
   head () {
     return {
@@ -86,14 +115,24 @@ export default {
     border-radius: 8px;
     color: rgb(79, 185, 204);
   }
-  .fix{
-    margin-top: 5px;
-    color: white;
-
+  .additions{
+    margin-top: 10px;
+    border-style: none;
+    border-radius: 8px;
+    color: rgb(81, 185, 60);
   }
-  .enhancement{
+  .changes{
+    margin-top: 10px;
+    border-style: none;
+    border-radius: 8px;
+    color: rgb(222, 224, 52);
+  }
+  .addition, .change, .fix, .enhancement{
     color: white;
     margin-top: 5px;
+  }
+  h4{
+    font-size: 2rem;
   }
 .versionEntry{
   color: white;
