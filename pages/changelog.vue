@@ -111,9 +111,19 @@ export default {
     border-radius: 8px;
     color: rgb(81, 185, 60);
   }
+  .changes{
+    margin-top: 10px;
+    border-style: none;
+    border-radius: 8px;
+    color: rgb(222, 224, 52);
+  }
   .addition{
     color: white;
     margin-top: 5px;
+  }
+  .change{
+    margin-top: 5px;
+    color: white;
   }
   .fix{
     margin-top: 5px;
