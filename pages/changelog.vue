@@ -13,7 +13,7 @@
                 <small>{{ getPrettyDate(change.date) }}</small>
               </client-only>
               <div />
-              <div class="additions">
+              <div v-if="change.additions != undefined" class="additions">
                 <h4>{{ $t("changelog.additions") }}</h4>
 
                 <div v-for="add in change.additions" :key="add" class="addition">
@@ -23,7 +23,7 @@
                 </div>
               </div>
 
-              <div class="enhancements">
+              <div v-if="change.enhancements != undefined" class="enhancements">
                 <h4>{{ $t("changelog.enhancements") }}</h4>
 
                 <div v-for="enhancement in change.enhancements" :key="enhancement" class="enhancement">
@@ -33,7 +33,7 @@
                 </div>
               </div>
 
-              <div class="changes">
+              <div v-if="change.changes != undefined" class="changes">
                 <h4>{{ $t("changelog.changes") }}</h4>
 
                 <div v-for="cha in change.changes" :key="cha" class="change">
@@ -43,7 +43,7 @@
                 </div>
               </div>
 
-              <div class="fixes">
+              <div v-if="change.fixes != undefined" class="fixes">
                 <h4>{{ $t("changelog.fixes") }}</h4>
 
                 <div v-for="fix in change.fixes" :key="fix" class="fix">
@@ -76,7 +76,18 @@ export default {
   },
   async fetch () {
     const response = await fetch('https://play.cryptic-game.net/assets/changelog.json')
-    this.changes = await response.json()
+    const changes = await response.json()
+    for (const change in changes) {
+      // eslint-disable-next-line eqeqeq
+      if (change.enhancements == 0) { change.enhancements = undefined }
+      // eslint-disable-next-line eqeqeq
+      if (change.additions == 0) { change.additions = undefined }
+      // eslint-disable-next-line eqeqeq
+      if (change.fixes == 0) { change.fixes = undefined }
+      // eslint-disable-next-line eqeqeq
+      if (change.changes == 0) { change.changes = undefined }
+    }
+    this.changes = changes
   },
   head () {
     return {
