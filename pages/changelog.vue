@@ -17,9 +17,9 @@
                 <h4>{{ $t("changelog.additions") }}</h4>
 
                 <div v-for="add in change.additions" :key="add" class="addition">
-                  <h5 style="font-weight: normal;">
+                  <p style="font-weight: normal;">
                     {{ add }}
-                  </h5>
+                  </p>
                 </div>
               </div>
 
@@ -27,9 +27,9 @@
                 <h4>{{ $t("changelog.enhancements") }}</h4>
 
                 <div v-for="enhancement in change.enhancements" :key="enhancement" class="enhancement">
-                  <h5 style="font-weight: normal;">
+                  <p style="font-weight: normal;">
                     {{ enhancement }}
-                  </h5>
+                  </p>
                 </div>
               </div>
 
@@ -37,9 +37,9 @@
                 <h4>{{ $t("changelog.changes") }}</h4>
 
                 <div v-for="cha in change.changes" :key="cha" class="change">
-                  <h5 style="font-weight: normal;">
+                  <p style="font-weight: normal;">
                     {{ cha }}
-                  </h5>
+                  </p>
                 </div>
               </div>
 
@@ -47,9 +47,9 @@
                 <h4>{{ $t("changelog.fixes") }}</h4>
 
                 <div v-for="fix in change.fixes" :key="fix" class="fix">
-                  <h5 style="font-weight: normal;">
+                  <p style="font-weight: normal;">
                     {{ fix }}
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
@@ -120,6 +120,9 @@ export default {
   .addition, .change, .fix, .enhancement{
     color: white;
     margin-top: 5px;
+  }
+  h4{
+    font-size: 2rem;
   }
 .versionEntry{
   color: white;
