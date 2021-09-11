@@ -22,7 +22,17 @@
 <script>
 import NavigationBar from '@/components/NavigationBar'
 import BlogPostCard from '@/components/BlogPostCard'
-
+function mergePostArraysByIdPreferred (PreferredArray, fallbackArray) {
+  const map = new Map()
+  PreferredArray.forEach(item => map.set(item.id.postId, item))
+  fallbackArray.forEach((item) => {
+    if (!map.has(item.id.postId)) {
+      map.set(item.id.postId, item)
+    }
+  })
+  const reslt = Array.from(map.values())
+  return reslt
+}
 export default {
   name: 'PostsPage',
   components: { BlogPostCard, NavigationBar },
@@ -30,8 +40,13 @@ export default {
     posts: []
   }),
   async fetch () {
-    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en')
-    this.posts = await response.json()
+    const lang = this.$i18n.locale
+    const responsePreferredF = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
+    const responsePreferred = await responsePreferredF.json()
+    const responseFallbackF = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en')
+    const responseFallback = await responseFallbackF.json()
+    const response = mergePostArraysByIdPreferred(responsePreferred, responseFallback)
+    this.posts = response
     this.posts = this.posts.reverse()
   },
   head () {
