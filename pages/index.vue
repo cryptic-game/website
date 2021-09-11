@@ -300,7 +300,8 @@ export default {
     ]
   }),
   async fetch () {
-    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/de')
+    const lang = this.$i18n.localeProperties.iso.split('-')[0]
+    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
     this.blogPosts = await response.json()
   },
   created () {

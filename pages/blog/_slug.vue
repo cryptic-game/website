@@ -3,12 +3,12 @@
   <div class="post-page">
     <NavigationBar title="Blog" />
     <article class="content formatted">
-      <img :alt="`Title Image from: ${post.title}`" :src="post.image" class="post-page__image"><br/>
-      <span>{{ Intl.DateTimeFormat(this.$i18n.localeProperties.iso).format(new Date(post.created)) }}</span>
+      <img :alt="`Title Image from: ${post.title}`" :src="post.image" class="post-page__image"><br>
+      <span>{{ Intl.DateTimeFormat($i18n.localeProperties.iso).format(new Date(post.created)) }}</span>
       <h1 class="post-page__title">
-        {{ post.title || "untitled post"}}
+        {{ post.title || "untitled post" }}
       </h1>
-      <span v-if="post.author != undefinded">by {{post.author}} </span>
+      <span v-if="post.author != undefinded">by {{ post.author }} </span>
       <div class="post-page__content" v-html="post.content" />
     </article>
   </div>
@@ -28,10 +28,18 @@ export default {
   }),
   async fetch () {
     // example : https://api.admin.staging.cryptic-game.net/website/blog/de/long-text
-    const lang = this.$i18n.localeProperties.iso.split('-')[0]
+    let lang = this.$i18n.localeProperties.iso.split('-')[0]
     const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang + '/' + this.slug)
+
     // eslint-disable-next-line prefer-const
     let post = await response.json()
+    // eslint-disable-next-line eqeqeq
+    if (post.message != undefined && post.message === 'COMPONENT_NOT_FOUND') {
+      lang = 'en'
+      const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang + '/' + this.slug)
+      // eslint-disable-next-line prefer-const
+      post = await response.json()
+    }
     this.post = post
   },
   head () {
