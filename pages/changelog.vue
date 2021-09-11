@@ -16,7 +16,7 @@
               <div class="additions">
                 <h4>{{ $t("changelog.additions") }}</h4>
 
-                <div v-for="add in change.addtions" :key="add" class="addition">
+                <div v-for="add in change.additions" :key="add" class="addition">
                   <h5 style="font-weight: normal;">
                     {{ add }}
                   </h5>
