@@ -27,19 +27,20 @@ export default {
     post: {}
   }),
   async fetch () {
-    // example : https://api.admin.staging.cryptic-game.net/website/blog/de/long-text
     let lang = this.$i18n.locale
-    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang + '/' + this.slug)
+    let error
+    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang + '/' + this.slug).catch((err) => { error = err })
 
     // eslint-disable-next-line prefer-const
     let post = await response.json()
+
     // eslint-disable-next-line eqeqeq
-    if (post.message != undefined && post.message === 'COMPONENT_NOT_FOUND') {
+    if (post.title == undefined || post == 0 || error != undefined) {
       lang = 'en'
-      const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang + '/' + this.slug)
-      // eslint-disable-next-line prefer-const
+      const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en/' + this.slug)
       post = await response.json()
     }
+
     this.post = post
   },
   head () {
