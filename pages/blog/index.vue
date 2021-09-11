@@ -7,8 +7,8 @@
       </h1>
       <div class="posts-page__posts">
         <BlogPostCard
-          v-for="post in posts"
-          :key="post.slug"
+          v-for="post in publishedPosts"
+          :key="post.id.postId"
           :post="post"
           class="posts-page__post"
           image-height="50vh"
@@ -20,26 +20,27 @@
 
 <script>
 import NavigationBar from '@/components/NavigationBar'
-import { blogAPI } from '@/assets/js/blog'
-import { mapObjectKeys } from '@/assets/js/mapObjectKeys'
 import BlogPostCard from '@/components/BlogPostCard'
 
 export default {
   name: 'PostsPage',
   components: { BlogPostCard, NavigationBar },
-  async asyncData () {
-    return {
-      posts: Array.from(await blogAPI.posts.browse({
-        include: 'slug,title,feature_image,reading_time,published_at'
-      })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
-    }
-  },
   data: () => ({
     posts: []
   }),
+  async fetch () {
+    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/de')
+    this.posts = await response.json()
+  },
   head () {
     return {
       titleTemplate: 'Blog - %s'
+    }
+  },
+  computed: {
+    // eslint-disable-next-line object-shorthand
+    publishedPosts: function () {
+      return this.posts.filter(post => post.published === true)
     }
   }
 }

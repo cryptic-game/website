@@ -1,40 +1,41 @@
+/* eslint-disable vue/no-v-html */
 <template>
   <div class="post-page">
     <NavigationBar title="Blog" />
     <article class="content formatted">
-      <img :alt="`Title Image from: ${post.title}`" :src="post.image" class="post-page__image">
-      <span>{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
+      <img :alt="`Title Image from: ${post.title}`" :src="post.image" class="post-page__image"><br/>
+      <span>{{ Intl.DateTimeFormat(this.$i18n.localeProperties.iso).format(new Date(post.created)) }}</span>
       <h1 class="post-page__title">
-        {{ post.title }}
+        {{ post.title || "untitled post"}}
       </h1>
-      <span>by {{ post.authors.map(author => author.name).join(", ") }} | reading time:
-        {{ Math.max(1, post.readingTime) }} minute{{ Math.max(1, post.readingTime) === 1 ? "" : "s" }}</span>
-      <div class="post-page__content" v-html="post.html" />
+      <span v-if="post.author != undefinded">by {{post.author}} </span>
+      <div class="post-page__content" v-html="post.content" />
     </article>
   </div>
 </template>
 
 <script>
 import NavigationBar from '@/components/NavigationBar'
-import { blogAPI } from '@/assets/js/blog'
-import { mapObjectKeys } from '@/assets/js/mapObjectKeys'
 
 export default {
   name: 'PostPage',
   components: { NavigationBar },
-  async asyncData ({ route }) {
-    return {
-      post: mapObjectKeys(blogAPI.mappings.post, await blogAPI.posts.read({
-        slug: route.params.slug,
-        include: 'title,html,published_at,authors'
-      }))
-    }
+  asyncData ({ route }) {
+    return { slug: route.params.slug }
   },
   data: () => ({
     post: {}
   }),
+  async fetch () {
+    // example : https://api.admin.staging.cryptic-game.net/website/blog/de/long-text
+    const lang = 'de'
+    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang + '/' + this.slug)
+    // eslint-disable-next-line prefer-const
+    let post = await response.json()
+    this.post = post
+  },
   head () {
-    const content = this.post.excerpt.replace(/\r?[\n|\r]/g, ' ').split(' ').filter(data => data).join(' ') || ''
+    const content = this.post.description
     return {
       titleTemplate: `${this.post.title} - %s`,
       meta: [
@@ -42,8 +43,8 @@ export default {
         { hid: 'description', name: 'description', content },
         { hid: 'og:description', name: 'og:description', content },
         { hid: 'twitter:description', name: 'twitter:description', content },
-        { hid: 'og:url', name: 'og:url', content: `https://cryptic-game.net/blog/${this.post.slug}` },
-        { hid: 'twitter:url', name: 'og:url', content: `https://cryptic-game.net/blog/${this.post.slug}` },
+        { hid: 'og:url', name: 'og:url', content: `https://cryptic-game.net/blog/${this.slug}` },
+        { hid: 'twitter:url', name: 'og:url', content: `https://cryptic-game.net/blog/${this.slug}` },
         { hid: 'og:image', name: 'og:image', content: this.post.image || 'https://cryptic-game.net/open-graph.jpg' },
         {
           hid: 'twitter:image',
@@ -54,12 +55,7 @@ export default {
         {
           hid: 'article:published_time',
           name: 'article:published_time',
-          content: new Date(this.post.publishedAt).toString()
-        },
-        {
-          hid: 'article:author',
-          name: 'article:author',
-          content: this.post.authors.map(author => author.name).join(', ')
+          content: new Date(this.post.created).toString()
         }
       ]
     }
