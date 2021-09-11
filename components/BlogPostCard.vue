@@ -2,10 +2,8 @@
   <div class="blog-post-card">
     <img :alt="`Title Image from: ${post.title}`" :src="post.image || 'https://cryptic-game.net/open-graph.jpg'" :style="imageStyle" class="blog-post-card__image">
     <div class="blog-post-card__info">
+      <span class="blog-post-card__title">{{ post.title }}</span>
       <small class="blog-post-card__date">{{ new Date(post.created).toLocaleDateString() }}</small>
-      <span class="blog-post-card__title">
-        {{ post.title }}
-      </span>
       <span>{{ post.description }}</span>
       <div class="blog-post-card__footer">
         <nuxt-link :to="localePath(`/blog/${post.id.postId}`)" class="blog-post-card__link link">
