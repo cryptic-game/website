@@ -6,6 +6,7 @@
       <span class="blog-post-card__title">
         {{ post.title }}
       </span>
+      <span>{{post.description}}</span>
       <div class="blog-post-card__footer">
         <nuxt-link :to="localePath(`/blog/${post.id.postId}`)" class="blog-post-card__link link">
           Read
