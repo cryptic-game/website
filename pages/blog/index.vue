@@ -32,6 +32,7 @@ export default {
   async fetch () {
     const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en')
     this.posts = await response.json()
+    this.posts = this.posts.reverse()
   },
   head () {
     return {
