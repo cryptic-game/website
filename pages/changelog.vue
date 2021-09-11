@@ -13,7 +13,7 @@
                 <small>{{ getPrettyDate(change.date) }}</small>
               </client-only>
               <div />
-              <div v-if="change.additions != undefined" class="additions">
+              <div v-if="change.additions" class="additions">
                 <h4>{{ $t("changelog.additions") }}</h4>
 
                 <div v-for="add in change.additions" :key="add" class="addition">
@@ -23,7 +23,7 @@
                 </div>
               </div>
 
-              <div v-if="change.enhancements != undefined" class="enhancements">
+              <div v-if="change.enhancements" class="enhancements">
                 <h4>{{ $t("changelog.enhancements") }}</h4>
 
                 <div v-for="enhancement in change.enhancements" :key="enhancement" class="enhancement">
@@ -33,7 +33,7 @@
                 </div>
               </div>
 
-              <div v-if="change.changes != undefined" class="changes">
+              <div v-if="change.changes" class="changes">
                 <h4>{{ $t("changelog.changes") }}</h4>
 
                 <div v-for="cha in change.changes" :key="cha" class="change">
@@ -43,7 +43,7 @@
                 </div>
               </div>
 
-              <div v-if="change.fixes != undefined" class="fixes">
+              <div v-if="change.fixes" class="fixes">
                 <h4>{{ $t("changelog.fixes") }}</h4>
 
                 <div v-for="fix in change.fixes" :key="fix" class="fix">
@@ -66,7 +66,6 @@ import NavigationBar from '@/components/NavigationBar'
 export default {
   name: 'ChangelogPage',
   components: {
-
     NavigationBar
   },
   data () {
@@ -77,15 +76,15 @@ export default {
   async fetch () {
     const response = await fetch('https://play.cryptic-game.net/assets/changelog.json')
     const changes = await response.json()
-    for (const change in changes) {
+    for (const change of changes.versions) {
       // eslint-disable-next-line eqeqeq
-      if (change.enhancements == 0) { change.enhancements = undefined }
+      if (!change.enhancements?.length) { change.enhancements = null }
       // eslint-disable-next-line eqeqeq
-      if (change.additions == 0) { change.additions = undefined }
+      if (!change.additions?.length) { change.additions = null }
       // eslint-disable-next-line eqeqeq
-      if (change.fixes == 0) { change.fixes = undefined }
+      if (!change.fixes?.length) { change.fixes = null }
       // eslint-disable-next-line eqeqeq
-      if (change.changes == 0) { change.changes = undefined }
+      if (!change.changes?.length) { change.changes = null }
     }
     this.changes = changes
   },
