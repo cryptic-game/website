@@ -33,6 +33,16 @@
                 </div>
               </div>
 
+              <div class="changes">
+                <h4>{{ $t("changelog.changes") }}</h4>
+
+                <div v-for="cha in change.changes" :key="cha" class="change">
+                  <h5 style="font-weight: normal;">
+                    {{ cha }}
+                  </h5>
+                </div>
+              </div>
+
               <div class="fixes">
                 <h4>{{ $t("changelog.fixes") }}</h4>
 
