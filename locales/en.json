@@ -16,7 +16,9 @@
     },
     "changelog":{
         "fixes":"Fixes",
-        "enhancements":"Enhancements"
+        "enhancements":"Enhancements",
+        "additions":"Additions",
+        "changes":"Changes"
     },
     "home": {
         "createTheGame": "Don’t <strong>play</strong> the game, <span><br/><strong>create</strong> the game</span>",
