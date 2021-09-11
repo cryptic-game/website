@@ -8,6 +8,7 @@
       <h1 class="post-page__title">
         {{ post.title || "untitled post" }}
       </h1>
+      <span class="post-page_description">{{ post.description }}</span>
       <span v-if="post.author != undefinded">by {{ post.author }} </span>
       <div class="post-page__content" v-html="post.content" />
     </article>
@@ -79,7 +80,14 @@ export default {
   object-fit: cover;
   margin-bottom: 20px;
 }
-
+.post-page_description{
+  margin-top: 14px;
+  margin-bottom: 14px;
+  background: rgb(17, 17, 17);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+}
 .post-page__title {
   margin-top: 0;
   margin-bottom: 5px;
