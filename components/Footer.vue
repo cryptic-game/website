@@ -55,6 +55,7 @@ export default {
 @use "../assets/css/mixins/screenSize";
 
 .footer {
+  padding-bottom: 40px;
   position: sticky;
   top: 100vh;
   left: 0;
