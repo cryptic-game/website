@@ -3,7 +3,7 @@ import de from './locales/de.json'
 
 export default {
   target: 'static',
-
+  generate: { fallback: true },
   head: {
     title: 'Cryptic Game',
     meta: [
