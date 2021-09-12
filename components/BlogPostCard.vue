@@ -1,20 +1,12 @@
 <template>
   <div class="blog-post-card">
-    <img :alt="`Title Image from: ${post.title}`" :src="post.image" :style="imageStyle" class="blog-post-card__image">
+    <img :alt="`Title Image from: ${post.title}`" :src="post.image || 'https://cryptic-game.net/open-graph.jpg'" :style="imageStyle" class="blog-post-card__image">
     <div class="blog-post-card__info">
-      <span class="blog-post-card__date">{{ new Date(post.publishedAt).toLocaleDateString() }}</span>
-      <span class="blog-post-card__title">
-        {{ post.title }}
-      </span>
-      <span class="blog-post-card__excerpt">{{ post.excerpt }}</span>
+      <span class="blog-post-card__title">{{ post.title }}</span>
+      <small class="blog-post-card__date">{{ new Date(post.created).toLocaleDateString() }}</small>
+      <span>{{ post.description }}</span>
       <div class="blog-post-card__footer">
-        <span class="blog-post-card__reading-time">
-          <strong>{{ Math.max(1, post.readingTime) }} minute{{
-            Math.max(1, post.readingTime) === 1 ? "" : "s"
-          }}</strong>
-          reading time
-        </span>
-        <nuxt-link :to="localePath(`/blog/${post.slug}`)" class="blog-post-card__link link">
+        <nuxt-link :to="localePath(`/blog/${post.id.postId}`)" class="blog-post-card__link link">
           Read
         </nuxt-link>
       </div>
