@@ -109,6 +109,11 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
+      ]
+    },
     extend (config, ctx) {
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
 
