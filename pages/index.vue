@@ -63,7 +63,7 @@
         <div class="blog-section__posts flex-with-gutter">
           <BlogPostCard
             v-for="post in blogPosts"
-            :key="post.slug"
+            :key="post.id.postId"
             :post="post"
           />
           <div
@@ -240,8 +240,6 @@
 <script>
 import NavigationBar from '@/components/NavigationBar'
 import Footer from '@/components/Footer'
-import { blogAPI } from '@/assets/js/blog'
-import { mapObjectKeys } from '@/assets/js/mapObjectKeys'
 import BlogPostCard from '@/components/BlogPostCard'
 import CButton from '@/components/CButton'
 import DiscordIcon from '@/assets/icons/discord.svg'
@@ -278,16 +276,6 @@ export default {
     Typewriter
   },
   layout: 'none',
-  async asyncData () {
-    return {
-      blogPosts: Array.from(
-        await blogAPI.posts.browse({
-          limit: 2,
-          include: 'slug,title,feature_image,reading_time,published_at'
-        })
-      ).map(post => mapObjectKeys(blogAPI.mappings.post, post))
-    }
-  },
   data: () => ({
     blogPosts: [],
     subtitles: [
@@ -311,6 +299,11 @@ export default {
       'Hashback'
     ]
   }),
+  async fetch () {
+    const lang = this.$i18n.locale
+    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
+    this.blogPosts = await response.json()
+  },
   created () {
     this.shuffleSubtitles()
   },
