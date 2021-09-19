@@ -30,8 +30,9 @@ function mergePostArraysByIdPreferred (PreferredArray, fallbackArray) {
       map.set(item.id.postId, item)
     }
   })
-  const reslt = Array.from(map.values())
-  return reslt
+  const result = Array.from(map.values())
+  result.sort((a, b) => a === b ? 0 : (a.created < b.created) ? -1 : 1)
+  return result
 }
 export default {
   name: 'PostsPage',
