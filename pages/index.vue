@@ -1,7 +1,7 @@
 <template>
   <main class="index-page">
     <NavigationBar background-after-scroll />
-    <video autoplay class="background-video" loop muted>
+    <video autoplay class="background-video" loop muted playsinline>
       <source src="@/assets/video/background.mp4" type="video/mp4">
     </video>
     <section class="hero-section content">
