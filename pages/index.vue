@@ -301,8 +301,13 @@ export default {
   async fetch () {
     const lang = this.$i18n.locale
     const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
-    this.blogPosts = await response.json()
-    this.blogPosts = this.blogPosts.slice(-2)
+    let posts = await response.json()
+    posts = posts.reverse()
+    console.log(posts)
+    posts = posts.slice(-2)
+    console.log('-----------------------')
+    console.log(posts)
+    this.blogPosts = posts
   },
   created () {
     this.shuffleSubtitles()
