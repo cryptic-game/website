@@ -302,11 +302,7 @@ export default {
     const lang = this.$i18n.locale
     const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
     let posts = await response.json()
-    posts = posts.reverse()
-    console.log(posts)
-    posts = posts.slice(-2)
-    console.log('-----------------------')
-    console.log(posts)
+    posts = posts.reverse().slice(-2).reverse()
     this.blogPosts = posts
   },
   created () {
