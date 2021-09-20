@@ -254,7 +254,6 @@ import LanguageIcon from '@/assets/icons/language.svg'
 import PaintbrushIcon from '@/assets/icons/paintbrush.svg'
 import ShieldIcon from '@/assets/icons/shield.svg'
 import Typewriter from '@/components/Typewriter'
-
 export default {
   name: 'IndexPage',
   components: {
@@ -303,6 +302,8 @@ export default {
     const lang = this.$i18n.locale
     const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
     this.blogPosts = await response.json()
+    this.blogPosts = this.blogPosts.reverse()
+    this.blogPosts = this.blogPosts.slice(-2)
   },
   created () {
     this.shuffleSubtitles()
