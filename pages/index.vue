@@ -1,7 +1,15 @@
 <template>
   <main class="index-page">
     <NavigationBar background-after-scroll />
-    <video autoplay class="background-video" loop muted playsinline>
+    <video
+      class="background-video"
+      autoplay
+      loop
+      muted
+      playsinline
+      poster="@/assets/image/wp-1.jpg"
+    >
+
       <source src="@/assets/video/background.mp4" type="video/mp4">
     </video>
     <section class="hero-section content">
