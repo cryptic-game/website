@@ -4,6 +4,10 @@ import de from './locales/de.json'
 export default {
   target: 'static',
 
+  generate: {
+    fallback: false
+  },
+
   head: {
     title: 'Cryptic Game',
     meta: [
