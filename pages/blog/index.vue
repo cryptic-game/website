@@ -31,7 +31,7 @@ function mergePostArraysByIdPreferred (PreferredArray, fallbackArray) {
     }
   })
   const result = Array.from(map.values())
-  result.sort((a, b) => a === b ? 0 : (a.created < b.created) ? -1 : 1)
+  result.sort((a, b) => a === b ? 0 : (a.created > b.created) ? -1 : 1)
   return result
 }
 export default {
@@ -47,7 +47,7 @@ export default {
     const responseFallbackF = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en')
     const responseFallback = await responseFallbackF.json()
     const response = mergePostArraysByIdPreferred(responsePreferred, responseFallback)
-    this.posts = response.reverse()
+    this.posts = response
   },
   head () {
     return {
