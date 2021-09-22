@@ -31,7 +31,7 @@ function mergePostArraysByIdPreferred (PreferredArray, fallbackArray) {
     }
   })
   const result = Array.from(map.values())
-  result.sort((a, b) => a === b ? 0 : (a.created < b.created) ? -1 : 1)
+  result.sort((a, b) => a === b ? 0 : (a.created > b.created) ? -1 : 1)
   return result
 }
 export default {
