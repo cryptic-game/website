@@ -48,6 +48,7 @@ export default {
     const responseFallback = await responseFallbackF.json()
     const response = mergePostArraysByIdPreferred(responsePreferred, responseFallback)
     this.posts = response
+    this.posts = this.posts.reverse()
   },
   head () {
     return {
