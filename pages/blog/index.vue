@@ -47,8 +47,7 @@ export default {
     const responseFallbackF = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en')
     const responseFallback = await responseFallbackF.json()
     const response = mergePostArraysByIdPreferred(responsePreferred, responseFallback)
-    this.posts = response
-    this.posts = this.posts.reverse()
+    this.posts = response.reverse()
   },
   head () {
     return {
