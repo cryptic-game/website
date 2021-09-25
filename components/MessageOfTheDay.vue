@@ -1,5 +1,5 @@
 <template>
-  <div class="motd" :style="motd.style">
+  <div v-if="motd.message != undefined" class="motd" :style="motd.style">
     {{ motd.message }} <a v-if="motd.readmorelink != undefined" :href="motd.readmorelink" :style="motd.style"> READ MORE </a>
   </div>
 </template>
