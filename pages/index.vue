@@ -40,7 +40,7 @@
         <span>
           {{ $t("home.playEarlyVersion") }}
         </span>
-        <span class="second-section__version"> Cryptic Pre Alpha 2 </span>
+        <span class="second-section__version fit-c-1"> Cryptic Pre Alpha 2 </span>
         <CButton blue outline text-color="white" :to="localePath('/blog')">
           <template #icon>
             <NoteIcon class="icon" />
@@ -344,7 +344,9 @@ export default {
     background-color: var(--colors-green);
   }
 }
-
+.fit-c-1{
+  min-width: fit-content;
+}
 .section {
   width: 100%;
   z-index: 1;
