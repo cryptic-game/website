@@ -5,9 +5,9 @@
     <article class="content formatted">
       <img :alt="`Title Image from: ${post.title}`" :src="post.image" class="post-page__image"><br>
       <span>{{ Intl.DateTimeFormat($i18n.localeProperties.iso).format(new Date(post.created)) }}</span>
-      <h1 class="post-page__title">
+      <h2 class="post-page__title">
         {{ post.title || "untitled post" }}
-      </h1>
+      </h2>
       <span class="post-page_description">{{ post.description }}</span>
       <span v-if="post.author != undefinded">by {{ post.author }} </span>
       <div class="post-page__content" v-html="post.content" />
