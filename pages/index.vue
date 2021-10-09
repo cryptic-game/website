@@ -310,7 +310,16 @@ export default {
     const lang = this.$i18n.locale
     const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
     let posts = await response.json()
-    posts = posts.slice(0, 2)
+    const postsFiltered = []
+    let i = 0
+    while (postsFiltered.length !== 2 && i < posts.length) {
+      const post = posts[i]
+      if (post.published === true) {
+        postsFiltered.push(post)
+      }
+      i++
+    }
+    posts = postsFiltered
     this.blogPosts = posts
   },
   created () {
