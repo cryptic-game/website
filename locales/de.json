@@ -12,7 +12,7 @@
         "roadmap": "Roadmap",
         "contribute": "Unterstützen",
         "team": "Team",
-        "changelog": "Änderungsprotokoll"
+        "changelog": "Changelog"
     },
     "home": {
         "createTheGame": "<strong>Spiel</strong> nicht das Spiel, <span><br/><strong>erstelle</strong> das Spiel</span>",
@@ -25,14 +25,14 @@
         "project": "Das Projekt",
         "projectDescription": {
             "initiated": "Das Projekt \"Cryptic\" wurde initiiert von dem deutschen YouTuber",
-            "announced": "Es wurde zuerst am 15. Oktober 2017 in einem",
+            "announced": "Es wurde initial am 15. Oktober 2017 in einem",
             "announcementVideo": "Ankündigungsvideo",
             "goal": "angekündigt. Das Ziel des Projektes ist es, eine einzigartige Spielerfahrung für die Spieler zu schaffen, hauptsächlich aber, es für Personen, die am Programmieren und Computer Sience interessiert sind, möglich zu machen, das Spiel mitzuentwickeln, ihre Fähigkeiten zu verbessern und etwas großes zu erschaffen. Das enthält die Auswahl über den Spielinhalt, das Design, Soundeffekte, das Programmieren, Testen und Serverwartung.",
             "daily": "Wir streben täglich an, Cryptic zu verbessern und wollen eine interessante, abenteuerliche und spielerische Einleitung in die Welt des Hackens bieten."
         },
         "crypticDescription": {
             "what": "Was ist Cryptic?",
-            "long": "Cryptic ist eine MMO Hacking-Simulation mit Echtzeit-Strategie-Elementen. Durch das Benutzen von spezifischen Programmen und Befehlen kannst du die Systeme anderer Spieler und globale Infrastruktur infiltrieren. Level deine Hardware und Software hoch, produziere deine eigene Malware in dem Entwicklungszentrum oder kommuniziere mit anderen Spielern, um einen Angriff zu planen. Aber das ist erst der Anfang.",
+            "long": "Cryptic ist eine MMO Hacking-Simulation mit Echtzeit-Strategie-Elementen. Durch das Benutzen von spezifischen Programmen und Befehlen kannst du die Systeme anderer Spieler, sowie die globale Infrastruktur, infiltrieren. Level deine Hardware und Software hoch, produziere deine eigene Malware in dem Entwicklungszentrum oder kommuniziere mit anderen Spielern, um einen Angriff zu planen. Aber das ist erst der Anfang.",
             "help": "Hilf der Cyber-Polizei als ein White Hat, die Aktivität von bösartigen Hackern zu stoppen oder werde ein Blackhat, um ganze Netzwerke lahmzulegen und andere Spieler auszuspionieren."
         },
         "groups": {
