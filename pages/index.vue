@@ -320,7 +320,6 @@ export default {
       i++
     }
     posts = postsFiltered
-    posts = posts.slice(0, 2)
     this.blogPosts = posts
   },
   created () {
