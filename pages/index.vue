@@ -311,11 +311,13 @@ export default {
     const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
     let posts = await response.json()
     const postsFiltered = []
-    for (let i = 0; i < posts.length; i++) {
+    let i = 0
+    while (postsFiltered.length !== 2 && i < posts.length) {
       const post = posts[i]
       if (post.published === true) {
         postsFiltered.push(post)
       }
+      i++
     }
     posts = postsFiltered
     posts = posts.slice(0, 2)
