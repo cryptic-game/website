@@ -1,6 +1,6 @@
 <template>
   <div class="blog-post-card">
-    <img :alt="`Title Image from: ${post.title}`" :src="post.image || 'https://cryptic-game.net/open-graph.jpg'" :style="imageStyle" class="blog-post-card__image">
+    <img alt="Blog post image" :src="post.image || 'https://cryptic-game.net/open-graph.jpg'" :style="imageStyle" class="blog-post-card__image">
     <div class="blog-post-card__info">
       <span class="blog-post-card__title">{{ post.title }}</span>
       <small class="blog-post-card__date">{{ new Date(post.created).toLocaleDateString() }}</small>
@@ -47,8 +47,16 @@ export default {
   width: 100%;
 
   border-radius: 3px;
+  float: left;
+  margin-right: 5vw;
 }
-
+@media all and (max-width: 1170px) and (orientation:landscape)
+{
+    .blog-post-card{
+    max-width: 36vw;
+    min-width: 18.4rem;
+    }
+}
 .blog-post-card__info {
   padding: 20px;
 }
@@ -79,6 +87,7 @@ export default {
 
   color: white;
   margin-bottom: 8px;
+  min-height: 4rem;
 }
 
 .blog-post-card__footer {
