@@ -47,6 +47,10 @@ export default {
   width: 100%;
 
   border-radius: 3px;
+  max-width: 40vw;
+  float: left;
+  margin-left: 5vw;
+  min-width: 18.4rem;
 }
 
 .blog-post-card__info {
@@ -79,6 +83,7 @@ export default {
 
   color: white;
   margin-bottom: 8px;
+  min-height: 4rem;
 }
 
 .blog-post-card__footer {
