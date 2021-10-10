@@ -11,7 +11,8 @@
         "faq": "FAQ",
         "roadmap": "Roadmap",
         "contribute": "Unterstützen",
-        "team": "Team"
+        "team": "Team",
+        "changelog": "Changelog"
     },
     "home": {
         "createTheGame": "<strong>Spiel</strong> nicht das Spiel, <span><br/><strong>erstelle</strong> das Spiel</span>",
@@ -24,19 +25,19 @@
         "project": "Das Projekt",
         "projectDescription": {
             "initiated": "Das Projekt \"Cryptic\" wurde initiiert von dem deutschen YouTuber",
-            "announced": "Es wurde zuerst am 15. Oktober 2017 in einem",
+            "announced": "Es wurde initial am 15. Oktober 2017 in einem",
             "announcementVideo": "Ankündigungsvideo",
             "goal": "angekündigt. Das Ziel des Projektes ist es, eine einzigartige Spielerfahrung für die Spieler zu schaffen, hauptsächlich aber, es für Personen, die am Programmieren und Computer Sience interessiert sind, möglich zu machen, das Spiel mitzuentwickeln, ihre Fähigkeiten zu verbessern und etwas großes zu erschaffen. Das enthält die Auswahl über den Spielinhalt, das Design, Soundeffekte, das Programmieren, Testen und Serverwartung.",
             "daily": "Wir streben täglich an, Cryptic zu verbessern und wollen eine interessante, abenteuerliche und spielerische Einleitung in die Welt des Hackens bieten."
         },
         "crypticDescription": {
             "what": "Was ist Cryptic?",
-            "long": "Cryptic ist eine MMO Hacking-Simulation mit Echtzeit-Strategie-Elementen. Durch das Benutzen von spezifischen Programmen und Befehlen kannst du die Systeme anderer Spieler und globale Infrastruktur infiltrieren. Level deine Hardware und Software hoch, produziere deine eigene Malware in dem Entwicklungszentrum oder kommuniziere mit anderen Spielern, um einen Angriff zu planen. Aber das ist erst der Anfang.",
+            "long": "Cryptic ist eine MMO Hacking-Simulation mit Echtzeit-Strategie-Elementen. Durch das Benutzen von spezifischen Programmen und Befehlen kannst du die Systeme anderer Spieler, sowie die globale Infrastruktur, infiltrieren. Level deine Hardware und Software hoch, produziere deine eigene Malware in dem Entwicklungszentrum oder kommuniziere mit anderen Spielern, um einen Angriff zu planen. Aber das ist erst der Anfang.",
             "help": "Hilf der Cyber-Polizei als ein White Hat, die Aktivität von bösartigen Hackern zu stoppen oder werde ein Blackhat, um ganze Netzwerke lahmzulegen und andere Spieler auszuspionieren."
         },
         "groups": {
             "groups": "Abteilungen",
-            "frontendDescription": "Das Frontend-Team entwickelt die Internetseite auf der Cryptic gespielt wird. Dazu gehören alle erdenklichen Spielelemente wie z. B. ein Desktop, oder verschiedene Apps innerhalb des Spiels, die für ein interessantes Spielgefühl sorgen. Die Herausforderung besteht darin komplexe Spielmechaniken ohne Game engine zu programmieren. Du solltest Erfahrung in der Webentwicklung mitbringen, sowie Kenntnis von TypeScript, Angular und Git, im Idealfall auch SCSS mitbringen.",
+            "frontendDescription": "Das Frontend-Team entwickelt die Internetseite auf der Cryptic gespielt wird. Dazu gehören alle erdenklichen Spielelemente wie z. B. ein Desktop, oder verschiedene Apps innerhalb des Spiels, die für ein interessantes Spielgefühl sorgen. Die Herausforderung besteht darin, komplexe Spielmechaniken ohne Game engine zu programmieren. Du solltest Erfahrung in der Webentwicklung mitbringen, sowie Kenntnis in TypeScript, Angular und Git, im Idealfall auch SCSS mitbringen.",
             "backendDescription": "Das Backend-Team programmiert die komplexe Spiellogik und hält diese Instand. Ein weiterer Part ist das ausgiebige Testen der Backend-Struktur sowie das schreiben eines performanten Codes so, dass es keine Performance Engpässe gibt. Du solltest gute Kenntnis von Java oder Python, und Git mitbringen.",
             "gamedesignDescription": "Das Game Design-Team beschäftigt sich auf theoretischer Ebene damit, welche Inhalte, Eigenschaften und Faktoren für die Gestaltung eines spannenden Spiels vorliegen müssen. Das bedeutet, dass wir gemeinsam alle Inhalte des Spiels ausarbeiten. Dazu gehört z. B. die Entwicklung eines Desktops, die Erfindung verschiedener Hacker-Attacken sowie einem Terminal oder ein Erfahrungs-System und deren jeweilige Logik. Die wichtigste Voraussetzung ist, kreativ zu sein, sowie den Zusammenhang von vielen verschiedenen Faktoren und Parametern im Blick zu haben.",
             "designDescription": "Der Design-Bereich ist in drei Unterbereiche unterteilt. Im Bereich Grafik werden alle benötigten Icons, Designvorlagen und sonstiges Bildmaterial erstellt, welches für das Spiel oder die Webseite benötigt wird. Im Bereich Videoproduktion werden Sachen wie Video-Trailer, Intros und Animationen erstellt. Im Bereich Sounddesign werden ganze Musikstücke komponiert oder Soundeffekte erstellt.",
@@ -128,5 +129,11 @@
             "discord": "Du möchtest jetzt mitmachen? Dann schaue doch mal auf unseren",
             "first-steps": "Dort vernetzen sich alle unsere Teams, organisieren sich eigenständig und besprechen die nächsten Schritte für Cryptic. Wenn du dem Server beitrittst, lies dir einfach alles durch. In den Textkanälen findest du dann die weiteren Schritte für deine Bewerbung. 😉"
         }
+    },
+    "changelog": {
+        "additions": "Ergänzungen",
+        "changes": "Änderungen",
+        "fixes": "Fehlerbehebungen",
+        "enhancements": "Verbesserungen"
     }
 }
