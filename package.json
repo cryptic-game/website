@@ -30,7 +30,7 @@
     "env-cmd": "10.1.0",
     "eslint": "7.32.0",
     "eslint-plugin-nuxt": "2.0.0",
-    "eslint-plugin-vue": "7.18.0",
+    "eslint-plugin-vue": "7.20.0",
     "sass": "1.43.2",
     "sass-loader": "8.0.2",
     "vue-svg-loader": "0.16.0"
