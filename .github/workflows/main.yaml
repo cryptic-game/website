@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
 
 jobs:
@@ -25,10 +25,10 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run lint
+      - run: npm run lint:ci
 
   build:
-    needs: [ lint ]
+    needs: [lint]
     runs-on: ubuntu-latest
 
     steps:

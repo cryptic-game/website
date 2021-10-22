@@ -97,6 +97,10 @@ export default {
           href: 'https://play.cryptic-game.net'
         },
         {
+          label: 'changelog',
+          to: '/changelog'
+        },
+        {
           label: 'blog',
           to: '/blog'
         },

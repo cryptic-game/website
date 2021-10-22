@@ -4,6 +4,10 @@ import de from './locales/de.json'
 export default {
   target: 'static',
 
+  generate: {
+    fallback: false
+  },
+
   head: {
     title: 'Cryptic Game',
     meta: [
@@ -47,14 +51,14 @@ export default {
         hid: 'twitter:card',
         name: 'twitter:card',
         content: 'summary_large_image'
+      },
+      {
+        name: 'theme-color',
+        content: '#000000'
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Alata&display=swap'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
@@ -83,9 +87,9 @@ export default {
   i18n: {
     lazy: true,
     locales: [
-      { code: 'en', iso: 'en', file: 'en.json', dir: 'ltr' },
-      { code: 'de', iso: 'de', file: 'de.json', dir: 'ltr' },
-      { code: 'zh', iso: 'zh', file: 'zh_Hans.json', dir: 'ltr' }
+      { code: 'en', iso: 'en-US', file: 'en.json', dir: 'ltr' },
+      { code: 'de', iso: 'de-DE', file: 'de.json', dir: 'ltr' }
+      // { code: 'zh', iso: 'zh-Hans', file: 'zh_Hans.json', dir: 'ltr' }
     ],
     langDir: 'locales/',
     defaultLocale: 'en',
@@ -109,6 +113,11 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
+      ]
+    },
     extend (config, ctx) {
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
 

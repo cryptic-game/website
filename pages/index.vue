@@ -1,7 +1,15 @@
 <template>
   <main class="index-page">
     <NavigationBar background-after-scroll />
-    <video autoplay class="background-video" loop muted>
+    <video
+      class="background-video"
+      autoplay
+      loop
+      muted
+      playsinline
+      poster="@/assets/image/wp-1.jpg"
+    >
+
       <source src="@/assets/video/background.mp4" type="video/mp4">
     </video>
     <section class="hero-section content">
@@ -32,7 +40,7 @@
         <span>
           {{ $t("home.playEarlyVersion") }}
         </span>
-        <span class="second-section__version"> Cryptic Pre Alpha 2 </span>
+        <span class="second-section__version fit-c-1"> Cryptic Pre Alpha 2 </span>
         <CButton blue outline text-color="white" :to="localePath('/blog')">
           <template #icon>
             <NoteIcon class="icon" />
@@ -63,7 +71,7 @@
         <div class="blog-section__posts flex-with-gutter">
           <BlogPostCard
             v-for="post in blogPosts"
-            :key="post.slug"
+            :key="post.id.postId"
             :post="post"
           />
           <div
@@ -240,8 +248,6 @@
 <script>
 import NavigationBar from '@/components/NavigationBar'
 import Footer from '@/components/Footer'
-import { blogAPI } from '@/assets/js/blog'
-import { mapObjectKeys } from '@/assets/js/mapObjectKeys'
 import BlogPostCard from '@/components/BlogPostCard'
 import CButton from '@/components/CButton'
 import DiscordIcon from '@/assets/icons/discord.svg'
@@ -256,7 +262,6 @@ import LanguageIcon from '@/assets/icons/language.svg'
 import PaintbrushIcon from '@/assets/icons/paintbrush.svg'
 import ShieldIcon from '@/assets/icons/shield.svg'
 import Typewriter from '@/components/Typewriter'
-
 export default {
   name: 'IndexPage',
   components: {
@@ -278,16 +283,6 @@ export default {
     Typewriter
   },
   layout: 'none',
-  async asyncData () {
-    return {
-      blogPosts: Array.from(
-        await blogAPI.posts.browse({
-          limit: 2,
-          include: 'slug,title,feature_image,reading_time,published_at'
-        })
-      ).map(post => mapObjectKeys(blogAPI.mappings.post, post))
-    }
-  },
   data: () => ({
     blogPosts: [],
     subtitles: [
@@ -311,6 +306,22 @@ export default {
       'Hashback'
     ]
   }),
+  async fetch () {
+    const lang = this.$i18n.locale
+    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
+    let posts = await response.json()
+    const postsFiltered = []
+    let i = 0
+    while (postsFiltered.length !== 2 && i < posts.length) {
+      const post = posts[i]
+      if (post.published === true) {
+        postsFiltered.push(post)
+      }
+      i++
+    }
+    posts = postsFiltered
+    this.blogPosts = posts
+  },
   created () {
     this.shuffleSubtitles()
   },
@@ -329,10 +340,12 @@ export default {
   }
 }
 </script>
-
 <style lang="scss" scoped>
 @use "../assets/css/mixins/screenSize";
-
+.icon{
+  max-width: 100%;
+  max-height: 13vh;
+}
 .index-page {
   width: 100%;
 
@@ -340,7 +353,9 @@ export default {
     background-color: var(--colors-green);
   }
 }
-
+.fit-c-1{
+  min-width: fit-content;
+}
 .section {
   width: 100%;
   z-index: 1;
@@ -403,6 +418,8 @@ export default {
 
     .hero-section__join-button {
       margin-top: 20px;
+      max-width: 100%;
+      max-height: 20vh;
     }
   }
 }

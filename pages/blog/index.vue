@@ -6,13 +6,14 @@
         Blog
       </h1>
       <div class="posts-page__posts">
-        <BlogPostCard
-          v-for="post in posts"
-          :key="post.slug"
-          :post="post"
-          class="posts-page__post"
-          image-height="50vh"
-        />
+        <div v-for="post in posts" :key="post.title">
+          <BlogPostCard
+            v-if="post.published"
+            :key="post.id.postId"
+            :post="post"
+            class="posts-page__post"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -20,23 +21,34 @@
 
 <script>
 import NavigationBar from '@/components/NavigationBar'
-import { blogAPI } from '@/assets/js/blog'
-import { mapObjectKeys } from '@/assets/js/mapObjectKeys'
 import BlogPostCard from '@/components/BlogPostCard'
-
+function mergePostArraysByIdPreferred (PreferredArray, fallbackArray) {
+  const map = new Map()
+  PreferredArray.forEach(item => map.set(item.id.postId, item))
+  fallbackArray.forEach((item) => {
+    if (!map.has(item.id.postId)) {
+      map.set(item.id.postId, item)
+    }
+  })
+  const result = Array.from(map.values())
+  result.sort((a, b) => a === b ? 0 : (a.created > b.created) ? -1 : 1)
+  return result
+}
 export default {
   name: 'PostsPage',
   components: { BlogPostCard, NavigationBar },
-  async asyncData () {
-    return {
-      posts: Array.from(await blogAPI.posts.browse({
-        include: 'slug,title,feature_image,reading_time,published_at'
-      })).map(post => mapObjectKeys(blogAPI.mappings.post, post))
-    }
-  },
   data: () => ({
     posts: []
   }),
+  async fetch () {
+    const lang = this.$i18n.locale
+    const responsePreferredF = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
+    const responsePreferred = await responsePreferredF.json()
+    const responseFallbackF = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en')
+    const responseFallback = await responseFallbackF.json()
+    const response = mergePostArraysByIdPreferred(responsePreferred, responseFallback)
+    this.posts = response
+  },
   head () {
     return {
       titleTemplate: 'Blog - %s'
