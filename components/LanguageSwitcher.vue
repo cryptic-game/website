@@ -1,7 +1,7 @@
 <template>
   <div class="host">
     <GlobeIcon width="2.2rem" height="2.2rem" class="globe" @click="toggle" />
-    <div v-if="active" class="languages" scroll.native="this.active=false" @mouseleave="toggle">
+    <div v-if="active" class="languages" scroll.native="this.active=false">
       <nuxt-link
         v-for="language in languages"
         :key="language.id"
@@ -54,7 +54,7 @@ export default {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-
+  font-size: 1.2rem;
   background-color: black;
   border-radius: 0.25rem;
   margin-right: 4vw;
