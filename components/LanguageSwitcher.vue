@@ -53,8 +53,8 @@ export default {
   flex-direction: column;
 
   background-color: black;
-  border: var(--colors-background-c) solid 0.0625rem;
   border-radius: 0.25rem;
+  margin-right: 4vw;
 }
 
 .languageItem {
@@ -64,7 +64,6 @@ export default {
   transition: background-color 150ms ease-in-out;
 
   &:not(:first-child) {
-    border-top: var(--colors-background-c) solid 0.0625rem;
   }
 
   &:hover {
