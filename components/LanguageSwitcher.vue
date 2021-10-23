@@ -62,7 +62,7 @@ export default {
   color: #50AF2F;
   text-decoration: none;
   transition: background-color 150ms ease-in-out;
-
+  border-radius: 0.25rem;
   &:not(:first-child) {
   }
 
