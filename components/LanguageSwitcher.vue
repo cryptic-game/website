@@ -68,6 +68,7 @@ export default {
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 0.25rem;
   }
 }
 
