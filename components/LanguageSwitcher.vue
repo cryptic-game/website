@@ -1,7 +1,7 @@
 <template>
   <div class="host">
     <GlobeIcon width="2.2rem" height="2.2rem" class="globe" @click="toggle" />
-    <div v-if="active" class="languages">
+    <div v-if="active" class="languages" @mouseleave="toggle">
       <nuxt-link
         v-for="language in languages"
         :key="language.id"
