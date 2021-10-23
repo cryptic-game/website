@@ -52,14 +52,14 @@ export default {
   display: flex;
   flex-direction: column;
 
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: black;
   border: var(--colors-background-c) solid 0.0625rem;
   border-radius: 0.25rem;
 }
 
 .languageItem {
   padding: 5px;
-  color: var(--colors-background-c);
+  color: #50AF2F;
   text-decoration: none;
   transition: background-color 150ms ease-in-out;
 
