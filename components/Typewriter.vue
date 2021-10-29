@@ -79,15 +79,4 @@ export default {
     50% { opacity:0; }
     100% { opacity:1; }
 }
-@media only screen and (max-height: 600px) {
-  span{
-    display: none;
-  }
-  .typewriter{
-    display: none;
-  }
-  .typewriter-cursor{
-    display: none;
-  }
-}
 </style>
