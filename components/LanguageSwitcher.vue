@@ -75,15 +75,5 @@ export default {
 .globe {
   cursor: pointer;
 }
-@media only screen and (max-height: 600px) {
-  span{
-    display: none;
-  }
-  .typewriter{
-    display: none;
-  }
-  .typewriter-cursor{
-    display: none;
-  }
-}
+
 </style>
