@@ -75,5 +75,4 @@ export default {
 .globe {
   cursor: pointer;
 }
-
 </style>
