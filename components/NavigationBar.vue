@@ -26,9 +26,6 @@
           </component>
           <LanguageSwitcher class="navigation-bar__language" />
         </div>
-        <span class="navigation-bar__title">
-          {{ title ? $t("navbar." + title.toLowerCase()) : "" }}
-        </span>
         <div class="navigation-bar__container-2">
           <div class="navigation-bar__links">
             <template v-for="item in items">
