@@ -24,7 +24,7 @@
     "nuxt-lazy-load": "1.2.6"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.15.0",
+    "@babel/eslint-parser": "7.16.3",
     "@nuxtjs/eslint-config": "6.0.1",
     "@nuxtjs/eslint-module": "3.0.2",
     "env-cmd": "10.1.0",
