@@ -190,12 +190,7 @@ export default {
     background-color: var(--colors-background);
   }
 
-  .navigation-bar.x-scrolled & {
-    .navigation-bar__title {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+
 }
 
 .navigation-bar__toggle {
@@ -221,25 +216,7 @@ export default {
   margin-right: 20px;
 }
 
-.navigation-bar__title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-overflow: ellipsis;
-  overflow: hidden;
 
-  flex-shrink: 0;
-  max-width: calc(100% - 10px);
-
-  transition: 200ms ease;
-  transition-property: opacity, transform;
-
-  opacity: 0;
-  transform: translateY(10px);
-
-  @include notMobile {
-    font-size: 1.5rem;
-  }
-}
 
 .navigation-bar__container-1 {
   max-width: 100%;
