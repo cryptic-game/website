@@ -190,7 +190,6 @@ export default {
     background-color: var(--colors-background);
   }
 
-
 }
 
 .navigation-bar__toggle {
@@ -215,8 +214,6 @@ export default {
   min-width: 46.3833px;
   margin-right: 20px;
 }
-
-
 
 .navigation-bar__container-1 {
   max-width: 100%;
