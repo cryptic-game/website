@@ -21,8 +21,7 @@
     "@tryghost/content-api": "1.5.11",
     "nuxt": "2.15.7",
     "nuxt-i18n": "6.28.1",
-    "nuxt-lazy-load": "1.2.6",
-    "vue-clickaway": "^2.2.2"
+    "nuxt-lazy-load": "1.2.6"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.15.0",

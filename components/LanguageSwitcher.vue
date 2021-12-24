@@ -1,7 +1,7 @@
 <template>
-  <div class="host">
+  <div class="host" @click.stop>
     <GlobeIcon width="2.2rem" height="2.2rem" class="globe" @click="toggle" />
-    <div v-if="active" v-on-clickaway="caway" class="languages" scroll.native="this.active=false">
+    <div v-if="active" class="languages" scroll.native="this.active=false">
       <nuxt-link
         v-for="language in languages"
         :key="language.id"
@@ -15,12 +15,10 @@
 </template>
 
 <script>
-import { mixin as clickaway } from 'vue-clickaway'
 import GlobeIcon from '@/assets/icons/globe.svg'
 export default {
   name: 'LanguageSwitcher',
   components: { GlobeIcon },
-  mixins: [clickaway],
   data () {
     return {
       active: false,
@@ -33,6 +31,7 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', () => { this.active = false })
+    this.$parent.$parent.$el.addEventListener('click', () => { this.active = false })
   },
   methods: {
     toggle () {
