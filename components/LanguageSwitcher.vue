@@ -67,10 +67,11 @@ export default {
 
 .languageItem {
   padding: 5px;
-  color: #50AF2F;
+  color: white;
   text-decoration: none;
   transition: background-color 150ms ease-in-out;
   border-radius: 0.25rem;
+  white-space: nowrap;
   &:not(:first-child) {
   }
 
