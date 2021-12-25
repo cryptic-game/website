@@ -1,5 +1,5 @@
 <template>
-  <main class="team-page">
+  <div class="team-page">
     <NavigationBar title="Contribute" />
     <div class="content formatted">
       <h1 class="title">
@@ -33,7 +33,7 @@
         {{ $t("contribute.content.first-steps") }}
       </p>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
