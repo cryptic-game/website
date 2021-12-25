@@ -71,8 +71,6 @@ export default {
   transition: background-color 150ms ease-in-out;
   border-radius: 0.25rem;
   white-space: nowrap;
-  &:not(:first-child) {
-  }
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.25);
