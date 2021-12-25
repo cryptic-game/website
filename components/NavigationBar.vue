@@ -24,6 +24,7 @@
           >
             <CrypticHeadLogo class="navigation-bar__logo" />
           </component>
+          <LanguageSwitcher class="navigation-bar__language" />
         </div>
         <span class="navigation-bar__title">
           {{ title ? $t("navbar." + title.toLowerCase()) : "" }}
@@ -51,7 +52,7 @@
                 {{ $t("navbar." + item.label) }}
               </a>
             </template>
-            <LanguageSwitcher class="navigation-bar__language" />
+            <LanguageSwitcher class="navigation-bar__language hide_m" />
           </div>
         </div>
       </div>
@@ -140,6 +141,9 @@ export default {
 <style lang="scss">
 @mixin mobile() {
   @media (max-width: 1000px) {
+    .hide_m{
+      display: none;
+    }
     @content;
   }
 }
