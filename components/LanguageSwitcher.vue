@@ -1,7 +1,7 @@
 <template>
-  <div class="host">
+  <div class="host" @click.stop>
     <GlobeIcon width="2.2rem" height="2.2rem" class="globe" @click="toggle" />
-    <div v-if="active" class="languages">
+    <div v-if="active" class="languages" scroll.native="this.active=false">
       <nuxt-link
         v-for="language in languages"
         :key="language.id"
@@ -16,7 +16,6 @@
 
 <script>
 import GlobeIcon from '@/assets/icons/globe.svg'
-
 export default {
   name: 'LanguageSwitcher',
   components: { GlobeIcon },
@@ -24,23 +23,31 @@ export default {
     return {
       active: false,
       languages: [
-        { id: 'en', name: 'English (US)' },
-        { id: 'de', name: 'Deutsch (DE)' }
+        { id: 'en', name: 'EN (US)' },
+        { id: 'de', name: 'DE (DE)' }
         // { id: 'zh', name: '简体中文（中国）' }
       ]
     }
   },
+  mounted () {
+    window.addEventListener('scroll', () => { this.active = false })
+    this.$parent.$parent.$el.addEventListener('click', () => { this.active = false })
+  },
   methods: {
     toggle () {
       this.active = !this.active
+    },
+
+    caway () {
+      this.active = false
     }
+
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .host {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -51,24 +58,23 @@ export default {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-
-  background-color: rgba(255, 255, 255, 0.5);
-  border: var(--colors-background-c) solid 0.0625rem;
+  font-size: 1.2rem;
+  background-color: black;
   border-radius: 0.25rem;
+  margin-right: 4vw;
 }
 
 .languageItem {
   padding: 5px;
-  color: var(--colors-background-c);
+  color: white;
   text-decoration: none;
   transition: background-color 150ms ease-in-out;
-
-  &:not(:first-child) {
-    border-top: var(--colors-background-c) solid 0.0625rem;
-  }
+  border-radius: 0.25rem;
+  white-space: nowrap;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 0.25rem;
   }
 }
 

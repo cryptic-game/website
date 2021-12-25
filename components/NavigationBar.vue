@@ -49,7 +49,7 @@
                 {{ $t("navbar." + item.label) }}
               </a>
             </template>
-            <LanguageSwitcher class="navigation-bar__language" />
+            <LanguageSwitcher class="navigation-bar__language hide_d" />
           </div>
         </div>
       </div>
@@ -144,6 +144,9 @@ export default {
 
 @mixin notMobile() {
   @media (min-width: 1001px) {
+    .hide_d{
+      display: none;
+    }
     @content;
   }
 }
