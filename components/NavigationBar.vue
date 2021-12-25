@@ -24,7 +24,6 @@
           >
             <CrypticHeadLogo class="navigation-bar__logo" />
           </component>
-          <LanguageSwitcher class="navigation-bar__language" />
         </div>
         <span class="navigation-bar__title">
           {{ title ? $t("navbar." + title.toLowerCase()) : "" }}
