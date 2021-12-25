@@ -48,7 +48,6 @@ export default {
 
 <style lang="scss" scoped>
 .host {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
