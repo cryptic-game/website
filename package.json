@@ -32,6 +32,7 @@
     "eslint": "latest",
     "eslint-plugin-nuxt": "latest",
     "eslint-plugin-vue": "latest",
+    "node-fetch": "2.x.x",
     "sass": "latest",
     "sass-loader": "10.x.x",
     "vue-svg-loader": "latest"
