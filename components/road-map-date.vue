@@ -39,6 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 div.roadmap-date-group {
+  cursor: vertical-text;
   display: flex;
   flex-direction: row;
   height: 100%;
