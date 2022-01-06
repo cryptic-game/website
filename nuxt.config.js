@@ -5,7 +5,7 @@ export default {
   target: 'static',
 
   generate: {
-    fallback: '404.html',
+    fallback: '404.html'
   },
 
   head: {
