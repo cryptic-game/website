@@ -8,126 +8,52 @@
 
       <road-map-date
         state="next"
-        year="2021/2022"
+        year="2023/2024"
         month="Planed For The Future"
       >
-        <road-map-version version="Pre Alpha 3.5">
+        <road-map-version version="Pre Alpha X">
           <road-map-sprint
             action="Implement base for Music/Sounds"
             group="Gamedesign, Frontend, Sounddesign"
           />
           <road-map-sprint
-            action="Implement Cryptic UI Design"
-            group="Frontend, Design"
-          />
-          <road-map-sprint
-            action="Implement Credits"
-            group="Gamedesign, Backend, Frontend, Design, Text"
-          />
-          <road-map-sprint
-            action="Cryptic Wiki: Game instructions"
-            group="Editorial Office"
-          />
-        </road-map-version>
-
-        <road-map-version version="Pre Alpha 3.4">
-          <road-map-sprint
             action="Implement base for mining pool"
             group="Gamedesign, Backend, Frontend, Design"
-          />
-          <road-map-sprint
-            action="Implement PC-UI-configurator"
-            group="Frontend, Design"
-          />
-          <road-map-sprint
-            action="Implement switching of hardware-components"
-            group="Gamedesign, Frontend, Design"
-          />
-          <road-map-sprint
-            action="Extend and optimize hardware-components"
-            group="Gamedesign, Backend"
-          />
-          <road-map-sprint
-            action="Implement Morphcoin currency symbol"
-            group="Frontend, Design"
           />
           <road-map-sprint
             action="Implement base for chat app"
             group="Gamedesign, Backend, Frontend, Design"
           />
           <road-map-sprint
-            action="Make services slow down performance"
-            group="Gamedesign, Backend"
+            action="Implement base for attack system"
+            group="Gamedesign, Backend, Frontend, Design"
           />
           <road-map-sprint
-            action="Further developing/optimizing apps"
-            group="Gamedesign, Frontend, Design"
+            action="Implement base for defense system"
+            group="Gamedesign, Backend, Frontend, Design"
           />
-        </road-map-version>
-
-        <road-map-version version="Pre Alpha 3.3">
           <road-map-sprint
-            action="Implement base for hacker-attacks/attacksystem"
-            group="Gamedesign, Backend, Frontend"
+            action="Implement new hacker-attacks"
+            group="Gamedesign, Backend, Frontend, Design"
           />
           <road-map-sprint
             action="Implement base for firewall app"
             group="Gamedesign, Backend, Frontend, Design"
           />
           <road-map-sprint
-            action="Implement base for user management system"
-            group="Gamedesign, Backend, Frontend, Design"
-          />
-          <road-map-sprint
-            action="Further developing/optimizing apps"
-            group="Gamedesign, Frontend, Design"
-          />
-        </road-map-version>
-
-        <road-map-version version="Pre Alpha 3.2">
-          <road-map-sprint
-            action="Implement IP address and replace UUID in apps"
-            group="Gamedesign, Backend, Frontend, Design"
-          />
-          <road-map-sprint
-            action="Implement router and network-switch"
-            group="Gamedesign, Backend"
-          />
-          <road-map-sprint
-            action="Expand network system"
-            group="Gamedesign, Backend"
-          />
-          <road-map-sprint
-            action="Implement network-UI"
-            group="Gamedesign, Frontend, Design"
-          />
-          <road-map-sprint
-            action="Further developing/optimizing apps"
-            group="Gamedesign, Frontend, Design"
-          />
-        </road-map-version>
-        <road-map-version version="Pre Alpha 3.1">
-          <road-map-sprint
-            action="Implement account verification"
-            group="Gamedesign, Backend, Frontend, Design"
-          />
-          <road-map-sprint
             action="Implement base for a rank list"
             group="Gamedesign, Backend, Frontend, Design"
-          />
-          <road-map-sprint
-            action="Extend Terminal"
-            group="Gamedesign, Frontend"
-          />
-          <road-map-sprint
-            action="Further developing/optimizing apps"
-            group="Gamedesign, Frontend, Design"
           />
         </road-map-version>
       </road-map-date>
 
       <road-map-date month="from February" year="2020" state="current">
         <road-map-version version="Pre Alpha 3.0">
+          <road-map-sprint
+            action="The total game is fundamentally redeveloped"
+            group=""
+          />
+          <br>
           <road-map-sprint
             action="Rewrite Backend Infrastructure"
             group="Backend, Security"
@@ -136,9 +62,78 @@
             action="Rewrite Frontend Infrastructure"
             group="Frontend, Security"
           />
-          <br>
-          <br>
-          <br>
+          <road-map-sprint
+            action="Rework account"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="Rework cryptocurrency"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="Rework file system"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="Rework wallet"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="Rework workload system"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="Rework computer"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="Rework hardware"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="Rework inventory"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="New processes"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="New networksystem"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="Implement gameparameter"
+            group="Gamedesign, Backend"
+          />
+          <road-map-sprint
+            action="Further developing/optimizing apps"
+            group="Gamedesign, Frontend, Design"
+          />
+          <road-map-sprint
+            action="Extend Terminal"
+            group="Gamedesign, Frontend, Design"
+          />
+          <road-map-sprint
+            action="Implement Cryptic-UI"
+            group="Frontend, Design"
+          />
+          <road-map-sprint
+            action="Implement PC-configurator"
+            group="Frontend, Design"
+          />
+          <road-map-sprint
+            action="Implement Credits"
+            group="Gamedesign, Design, Text"
+          />
+          <road-map-sprint
+            action="Cryptic Wiki: Game instructions"
+            group="Editorial Office"
+          />
+          <road-map-sprint
+            action="Implement Help-Center"
+            group="Gamedesign, Frontend, Design, Text"
+          />
         </road-map-version>
       </road-map-date>
 
