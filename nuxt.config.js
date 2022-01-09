@@ -80,7 +80,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    'nuxt-i18n',
+    '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     'nuxt-lazy-load'
   ],
