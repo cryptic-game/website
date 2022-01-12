@@ -48,13 +48,13 @@ export default {
 
   border-radius: 3px;
   float: left;
-  margin-right: 5vw;
 }
 @media all and (max-width: 1170px) and (orientation:landscape)
 {
     .blog-post-card{
     max-width: 36vw;
     min-width: 18.4rem;
+    margin-right: 5vw;
     }
 }
 .blog-post-card__info {

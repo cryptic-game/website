@@ -480,7 +480,7 @@ export default {
 
   .blog-section__posts {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     min-width: 0;
     width: var(--content-width);
 
