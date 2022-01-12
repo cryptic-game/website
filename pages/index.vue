@@ -484,7 +484,7 @@ export default {
     min-width: 0;
     width: var(--content-width);
     @media (min-width:1000px){
-      max-width:970px;
+      max-width:965px;
     }
     @include screenSize.mobile {
       flex-wrap: wrap;
