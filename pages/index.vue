@@ -483,8 +483,8 @@ export default {
     align-items: center;
     min-width: 0;
     width: var(--content-width);
-    @media (min-width:769px){
-      max-width:50vw;
+    @media (min-width:1000px){
+      max-width:970px;
     }
     @include screenSize.mobile {
       flex-wrap: wrap;
