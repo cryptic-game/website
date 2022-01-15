@@ -14,6 +14,8 @@ export default {
       }
       if (!s) {
         return dateA.join('.')
+      }else{
+        return dateA.joint('/')
       }
     }
 
