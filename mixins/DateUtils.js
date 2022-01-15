@@ -1,7 +1,6 @@
 export default {
   methods: {
     getDateWithLZero (date) {
-      console.log(date)
       // eslint-disable-next-line prefer-const
       let dateA = []
       let s = false
