@@ -4,7 +4,7 @@
     <NavigationBar title="Blog" />
     <article class="content formatted">
       <img :alt="`Title Image from: ${post.title}`" :src="post.image" class="post-page__image"><br>
-      <span>{{ Intl.DateTimeFormat($i18n.localeProperties.iso).format(new Date(post.created)) }}</span>
+      <span>{{ getDateWithLZero(Intl.DateTimeFormat($i18n.localeProperties.iso).format(new Date(post.created))).toString() }}</span>
       <h2 class="post-page__title">
         {{ post.title || "untitled post" }}
       </h2>
@@ -16,11 +16,12 @@
 </template>
 
 <script>
+import DateUtils from '../../mixins/DateUtils.js'
 import NavigationBar from '@/components/NavigationBar'
-
 export default {
   name: 'PostPage',
   components: { NavigationBar },
+  mixins: [DateUtils],
   asyncData ({ route }) {
     return { slug: route.params.slug }
   },
