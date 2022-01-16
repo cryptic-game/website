@@ -10,7 +10,7 @@
             <div>
               <h3>{{ change.name }}</h3>
               <client-only>
-                <small>{{ getPrettyDate(change.date) }}</small>
+                <small>{{ getDateWithLZero(getPrettyDate(change.date)) }}</small>
               </client-only>
               <div />
               <div v-if="change.additions" class="additions">
@@ -63,11 +63,13 @@
 
 <script>
 import NavigationBar from '@/components/NavigationBar'
+import DateUtils from '@/mixins/DateUtils'
 export default {
   name: 'ChangelogPage',
   components: {
     NavigationBar
   },
+  mixins: [DateUtils],
   data () {
     return {
       changes: []
