@@ -35,10 +35,10 @@ export default {
   },
   async fetch () {
     this.departments = await fetch(
-      'https://api.admin.staging.cryptic-game.net/website/team/department'
+      'https://staging-admin-api.cryptic-game.net/website/team/department'
     ).then(result => result.json())
     this.members = await fetch(
-      'https://api.admin.staging.cryptic-game.net/website/team'
+      'https://staging-admin-api.cryptic-game.net/website/team'
     )
       .then(result => result.text())
       .then(result => JSON.parse(result))
