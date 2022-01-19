@@ -30,7 +30,7 @@ export default {
   async fetch () {
     let lang = this.$i18n.locale
     let error
-    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang + '/' + this.slug).catch((err) => { error = err })
+    const response = await fetch('https://staging-admin-api.cryptic-game.net/website/blog/' + lang + '/' + this.slug).catch((err) => { error = err })
 
     // eslint-disable-next-line prefer-const
     let post = await response.json()
@@ -38,7 +38,7 @@ export default {
     // eslint-disable-next-line eqeqeq
     if (post.title == undefined || post == 0 || error != undefined) {
       lang = 'en'
-      const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en/' + this.slug)
+      const response = await fetch('https://staging-admin-api.cryptic-game.net/website/blog/en/' + this.slug)
       post = await response.json()
     }
 

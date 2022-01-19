@@ -42,9 +42,9 @@ export default {
   }),
   async fetch () {
     const lang = this.$i18n.locale
-    const responsePreferredF = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
+    const responsePreferredF = await fetch('https://staging-admin-api.cryptic-game.net/website/blog/' + lang)
     const responsePreferred = await responsePreferredF.json()
-    const responseFallbackF = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/en')
+    const responseFallbackF = await fetch('https://staging-admin-api.cryptic-game.net/website/blog/en')
     const responseFallback = await responseFallbackF.json()
     const response = mergePostArraysByIdPreferred(responsePreferred, responseFallback)
     this.posts = response
