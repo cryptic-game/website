@@ -308,7 +308,7 @@ export default {
   }),
   async fetch () {
     const lang = this.$i18n.locale
-    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
+    const response = await fetch('https://staging-admin-api.cryptic-game.net/website/blog/' + lang)
     let posts = await response.json()
     const postsFiltered = []
     let i = 0
