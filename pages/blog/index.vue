@@ -22,6 +22,7 @@
 <script>
 import NavigationBar from '@/components/NavigationBar'
 import BlogPostCard from '@/components/BlogPostCard'
+import { getDetails } from '@/assets/js/BlogApiConfig'
 function mergePostArraysByIdPreferred (PreferredArray, fallbackArray) {
   const map = new Map()
   PreferredArray.forEach(item => map.set(item.id.postId, item))
@@ -42,9 +43,9 @@ export default {
   }),
   async fetch () {
     const lang = this.$i18n.locale
-    const responsePreferredF = await fetch('https://staging-admin-api.cryptic-game.net/website/blog/' + lang)
+    const responsePreferredF = await fetch(getDetails().blog_api_url + lang)
     const responsePreferred = await responsePreferredF.json()
-    const responseFallbackF = await fetch('https://staging-admin-api.cryptic-game.net/website/blog/en')
+    const responseFallbackF = await fetch(getDetails().blog_api_url + 'en')
     const responseFallback = await responseFallbackF.json()
     const response = mergePostArraysByIdPreferred(responsePreferred, responseFallback)
     this.posts = response
