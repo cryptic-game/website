@@ -481,10 +481,12 @@ export default {
 
   .blog-section__posts {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     min-width: 0;
     width: var(--content-width);
-
+    @media (min-width:1000px){
+      max-width:965px;
+    }
     @include screenSize.mobile {
       flex-wrap: wrap;
       width: 100%;
