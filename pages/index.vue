@@ -262,6 +262,7 @@ import LanguageIcon from '@/assets/icons/language.svg'
 import PaintbrushIcon from '@/assets/icons/paintbrush.svg'
 import ShieldIcon from '@/assets/icons/shield.svg'
 import Typewriter from '@/components/Typewriter'
+import { getDetails } from '@/assets/js/BlogApiConfig'
 export default {
   name: 'IndexPage',
   components: {
@@ -308,7 +309,7 @@ export default {
   }),
   async fetch () {
     const lang = this.$i18n.locale
-    const response = await fetch('https://api.admin.staging.cryptic-game.net/website/blog/' + lang)
+    const response = await fetch(getDetails().blog_api_url + lang)
     let posts = await response.json()
     const postsFiltered = []
     let i = 0
