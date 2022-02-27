@@ -9,7 +9,7 @@
         {{ post.title || "untitled post" }}
       </h2>
       <span class="post-page_description">{{ post.description }}</span>
-      <span v-if="post.author != undefinded">by {{ post.author }} </span>
+      <span v-if="post.author != 'Unknown'">by {{ post.author }} </span>
       <div class="post-page__content" v-html="post.content" />
     </article>
   </div>
@@ -41,7 +41,12 @@ export default {
       const response = await fetch('https://staging-admin-api.cryptic-game.net/website/blog/en/' + this.slug)
       post = await response.json()
     }
-
+    // eslint-disable-next-line eqeqeq
+    if (post.author == undefined) {
+      post.author = 'Unknown'
+    }
+    // eslint-disable-next-line no-console
+    console.log(post)
     this.post = post
   },
   head () {
@@ -66,7 +71,8 @@ export default {
           hid: 'article:published_time',
           name: 'article:published_time',
           content: new Date(this.post.created).toString()
-        }
+        },
+        { hid: 'author', name: 'author', content: this.post.author }
       ]
     }
   }
