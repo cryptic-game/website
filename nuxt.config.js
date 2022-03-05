@@ -120,7 +120,7 @@ export default {
       ]
     },
     html: {
-      minify: true,
+      minify: true
     },
     extend (config, ctx) {
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
