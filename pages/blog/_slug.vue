@@ -93,6 +93,10 @@ export default {
   margin-bottom: 5px;
 }
 
+image {
+  max-width: 100%;
+}
+
 .post-page__content {
   margin-top: 40px;
 
