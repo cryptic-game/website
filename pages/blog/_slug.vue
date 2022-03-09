@@ -93,7 +93,7 @@ export default {
   margin-bottom: 5px;
 }
 
-img, image {
+.post-page__content ::v-deep img, ::v-deep image {
   max-width: 100%;
 }
 
