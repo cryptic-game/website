@@ -93,7 +93,7 @@ export default {
   margin-bottom: 5px;
 }
 
-image {
+img, image {
   max-width: 100%;
 }
 
