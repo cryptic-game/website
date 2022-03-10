@@ -3,7 +3,7 @@
     <img alt="Blog post image" :src="post.image || 'https://cryptic-game.net/open-graph.jpg'" :style="imageStyle" class="blog-post-card__image">
     <div class="blog-post-card__info">
       <span class="blog-post-card__title">{{ post.title }}</span>
-      <small class="blog-post-card__date">{{ new Date(post.created).toLocaleDateString() }}</small>
+      <small class="blog-post-card__date">{{ getDateWithLZero(Intl.DateTimeFormat().format(new Date(post.created))) }}</small>
       <span>{{ post.description }}</span>
       <div class="blog-post-card__footer">
         <nuxt-link :to="localePath(`/blog/${post.id.postId}`)" class="blog-post-card__link link">
@@ -15,8 +15,10 @@
 </template>
 
 <script>
+import DateUtils from '../mixins/DateUtils.js'
 export default {
   name: 'BlogPostCard',
+  mixins: [DateUtils],
   props: {
     post: {
       type: Object,
