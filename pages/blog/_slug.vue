@@ -42,11 +42,10 @@ export default {
       post = await response.json()
     }
     // eslint-disable-next-line eqeqeq
-    if (post.author == undefined) {
+    if (!post.author) {
       post.author = 'Unknown'
     }
     // eslint-disable-next-line no-console
-    console.log(post)
     this.post = post
   },
   head () {
