@@ -11,7 +11,7 @@
         year="2023/2024"
         month="Planed For The Future"
       >
-        <road-map-version version="Pre Alpha X">
+        <road-map-version version="Alpha X">
           <road-map-sprint
             action="Implement base for Music/Sounds"
             group="Gamedesign, Frontend, Sounddesign"
@@ -48,7 +48,7 @@
       </road-map-date>
 
       <road-map-date month="from February" year="2020" state="current">
-        <road-map-version version="Pre Alpha 3.0">
+        <road-map-version version="Alpha 1">
           <road-map-sprint
             action="The total game is fundamentally redeveloped"
             group=""

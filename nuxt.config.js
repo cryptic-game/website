@@ -5,7 +5,8 @@ export default {
   target: 'static',
 
   generate: {
-    fallback: false
+    fallback: false,
+    subFolders: false
   },
 
   head: {
@@ -118,6 +119,9 @@ export default {
       plugins: [
         ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
       ]
+    },
+    html: {
+      minify: true
     },
     extend (config, ctx) {
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))

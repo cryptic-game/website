@@ -99,6 +99,10 @@ export default {
   margin-bottom: 5px;
 }
 
+.post-page__content ::v-deep img, ::v-deep image {
+  max-width: 100%;
+}
+
 .post-page__content {
   margin-top: 40px;
 
