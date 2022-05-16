@@ -17,7 +17,7 @@
 
 <script>
 import NavigationBar from '@/components/NavigationBar'
-
+import { generateFallbackKeywords } from '@/assets/js/keywords'
 export default {
   name: 'PostPage',
   components: { NavigationBar },
@@ -57,6 +57,7 @@ export default {
         { hid: 'description', name: 'description', content },
         { hid: 'og:description', name: 'og:description', content },
         { hid: 'twitter:description', name: 'twitter:description', content },
+        { hid: 'keywords', name: 'keywords', content: this.post.keywords || generateFallbackKeywords(this.post.title) },
         { hid: 'og:url', name: 'og:url', content: `https://cryptic-game.net/blog/${this.slug}` },
         { hid: 'twitter:url', name: 'og:url', content: `https://cryptic-game.net/blog/${this.slug}` },
         { hid: 'og:image', name: 'og:image', content: this.post.image || 'https://cryptic-game.net/open-graph.jpg' },
