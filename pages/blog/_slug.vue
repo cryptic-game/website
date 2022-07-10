@@ -9,7 +9,7 @@
         {{ post.title || "untitled post" }}
       </h2>
       <span class="post-page_description">{{ post.description }}</span>
-      <span v-if="post.author != undefinded">by {{ post.author }} </span>
+      <span v-if="post.author != 'Unknown'">by {{ post.author }} </span>
       <div class="post-page__content" v-html="post.content" />
     </article>
   </div>
@@ -17,7 +17,7 @@
 
 <script>
 import NavigationBar from '@/components/NavigationBar'
-
+import { generateFallbackKeywords } from '@/assets/js/keywords'
 export default {
   name: 'PostPage',
   components: { NavigationBar },
@@ -41,7 +41,11 @@ export default {
       const response = await fetch('https://staging-admin-api.cryptic-game.net/website/blog/en/' + this.slug)
       post = await response.json()
     }
-
+    // eslint-disable-next-line eqeqeq
+    if (!post.author) {
+      post.author = 'Unknown'
+    }
+    // eslint-disable-next-line no-console
     this.post = post
   },
   head () {
@@ -53,6 +57,7 @@ export default {
         { hid: 'description', name: 'description', content },
         { hid: 'og:description', name: 'og:description', content },
         { hid: 'twitter:description', name: 'twitter:description', content },
+        { hid: 'keywords', name: 'keywords', content: this.post.keywords || generateFallbackKeywords(this.post.title) },
         { hid: 'og:url', name: 'og:url', content: `https://cryptic-game.net/blog/${this.slug}` },
         { hid: 'twitter:url', name: 'og:url', content: `https://cryptic-game.net/blog/${this.slug}` },
         { hid: 'og:image', name: 'og:image', content: this.post.image || 'https://cryptic-game.net/open-graph.jpg' },
@@ -66,7 +71,8 @@ export default {
           hid: 'article:published_time',
           name: 'article:published_time',
           content: new Date(this.post.created).toString()
-        }
+        },
+        { hid: 'author', name: 'author', content: this.post.author }
       ]
     }
   }

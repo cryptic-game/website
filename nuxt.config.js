@@ -86,6 +86,7 @@ export default {
     'nuxt-lazy-load'
   ],
   i18n: {
+    baseUrl: 'https://cryptic-game.net',
     lazy: true,
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.json', dir: 'ltr' },
