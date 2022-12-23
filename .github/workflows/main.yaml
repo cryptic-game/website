@@ -63,6 +63,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: themorpheustutorials/webspace
+          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
     
       - uses: actions/download-artifact@v3
         with:
