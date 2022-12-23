@@ -53,3 +53,27 @@ jobs:
         with:
           name: cryptic-website
           path: dist
+
+  deploy:
+    needs: [ build ]
+    if: format('refs/heads/{0}', github.event.repository.default_branch) == github.ref
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: cryptic-website
+
+      - name: Deploy Repository
+        uses: JamesIves/github-pages-deploy-action@ba1486788b0490a235422264426c45848eac35c6
+        with:
+          repository-name: themorpheustutorials/webspace
+          branch: main
+          folder: .
+          clean: true
+          target-folder: www/net.cryptic-game
+
+          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          commit-message: Deployed ${{ github.repository }}
+          git-config-name: GitHub
+          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
