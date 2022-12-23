@@ -60,6 +60,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: git init
+    
       - uses: actions/download-artifact@v3
         with:
           name: cryptic-website
