@@ -60,18 +60,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: git init
+      - uses: actions/checkout@v3
+        with:
+          repository: themorpheustutorials/webspace
     
       - uses: actions/download-artifact@v3
         with:
           name: cryptic-website
+          path: __dist
 
       - name: Deploy Repository
         uses: JamesIves/github-pages-deploy-action@ba1486788b0490a235422264426c45848eac35c6
         with:
           repository-name: themorpheustutorials/webspace
           branch: main
-          folder: .
+          folder: __dist
           clean: true
           target-folder: www/net.cryptic-game
 
