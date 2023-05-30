@@ -54,17 +54,19 @@
         </div>
       </div>
     </nav>
+    <message-of-the-day />
   </div>
 </template>
 
 <script>
 import CrypticHeadLogo from '@/assets/icons/cryptic_head.svg'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import MessageOfTheDay from '@/components/MessageOfTheDay.vue'
 import { isNuxt } from '@/assets/js/isNuxt'
 
 export default {
   name: 'NavigationBar',
-  components: { CrypticHeadLogo, LanguageSwitcher },
+  components: { CrypticHeadLogo, LanguageSwitcher, MessageOfTheDay },
   props: {
     backgroundAfterScroll: {
       type: Boolean,
