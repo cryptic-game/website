@@ -9,8 +9,7 @@
       playsinline
       poster="@/assets/image/wp-1.jpg"
     >
-
-      <source src="@/assets/video/background.mp4" type="video/mp4">
+      <source src="@/assets/video/background.mp4" type="video/mp4" />
     </video>
     <section class="hero-section content">
       <span class="hero-section__slogan">
@@ -40,7 +39,9 @@
         <span>
           {{ $t("home.playEarlyVersion") }}
         </span>
-        <span class="second-section__version fit-c-1"> Cryptic Pre Alpha 2 </span>
+        <span class="second-section__version fit-c-1">
+          Cryptic Pre Alpha 2
+        </span>
         <CButton blue outline text-color="white" :to="localePath('/blog')">
           <template #icon>
             <NoteIcon class="icon" />
@@ -63,9 +64,7 @@
       </div>
     </section>
     <section class="section blog-section">
-      <h2 class="section__title content">
-        Blog
-      </h2>
+      <h2 class="section__title content">Blog</h2>
       <div class="blog-section__content">
         <div />
         <div class="blog-section__posts flex-with-gutter">
@@ -129,72 +128,56 @@
         <div class="groups-section__groups">
           <div class="groups-section__group">
             <WindowIcon class="icon" />
-            <h3 class="groups-section__group-title">
-              Frontend
-            </h3>
+            <h3 class="groups-section__group-title">Frontend</h3>
             <p class="groups-section__group-text">
               {{ $t("home.groups.frontendDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
             <CodeIcon class="icon" />
-            <h3 class="groups-section__group-title">
-              Backend
-            </h3>
+            <h3 class="groups-section__group-title">Backend</h3>
             <p class="groups-section__group-text">
               {{ $t("home.groups.backendDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
             <GamepadIcon class="icon" />
-            <h3 class="groups-section__group-title">
-              Gamedesign
-            </h3>
+            <h3 class="groups-section__group-title">Gamedesign</h3>
             <p class="groups-section__group-text">
               {{ $t("home.groups.gamedesignDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
             <PaintbrushIcon class="icon" />
-            <h3 class="groups-section__group-title">
-              Design
-            </h3>
+            <h3 class="groups-section__group-title">Design</h3>
             <p class="groups-section__group-text">
               {{ $t("home.groups.designDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
             <GlobeIcon class="icon" />
-            <h3 class="groups-section__group-title">
-              Website
-            </h3>
+            <h3 class="groups-section__group-title">Website</h3>
             <p class="groups-section__group-text">
               {{ $t("home.groups.websiteDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
             <ShieldIcon class="icon" />
-            <h3 class="groups-section__group-title">
-              Security
-            </h3>
+            <h3 class="groups-section__group-title">Security</h3>
             <p class="groups-section__group-text">
               {{ $t("home.groups.securityDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
             <LanguageIcon class="icon" />
-            <h3 class="groups-section__group-title">
-              Translation
-            </h3>
+            <h3 class="groups-section__group-title">Translation</h3>
             <p class="groups-section__group-text">
               {{ $t("home.groups.translationDescription") }}
             </p>
           </div>
           <div class="groups-section__group">
             <ABCIcon class="icon" />
-            <h3 class="groups-section__group-title">
-              Correction
-            </h3>
+            <h3 class="groups-section__group-title">Correction</h3>
             <p class="groups-section__group-text">
               {{ $t("home.groups.correctionDescription") }}
             </p>
@@ -204,9 +187,7 @@
     </section>
     <section class="section faq-section">
       <div class="content">
-        <h2 class="section__title">
-          FAQ
-        </h2>
+        <h2 class="section__title">FAQ</h2>
         <div>
           <h3 class="faq-section__question">
             {{ $t("faq.communityProject.communityProject") }}
@@ -216,7 +197,8 @@
             class="link"
             href="https://docs.google.com/document/d/17ac_FxqzxQT7DbrJf-xyr8B_ySuvDZhagqP5w10oeyw"
             target="_blank"
-          >{{ $t("faq.communityProject.sheet") }}</a>.
+            >{{ $t("faq.communityProject.sheet") }}</a
+          >.
         </div>
         <div>
           <h3 class="faq-section__question">
@@ -231,10 +213,12 @@
           {{ $t("faq.beginner.description") }}
         </div>
         <div class="more-at-faq">
-          <span>{{ $t("faq.more.more") }}
+          <span
+            >{{ $t("faq.more.more") }}
             <nuxt-link :to="localePath('/faq')" class="link">{{
               $t("faq.more.faqPage")
-            }}</nuxt-link>.
+            }}</nuxt-link
+            >.
           </span>
         </div>
       </div>
@@ -246,25 +230,25 @@
 </template>
 
 <script>
-import NavigationBar from '@/components/NavigationBar'
-import Footer from '@/components/Footer'
-import BlogPostCard from '@/components/BlogPostCard'
-import CButton from '@/components/CButton'
-import DiscordIcon from '@/assets/icons/discord.svg'
-import GamepadIcon from '@/assets/icons/gamepad.svg'
-import NoteIcon from '@/assets/icons/note.svg'
-import ArrowRightIcon from '@/assets/icons/arrow_right.svg'
-import WindowIcon from '@/assets/icons/window.svg'
-import ABCIcon from '@/assets/icons/abc.svg'
-import CodeIcon from '@/assets/icons/code.svg'
-import GlobeIcon from '@/assets/icons/globe.svg'
-import LanguageIcon from '@/assets/icons/language.svg'
-import PaintbrushIcon from '@/assets/icons/paintbrush.svg'
-import ShieldIcon from '@/assets/icons/shield.svg'
-import Typewriter from '@/components/Typewriter'
-import { getDetails } from '@/assets/js/BlogApiConfig'
+import NavigationBar from "@/components/NavigationBar";
+import Footer from "@/components/Footer";
+import BlogPostCard from "@/components/BlogPostCard";
+import CButton from "@/components/CButton";
+import DiscordIcon from "@/assets/icons/discord.svg";
+import GamepadIcon from "@/assets/icons/gamepad.svg";
+import NoteIcon from "@/assets/icons/note.svg";
+import ArrowRightIcon from "@/assets/icons/arrow_right.svg";
+import WindowIcon from "@/assets/icons/window.svg";
+import ABCIcon from "@/assets/icons/abc.svg";
+import CodeIcon from "@/assets/icons/code.svg";
+import GlobeIcon from "@/assets/icons/globe.svg";
+import LanguageIcon from "@/assets/icons/language.svg";
+import PaintbrushIcon from "@/assets/icons/paintbrush.svg";
+import ShieldIcon from "@/assets/icons/shield.svg";
+import Typewriter from "@/components/Typewriter";
+import { getDetails } from "@/assets/js/BlogApiConfig";
 export default {
-  name: 'IndexPage',
+  name: "IndexPage",
   components: {
     NavigationBar,
     Footer,
@@ -281,69 +265,69 @@ export default {
     LanguageIcon,
     PaintbrushIcon,
     ShieldIcon,
-    Typewriter
+    Typewriter,
   },
-  layout: 'none',
+  layout: "none",
   data: () => ({
     blogPosts: [],
     subtitles: [
-      'Don’t play the game, create the game',
-      'the cyberwar game',
-      'the Hacker Browsergame',
-      'get hacked!',
+      "Don’t play the game, create the game",
+      "the cyberwar game",
+      "the Hacker Browsergame",
+      "get hacked!",
       "don't get hacked!",
-      'the Hacker playground',
-      'The cryptic way of hacking',
-      'The art of hacking',
-      'The Cyberspace',
-      'Game of Cyberwar',
-      'Be the most feared hacker',
-      'The League of extraordinary Hackers',
-      'Hackelicious',
-      'be a 1 or 0',
-      'Blackhack',
-      'world of warhack',
-      'Hackback',
-      'Hashback'
-    ]
+      "the Hacker playground",
+      "The cryptic way of hacking",
+      "The art of hacking",
+      "The Cyberspace",
+      "Game of Cyberwar",
+      "Be the most feared hacker",
+      "The League of extraordinary Hackers",
+      "Hackelicious",
+      "be a 1 or 0",
+      "Blackhack",
+      "world of warhack",
+      "Hackback",
+      "Hashback",
+    ],
   }),
-  async fetch () {
-    const lang = this.$i18n.locale
-    const response = await fetch(getDetails().blog_api_url + lang)
-    let posts = await response.json()
-    const postsFiltered = []
-    let i = 0
+  async fetch() {
+    const lang = this.$i18n.locale;
+    const response = await fetch(getDetails().blog_api_url + lang);
+    let posts = await response.json();
+    const postsFiltered = [];
+    let i = 0;
     while (postsFiltered.length !== 2 && i < posts.length) {
-      const post = posts[i]
+      const post = posts[i];
       if (post.published === true) {
-        postsFiltered.push(post)
+        postsFiltered.push(post);
       }
-      i++
+      i++;
     }
-    posts = postsFiltered
-    this.blogPosts = posts
+    posts = postsFiltered;
+    this.blogPosts = posts;
   },
-  created () {
-    this.shuffleSubtitles()
+  created() {
+    this.shuffleSubtitles();
   },
   methods: {
-    shuffleSubtitles () {
+    shuffleSubtitles() {
       // Fisher-Yates shuffle algorithm
       for (let i = this.subtitles.length - 1; i > 0; i -= 1) {
         const j = Math.floor(Math.random() * (i + 1));
         // swap elements on positions i and j
         [this.subtitles[i], this.subtitles[j]] = [
           this.subtitles[j],
-          this.subtitles[i]
-        ]
+          this.subtitles[i],
+        ];
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 @use "../assets/css/mixins/screenSize";
-.icon{
+.icon {
   max-width: 100%;
   max-height: 13vh;
 }
@@ -354,7 +338,7 @@ export default {
     background-color: var(--colors-green);
   }
 }
-.fit-c-1{
+.fit-c-1 {
   min-width: fit-content;
 }
 .section {
@@ -484,8 +468,8 @@ export default {
     align-items: center;
     min-width: 0;
     width: var(--content-width);
-    @media (min-width:1000px){
-      max-width:965px;
+    @media (min-width: 1000px) {
+      max-width: 965px;
     }
     @include screenSize.mobile {
       flex-wrap: wrap;
