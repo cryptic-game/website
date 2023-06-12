@@ -23,7 +23,7 @@
           :size="2"
           class="hero-section__join-button"
           discord
-          href="https://discord.gg/tN5Wcab"
+          href="https://discord.gg/GzRPeRBPSM"
           new-tab
           rel="noopener"
           target="_blank"
